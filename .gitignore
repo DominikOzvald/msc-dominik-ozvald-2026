@@ -1,0 +1,10 @@
+.idea
+env
+test_data
+test_images
+train_data
+train_images
+trained_models
+Drain.py
+Brain.py
+__pycache__
