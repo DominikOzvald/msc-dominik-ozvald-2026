@@ -10,9 +10,9 @@ if __name__ == "__main__":
     data_folder = "../test_data"
     save_folder = "../trained_models"
     image_folder = "../test_images"
-    embedding_dim = 32
-    hidden_size = 196
-    latent_size = 64
+    embedding_dim = 64
+    hidden_size = 512
+    latent_size = 384
     model_name = f"LINE_VAE_I_{embedding_dim}_H_{hidden_size}_L_{latent_size}"
     char_vocab = CharVocab()
     matrix = create_embedding_matrix(char_vocab, embedding_dim)

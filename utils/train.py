@@ -1,6 +1,9 @@
+import math
+
 import torch
 import tqdm
 import torch.nn.functional as F
+from utils.data import separate_last_log
 
 
 def vae_loss(x, recon, mean, log_var, beta, criterion):
@@ -95,5 +98,34 @@ def transformer_train_loop(model, embedder, optimizer, data_loader, epochs, show
             # print("z", z[0, 0, :5])
             # print("o", out[0, 0, :5])
             # print("o", out[0, 1, :5])
+        losses.append(train_loss / batch_num)
+    return losses
+
+
+def dec_trans_train_loop(model, embedder, optimizer, data_loader, epochs, show_every_n, n_steps: int = 1):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+    model.train()
+    embedder.requires_grad_(False)
+    embedder.to(device)
+    embedder.train()
+    losses = []
+    batch_num = len(data_loader.dataset) // data_loader.batch_size + 1
+    for epoch in range(epochs):
+        train_loss = 0
+        for batch, (data, lengths, masks) in tqdm.tqdm(enumerate(data_loader)):
+            data = data.to(device)
+            masks = masks.to(device)
+            lengths = lengths.cpu()
+            optimizer.zero_grad()
+            z = embedder(data, lengths)
+            z, target, masks = separate_last_log(z, masks, n_steps=n_steps)
+            out = model(z, masks, n_steps=n_steps)
+            loss = F.mse_loss(out.reshape(-1, out.size(-1)), target.reshape(-1, out.size(-1)))
+            loss.backward()
+            train_loss += loss.item()
+            optimizer.step()
+        if epoch % show_every_n == 0 or epoch == epochs - 1:
+            print(f"Epoch {epoch}: Average Loss: {train_loss / batch_num}")
         losses.append(train_loss / batch_num)
     return losses

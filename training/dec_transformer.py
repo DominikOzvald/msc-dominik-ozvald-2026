@@ -2,9 +2,9 @@ import torch.nn
 from os import path
 from models.vae import LineVae
 from utils.datasets import CharVocab, TransformerDataset
-from models.vaetransformer import VAETransformer
+from models.vaetransformer import DecoderTransformer
 from torch.optim import Adam
-from utils.train import transformer_train_loop
+from utils.train import dec_trans_train_loop
 from torch.utils.data import DataLoader
 from torch import save
 from models.embedder import Embedder
@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 
-    data_folder = "../train_data"
+    data_folder = "../pom"
     save_folder = "../trained_models"
     image_folder = "../train_images"
     # ----------------------------------------------------------------------------
@@ -33,38 +33,36 @@ if __name__ == "__main__":
     except:
         print("Can not load VAE", vae_name)
         exit(-1)
-    # ----------------------------------------------------------------------------
 
     dec_layer = 2
-    enc_layer = 2
     n_head = 2
     dim_forward = 1024
     d_model = 64
-    transformer_name = f"VAETransformer_DE_{dec_layer}_H_{n_head}_F_{dim_forward}"
-    lr = 2e-3
+    transformer_name = f"DecTransformer_D_{dec_layer}_H_{n_head}_F_{dim_forward}"
+    lr = 1e-3
     # ----------------------------------------------------------------------------
-    embedder = Embedder(vae.enc_matrix,vae.enc)
-    model = VAETransformer(d_model=d_model, n_head=n_head, dec_layer=dec_layer, enc_layer=enc_layer,
-                           dim_forward=dim_forward)
+    embedder = Embedder(vae.enc_matrix, vae.enc)
+    model = DecoderTransformer(d_model=d_model, n_head=n_head,enc_dec_layer=dec_layer,
+                               dim_forward=dim_forward)
 
     optimizer = Adam(model.parameters(), lr=lr)
     # ----------------------------------------------------------------------------
 
-    step = 5
-    frame_size = 30
+    step = 1
+    frame_size = 20
     max_len = 200
-    batch_size = 64
-    epochs = 120
+    batch_size = 256
+    epochs = 100
+    n_steps = 5
     out_every = 10
     data_set = TransformerDataset(data_folder, step=step, frame_size=frame_size)
     data_loader = DataLoader(data_set, batch_size=batch_size, shuffle=True)
+
+    loses = dec_trans_train_loop(model, embedder, optimizer, data_loader, epochs, show_every_n=out_every,n_steps=5)
+
     # ----------------------------------------------------------------------------
 
-    loses = transformer_train_loop(model, embedder,optimizer, data_loader, epochs, show_every_n=out_every)
-
-    # ----------------------------------------------------------------------------
-
-    plt.plot(range(50,len(loses)), loses[50:])
+    plt.plot(range(0, len(loses)), loses[0:])
     plt.grid()
     plt.title(f"{transformer_name}_loss")
     plt.savefig(path.join(image_folder, f"{transformer_name}_loss.png"))

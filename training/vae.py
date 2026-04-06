@@ -1,5 +1,5 @@
 from utils.datasets import LogCharDataSet
-from utils.data import pad_len_collate_fn
+from utils.data import fixed_pad_fn_factory,pad_len_collate_fn
 from utils.embeddings import create_embedding_matrix
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
@@ -14,9 +14,9 @@ if __name__ == "__main__":
     save_folder = "../trained_models"
     image_folder = "../train_images"
     batch_size = 128
-    embedding_dim = 32
-    hidden_size = 196
-    latent_size = 64
+    embedding_dim = 64
+    hidden_size = 512
+    latent_size = 384
     lr = 1e-3
     epochs = 100
     print_every = 10
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     data_set = LogCharDataSet(data_folder)
     matrix = create_embedding_matrix(data_set.vocab,embedding_dim)
-    data_loader = DataLoader(data_set,batch_size=batch_size,shuffle=True,collate_fn=pad_len_collate_fn)
+    data_loader = DataLoader(data_set,batch_size=batch_size,shuffle=True,collate_fn=fixed_pad_fn_factory(200))
     # ----------------------------------------------------------------------------
 
     _, axs = plt.subplots(1, 2)
