@@ -32,7 +32,6 @@ class VAETransformer(torch.nn.Module):
                                                 num_decoder_layers=dec_layer, num_encoder_layers=enc_layer,
                                                 dim_feedforward=dim_forward)
 
-
     def forward(self, z: torch.Tensor, tgt_z: torch.Tensor, masks: torch.Tensor):
         src = z * math.sqrt(self.d_model)
         src = self.pe(src)
@@ -40,7 +39,7 @@ class VAETransformer(torch.nn.Module):
         tgt = self.pe(tgt)
         tgt_mask = torch.nn.Transformer.generate_square_subsequent_mask(tgt.size(1),
                                                                         device=tgt.device)
-        tgt_padding_masks = torch.cat([torch.zeros(masks.size(0), 1, device=masks.device), masks[:, :-1]],dim=1)
+        tgt_padding_masks = torch.cat([torch.zeros(masks.size(0), 1, device=masks.device), masks[:, :-1]], dim=1)
         out = self.transformer(src=src, tgt=tgt, tgt_mask=tgt_mask, tgt_key_padding_mask=tgt_padding_masks,
                                src_key_padding_mask=masks)
 
@@ -58,21 +57,49 @@ class DecoderTransformer(torch.nn.Module):
         self.enc_dec_layer = enc_dec_layer
 
         self.transformer = torch.nn.Transformer(d_model=d_model, dim_feedforward=dim_forward, nhead=n_head,
-                                                num_decoder_layers=enc_dec_layer, num_encoder_layers=enc_dec_layer,batch_first=True)
+                                                num_decoder_layers=enc_dec_layer, num_encoder_layers=enc_dec_layer,
+                                                batch_first=True)
         self.pe = PosEncoder(d_model)
 
-    def forward(self, z: torch.Tensor, masks: torch.Tensor,n_steps:int = 4):
+    def forward(self, z: torch.Tensor, masks: torch.Tensor, n_steps: int = 4):
         src = z * math.sqrt(self.d_model)
         src = self.pe(src)
         for i in range(n_steps):
             sos = torch.zeros((src.size(0), 1, src.size(2)), device=src.device)
-            tgt = torch.cat([sos, src[:, :-1, :]],dim=1)
+            tgt = torch.cat([sos, src[:, :-1, :]], dim=1)
 
             casual_mask = torch.nn.Transformer.generate_square_subsequent_mask(src.size(1), device=src.device)
             trnas_out = self.transformer(src=src, tgt=tgt, tgt_mask=casual_mask, tgt_key_padding_mask=None,
                                          src_key_padding_mask=None)
 
-            new_vector = trnas_out[:, -1:,:]
-            src = torch.cat([src,new_vector],dim=1)
-        out = src[:,-n_steps:,:]
+            new_vector = trnas_out[:, -1:, :]
+            src = torch.cat([src, new_vector], dim=1)
+        out = src[:, -n_steps:, :]
         return out
+
+
+class TaggedTransformer(torch.nn.Module):
+    def __init__(self, d_model: int = 128, dim_forward: int = 1024, n_head: int = 2,
+                 num_layers: int = 2, num_class: int = 5):
+        super().__init__()
+        self.d_model = d_model
+        self.dim_forward = dim_forward
+        self.n_head = n_head
+        self.num_layers = num_layers
+        self.num_class = num_class
+
+        self.pe = PosEncoder(d_model=d_model, max_len=300)
+
+        enc_layer = torch.nn.TransformerEncoderLayer(d_model=self.d_model, nhead=self.n_head,
+                                                     dim_feedforward=self.dim_forward, batch_first=True)
+        self.transformer = torch.nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+        self.fc = torch.nn.Sequential(torch.nn.Linear(in_features=d_model, out_features=d_model // 2),
+                                      torch.nn.ReLU(),
+                                      torch.nn.Linear(in_features=d_model // 2, out_features=self.num_class))
+
+    def forward(self, z: torch.Tensor, masks: torch.Tensor):
+        z = z * math.sqrt(self.d_model)
+        z = self.pe(z)
+        z = self.transformer(z, src_key_padding_mask=masks)
+        z = self.fc(z)
+        return z

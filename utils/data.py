@@ -51,6 +51,31 @@ def extract_raw(file_name):
     return logs
 
 
+def extract_tag(log):
+    tags = ["<FLAKY>", "<DRIFT>", "<SECURITY>", "<SILENT>"]
+    tag_num = 0
+    for i, tag in enumerate(tags):
+        if log.startswith(tag):
+            log = log[len(tag):]
+            tag_num = i + 1
+    return log, tag_num
+
+
+def extract_tagged(file_name, max_in_len=200):
+    tagged_pairs = []
+    try:
+        with open(file_name, "r", encoding="utf-8") as f:
+            for line in f:
+                log = line.split(" ", maxsplit=1)
+                if len(log) > 1:
+                    log, tag = extract_tag(log[1])
+                    tagged_pairs.append((log[:max_in_len], tag))
+
+    except Exception as e:
+        print("Skipping file:", file_name, e)
+    return tagged_pairs
+
+
 def form_instances(logs, step: int, frame_size: int):
     instances = []
     for i in range(0, len(logs), step):
@@ -85,17 +110,16 @@ def pad_frame_collate_fn(batch):
 def fixed_pad_fn(batch, size=30):
     lengths = torch.tensor([len(x) for x in batch])
     with torch.no_grad():
-        data = [ F.pad(x,[0,size-x.size(0)],value=0) for x in batch ]
-        data = torch.stack(data,dim=0)
-    return data,lengths
-
+        data = [F.pad(x, [0, size - x.size(0)], value=0) for x in batch]
+        data = torch.stack(data, dim=0)
+    return data, lengths
 
 
 def fixed_pad_fn_factory(size=10):
     return lambda x: fixed_pad_fn(x, size)
 
 
-def separate_last_log(data, masks,n_steps:int = 1):
+def separate_last_log(data, masks, n_steps: int = 1):
     # index = torch.searchsorted(masks, torch.ones((masks.size(0),1), device=masks.device)) - 1
     # tgt = data[torch.arange(data.size(0), device=data.device), index.view(-1)]
     with torch.no_grad():

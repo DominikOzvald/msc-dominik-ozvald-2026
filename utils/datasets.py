@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import Dataset
 from Drain import LogParser
 from utils.embeddings import CharVocab, LogVocab
-from utils.data import extract_raw, extract_with_parse, form_instances, count_logs
+from utils.data import extract_raw, extract_with_parse, form_instances, count_logs, extract_tagged
 import os
 import bisect
 import torch.nn.functional as F
@@ -64,7 +64,8 @@ class TransformerDataset(Dataset):
         with torch.no_grad():
             enc_logs = [self.vocab.encode(log) for log in logs]
             lengths = torch.Tensor([len(log) for log in enc_logs])
-            frame = torch.stack([F.pad(log, (0, self.max_len - log.size(0)), value=0) for log in enc_logs]).to(torch.long)
+            frame = torch.stack([F.pad(log, (0, self.max_len - log.size(0)), value=0) for log in enc_logs]).to(
+                torch.long)
             frame_len = frame.size(0)
             if frame_len < self.frame_size:
                 frame = F.pad(frame, (0, 0, 0, self.frame_size - frame_len), value=0)
@@ -116,6 +117,34 @@ class LogDataSet(Dataset):
         return len(self.data)
 
 
+class DummyCharDataSet(Dataset):
+    def __init__(self, log_dir: str = None, max_in_len: int = 200):
+        super().__init__()
+        self.data = []
+        self.vocab = CharVocab()
+        self.max_in_len = max_in_len
+        if log_dir:
+            log_files = [file for file in os.listdir(log_dir) if file[-4:] == ".txt"]
+            for log_file in log_files:
+                self.add_from_file(os.path.join(log_dir, log_file))
+
+    def add_from_file(self, file_path):
+        pairs = extract_tagged(file_path, self.max_in_len)
+        logs, tags = zip(*pairs)
+        for log in logs:
+            if log not in self.data:
+                self.data.append(log[:self.max_in_len])
+
+    def get_unencoded(self, item):
+        return self.data[item]
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, item):
+        return self.vocab.encode(self.data[item])
+
+
 class LogCharDataSet(Dataset):
 
     def __init__(self, log_dir: str, step=1, frame_size=1, cut_off=200, join_frame=True):
@@ -151,3 +180,51 @@ class LogCharDataSet(Dataset):
 
     def __len__(self):
         return len(self.data)
+
+
+class DummyLogDataSet(Dataset):
+    def __init__(self, log_dir: str = None, step: int = 5, frame_size: int = 30, max_in_len: int = 200,
+                 pad_tag: int = 0):
+        super().__init__()
+        self.step = step
+        self.frame_size = frame_size
+        self.vocab = CharVocab()
+        self.data = []
+        self.files = []
+        self.max_in_len = max_in_len
+        self.pad_tag = pad_tag
+        if log_dir:
+            log_files = [file for file in os.listdir(log_dir) if file[-4:] == ".txt"]
+            for log_file in log_files:
+                self.add_from_file(os.path.join(log_dir, log_file))
+
+    def add_from_file(self, file_name):
+        pairs = extract_tagged(file_name, self.max_in_len)
+        file_start = len(self.data)
+        num_frames = 0
+        for i in range(0, len(pairs), self.step):
+            self.data.append(pairs[i:i + self.frame_size])
+            num_frames += 1
+        self.files.append((file_name, file_start, num_frames))
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, item):
+        logs, tags = zip(*self.data[item])
+        with torch.no_grad():
+            lengths = torch.Tensor([len(log) for log in logs])
+            tags = torch.Tensor(tags)
+            enc_logs = [self.vocab.encode(log) for log in logs]
+            padded_log = [F.pad(log, (0, self.max_in_len - log.size(0)), value=0) for log in enc_logs]
+            frame = torch.stack(padded_log, dim=0)
+            frame_len = frame.size(0)
+            if frame_len < self.frame_size:
+                frame = F.pad(frame, (0, 0, 0, self.frame_size - frame_len), value=0)
+                lengths = torch.cat([lengths, torch.ones(self.frame_size - frame_len)])
+                tags = torch.cat([tags, self.pad_tag * torch.ones(self.frame_size - frame_len)])
+                mask = torch.cat([torch.zeros(frame_len), torch.ones(self.frame_size - frame_len)])
+            else:
+                mask = torch.zeros(frame_len)
+            tags = tags.to(torch.long)
+        return frame, lengths, mask, tags

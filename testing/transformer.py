@@ -1,18 +1,18 @@
 import torch.nn
 from os import path
-from utils.datasets import CharVocab, TransformerDataset
-from models.vae import LineVae
+from utils.datasets import CharVocab, DummyLogDataSet
 from models.embedder import ConvEmbedder
 from models.vaetransformer import VAETransformer
 from torch.utils.data import DataLoader
 from utils.train import transformer_loss
+import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import math
 import numpy as np
+from sklearn.metrics import roc_curve, roc_auc_score
 
 if __name__ == "__main__":
-    data_folders = ["../test_data/S", "../test_data/F"]
-    truth_folder = ["../test_data/T/0", "../test_data/T/1", "../test_data/T/2"]
+    data_folder = "../test_data"
     save_folder = "../trained_models"
     image_folder = "../test_images"
 
@@ -50,59 +50,43 @@ if __name__ == "__main__":
     except:
         print("Can not load Transformer:", transformer_name)
         exit(-1)
-    step_size = 5
-    frame_size = 30
+    transformer.eval()
+    step_size = 60
+    frame_size = 60
     max_len = 200
-    truth_losses = []
-    for folder in truth_folder:
-        losses = []
-        data_set = TransformerDataset(folder, step=step_size, frame_size=frame_size, max_len=max_len)
-        data_loader = DataLoader(data_set, batch_size=1, shuffle=False)
-        for i, (data, lengths, masks) in enumerate(data_loader):
-            with torch.no_grad():
-                z = embedder(data, lengths)
-                sos = torch.zeros(z.size(0), 1, z.size(2))
-                tgt = torch.cat([sos, z[:, :-1, :]], dim=1)
-                out = transformer(z, tgt, masks)
-                loss = transformer_loss(out, z, masks)
-                losses.append(loss.item())
-                if i > 100:
-                    break
-        truth_losses.append(torch.Tensor(losses).unsqueeze(-1))
-    truth_losses = torch.cat(truth_losses, dim=-1)
-    thresholds = torch.mean(truth_losses, dim=-1) + 3 * torch.std(truth_losses, dim=-1)
+    pad_tag = 6
+    dataset = DummyLogDataSet(data_folder, step=step_size, frame_size=frame_size, max_in_len=max_in_len,
+                              pad_tag=pad_tag)
+    data_loader = DataLoader(dataset, batch_size=64, shuffle=False)
 
-    threshold_window_size = 50
-    for k, folder in enumerate(data_folders):
-        data_set = TransformerDataset(folder, step=step_size, frame_size=frame_size, max_len=max_len)
-        data_loader = DataLoader(data_set, batch_size=1, shuffle=False)
-        losses = []
-        loss_windows = []
-        anomalies = []
+    y_true = torch.zeros(0)
+    y_score = torch.zeros(0)
+    for i, (data, lengths, masks, tags) in enumerate(data_loader):
+        with torch.no_grad():
+            z = embedder(data, lengths)
+            sos = torch.zeros(z.size(0), 1, z.size(2))
+            tgt = torch.cat([sos, z[:, :-1, :]], dim=1)
+            out = transformer(z, tgt, masks)
+            tags = tags.view(-1)
 
-        for i, (data, lengths, masks) in enumerate(data_loader):
-            with torch.no_grad():
-                z = embedder(data, lengths)
-                sos = torch.zeros(z.size(0), 1, z.size(2))
-                tgt = torch.cat([sos, z[:, :-1, :]], dim=1)
-                out = transformer(z, tgt, masks)
-                loss = transformer_loss(out, z, masks)
-                is_anomaly = False
-                if loss.item() > thresholds[i].item():
-                    is_anomaly = True
+            loss = F.mse_loss(out, z, reduction="none")
+            loss = torch.mean(loss, dim=-1).view(-1)
+            loss = loss[tags != pad_tag]
+            tags = tags[tags != pad_tag]
+            tags = tags > 0
+            tags = tags.to(torch.int32)
+            y_score = torch.cat([y_score, loss])
+            y_true = torch.cat([y_true, tags])
+    fpr, tpr, trsh = roc_curve(y_true, y_score)
+    area = roc_auc_score(y_true, y_score)
 
-                losses.append(loss.item())
-                anomalies.append(is_anomaly)
-            if i > 100:
-                break
-            print(f"Line {i * step_size}-{i * step_size + frame_size}: {loss.item():.4f} | is anomaly: {is_anomaly}")
-        print(f"Average loss: {sum(losses) / len(losses):.4f}")
-        plt.plot(range(len(thresholds)), thresholds, color="orange",
-                 label="threshold")
-        plt.plot(range(len(losses)), losses, label="MSE")
-        plt.scatter(np.arange(len(losses))[anomalies], np.array(losses)[anomalies], color="red", label="anomaly")
-        plt.grid()
-        plt.legend()
-        plt.title(folder)
-        plt.savefig(path.join(image_folder, f"{transformer_name}_{k}.png"))
-        plt.clf()
+    plt.plot(fpr, tpr, label=f"ROC curve (area {area:.4f})")
+    plt.plot(np.linspace(0, 1, 10), np.linspace(0, 1, 10), linestyle='dashed', color="gray",
+             label="Random classifier (area 0.5)")
+    plt.ylabel("True Positive Rate")
+    plt.xlabel("False Positive Rate")
+    plt.title("Receiver Operating Characteristic")
+    plt.ylim((0, 1.05))
+    plt.xlim((0, 1.0))
+    plt.legend()
+    plt.show()

@@ -8,6 +8,7 @@ trained_models
 __pycache__
 debugging
 pom
+train_data_std
 Drain.py
 Brain.py
 shuffle.py
