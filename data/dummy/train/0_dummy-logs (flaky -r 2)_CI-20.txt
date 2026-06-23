@@ -1,0 +1,295 @@
+﻿2026-05-09T22:26:47.8935065Z Current runner version: '2.334.0'
+2026-05-09T22:26:47.9021539Z ##[group]Runner Image Provisioner
+2026-05-09T22:26:47.9022754Z Hosted Compute Agent
+2026-05-09T22:26:47.9023703Z Version: 20260213.493
+2026-05-09T22:26:47.9024714Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-09T22:26:47.9025945Z Build Date: 2026-02-13T00:28:41Z
+2026-05-09T22:26:47.9048030Z Worker ID: {8d41c5ae-f03a-41be-b8f6-20aa7794f728}
+2026-05-09T22:26:47.9049220Z Azure Region: eastus2
+2026-05-09T22:26:47.9050255Z ##[endgroup]
+2026-05-09T22:26:47.9053148Z ##[group]Operating System
+2026-05-09T22:26:47.9054154Z Ubuntu
+2026-05-09T22:26:47.9054955Z 24.04.4
+2026-05-09T22:26:47.9055841Z LTS
+2026-05-09T22:26:47.9056899Z ##[endgroup]
+2026-05-09T22:26:47.9057768Z ##[group]Runner Image
+2026-05-09T22:26:47.9058988Z Image: ubuntu-24.04
+2026-05-09T22:26:47.9059859Z Version: 20260413.86.1
+2026-05-09T22:26:47.9061948Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-09T22:26:47.9064491Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-05-09T22:26:47.9086999Z ##[endgroup]
+2026-05-09T22:26:47.9089047Z ##[group]GITHUB_TOKEN Permissions
+2026-05-09T22:26:47.9091675Z Contents: read
+2026-05-09T22:26:47.9093055Z Metadata: read
+2026-05-09T22:26:47.9093943Z Packages: read
+2026-05-09T22:26:47.9094764Z ##[endgroup]
+2026-05-09T22:26:47.9098240Z Secret source: Actions
+2026-05-09T22:26:47.9099402Z Prepare workflow directory
+2026-05-09T22:26:48.0111445Z Prepare all required actions
+2026-05-09T22:26:48.0168242Z Getting action download info
+2026-05-09T22:26:48.3033690Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-09T22:26:48.5679303Z Complete job name: dummy-logs (flaky -r 2)
+2026-05-09T22:26:48.6499930Z ##[group]Run actions/checkout@v4
+2026-05-09T22:26:48.6500745Z with:
+2026-05-09T22:26:48.6501141Z   repository: DominikOzvald/dummy
+2026-05-09T22:26:48.6501818Z   token: ***
+2026-05-09T22:26:48.6502215Z   ssh-strict: true
+2026-05-09T22:26:48.6502601Z   ssh-user: git
+2026-05-09T22:26:48.6502986Z   persist-credentials: true
+2026-05-09T22:26:48.6503411Z   clean: true
+2026-05-09T22:26:48.6503789Z   sparse-checkout-cone-mode: true
+2026-05-09T22:26:48.6504253Z   fetch-depth: 1
+2026-05-09T22:26:48.6504620Z   fetch-tags: false
+2026-05-09T22:26:48.6505010Z   show-progress: true
+2026-05-09T22:26:48.6505393Z   lfs: false
+2026-05-09T22:26:48.6505754Z   submodules: false
+2026-05-09T22:26:48.6506644Z   set-safe-directory: true
+2026-05-09T22:26:48.6507446Z ##[endgroup]
+2026-05-09T22:26:48.7728101Z Syncing repository: DominikOzvald/dummy
+2026-05-09T22:26:48.7731068Z ##[group]Getting Git version info
+2026-05-09T22:26:48.7732457Z Working directory is '/home/runner/work/dummy/dummy'
+2026-05-09T22:26:48.7741887Z [command]/usr/bin/git version
+2026-05-09T22:26:48.7764671Z git version 2.53.0
+2026-05-09T22:26:48.7794293Z ##[endgroup]
+2026-05-09T22:26:48.7812315Z Temporarily overriding HOME='/home/runner/work/_temp/2d2076f0-4af3-4401-b3cc-24ec75348d55' before making global git config changes
+2026-05-09T22:26:48.7815300Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T22:26:48.7820454Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T22:26:48.7868475Z Deleting the contents of '/home/runner/work/dummy/dummy'
+2026-05-09T22:26:48.7872542Z ##[group]Initializing the repository
+2026-05-09T22:26:48.7878556Z [command]/usr/bin/git init /home/runner/work/dummy/dummy
+2026-05-09T22:26:48.8018516Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-09T22:26:48.8020774Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-09T22:26:48.8029429Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-09T22:26:48.8031161Z hint: call:
+2026-05-09T22:26:48.8032101Z hint:
+2026-05-09T22:26:48.8033689Z hint: 	git config --global init.defaultBranch <name>
+2026-05-09T22:26:48.8035407Z hint:
+2026-05-09T22:26:48.8037467Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-09T22:26:48.8039499Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-09T22:26:48.8041690Z hint:
+2026-05-09T22:26:48.8042815Z hint: 	git branch -m <name>
+2026-05-09T22:26:48.8044610Z hint:
+2026-05-09T22:26:48.8046420Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-09T22:26:48.8049136Z Initialized empty Git repository in /home/runner/work/dummy/dummy/.git/
+2026-05-09T22:26:48.8053592Z [command]/usr/bin/git remote add origin https://github.com/DominikOzvald/dummy
+2026-05-09T22:26:48.8072142Z ##[endgroup]
+2026-05-09T22:26:48.8073753Z ##[group]Disabling automatic garbage collection
+2026-05-09T22:26:48.8077524Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-09T22:26:48.8113995Z ##[endgroup]
+2026-05-09T22:26:48.8115643Z ##[group]Setting up auth
+2026-05-09T22:26:48.8122971Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T22:26:48.8159147Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T22:26:48.8636944Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T22:26:48.8642459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T22:26:48.9974389Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T22:26:48.9977738Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T22:26:48.9980484Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-09T22:26:48.9983852Z ##[endgroup]
+2026-05-09T22:26:48.9985030Z ##[group]Fetching the repository
+2026-05-09T22:26:48.9987003Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e40f767fb68cb719d4cc41e6df565c8b92eed589:refs/remotes/origin/main
+2026-05-09T22:26:49.1273559Z From https://github.com/DominikOzvald/dummy
+2026-05-09T22:26:49.1275310Z  * [new ref]         e40f767fb68cb719d4cc41e6df565c8b92eed589 -> origin/main
+2026-05-09T22:26:49.1304887Z ##[endgroup]
+2026-05-09T22:26:49.1306762Z ##[group]Determining the checkout info
+2026-05-09T22:26:49.1308483Z ##[endgroup]
+2026-05-09T22:26:49.1313449Z [command]/usr/bin/git sparse-checkout disable
+2026-05-09T22:26:49.1352458Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-09T22:26:49.1381408Z ##[group]Checking out the ref
+2026-05-09T22:26:49.1386495Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-09T22:26:49.1433640Z Switched to a new branch 'main'
+2026-05-09T22:26:49.1437059Z branch 'main' set up to track 'origin/main'.
+2026-05-09T22:26:49.1445208Z ##[endgroup]
+2026-05-09T22:26:49.1481000Z [command]/usr/bin/git log -1 --format=%H
+2026-05-09T22:26:49.1505312Z e40f767fb68cb719d4cc41e6df565c8b92eed589
+2026-05-09T22:26:49.1728309Z ##[group]Run python build.py --mode flaky -r 2
+2026-05-09T22:26:49.1728986Z [36;1mpython build.py --mode flaky -r 2[0m
+2026-05-09T22:26:49.1753455Z shell: /usr/bin/bash -e {0}
+2026-05-09T22:26:49.1753938Z ##[endgroup]
+2026-05-09T22:26:49.2084459Z 
+2026-05-09T22:26:49.2085372Z 
+2026-05-09T22:26:49.2086552Z INFO > build
+2026-05-09T22:26:49.2088317Z INFO > npm run clean && tsc && npm run copy-views && npm run copy-public
+2026-05-09T22:26:49.2089533Z 
+2026-05-09T22:26:49.2090100Z 
+2026-05-09T22:26:49.2091562Z INFO > clean
+2026-05-09T22:26:49.2092614Z INFO > shx rm -rf dist
+2026-05-09T22:26:49.2094196Z INFO Initializing build dependency installation: Node v20.11.0, PNPM v8.15.4
+2026-05-09T22:26:49.2098875Z INFO Resolving dependency installation form package.json
+2026-05-09T22:26:49.2100385Z INFO Resolving dependency package dotenv version f^17.2.3 matches config version ^17.2.3
+2026-05-09T22:26:49.2101616Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2102539Z INFO 	Downloading packages ... 15.22%
+2026-05-09T22:26:49.2103403Z INFO 	Downloading packages ... 45.95%
+2026-05-09T22:26:49.2104238Z INFO 	Downloading packages ... 70.68%
+2026-05-09T22:26:49.2105547Z INFO Resolving dependency package express version f^5.2.1 matches config version ^5.2.1
+2026-05-09T22:26:49.2107234Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2108121Z INFO 	Downloading packages ... 22.66%
+2026-05-09T22:26:49.2108990Z INFO 	Downloading packages ... 46.16%
+2026-05-09T22:26:49.2109859Z INFO 	Downloading packages ... 66.33%
+2026-05-09T22:26:49.2111095Z INFO Resolving dependency package http version f^0.0.1 matches config version ^0.0.1
+2026-05-09T22:26:49.2112431Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2113298Z INFO 	Downloading packages ... 24.93%
+2026-05-09T22:26:49.2114164Z INFO 	Downloading packages ... 45.64%
+2026-05-09T22:26:49.2114964Z INFO 	Downloading packages ... 76.28%
+2026-05-09T22:26:49.2115811Z INFO 	Downloading packages ... 98.71%
+2026-05-09T22:26:49.2117426Z INFO Resolving dependency package pg version f^8.16.3 matches config version ^8.16.3
+2026-05-09T22:26:49.2118755Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2119589Z INFO 	Downloading packages ... 34.08%
+2026-05-09T22:26:49.2120438Z INFO 	Downloading packages ... 53.38%
+2026-05-09T22:26:49.2121292Z INFO 	Downloading packages ... 74.57%
+2026-05-09T22:26:49.2122634Z INFO Resolving dependency package pug version f^3.0.3 matches config version ^3.0.3
+2026-05-09T22:26:49.2123896Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2124685Z INFO 	Downloading packages ... 32.60%
+2026-05-09T22:26:49.2125483Z INFO 	Downloading packages ... 57.69%
+2026-05-09T22:26:49.2126572Z INFO 	Downloading packages ... 84.63%
+2026-05-09T22:26:49.2127926Z INFO Resolving dependency package swagger-jsdoc version f^6.2.8 matches config version ^6.2.8
+2026-05-09T22:26:49.2129268Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2130066Z INFO 	Downloading packages ... 30.88%
+2026-05-09T22:26:49.2130872Z INFO 	Downloading packages ... 49.67%
+2026-05-09T22:26:49.2131665Z INFO 	Downloading packages ... 69.15%
+2026-05-09T22:26:49.2132459Z INFO 	Downloading packages ... 87.24%
+2026-05-09T22:26:49.2133802Z INFO Resolving dependency package swagger-ui-express version f^5.0.1 matches config version ^5.0.1
+2026-05-09T22:26:49.2135233Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2136236Z INFO 	Downloading packages ... 29.48%
+2026-05-09T22:26:49.2137100Z INFO 	Downloading packages ... 54.98%
+2026-05-09T22:26:49.2137910Z INFO 	Downloading packages ... 88.27%
+2026-05-09T22:26:49.2139142Z INFO Resolving dependency package jest version f^30.2.0 matches config version ^30.2.0
+2026-05-09T22:26:49.2140492Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2142615Z INFO 	Downloading packages ... 16.56%
+2026-05-09T22:26:49.2143280Z INFO 	Downloading packages ... 43.27%
+2026-05-09T22:26:49.2143796Z INFO 	Downloading packages ... 59.22%
+2026-05-09T22:26:49.2144285Z INFO 	Downloading packages ... 80.69%
+2026-05-09T22:26:49.2145256Z INFO Resolving dependency package shx version f^0.4.0 matches config version ^0.4.0
+2026-05-09T22:26:49.2146437Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2147040Z INFO 	Downloading packages ... 20.46%
+2026-05-09T22:26:49.2147556Z INFO 	Downloading packages ... 46.09%
+2026-05-09T22:26:49.2148040Z INFO 	Downloading packages ... 78.31%
+2026-05-09T22:26:49.2148631Z INFO 	Downloading packages ... 94.65%
+2026-05-09T22:26:49.2149376Z INFO Resolving dependency package supertest version f^7.1.4 matches config version ^7.1.4
+2026-05-09T22:26:49.2150152Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2150634Z INFO 	Downloading packages ... 20.19%
+2026-05-09T22:26:49.2151312Z INFO 	Downloading packages ... 47.85%
+2026-05-09T22:26:49.2151819Z INFO 	Downloading packages ... 72.23%
+2026-05-09T22:26:49.2152309Z INFO 	Downloading packages ... 93.79%
+2026-05-09T22:26:49.2153049Z INFO Resolving dependency package ts-jest version f^29.4.6 matches config version ^29.4.6
+2026-05-09T22:26:49.2153819Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:49.2154314Z INFO 	Downloading packages ... 32.91%
+2026-05-09T22:26:49.2154800Z INFO 	Downloading packages ... 50.40%
+2026-05-09T22:26:49.2155281Z INFO 	Downloading packages ... 84.05%
+2026-05-09T22:26:49.2155811Z INFO added 11 packages, audited 536 packages in 21s
+2026-05-09T22:26:49.2156599Z INFO 54 package is looking for funding
+2026-05-09T22:26:49.2157110Z INFO run `npm fund` for details
+2026-05-09T22:26:49.2157562Z INFO found 0 vulnerabilities
+2026-05-09T22:26:49.2157847Z 
+2026-05-09T22:26:49.2157853Z 
+2026-05-09T22:26:49.2158012Z INFO > copy-views
+2026-05-09T22:26:49.2158395Z INFO > shx cp -r src/views dist
+2026-05-09T22:26:49.2158693Z 
+2026-05-09T22:26:49.2158699Z 
+2026-05-09T22:26:49.2158861Z INFO > copy-public
+2026-05-09T22:26:49.2159267Z INFO > shx cp -r src/public dist/public
+2026-05-09T22:26:49.2198626Z ##[group]Run python test.py --mode flaky -r 2 | python tagger.py
+2026-05-09T22:26:49.2199434Z [36;1mpython test.py --mode flaky -r 2 | python tagger.py[0m
+2026-05-09T22:26:49.2220496Z shell: /usr/bin/bash -e {0}
+2026-05-09T22:26:49.2220947Z ##[endgroup]
+2026-05-09T22:26:49.3122161Z 
+2026-05-09T22:26:49.3122631Z ==============================Testing GET Methods==============================
+2026-05-09T22:26:49.3124041Z <FLAKY> test_authorization (__main__.TestGetMethods.test_authorization) ... 
+2026-05-09T22:26:49.3126350Z <FLAKY>   test_authorization (__main__.TestGetMethods.test_authorization) (url='/api/subjects/{idSubject}/students') ... FAIL
+2026-05-09T22:26:49.3128238Z <FLAKY> test_found (__main__.TestGetMethods.test_found) ... 
+2026-05-09T22:26:49.3129996Z <FLAKY>   test_found (__main__.TestGetMethods.test_found) (url='/api/subjects/{idSubject}/students/{idStudent}/exams') ... FAIL
+2026-05-09T22:26:49.3131374Z 
+2026-05-09T22:26:49.3131775Z ======================================================================
+2026-05-09T22:26:49.3133492Z <FLAKY> FAIL: test_authorization (__main__.TestGetMethods.test_authorization) (url='/api/subjects/{idSubject}/students')
+2026-05-09T22:26:49.3135309Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3136676Z <FLAKY> Traceback (most recent call last):
+2026-05-09T22:26:49.3137961Z <FLAKY>   File "/home/runner/work/dummy/dummy/test.py", line 186, in test_authorization
+2026-05-09T22:26:49.3139439Z <FLAKY>     self.assertEqual((status, body_received), (200, body_expected))
+2026-05-09T22:26:49.3141091Z <FLAKY> AssertionError: Tuples differ: (500, 'Server error') != (200, [{'id_person': 0, 'name': 'Dominik O[46 chars]t'}])
+2026-05-09T22:26:49.3142281Z 
+2026-05-09T22:26:49.3142553Z <FLAKY> First differing element 0:
+2026-05-09T22:26:49.3143186Z 500
+2026-05-09T22:26:49.3143719Z 200
+2026-05-09T22:26:49.3144011Z 
+2026-05-09T22:26:49.3144340Z <FLAKY> - (500, 'Server error')
+2026-05-09T22:26:49.3145053Z <FLAKY> + (200,
+2026-05-09T22:26:49.3145663Z <FLAKY> +  [{'id_person': 0,
+2026-05-09T22:26:49.3146624Z <FLAKY> +    'name': 'Dominik Ozvald',
+2026-05-09T22:26:49.3147377Z <FLAKY> +    'role': 'student',
+2026-05-09T22:26:49.3148086Z <FLAKY> +    'username': 'do54365'}])
+2026-05-09T22:26:49.3148629Z 
+2026-05-09T22:26:49.3148977Z ======================================================================
+2026-05-09T22:26:49.3150590Z <FLAKY> FAIL: test_found (__main__.TestGetMethods.test_found) (url='/api/subjects/{idSubject}/students/{idStudent}/exams')
+2026-05-09T22:26:49.3152556Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3153578Z <FLAKY> Traceback (most recent call last):
+2026-05-09T22:26:49.3154787Z <FLAKY>   File "/home/runner/work/dummy/dummy/test.py", line 166, in test_found
+2026-05-09T22:26:49.3156822Z <FLAKY>     self.assertEqual((status, body_received), (200, body_expected))
+2026-05-09T22:26:49.3159198Z <FLAKY> AssertionError: Tuples differ: (404, '404 Can not find /api/subjects/{idS[31 chars]ams') != (200, [{'id_grade': 4, 'exam_type': 'writt[73 chars] 0}])
+2026-05-09T22:26:49.3160492Z 
+2026-05-09T22:26:49.3160755Z <FLAKY> First differing element 0:
+2026-05-09T22:26:49.3161309Z 404
+2026-05-09T22:26:49.3161621Z 200
+2026-05-09T22:26:49.3161794Z 
+2026-05-09T22:26:49.3162174Z <FLAKY> - (404, '404 Can not find /api/subjects/{idSubject}/students/{idStudent}/exams')
+2026-05-09T22:26:49.3162851Z <FLAKY> + (200,
+2026-05-09T22:26:49.3163229Z <FLAKY> +  [{'comment': 'updated',
+2026-05-09T22:26:49.3163705Z <FLAKY> +    'exam_grade': 3,
+2026-05-09T22:26:49.3164189Z <FLAKY> +    'exam_type': 'written',
+2026-05-09T22:26:49.3164689Z <FLAKY> +    'id_grade': 4,
+2026-05-09T22:26:49.3165163Z <FLAKY> +    'id_person': 0,
+2026-05-09T22:26:49.3165631Z <FLAKY> +    'id_subject': 0}])
+2026-05-09T22:26:49.3165933Z 
+2026-05-09T22:26:49.3166550Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3167351Z <FLAKY> Ran 2 tests in 0.001s
+2026-05-09T22:26:49.3167883Z 
+2026-05-09T22:26:49.3168276Z <FLAKY> FAILED (failures=2)
+2026-05-09T22:26:49.3168567Z 
+2026-05-09T22:26:49.3168819Z ==============================Testing POST Methods==============================
+2026-05-09T22:26:49.3169603Z test_created (__main__.TestPostMethods.test_created) ... ok
+2026-05-09T22:26:49.3170038Z 
+2026-05-09T22:26:49.3170292Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3170862Z Ran 1 test in 0.000s
+2026-05-09T22:26:49.3171198Z 
+2026-05-09T22:26:49.3171346Z OK
+2026-05-09T22:26:49.3171524Z 
+2026-05-09T22:26:49.3171784Z ==============================Testing PUT Methods==============================
+2026-05-09T22:26:49.3172447Z test_update (__main__.TestPutMethods.test_update) ... ok
+2026-05-09T22:26:49.3172854Z 
+2026-05-09T22:26:49.3173102Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3173674Z Ran 1 test in 0.000s
+2026-05-09T22:26:49.3173911Z 
+2026-05-09T22:26:49.3174054Z OK
+2026-05-09T22:26:49.3174232Z 
+2026-05-09T22:26:49.3174488Z ==============================Testing DELETE Methods==============================
+2026-05-09T22:26:49.3175184Z <FLAKY> test_delete (__main__.TestDeleteMethods.test_delete) ... 
+2026-05-09T22:26:49.3176570Z <FLAKY>   test_delete (__main__.TestDeleteMethods.test_delete) (url='/api/subjects/{idSubject}/students/{idStudent}/exams/{idExam}') ... FAIL
+2026-05-09T22:26:49.3177421Z 
+2026-05-09T22:26:49.3177623Z ======================================================================
+2026-05-09T22:26:49.3178641Z <FLAKY> FAIL: test_delete (__main__.TestDeleteMethods.test_delete) (url='/api/subjects/{idSubject}/students/{idStudent}/exams/{idExam}')
+2026-05-09T22:26:49.3179697Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3180299Z <FLAKY> Traceback (most recent call last):
+2026-05-09T22:26:49.3180982Z <FLAKY>   File "/home/runner/work/dummy/dummy/test.py", line 302, in test_delete
+2026-05-09T22:26:49.3181788Z <FLAKY>     self.assertEqual(response_received, response_expected)
+2026-05-09T22:26:49.3182761Z <FLAKY> AssertionError: {'status': 403, 'text': '403 You do not have permission to DELETE {url}'} != {'status': 204}
+2026-05-09T22:26:49.3183758Z <FLAKY> - {'status': 403, 'text': '403 You do not have permission to DELETE {url}'}
+2026-05-09T22:26:49.3184433Z <FLAKY> + {'status': 204}
+2026-05-09T22:26:49.3184704Z 
+2026-05-09T22:26:49.3184959Z ----------------------------------------------------------------------
+2026-05-09T22:26:49.3185528Z <FLAKY> Ran 1 test in 0.000s
+2026-05-09T22:26:49.3185800Z 
+2026-05-09T22:26:49.3186211Z <FLAKY> FAILED (failures=1)
+2026-05-09T22:26:49.3290887Z Post job cleanup.
+2026-05-09T22:26:49.4301208Z [command]/usr/bin/git version
+2026-05-09T22:26:49.4342182Z git version 2.53.0
+2026-05-09T22:26:49.4391059Z Temporarily overriding HOME='/home/runner/work/_temp/1f3db427-443a-4e6b-a477-13ef433c84ce' before making global git config changes
+2026-05-09T22:26:49.4394160Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T22:26:49.4398689Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T22:26:49.4442676Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T22:26:49.4477848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T22:26:49.4712345Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T22:26:49.4735604Z http.https://github.com/.extraheader
+2026-05-09T22:26:49.4867576Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-09T22:26:49.5191557Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T22:26:49.5211530Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T22:26:49.5225758Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T22:26:49.5593598Z Cleaning up orphan processes
+2026-05-09T22:26:49.6093331Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

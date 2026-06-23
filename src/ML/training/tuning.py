@@ -9,8 +9,9 @@ from src.ML.models.transformer import TaggedTransformer
 from torch import save
 
 if __name__ == "__main__":
-    data_folder = "C:/Faks/Diplomski rad/data/tagged_gha/train"
-    save_folder = "../../../models"
+    file_path = path.dirname(path.abspath(__file__))
+    data_folder = path.join(file_path,"C:/Faks/Diplomski rad/data/tagged_gha/train")
+    save_folder = path.join(file_path,"../../../models")
 
     # ----------------------------------------------------------------------------
     char_vocab = CharVocab()

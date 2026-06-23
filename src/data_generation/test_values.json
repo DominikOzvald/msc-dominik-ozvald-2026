@@ -1,0 +1,62 @@
+{
+	"adminUser": {
+		"rows": [
+			{
+				"id_person": 7,
+				"name": "Admin",
+				"username": "admin",
+				"role": "admin"
+			}
+		]
+	},
+	"regularUser": {
+		"rows": [
+			{
+				"id_person": 0,
+				"name": "Dominik Ozvald",
+				"username": "do54365",
+				"role": "student"
+			}
+		]
+	},
+	"subjects": {
+		"rows": [
+			{
+				"id_subject": 0,
+				"name_subject": "Biology",
+				"code_subject": "BIO",
+				"hours_per_week": 3
+			}
+		]
+	},
+	"exams": {
+		"rows": [
+			{
+				"id_grade": 4,
+				"exam_type": "written",
+				"comment": "updated",
+				"exam_grade": 3,
+				"id_subject": 0,
+				"id_person": 0
+			}
+		]
+	},
+	"attendance": {
+		"rows": [
+			{
+				"id_perosn": 0,
+				"id_subject": 0
+			}
+		]
+	},
+	"updatedSubject": {
+		"nameSubject": "Biology",
+		"codeSubject": "BIO",
+		"hoursPerWeek": 3
+	},
+	"updatedExam": {
+		"examType": "written",
+		"comment": "updated",
+		"grade": 3
+	}
+}

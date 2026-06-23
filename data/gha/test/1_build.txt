@@ -1,0 +1,1979 @@
+2023-08-31T19:33:17.9346210Z Requested labels: ubuntu-22.04
+2023-08-31T19:33:17.9346525Z Job defined at: ACEnglish/truvari/.github/workflows/func_tests.yml@refs/heads/develop
+2023-08-31T19:33:17.9346680Z Waiting for a runner to pick up this job...
+2023-08-31T19:33:18.5787778Z Job is waiting for a hosted runner to come online.
+2023-08-31T19:33:23.4748978Z Job is about to start running on the hosted runner: GitHub Actions 3 (hosted)
+2023-08-31T19:33:38.4776457Z Current runner version: '2.308.0'
+2023-08-31T19:33:38.4813353Z ##[group]Operating System
+2023-08-31T19:33:38.4814119Z Ubuntu
+2023-08-31T19:33:38.4814404Z 22.04.3
+2023-08-31T19:33:38.4814699Z LTS
+2023-08-31T19:33:38.4815030Z ##[endgroup]
+2023-08-31T19:33:38.4815327Z ##[group]Runner Image
+2023-08-31T19:33:38.4815767Z Image: ubuntu-22.04
+2023-08-31T19:33:38.4816123Z Version: 20230821.1.0
+2023-08-31T19:33:38.4816674Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230821.1/images/linux/Ubuntu2204-Readme.md
+2023-08-31T19:33:38.4817294Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230821.1
+2023-08-31T19:33:38.4817783Z ##[endgroup]
+2023-08-31T19:33:38.4818206Z ##[group]Runner Image Provisioner
+2023-08-31T19:33:38.4818525Z 2.0.266.1
+2023-08-31T19:33:38.4818841Z ##[endgroup]
+2023-08-31T19:33:38.4820665Z ##[group]GITHUB_TOKEN Permissions
+2023-08-31T19:33:38.4821495Z Actions: write
+2023-08-31T19:33:38.4822000Z Checks: write
+2023-08-31T19:33:38.4823234Z Contents: write
+2023-08-31T19:33:38.4824069Z Deployments: write
+2023-08-31T19:33:38.4824440Z Discussions: write
+2023-08-31T19:33:38.4824794Z Issues: write
+2023-08-31T19:33:38.4825096Z Metadata: read
+2023-08-31T19:33:38.4825479Z Packages: write
+2023-08-31T19:33:38.4825824Z Pages: write
+2023-08-31T19:33:38.4826121Z PullRequests: write
+2023-08-31T19:33:38.4826517Z RepositoryProjects: write
+2023-08-31T19:33:38.4826965Z SecurityEvents: write
+2023-08-31T19:33:38.4827343Z Statuses: write
+2023-08-31T19:33:38.4827690Z ##[endgroup]
+2023-08-31T19:33:38.4832214Z Secret source: Actions
+2023-08-31T19:33:38.4832766Z Prepare workflow directory
+2023-08-31T19:33:38.5829523Z Prepare all required actions
+2023-08-31T19:33:38.6087069Z Getting action download info
+2023-08-31T19:33:38.9494029Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-08-31T19:33:39.6257046Z Download action repository 'actions/setup-python@v4' (SHA:61a6322f88396a6271a6ee3565807d608ecaddd1)
+2023-08-31T19:33:40.1905908Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-31T19:33:40.8348256Z Download action repository 'actions/upload-artifact@v3' (SHA:0b7f8abb1508181956e8e162db84b466c27e18ce)
+2023-08-31T19:33:41.2997608Z Download action repository 'ad-m/github-push-action@master' (SHA:29f05e01bb17e6f28228b47437e03a7b69e1f9ef)
+2023-08-31T19:33:41.8221406Z Complete job name: build
+2023-08-31T19:33:41.9476990Z ##[group]Run actions/checkout@v3
+2023-08-31T19:33:41.9477654Z with:
+2023-08-31T19:33:41.9477868Z   persist-credentials: false
+2023-08-31T19:33:41.9478101Z   fetch-depth: 0
+2023-08-31T19:33:41.9478388Z   repository: ACEnglish/truvari
+2023-08-31T19:33:41.9479048Z   token: ***
+2023-08-31T19:33:41.9479271Z   ssh-strict: true
+2023-08-31T19:33:41.9479482Z   clean: true
+2023-08-31T19:33:41.9479724Z   sparse-checkout-cone-mode: true
+2023-08-31T19:33:41.9479949Z   fetch-tags: false
+2023-08-31T19:33:41.9480325Z   lfs: false
+2023-08-31T19:33:41.9480528Z   submodules: false
+2023-08-31T19:33:41.9480946Z   set-safe-directory: true
+2023-08-31T19:33:41.9481395Z ##[endgroup]
+2023-08-31T19:33:42.3315654Z Syncing repository: ACEnglish/truvari
+2023-08-31T19:33:42.3318086Z ##[group]Getting Git version info
+2023-08-31T19:33:42.3318967Z Working directory is '/home/runner/work/truvari/truvari'
+2023-08-31T19:33:42.3325549Z [command]/usr/bin/git version
+2023-08-31T19:33:42.3417380Z git version 2.41.0
+2023-08-31T19:33:42.3442681Z ##[endgroup]
+2023-08-31T19:33:42.3477352Z Temporarily overriding HOME='/home/runner/work/_temp/870ae66d-3d9c-4880-9b25-bbe49b1ab673' before making global git config changes
+2023-08-31T19:33:42.3483999Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-31T19:33:42.3492184Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/truvari/truvari
+2023-08-31T19:33:42.3553674Z Deleting the contents of '/home/runner/work/truvari/truvari'
+2023-08-31T19:33:42.3561137Z ##[group]Initializing the repository
+2023-08-31T19:33:42.3567492Z [command]/usr/bin/git init /home/runner/work/truvari/truvari
+2023-08-31T19:33:42.3702980Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-31T19:33:42.3704475Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-31T19:33:42.3705397Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-31T19:33:42.3705817Z hint: 
+2023-08-31T19:33:42.3706363Z hint: 	git config --global init.defaultBranch <name>
+2023-08-31T19:33:42.3706661Z hint: 
+2023-08-31T19:33:42.3707263Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-31T19:33:42.3707789Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-31T19:33:42.3708109Z hint: 
+2023-08-31T19:33:42.3708564Z hint: 	git branch -m <name>
+2023-08-31T19:33:42.3724259Z Initialized empty Git repository in /home/runner/work/truvari/truvari/.git/
+2023-08-31T19:33:42.3742556Z [command]/usr/bin/git remote add origin https://github.com/ACEnglish/truvari
+2023-08-31T19:33:42.3801289Z ##[endgroup]
+2023-08-31T19:33:42.3801838Z ##[group]Disabling automatic garbage collection
+2023-08-31T19:33:42.3809087Z [command]/usr/bin/git config --local gc.auto 0
+2023-08-31T19:33:42.3853025Z ##[endgroup]
+2023-08-31T19:33:42.3917633Z ##[group]Setting up auth
+2023-08-31T19:33:42.3918223Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-31T19:33:42.3919350Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-31T19:33:42.4523492Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-31T19:33:42.4559913Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-31T19:33:42.4874836Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-31T19:33:42.4949679Z ##[endgroup]
+2023-08-31T19:33:42.4954376Z ##[group]Fetching the repository
+2023-08-31T19:33:42.5001676Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2023-08-31T19:33:43.0588503Z remote: Enumerating objects: 11368, done.        
+2023-08-31T19:33:43.0589802Z remote: Counting objects:   0% (1/1022)        
+2023-08-31T19:33:43.0590255Z remote: Counting objects:   1% (11/1022)        
+2023-08-31T19:33:43.0590596Z remote: Counting objects:   2% (21/1022)        
+2023-08-31T19:33:43.0590934Z remote: Counting objects:   3% (31/1022)        
+2023-08-31T19:33:43.0591410Z remote: Counting objects:   4% (41/1022)        
+2023-08-31T19:33:43.0591726Z remote: Counting objects:   5% (52/1022)        
+2023-08-31T19:33:43.0592041Z remote: Counting objects:   6% (62/1022)        
+2023-08-31T19:33:43.0592374Z remote: Counting objects:   7% (72/1022)        
+2023-08-31T19:33:43.0592865Z remote: Counting objects:   8% (82/1022)        
+2023-08-31T19:33:43.0593218Z remote: Counting objects:   9% (92/1022)        
+2023-08-31T19:33:43.0593532Z remote: Counting objects:  10% (103/1022)        
+2023-08-31T19:33:43.0593885Z remote: Counting objects:  11% (113/1022)        
+2023-08-31T19:33:43.0594214Z remote: Counting objects:  12% (123/1022)        
+2023-08-31T19:33:43.0594542Z remote: Counting objects:  13% (133/1022)        
+2023-08-31T19:33:43.0594850Z remote: Counting objects:  14% (144/1022)        
+2023-08-31T19:33:43.0595173Z remote: Counting objects:  15% (154/1022)        
+2023-08-31T19:33:43.0595495Z remote: Counting objects:  16% (164/1022)        
+2023-08-31T19:33:43.0595800Z remote: Counting objects:  17% (174/1022)        
+2023-08-31T19:33:43.0596121Z remote: Counting objects:  18% (184/1022)        
+2023-08-31T19:33:43.0596441Z remote: Counting objects:  19% (195/1022)        
+2023-08-31T19:33:43.0597288Z remote: Counting objects:  20% (205/1022)        
+2023-08-31T19:33:43.0597606Z remote: Counting objects:  21% (215/1022)        
+2023-08-31T19:33:43.0598083Z remote: Counting objects:  22% (225/1022)        
+2023-08-31T19:33:43.0598375Z remote: Counting objects:  23% (236/1022)        
+2023-08-31T19:33:43.0598695Z remote: Counting objects:  24% (246/1022)        
+2023-08-31T19:33:43.0599004Z remote: Counting objects:  25% (256/1022)        
+2023-08-31T19:33:43.0599311Z remote: Counting objects:  26% (266/1022)        
+2023-08-31T19:33:43.0599606Z remote: Counting objects:  27% (276/1022)        
+2023-08-31T19:33:43.0599971Z remote: Counting objects:  28% (287/1022)        
+2023-08-31T19:33:43.0600281Z remote: Counting objects:  29% (297/1022)        
+2023-08-31T19:33:43.0600592Z remote: Counting objects:  30% (307/1022)        
+2023-08-31T19:33:43.0600882Z remote: Counting objects:  31% (317/1022)        
+2023-08-31T19:33:43.0601189Z remote: Counting objects:  32% (328/1022)        
+2023-08-31T19:33:43.0601680Z remote: Counting objects:  33% (338/1022)        
+2023-08-31T19:33:43.0601984Z remote: Counting objects:  34% (348/1022)        
+2023-08-31T19:33:43.0602301Z remote: Counting objects:  35% (358/1022)        
+2023-08-31T19:33:43.0602618Z remote: Counting objects:  36% (368/1022)        
+2023-08-31T19:33:43.0602926Z remote: Counting objects:  37% (379/1022)        
+2023-08-31T19:33:43.0603247Z remote: Counting objects:  38% (389/1022)        
+2023-08-31T19:33:43.0603721Z remote: Counting objects:  39% (399/1022)        
+2023-08-31T19:33:43.0604094Z remote: Counting objects:  40% (409/1022)        
+2023-08-31T19:33:43.0604393Z remote: Counting objects:  41% (420/1022)        
+2023-08-31T19:33:43.0604700Z remote: Counting objects:  42% (430/1022)        
+2023-08-31T19:33:43.0605008Z remote: Counting objects:  43% (440/1022)        
+2023-08-31T19:33:43.0605297Z remote: Counting objects:  44% (450/1022)        
+2023-08-31T19:33:43.0605606Z remote: Counting objects:  45% (460/1022)        
+2023-08-31T19:33:43.0605925Z remote: Counting objects:  46% (471/1022)        
+2023-08-31T19:33:43.0606216Z remote: Counting objects:  47% (481/1022)        
+2023-08-31T19:33:43.0606526Z remote: Counting objects:  48% (491/1022)        
+2023-08-31T19:33:43.0606836Z remote: Counting objects:  49% (501/1022)        
+2023-08-31T19:33:43.0607350Z remote: Counting objects:  50% (511/1022)        
+2023-08-31T19:33:43.0607662Z remote: Counting objects:  51% (522/1022)        
+2023-08-31T19:33:43.0607972Z remote: Counting objects:  52% (532/1022)        
+2023-08-31T19:33:43.0608281Z remote: Counting objects:  53% (542/1022)        
+2023-08-31T19:33:43.0608572Z remote: Counting objects:  54% (552/1022)        
+2023-08-31T19:33:43.0608878Z remote: Counting objects:  55% (563/1022)        
+2023-08-31T19:33:43.0609182Z remote: Counting objects:  56% (573/1022)        
+2023-08-31T19:33:43.0609473Z remote: Counting objects:  57% (583/1022)        
+2023-08-31T19:33:43.0609784Z remote: Counting objects:  58% (593/1022)        
+2023-08-31T19:33:43.0610102Z remote: Counting objects:  59% (603/1022)        
+2023-08-31T19:33:43.0610395Z remote: Counting objects:  60% (614/1022)        
+2023-08-31T19:33:43.0610706Z remote: Counting objects:  61% (624/1022)        
+2023-08-31T19:33:43.0611013Z remote: Counting objects:  62% (634/1022)        
+2023-08-31T19:33:43.0611328Z remote: Counting objects:  63% (644/1022)        
+2023-08-31T19:33:43.0611662Z remote: Counting objects:  64% (655/1022)        
+2023-08-31T19:33:43.0611959Z remote: Counting objects:  65% (665/1022)        
+2023-08-31T19:33:43.0612270Z remote: Counting objects:  66% (675/1022)        
+2023-08-31T19:33:43.0612577Z remote: Counting objects:  67% (685/1022)        
+2023-08-31T19:33:43.0612926Z remote: Counting objects:  68% (695/1022)        
+2023-08-31T19:33:43.0613235Z remote: Counting objects:  69% (706/1022)        
+2023-08-31T19:33:43.0613541Z remote: Counting objects:  70% (716/1022)        
+2023-08-31T19:33:43.0613833Z remote: Counting objects:  71% (726/1022)        
+2023-08-31T19:33:43.0614301Z remote: Counting objects:  72% (736/1022)        
+2023-08-31T19:33:43.0614607Z remote: Counting objects:  73% (747/1022)        
+2023-08-31T19:33:43.0615096Z remote: Counting objects:  74% (757/1022)        
+2023-08-31T19:33:43.0615397Z remote: Counting objects:  75% (767/1022)        
+2023-08-31T19:33:43.0615720Z remote: Counting objects:  76% (777/1022)        
+2023-08-31T19:33:43.0616044Z remote: Counting objects:  77% (787/1022)        
+2023-08-31T19:33:43.0616345Z remote: Counting objects:  78% (798/1022)        
+2023-08-31T19:33:43.0616663Z remote: Counting objects:  79% (808/1022)        
+2023-08-31T19:33:43.0616984Z remote: Counting objects:  80% (818/1022)        
+2023-08-31T19:33:43.0617284Z remote: Counting objects:  81% (828/1022)        
+2023-08-31T19:33:43.0617600Z remote: Counting objects:  82% (839/1022)        
+2023-08-31T19:33:43.0617920Z remote: Counting objects:  83% (849/1022)        
+2023-08-31T19:33:43.0618228Z remote: Counting objects:  84% (859/1022)        
+2023-08-31T19:33:43.0618549Z remote: Counting objects:  85% (869/1022)        
+2023-08-31T19:33:43.0619544Z remote: Counting objects:  86% (879/1022)        
+2023-08-31T19:33:43.0619872Z remote: Counting objects:  87% (890/1022)        
+2023-08-31T19:33:43.0620174Z remote: Counting objects:  88% (900/1022)        
+2023-08-31T19:33:43.0620502Z remote: Counting objects:  89% (910/1022)        
+2023-08-31T19:33:43.0620821Z remote: Counting objects:  90% (920/1022)        
+2023-08-31T19:33:43.0621121Z remote: Counting objects:  91% (931/1022)        
+2023-08-31T19:33:43.0621440Z remote: Counting objects:  92% (941/1022)        
+2023-08-31T19:33:43.0957343Z remote: Counting objects:  93% (951/1022)        
+2023-08-31T19:33:43.0957680Z remote: Counting objects:  94% (961/1022)        
+2023-08-31T19:33:43.0957963Z remote: Counting objects:  95% (971/1022)        
+2023-08-31T19:33:43.0958229Z remote: Counting objects:  96% (982/1022)        
+2023-08-31T19:33:43.0958526Z remote: Counting objects:  97% (992/1022)        
+2023-08-31T19:33:43.0959160Z remote: Counting objects:  98% (1002/1022)        
+2023-08-31T19:33:43.0959460Z remote: Counting objects:  99% (1012/1022)        
+2023-08-31T19:33:43.0959740Z remote: Counting objects: 100% (1022/1022)        
+2023-08-31T19:33:43.0960208Z remote: Counting objects: 100% (1022/1022), done.        
+2023-08-31T19:33:43.0960808Z remote: Compressing objects:   0% (1/740)        
+2023-08-31T19:33:43.0961284Z remote: Compressing objects:   1% (8/740)        
+2023-08-31T19:33:43.0961569Z remote: Compressing objects:   2% (15/740)        
+2023-08-31T19:33:43.0961856Z remote: Compressing objects:   3% (23/740)        
+2023-08-31T19:33:43.0962127Z remote: Compressing objects:   4% (30/740)        
+2023-08-31T19:33:43.0962412Z remote: Compressing objects:   5% (37/740)        
+2023-08-31T19:33:43.0962694Z remote: Compressing objects:   6% (45/740)        
+2023-08-31T19:33:43.0962973Z remote: Compressing objects:   7% (52/740)        
+2023-08-31T19:33:43.0963249Z remote: Compressing objects:   8% (60/740)        
+2023-08-31T19:33:43.0963534Z remote: Compressing objects:   9% (67/740)        
+2023-08-31T19:33:43.0963814Z remote: Compressing objects:  10% (74/740)        
+2023-08-31T19:33:43.0964078Z remote: Compressing objects:  11% (82/740)        
+2023-08-31T19:33:43.0964359Z remote: Compressing objects:  12% (89/740)        
+2023-08-31T19:33:43.0964642Z remote: Compressing objects:  13% (97/740)        
+2023-08-31T19:33:43.0964913Z remote: Compressing objects:  14% (104/740)        
+2023-08-31T19:33:43.0965204Z remote: Compressing objects:  15% (111/740)        
+2023-08-31T19:33:43.1156097Z remote: Compressing objects:  16% (119/740)        
+2023-08-31T19:33:43.1157640Z remote: Compressing objects:  17% (126/740)        
+2023-08-31T19:33:43.1158568Z remote: Compressing objects:  18% (134/740)        
+2023-08-31T19:33:43.1162736Z remote: Compressing objects:  19% (141/740)        
+2023-08-31T19:33:43.1163316Z remote: Compressing objects:  20% (148/740)        
+2023-08-31T19:33:43.1163990Z remote: Compressing objects:  21% (156/740)        
+2023-08-31T19:33:43.1164914Z remote: Compressing objects:  22% (163/740)        
+2023-08-31T19:33:43.1165234Z remote: Compressing objects:  23% (171/740)        
+2023-08-31T19:33:43.1166139Z remote: Compressing objects:  24% (178/740)        
+2023-08-31T19:33:43.1535535Z remote: Compressing objects:  25% (185/740)        
+2023-08-31T19:33:43.1536047Z remote: Compressing objects:  26% (193/740)        
+2023-08-31T19:33:43.1536713Z remote: Compressing objects:  27% (200/740)        
+2023-08-31T19:33:43.1537259Z remote: Compressing objects:  28% (208/740)        
+2023-08-31T19:33:43.1539478Z remote: Compressing objects:  29% (215/740)        
+2023-08-31T19:33:43.1540057Z remote: Compressing objects:  30% (222/740)        
+2023-08-31T19:33:43.1541069Z remote: Compressing objects:  31% (230/740)        
+2023-08-31T19:33:43.1542142Z remote: Compressing objects:  32% (237/740)        
+2023-08-31T19:33:43.1542621Z remote: Compressing objects:  33% (245/740)        
+2023-08-31T19:33:43.1543592Z remote: Compressing objects:  34% (252/740)        
+2023-08-31T19:33:43.1544129Z remote: Compressing objects:  35% (259/740)        
+2023-08-31T19:33:43.1544715Z remote: Compressing objects:  36% (267/740)        
+2023-08-31T19:33:43.1545054Z remote: Compressing objects:  37% (274/740)        
+2023-08-31T19:33:43.1545417Z remote: Compressing objects:  38% (282/740)        
+2023-08-31T19:33:43.1732786Z remote: Compressing objects:  39% (289/740)        
+2023-08-31T19:33:43.1733437Z remote: Compressing objects:  40% (296/740)        
+2023-08-31T19:33:43.1734503Z remote: Compressing objects:  41% (304/740)        
+2023-08-31T19:33:43.1735478Z remote: Compressing objects:  42% (311/740)        
+2023-08-31T19:33:43.1735874Z remote: Compressing objects:  43% (319/740)        
+2023-08-31T19:33:43.1736379Z remote: Compressing objects:  44% (326/740)        
+2023-08-31T19:33:43.1739085Z remote: Compressing objects:  45% (333/740)        
+2023-08-31T19:33:43.1740354Z remote: Compressing objects:  46% (341/740)        
+2023-08-31T19:33:43.2111510Z remote: Compressing objects:  47% (348/740)        
+2023-08-31T19:33:43.2112156Z remote: Compressing objects:  48% (356/740)        
+2023-08-31T19:33:43.2113446Z remote: Compressing objects:  49% (363/740)        
+2023-08-31T19:33:43.2113941Z remote: Compressing objects:  50% (370/740)        
+2023-08-31T19:33:43.2115334Z remote: Compressing objects:  51% (378/740)        
+2023-08-31T19:33:43.2115941Z remote: Compressing objects:  52% (385/740)        
+2023-08-31T19:33:43.2116666Z remote: Compressing objects:  53% (393/740)        
+2023-08-31T19:33:43.2117215Z remote: Compressing objects:  54% (400/740)        
+2023-08-31T19:33:43.2117949Z remote: Compressing objects:  55% (407/740)        
+2023-08-31T19:33:43.2118493Z remote: Compressing objects:  56% (415/740)        
+2023-08-31T19:33:43.2120077Z remote: Compressing objects:  57% (422/740)        
+2023-08-31T19:33:43.2120580Z remote: Compressing objects:  58% (430/740)        
+2023-08-31T19:33:43.2121329Z remote: Compressing objects:  59% (437/740)        
+2023-08-31T19:33:43.2122209Z remote: Compressing objects:  60% (444/740)        
+2023-08-31T19:33:43.2341951Z remote: Compressing objects:  61% (452/740)        
+2023-08-31T19:33:43.2342518Z remote: Compressing objects:  62% (459/740)        
+2023-08-31T19:33:43.2343722Z remote: Compressing objects:  63% (467/740)        
+2023-08-31T19:33:43.2344527Z remote: Compressing objects:  64% (474/740)        
+2023-08-31T19:33:43.2344908Z remote: Compressing objects:  65% (481/740)        
+2023-08-31T19:33:43.2345559Z remote: Compressing objects:  66% (489/740)        
+2023-08-31T19:33:43.2345944Z remote: Compressing objects:  67% (496/740)        
+2023-08-31T19:33:43.2346583Z remote: Compressing objects:  68% (504/740)        
+2023-08-31T19:33:43.2346982Z remote: Compressing objects:  69% (511/740)        
+2023-08-31T19:33:43.2347356Z remote: Compressing objects:  70% (518/740)        
+2023-08-31T19:33:43.2348292Z remote: Compressing objects:  71% (526/740)        
+2023-08-31T19:33:43.2349400Z remote: Compressing objects:  72% (533/740)        
+2023-08-31T19:33:43.2349854Z remote: Compressing objects:  73% (541/740)        
+2023-08-31T19:33:43.2350558Z remote: Compressing objects:  74% (548/740)        
+2023-08-31T19:33:43.2350923Z remote: Compressing objects:  75% (555/740)        
+2023-08-31T19:33:43.2351269Z remote: Compressing objects:  76% (563/740)        
+2023-08-31T19:33:43.2351958Z remote: Compressing objects:  77% (570/740)        
+2023-08-31T19:33:43.2352654Z remote: Compressing objects:  78% (578/740)        
+2023-08-31T19:33:43.2353176Z remote: Compressing objects:  79% (585/740)        
+2023-08-31T19:33:43.2354383Z remote: Compressing objects:  80% (592/740)        
+2023-08-31T19:33:43.2354789Z remote: Compressing objects:  81% (600/740)        
+2023-08-31T19:33:43.2355620Z remote: Compressing objects:  82% (607/740)        
+2023-08-31T19:33:43.2355934Z remote: Compressing objects:  83% (615/740)        
+2023-08-31T19:33:43.2356251Z remote: Compressing objects:  84% (622/740)        
+2023-08-31T19:33:43.2356890Z remote: Compressing objects:  85% (629/740)        
+2023-08-31T19:33:43.2357329Z remote: Compressing objects:  86% (637/740)        
+2023-08-31T19:33:43.2358138Z remote: Compressing objects:  87% (644/740)        
+2023-08-31T19:33:43.2358557Z remote: Compressing objects:  88% (652/740)        
+2023-08-31T19:33:43.2359756Z remote: Compressing objects:  89% (659/740)        
+2023-08-31T19:33:43.2361587Z remote: Compressing objects:  90% (666/740)        
+2023-08-31T19:33:43.2362254Z remote: Compressing objects:  91% (674/740)        
+2023-08-31T19:33:43.2373627Z remote: Compressing objects:  92% (681/740)        
+2023-08-31T19:33:43.2375203Z remote: Compressing objects:  93% (689/740)        
+2023-08-31T19:33:43.2380672Z remote: Compressing objects:  94% (696/740)        
+2023-08-31T19:33:43.2382257Z remote: Compressing objects:  95% (703/740)        
+2023-08-31T19:33:43.2383756Z remote: Compressing objects:  96% (711/740)        
+2023-08-31T19:33:43.2385745Z remote: Compressing objects:  97% (718/740)        
+2023-08-31T19:33:43.2386735Z remote: Compressing objects:  98% (726/740)        
+2023-08-31T19:33:43.2388010Z remote: Compressing objects:  99% (733/740)        
+2023-08-31T19:33:43.2389180Z remote: Compressing objects: 100% (740/740)        
+2023-08-31T19:33:43.2390700Z remote: Compressing objects: 100% (740/740), done.        
+2023-08-31T19:33:43.2699030Z Receiving objects:   0% (1/11368)
+2023-08-31T19:33:43.2873502Z Receiving objects:   1% (114/11368)
+2023-08-31T19:33:43.3085769Z Receiving objects:   2% (228/11368)
+2023-08-31T19:33:43.3260125Z Receiving objects:   3% (342/11368)
+2023-08-31T19:33:43.3306274Z Receiving objects:   4% (455/11368)
+2023-08-31T19:33:43.3313915Z Receiving objects:   5% (569/11368)
+2023-08-31T19:33:43.3525514Z Receiving objects:   6% (683/11368)
+2023-08-31T19:33:43.3541336Z Receiving objects:   7% (796/11368)
+2023-08-31T19:33:43.3553136Z Receiving objects:   8% (910/11368)
+2023-08-31T19:33:43.3911702Z Receiving objects:   9% (1024/11368)
+2023-08-31T19:33:43.3938461Z Receiving objects:  10% (1137/11368)
+2023-08-31T19:33:43.3960549Z Receiving objects:  11% (1251/11368)
+2023-08-31T19:33:43.4000141Z Receiving objects:  12% (1365/11368)
+2023-08-31T19:33:43.4029530Z Receiving objects:  13% (1478/11368)
+2023-08-31T19:33:43.4075945Z Receiving objects:  14% (1592/11368)
+2023-08-31T19:33:43.4113485Z Receiving objects:  15% (1706/11368)
+2023-08-31T19:33:43.4164338Z Receiving objects:  16% (1819/11368)
+2023-08-31T19:33:43.4189683Z Receiving objects:  17% (1933/11368)
+2023-08-31T19:33:43.4201030Z Receiving objects:  18% (2047/11368)
+2023-08-31T19:33:43.4220094Z Receiving objects:  19% (2160/11368)
+2023-08-31T19:33:43.4241734Z Receiving objects:  20% (2274/11368)
+2023-08-31T19:33:43.4263279Z Receiving objects:  21% (2388/11368)
+2023-08-31T19:33:43.4296402Z Receiving objects:  22% (2501/11368)
+2023-08-31T19:33:43.4323553Z Receiving objects:  23% (2615/11368)
+2023-08-31T19:33:43.4349662Z Receiving objects:  24% (2729/11368)
+2023-08-31T19:33:43.4378382Z Receiving objects:  25% (2842/11368)
+2023-08-31T19:33:43.4410098Z Receiving objects:  26% (2956/11368)
+2023-08-31T19:33:43.4436788Z Receiving objects:  27% (3070/11368)
+2023-08-31T19:33:43.4465382Z Receiving objects:  28% (3184/11368)
+2023-08-31T19:33:43.4496318Z Receiving objects:  29% (3297/11368)
+2023-08-31T19:33:43.4534713Z Receiving objects:  30% (3411/11368)
+2023-08-31T19:33:43.4560433Z Receiving objects:  31% (3525/11368)
+2023-08-31T19:33:43.4580038Z Receiving objects:  32% (3638/11368)
+2023-08-31T19:33:43.4624369Z Receiving objects:  33% (3752/11368)
+2023-08-31T19:33:43.4642199Z Receiving objects:  34% (3866/11368)
+2023-08-31T19:33:43.4682198Z Receiving objects:  35% (3979/11368)
+2023-08-31T19:33:43.4710657Z Receiving objects:  36% (4093/11368)
+2023-08-31T19:33:43.4728236Z Receiving objects:  37% (4207/11368)
+2023-08-31T19:33:43.9220823Z Receiving objects:  38% (4320/11368)
+2023-08-31T19:33:44.0294429Z Receiving objects:  39% (4434/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0329433Z Receiving objects:  40% (4548/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0345929Z Receiving objects:  41% (4661/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0366339Z Receiving objects:  42% (4775/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0462622Z Receiving objects:  43% (4889/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0476126Z Receiving objects:  44% (5002/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0536373Z Receiving objects:  45% (5116/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0546684Z Receiving objects:  46% (5230/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0599975Z Receiving objects:  47% (5343/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0714848Z Receiving objects:  48% (5457/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0730563Z Receiving objects:  49% (5571/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0878781Z Receiving objects:  50% (5684/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0895475Z Receiving objects:  51% (5798/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0914771Z Receiving objects:  52% (5912/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0928464Z Receiving objects:  53% (6026/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0943901Z Receiving objects:  54% (6139/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0960144Z Receiving objects:  55% (6253/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.0973807Z Receiving objects:  56% (6367/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.1054576Z Receiving objects:  57% (6480/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.1110113Z Receiving objects:  58% (6594/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.1736774Z Receiving objects:  59% (6708/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:44.2587212Z Receiving objects:  60% (6821/11368), 14.60 MiB | 29.19 MiB/s
+2023-08-31T19:33:45.2592068Z Receiving objects:  60% (6908/11368), 30.55 MiB | 30.02 MiB/s
+2023-08-31T19:33:46.0239625Z Receiving objects:  60% (6910/11368), 62.61 MiB | 31.03 MiB/s
+2023-08-31T19:33:46.0245803Z Receiving objects:  61% (6935/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0247509Z Receiving objects:  62% (7049/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0265518Z Receiving objects:  63% (7162/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0292876Z Receiving objects:  64% (7276/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0304273Z Receiving objects:  65% (7390/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0345600Z Receiving objects:  66% (7503/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.0417746Z Receiving objects:  67% (7617/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1325326Z Receiving objects:  68% (7731/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1329866Z Receiving objects:  69% (7844/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1335169Z Receiving objects:  70% (7958/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1354338Z Receiving objects:  71% (8072/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1392565Z Receiving objects:  72% (8185/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1395437Z Receiving objects:  73% (8299/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1399424Z Receiving objects:  74% (8413/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1405552Z Receiving objects:  75% (8526/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1516492Z Receiving objects:  76% (8640/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1521617Z Receiving objects:  77% (8754/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1534288Z Receiving objects:  78% (8868/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.1539630Z Receiving objects:  79% (8981/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.2638071Z Receiving objects:  80% (9095/11368), 78.44 MiB | 31.14 MiB/s
+2023-08-31T19:33:46.4079880Z Receiving objects:  80% (9124/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4088636Z Receiving objects:  81% (9209/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4106397Z Receiving objects:  82% (9322/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4118086Z Receiving objects:  83% (9436/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4128607Z Receiving objects:  84% (9550/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4142309Z Receiving objects:  85% (9663/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4152753Z Receiving objects:  86% (9777/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4165960Z Receiving objects:  87% (9891/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4193222Z Receiving objects:  88% (10004/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4215800Z Receiving objects:  89% (10118/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4222037Z Receiving objects:  90% (10232/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4229535Z Receiving objects:  91% (10345/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4253809Z Receiving objects:  92% (10459/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4267428Z Receiving objects:  93% (10573/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4554966Z Receiving objects:  94% (10686/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4630240Z Receiving objects:  95% (10800/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4679640Z Receiving objects:  96% (10914/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4743501Z Receiving objects:  97% (11027/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4804681Z Receiving objects:  98% (11141/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4806517Z remote: Total 11368 (delta 428), reused 842 (delta 282), pack-reused 10346        
+2023-08-31T19:33:46.4898118Z Receiving objects:  99% (11255/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4898815Z Receiving objects: 100% (11368/11368), 92.83 MiB | 30.72 MiB/s
+2023-08-31T19:33:46.4900395Z Receiving objects: 100% (11368/11368), 98.13 MiB | 30.20 MiB/s, done.
+2023-08-31T19:33:46.4911902Z Resolving deltas:   0% (0/5913)
+2023-08-31T19:33:46.4918646Z Resolving deltas:   1% (61/5913)
+2023-08-31T19:33:46.4923685Z Resolving deltas:   2% (119/5913)
+2023-08-31T19:33:46.4927883Z Resolving deltas:   3% (178/5913)
+2023-08-31T19:33:46.4934879Z Resolving deltas:   4% (237/5913)
+2023-08-31T19:33:46.4943203Z Resolving deltas:   5% (296/5913)
+2023-08-31T19:33:46.4966822Z Resolving deltas:   6% (355/5913)
+2023-08-31T19:33:46.4979325Z Resolving deltas:   7% (414/5913)
+2023-08-31T19:33:46.4986285Z Resolving deltas:   8% (474/5913)
+2023-08-31T19:33:46.4994848Z Resolving deltas:   9% (533/5913)
+2023-08-31T19:33:46.5003044Z Resolving deltas:  10% (592/5913)
+2023-08-31T19:33:46.5025866Z Resolving deltas:  11% (651/5913)
+2023-08-31T19:33:46.5033039Z Resolving deltas:  12% (710/5913)
+2023-08-31T19:33:46.5053034Z Resolving deltas:  13% (769/5913)
+2023-08-31T19:33:46.5066405Z Resolving deltas:  14% (828/5913)
+2023-08-31T19:33:46.5078880Z Resolving deltas:  15% (887/5913)
+2023-08-31T19:33:46.5108309Z Resolving deltas:  16% (947/5913)
+2023-08-31T19:33:46.5141514Z Resolving deltas:  17% (1007/5913)
+2023-08-31T19:33:46.5155240Z Resolving deltas:  18% (1065/5913)
+2023-08-31T19:33:46.5161394Z Resolving deltas:  19% (1124/5913)
+2023-08-31T19:33:46.5167949Z Resolving deltas:  20% (1183/5913)
+2023-08-31T19:33:46.5173106Z Resolving deltas:  21% (1242/5913)
+2023-08-31T19:33:46.5176839Z Resolving deltas:  22% (1301/5913)
+2023-08-31T19:33:46.5183360Z Resolving deltas:  23% (1360/5913)
+2023-08-31T19:33:46.5189221Z Resolving deltas:  24% (1420/5913)
+2023-08-31T19:33:46.5194156Z Resolving deltas:  25% (1479/5913)
+2023-08-31T19:33:46.5199650Z Resolving deltas:  26% (1538/5913)
+2023-08-31T19:33:46.5204050Z Resolving deltas:  27% (1597/5913)
+2023-08-31T19:33:46.5224051Z Resolving deltas:  28% (1656/5913)
+2023-08-31T19:33:46.5245346Z Resolving deltas:  29% (1715/5913)
+2023-08-31T19:33:46.5264228Z Resolving deltas:  30% (1774/5913)
+2023-08-31T19:33:46.5269402Z Resolving deltas:  31% (1834/5913)
+2023-08-31T19:33:46.5277056Z Resolving deltas:  32% (1893/5913)
+2023-08-31T19:33:46.5285721Z Resolving deltas:  33% (1952/5913)
+2023-08-31T19:33:46.5294857Z Resolving deltas:  34% (2011/5913)
+2023-08-31T19:33:46.5306202Z Resolving deltas:  35% (2070/5913)
+2023-08-31T19:33:46.5559263Z Resolving deltas:  36% (2129/5913)
+2023-08-31T19:33:46.5683691Z Resolving deltas:  37% (2188/5913)
+2023-08-31T19:33:46.5894130Z Resolving deltas:  38% (2247/5913)
+2023-08-31T19:33:46.5917404Z Resolving deltas:  39% (2307/5913)
+2023-08-31T19:33:46.5928498Z Resolving deltas:  40% (2366/5913)
+2023-08-31T19:33:46.5943638Z Resolving deltas:  41% (2425/5913)
+2023-08-31T19:33:46.5956324Z Resolving deltas:  42% (2484/5913)
+2023-08-31T19:33:46.5973266Z Resolving deltas:  43% (2543/5913)
+2023-08-31T19:33:46.5991635Z Resolving deltas:  44% (2602/5913)
+2023-08-31T19:33:46.6009699Z Resolving deltas:  45% (2661/5913)
+2023-08-31T19:33:46.6023466Z Resolving deltas:  46% (2720/5913)
+2023-08-31T19:33:46.6035660Z Resolving deltas:  47% (2780/5913)
+2023-08-31T19:33:46.6047712Z Resolving deltas:  48% (2839/5913)
+2023-08-31T19:33:46.6058805Z Resolving deltas:  49% (2898/5913)
+2023-08-31T19:33:46.6083266Z Resolving deltas:  50% (2957/5913)
+2023-08-31T19:33:46.6097549Z Resolving deltas:  51% (3016/5913)
+2023-08-31T19:33:46.6130091Z Resolving deltas:  52% (3075/5913)
+2023-08-31T19:33:46.6150773Z Resolving deltas:  53% (3134/5913)
+2023-08-31T19:33:46.6162869Z Resolving deltas:  54% (3194/5913)
+2023-08-31T19:33:46.6169849Z Resolving deltas:  55% (3253/5913)
+2023-08-31T19:33:46.6177531Z Resolving deltas:  56% (3312/5913)
+2023-08-31T19:33:46.6186636Z Resolving deltas:  57% (3371/5913)
+2023-08-31T19:33:46.6200063Z Resolving deltas:  58% (3430/5913)
+2023-08-31T19:33:46.6212277Z Resolving deltas:  59% (3489/5913)
+2023-08-31T19:33:46.6221218Z Resolving deltas:  60% (3548/5913)
+2023-08-31T19:33:46.6239261Z Resolving deltas:  61% (3607/5913)
+2023-08-31T19:33:46.6278170Z Resolving deltas:  62% (3667/5913)
+2023-08-31T19:33:46.6290724Z Resolving deltas:  63% (3727/5913)
+2023-08-31T19:33:46.6304954Z Resolving deltas:  64% (3785/5913)
+2023-08-31T19:33:46.6312597Z Resolving deltas:  65% (3844/5913)
+2023-08-31T19:33:46.6325820Z Resolving deltas:  66% (3903/5913)
+2023-08-31T19:33:46.6340946Z Resolving deltas:  67% (3962/5913)
+2023-08-31T19:33:46.6349016Z Resolving deltas:  68% (4021/5913)
+2023-08-31T19:33:46.6368041Z Resolving deltas:  69% (4080/5913)
+2023-08-31T19:33:46.6379729Z Resolving deltas:  70% (4140/5913)
+2023-08-31T19:33:46.6483352Z Resolving deltas:  71% (4199/5913)
+2023-08-31T19:33:46.6488749Z Resolving deltas:  72% (4258/5913)
+2023-08-31T19:33:46.6495924Z Resolving deltas:  73% (4317/5913)
+2023-08-31T19:33:46.6505060Z Resolving deltas:  74% (4376/5913)
+2023-08-31T19:33:46.6535633Z Resolving deltas:  75% (4435/5913)
+2023-08-31T19:33:46.6553081Z Resolving deltas:  76% (4494/5913)
+2023-08-31T19:33:46.6575115Z Resolving deltas:  77% (4555/5913)
+2023-08-31T19:33:46.6649269Z Resolving deltas:  78% (4613/5913)
+2023-08-31T19:33:46.6658379Z Resolving deltas:  79% (4672/5913)
+2023-08-31T19:33:46.6671849Z Resolving deltas:  80% (4731/5913)
+2023-08-31T19:33:46.6677075Z Resolving deltas:  81% (4790/5913)
+2023-08-31T19:33:46.6688591Z Resolving deltas:  82% (4849/5913)
+2023-08-31T19:33:46.6692593Z Resolving deltas:  83% (4908/5913)
+2023-08-31T19:33:46.6708027Z Resolving deltas:  84% (4967/5913)
+2023-08-31T19:33:46.6715107Z Resolving deltas:  85% (5027/5913)
+2023-08-31T19:33:46.6722243Z Resolving deltas:  86% (5086/5913)
+2023-08-31T19:33:46.6728367Z Resolving deltas:  87% (5145/5913)
+2023-08-31T19:33:46.6746994Z Resolving deltas:  88% (5204/5913)
+2023-08-31T19:33:46.6755018Z Resolving deltas:  89% (5263/5913)
+2023-08-31T19:33:46.6813374Z Resolving deltas:  90% (5322/5913)
+2023-08-31T19:33:46.6817005Z Resolving deltas:  91% (5381/5913)
+2023-08-31T19:33:46.6831530Z Resolving deltas:  92% (5440/5913)
+2023-08-31T19:33:46.6835942Z Resolving deltas:  93% (5500/5913)
+2023-08-31T19:33:46.6841182Z Resolving deltas:  94% (5559/5913)
+2023-08-31T19:33:46.6863046Z Resolving deltas:  95% (5618/5913)
+2023-08-31T19:33:46.6888126Z Resolving deltas:  96% (5677/5913)
+2023-08-31T19:33:46.6894508Z Resolving deltas:  97% (5736/5913)
+2023-08-31T19:33:46.6959062Z Resolving deltas:  98% (5795/5913)
+2023-08-31T19:33:46.7043652Z Resolving deltas:  99% (5854/5913)
+2023-08-31T19:33:46.7045648Z Resolving deltas: 100% (5913/5913)
+2023-08-31T19:33:46.7046865Z Resolving deltas: 100% (5913/5913), done.
+2023-08-31T19:33:46.9576953Z From https://github.com/ACEnglish/truvari
+2023-08-31T19:33:46.9577955Z  * [new branch]      develop               -> origin/develop
+2023-08-31T19:33:46.9578561Z  * [new branch]      feature/unphased_phab -> origin/feature/unphased_phab
+2023-08-31T19:33:46.9579375Z  * [new branch]      feature/wgsrefine     -> origin/feature/wgsrefine
+2023-08-31T19:33:46.9580295Z  * [new branch]      main                  -> origin/main
+2023-08-31T19:33:46.9581083Z  * [new tag]         v0.1                  -> v0.1
+2023-08-31T19:33:46.9581567Z  * [new tag]         v0.2                  -> v0.2
+2023-08-31T19:33:46.9583337Z  * [new tag]         v0.3                  -> v0.3
+2023-08-31T19:33:46.9584124Z  * [new tag]         v0.4                  -> v0.4
+2023-08-31T19:33:46.9584867Z  * [new tag]         v1                    -> v1
+2023-08-31T19:33:46.9585486Z  * [new tag]         v1.1                  -> v1.1
+2023-08-31T19:33:46.9586233Z  * [new tag]         v1.2                  -> v1.2
+2023-08-31T19:33:46.9586751Z  * [new tag]         v1.3                  -> v1.3
+2023-08-31T19:33:46.9587552Z  * [new tag]         v1.3.1                -> v1.3.1
+2023-08-31T19:33:46.9588193Z  * [new tag]         v1.3.2                -> v1.3.2
+2023-08-31T19:33:46.9588755Z  * [new tag]         v1.3.3                -> v1.3.3
+2023-08-31T19:33:46.9589304Z  * [new tag]         v1.3.4                -> v1.3.4
+2023-08-31T19:33:46.9590057Z  * [new tag]         v2.0.0                -> v2.0.0
+2023-08-31T19:33:46.9590624Z  * [new tag]         v2.0.1                -> v2.0.1
+2023-08-31T19:33:46.9591427Z  * [new tag]         v2.0.2                -> v2.0.2
+2023-08-31T19:33:46.9591963Z  * [new tag]         v2.0.3                -> v2.0.3
+2023-08-31T19:33:46.9592512Z  * [new tag]         v2.0.4                -> v2.0.4
+2023-08-31T19:33:46.9592981Z  * [new tag]         v2.0.5                -> v2.0.5
+2023-08-31T19:33:46.9593753Z  * [new tag]         v2.1                  -> v2.1
+2023-08-31T19:33:46.9594275Z  * [new tag]         v2.1.1                -> v2.1.1
+2023-08-31T19:33:46.9594795Z  * [new tag]         v3.0.0                -> v3.0.0
+2023-08-31T19:33:46.9595261Z  * [new tag]         v3.0.1                -> v3.0.1
+2023-08-31T19:33:46.9595857Z  * [new tag]         v3.1.0                -> v3.1.0
+2023-08-31T19:33:46.9596403Z  * [new tag]         v3.2.0                -> v3.2.0
+2023-08-31T19:33:46.9596914Z  * [new tag]         v3.3.0                -> v3.3.0
+2023-08-31T19:33:46.9597825Z  * [new tag]         v3.4.0                -> v3.4.0
+2023-08-31T19:33:46.9598522Z  * [new tag]         v3.5.0                -> v3.5.0
+2023-08-31T19:33:46.9599308Z  * [new tag]         v3.5.1                -> v3.5.1
+2023-08-31T19:33:46.9599857Z  * [new tag]         v4.0.0                -> v4.0.0
+2023-08-31T19:33:46.9600793Z  * [new tag]         v4.1.0                -> v4.1.0
+2023-08-31T19:33:46.9665256Z [command]/usr/bin/git branch --list --remote origin/develop
+2023-08-31T19:33:46.9707003Z   origin/develop
+2023-08-31T19:33:46.9710043Z [command]/usr/bin/git rev-parse refs/remotes/origin/develop
+2023-08-31T19:33:46.9732438Z 79a342d56dbaeadcda4effec030264a44666d0e0
+2023-08-31T19:33:46.9737586Z ##[endgroup]
+2023-08-31T19:33:46.9738332Z ##[group]Determining the checkout info
+2023-08-31T19:33:46.9743651Z ##[endgroup]
+2023-08-31T19:33:46.9744479Z ##[group]Checking out the ref
+2023-08-31T19:33:46.9750359Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2023-08-31T19:33:47.2076644Z Switched to a new branch 'develop'
+2023-08-31T19:33:47.2078649Z branch 'develop' set up to track 'origin/develop'.
+2023-08-31T19:33:47.2109480Z ##[endgroup]
+2023-08-31T19:33:47.2170196Z [command]/usr/bin/git log -1 --format='%H'
+2023-08-31T19:33:47.2200127Z '79a342d56dbaeadcda4effec030264a44666d0e0'
+2023-08-31T19:33:47.2213420Z ##[group]Removing auth
+2023-08-31T19:33:47.2217679Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-31T19:33:47.2256702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-31T19:33:47.2554629Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-31T19:33:47.2575901Z http.https://github.com/.extraheader
+2023-08-31T19:33:47.2590462Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-31T19:33:47.2656327Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-31T19:33:47.3032031Z ##[endgroup]
+2023-08-31T19:33:47.3534018Z ##[group]Run actions/setup-python@v4
+2023-08-31T19:33:47.3534486Z with:
+2023-08-31T19:33:47.3534764Z   python-version: 3.10.4
+2023-08-31T19:33:47.3535118Z   check-latest: false
+2023-08-31T19:33:47.3535679Z   token: ***
+2023-08-31T19:33:47.3536078Z   update-environment: true
+2023-08-31T19:33:47.3536461Z   allow-prereleases: false
+2023-08-31T19:33:47.3536807Z ##[endgroup]
+2023-08-31T19:33:47.5907576Z ##[group]Installed versions
+2023-08-31T19:33:47.5936756Z Version 3.10.4 was not found in the local cache
+2023-08-31T19:33:48.2360057Z Version 3.10.4 is available for downloading
+2023-08-31T19:33:48.2361067Z Download from "https://github.com/actions/python-versions/releases/download/3.10.4-2650226428/python-3.10.4-linux-22.04-x64.tar.gz"
+2023-08-31T19:33:49.3218642Z Extract downloaded archive
+2023-08-31T19:33:49.3383087Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/b19cfa42-becb-4d2f-9646-c59851177ccb -f /home/runner/work/_temp/406f3d21-faff-4ecd-b598-14aaa6ecfbc1
+2023-08-31T19:33:51.3658975Z Execute installation script
+2023-08-31T19:33:51.3776451Z Check if Python hostedtoolcache folder exist...
+2023-08-31T19:33:51.3776862Z Create Python 3.10.4 folder
+2023-08-31T19:33:51.3804977Z Copy Python binaries to hostedtoolcache folder
+2023-08-31T19:33:51.9959282Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2023-08-31T19:33:52.0026324Z Upgrading pip...
+2023-08-31T19:33:55.6562579Z Looking in links: /tmp/tmpme4k7pef
+2023-08-31T19:33:55.6570244Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (58.1.0)
+2023-08-31T19:33:55.6575064Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (22.0.4)
+2023-08-31T19:33:58.5022930Z Collecting pip
+2023-08-31T19:33:58.6134071Z Downloading pip-23.2.1-py3-none-any.whl (2.1 MB)
+2023-08-31T19:33:59.2303870Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 3.4 MB/s eta 0:00:00
+2023-08-31T19:33:59.2305431Z 
+2023-08-31T19:33:59.2871721Z Installing collected packages: pip
+2023-08-31T19:34:00.8653758Z Successfully installed pip-23.2.1
+2023-08-31T19:34:00.9403663Z Create complete file
+2023-08-31T19:34:00.9494088Z Successfully set up CPython (3.10.4)
+2023-08-31T19:34:00.9497401Z ##[endgroup]
+2023-08-31T19:34:01.0823864Z ##[group]Run actions/cache@v3
+2023-08-31T19:34:01.0824240Z with:
+2023-08-31T19:34:01.0824734Z   path: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.0825265Z   key: /opt/hostedtoolcache/Python/3.10.4/x64-0c2620a39504e3c92e7e494735ebe3843e03c26dc9deca33b7d0045da761d73d
+2023-08-31T19:34:01.0825862Z   enableCrossOsArchive: false
+2023-08-31T19:34:01.0826223Z   fail-on-cache-miss: false
+2023-08-31T19:34:01.0826766Z   lookup-only: false
+2023-08-31T19:34:01.0827036Z env:
+2023-08-31T19:34:01.0827720Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.0828584Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:34:01.0829214Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.0829633Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.0830033Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.0830735Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:34:01.0831064Z ##[endgroup]
+2023-08-31T19:34:01.6028634Z Cache not found for input keys: /opt/hostedtoolcache/Python/3.10.4/x64-0c2620a39504e3c92e7e494735ebe3843e03c26dc9deca33b7d0045da761d73d
+2023-08-31T19:34:01.6213740Z ##[group]Run python3 -m pip install --upgrade pip setuptools
+2023-08-31T19:34:01.6214413Z [36;1mpython3 -m pip install --upgrade pip setuptools[0m
+2023-08-31T19:34:01.6215012Z [36;1mpython3 -m pip install Cython pylint anybadge coverage[0m
+2023-08-31T19:34:01.6215348Z [36;1mpython3 -m pip install .[0m
+2023-08-31T19:34:01.6284294Z shell: /usr/bin/bash -e {0}
+2023-08-31T19:34:01.6284662Z env:
+2023-08-31T19:34:01.6285346Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.6285808Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:34:01.6286264Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.6286738Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.6287098Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:34:01.6287511Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:34:01.6287884Z ##[endgroup]
+2023-08-31T19:34:02.2761187Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (22.0.4)
+2023-08-31T19:34:02.4926983Z Collecting pip
+2023-08-31T19:34:02.4930399Z   Obtaining dependency information for pip from https://files.pythonhosted.org/packages/50/c2/e06851e8cc28dcad7c155f4753da8833ac06a5c704c109313b8d5a62968a/pip-23.2.1-py3-none-any.whl.metadata
+2023-08-31T19:34:02.6012453Z   Downloading pip-23.2.1-py3-none-any.whl.metadata (4.2 kB)
+2023-08-31T19:34:02.6058333Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (58.1.0)
+2023-08-31T19:34:03.0053392Z Collecting setuptools
+2023-08-31T19:34:03.0056495Z   Obtaining dependency information for setuptools from https://files.pythonhosted.org/packages/4f/ab/0bcfebdfc3bfa8554b2b2c97a555569c4c1ebc74ea288741ea8326c51906/setuptools-68.1.2-py3-none-any.whl.metadata
+2023-08-31T19:34:03.0113064Z   Downloading setuptools-68.1.2-py3-none-any.whl.metadata (6.2 kB)
+2023-08-31T19:34:03.0895676Z Using cached pip-23.2.1-py3-none-any.whl (2.1 MB)
+2023-08-31T19:34:03.0992629Z Downloading setuptools-68.1.2-py3-none-any.whl (805 kB)
+2023-08-31T19:34:03.1694262Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.1/805.1 kB 12.0 MB/s eta 0:00:00
+2023-08-31T19:34:03.3002229Z Installing collected packages: setuptools, pip
+2023-08-31T19:34:03.3003796Z   Attempting uninstall: setuptools
+2023-08-31T19:34:03.3014114Z     Found existing installation: setuptools 58.1.0
+2023-08-31T19:34:03.3249178Z     Uninstalling setuptools-58.1.0:
+2023-08-31T19:34:03.3396100Z       Successfully uninstalled setuptools-58.1.0
+2023-08-31T19:34:03.9673094Z   Attempting uninstall: pip
+2023-08-31T19:34:03.9681474Z     Found existing installation: pip 22.0.4
+2023-08-31T19:34:04.0626968Z     Uninstalling pip-22.0.4:
+2023-08-31T19:34:04.1835799Z       Successfully uninstalled pip-22.0.4
+2023-08-31T19:34:05.8060263Z Successfully installed pip-23.2.1 setuptools-68.1.2
+2023-08-31T19:34:07.6414962Z Collecting Cython
+2023-08-31T19:34:07.6418057Z   Obtaining dependency information for Cython from https://files.pythonhosted.org/packages/e8/1a/26113a7a220b360a13f1a060deb1461bf55d433673dc79e523b6648ccc2d/Cython-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+2023-08-31T19:34:07.7467661Z   Downloading Cython-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+2023-08-31T19:34:07.8596310Z Collecting pylint
+2023-08-31T19:34:07.8601369Z   Obtaining dependency information for pylint from https://files.pythonhosted.org/packages/63/cc/00cbe3f09bd6d98d79ee66cf76451d253fb1a8a59029535ea2b6ba8a824d/pylint-2.17.5-py3-none-any.whl.metadata
+2023-08-31T19:34:07.8655238Z   Downloading pylint-2.17.5-py3-none-any.whl.metadata (12 kB)
+2023-08-31T19:34:07.9036467Z Collecting anybadge
+2023-08-31T19:34:07.9196757Z   Downloading anybadge-1.14.0-py3-none-any.whl (27 kB)
+2023-08-31T19:34:08.6557986Z Collecting coverage
+2023-08-31T19:34:08.6563266Z   Obtaining dependency information for coverage from https://files.pythonhosted.org/packages/f7/02/f24041262825e15425fc77ecc63555cf3741d3eec3ed06acdd4bdd636a9b/coverage-7.3.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+2023-08-31T19:34:08.6615131Z   Downloading coverage-7.3.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+2023-08-31T19:34:08.7304597Z Collecting platformdirs>=2.2.0 (from pylint)
+2023-08-31T19:34:08.7310840Z   Obtaining dependency information for platformdirs>=2.2.0 from https://files.pythonhosted.org/packages/14/51/fe5a0d6ea589f0d4a1b97824fb518962ad48b27cd346dcdfa2405187997a/platformdirs-3.10.0-py3-none-any.whl.metadata
+2023-08-31T19:34:08.7362994Z   Downloading platformdirs-3.10.0-py3-none-any.whl.metadata (11 kB)
+2023-08-31T19:34:08.8535120Z Collecting astroid<=2.17.0-dev0,>=2.15.6 (from pylint)
+2023-08-31T19:34:08.8537200Z   Obtaining dependency information for astroid<=2.17.0-dev0,>=2.15.6 from https://files.pythonhosted.org/packages/86/6f/22a8153395e193369fd43ca9d54123e74360115df4f10902516313eb9f10/astroid-2.15.6-py3-none-any.whl.metadata
+2023-08-31T19:34:08.8649293Z   Downloading astroid-2.15.6-py3-none-any.whl.metadata (4.7 kB)
+2023-08-31T19:34:08.9635051Z Collecting isort<6,>=4.2.5 (from pylint)
+2023-08-31T19:34:08.9680500Z   Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+2023-08-31T19:34:08.9921801Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 4.0 MB/s eta 0:00:00
+2023-08-31T19:34:09.0194485Z Collecting mccabe<0.8,>=0.6 (from pylint)
+2023-08-31T19:34:09.0244099Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2023-08-31T19:34:09.0927200Z Collecting tomlkit>=0.10.1 (from pylint)
+2023-08-31T19:34:09.0930470Z   Obtaining dependency information for tomlkit>=0.10.1 from https://files.pythonhosted.org/packages/a0/6d/808775ed618e51edaa7bbe6759e22e1c7eafe359af6e084700c6d39d3455/tomlkit-0.12.1-py3-none-any.whl.metadata
+2023-08-31T19:34:09.0985151Z   Downloading tomlkit-0.12.1-py3-none-any.whl.metadata (2.7 kB)
+2023-08-31T19:34:09.1321691Z Collecting dill>=0.2 (from pylint)
+2023-08-31T19:34:09.1325010Z   Obtaining dependency information for dill>=0.2 from https://files.pythonhosted.org/packages/f5/3a/74a29b11cf2cdfcd6ba89c0cecd70b37cd1ba7b77978ce611eb7a146a832/dill-0.3.7-py3-none-any.whl.metadata
+2023-08-31T19:34:09.1382578Z   Downloading dill-0.3.7-py3-none-any.whl.metadata (9.9 kB)
+2023-08-31T19:34:09.1776015Z Collecting tomli>=1.1.0 (from pylint)
+2023-08-31T19:34:09.1830453Z   Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+2023-08-31T19:34:09.2379863Z Collecting packaging (from anybadge)
+2023-08-31T19:34:09.2441351Z   Downloading packaging-23.1-py3-none-any.whl (48 kB)
+2023-08-31T19:34:09.2510362Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 kB 12.7 MB/s eta 0:00:00
+2023-08-31T19:34:09.4070796Z Collecting lazy-object-proxy>=1.4.0 (from astroid<=2.17.0-dev0,>=2.15.6->pylint)
+2023-08-31T19:34:09.4131649Z   Downloading lazy_object_proxy-1.9.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (63 kB)
+2023-08-31T19:34:09.4197605Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 kB 16.3 MB/s eta 0:00:00
+2023-08-31T19:34:09.6214336Z Collecting wrapt<2,>=1.11 (from astroid<=2.17.0-dev0,>=2.15.6->pylint)
+2023-08-31T19:34:09.6268277Z   Downloading wrapt-1.15.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (78 kB)
+2023-08-31T19:34:09.6338053Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 19.3 MB/s eta 0:00:00
+2023-08-31T19:34:09.6732907Z Collecting typing-extensions>=4.0.0 (from astroid<=2.17.0-dev0,>=2.15.6->pylint)
+2023-08-31T19:34:09.6735321Z   Obtaining dependency information for typing-extensions>=4.0.0 from https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl.metadata
+2023-08-31T19:34:09.6787939Z   Downloading typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+2023-08-31T19:34:09.7504703Z Downloading Cython-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+2023-08-31T19:34:09.8023622Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 74.1 MB/s eta 0:00:00
+2023-08-31T19:34:09.8089296Z Downloading pylint-2.17.5-py3-none-any.whl (536 kB)
+2023-08-31T19:34:09.8205803Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.7/536.7 kB 63.0 MB/s eta 0:00:00
+2023-08-31T19:34:09.8266876Z Downloading coverage-7.3.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (229 kB)
+2023-08-31T19:34:09.8345117Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.0/229.0 kB 47.6 MB/s eta 0:00:00
+2023-08-31T19:34:09.8403562Z Downloading astroid-2.15.6-py3-none-any.whl (278 kB)
+2023-08-31T19:34:09.8486897Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.3/278.3 kB 51.9 MB/s eta 0:00:00
+2023-08-31T19:34:09.8536651Z Downloading dill-0.3.7-py3-none-any.whl (115 kB)
+2023-08-31T19:34:09.8606678Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.3/115.3 kB 32.0 MB/s eta 0:00:00
+2023-08-31T19:34:09.8657493Z Downloading platformdirs-3.10.0-py3-none-any.whl (17 kB)
+2023-08-31T19:34:09.8734827Z Downloading tomlkit-0.12.1-py3-none-any.whl (37 kB)
+2023-08-31T19:34:09.8814545Z Downloading typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+2023-08-31T19:34:10.0562160Z Installing collected packages: wrapt, typing-extensions, tomlkit, tomli, platformdirs, packaging, mccabe, lazy-object-proxy, isort, dill, Cython, coverage, astroid, anybadge, pylint
+2023-08-31T19:34:12.2871222Z Successfully installed Cython-3.0.2 anybadge-1.14.0 astroid-2.15.6 coverage-7.3.0 dill-0.3.7 isort-5.12.0 lazy-object-proxy-1.9.0 mccabe-0.7.0 packaging-23.1 platformdirs-3.10.0 pylint-2.17.5 tomli-2.0.1 tomlkit-0.12.1 typing-extensions-4.7.1 wrapt-1.15.0
+2023-08-31T19:34:13.1656711Z Processing /home/runner/work/truvari/truvari
+2023-08-31T19:34:13.1689050Z   Installing build dependencies: started
+2023-08-31T19:34:15.6492645Z   Installing build dependencies: finished with status 'done'
+2023-08-31T19:34:15.6502450Z   Getting requirements to build wheel: started
+2023-08-31T19:34:16.0568276Z   Getting requirements to build wheel: finished with status 'done'
+2023-08-31T19:34:16.0599685Z   Preparing metadata (pyproject.toml): started
+2023-08-31T19:34:16.4567074Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:16.6674904Z Collecting pywfa>=0.5.1 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:17.0190180Z   Downloading pywfa-0.5.1.tar.gz (3.5 MB)
+2023-08-31T19:34:17.3901170Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 9.5 MB/s eta 0:00:00
+2023-08-31T19:34:17.5895232Z   Installing build dependencies: started
+2023-08-31T19:34:21.5209624Z   Installing build dependencies: finished with status 'done'
+2023-08-31T19:34:21.5217244Z   Getting requirements to build wheel: started
+2023-08-31T19:34:30.3453200Z   Getting requirements to build wheel: finished with status 'done'
+2023-08-31T19:34:30.3485761Z   Installing backend dependencies: started
+2023-08-31T19:34:31.4587745Z   Installing backend dependencies: finished with status 'done'
+2023-08-31T19:34:31.4598339Z   Preparing metadata (pyproject.toml): started
+2023-08-31T19:34:38.5866265Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:38.7523484Z Collecting rich>=12.5.1 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:38.7526803Z   Obtaining dependency information for rich>=12.5.1 from https://files.pythonhosted.org/packages/8d/5f/21a93b2ec205f4b79853ff6e838e3c99064d5dbe85ec6b05967506f14af0/rich-13.5.2-py3-none-any.whl.metadata
+2023-08-31T19:34:38.7579921Z   Downloading rich-13.5.2-py3-none-any.whl.metadata (18 kB)
+2023-08-31T19:34:38.8623202Z Collecting edlib>=1.3.9 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:38.8707451Z   Downloading edlib-1.3.9-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (363 kB)
+2023-08-31T19:34:38.8819976Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.3/363.3 kB 50.4 MB/s eta 0:00:00
+2023-08-31T19:34:38.9572742Z Collecting pysam>=0.19.1 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:38.9678527Z   Downloading pysam-0.21.0-cp310-cp310-manylinux_2_24_x86_64.whl (20.0 MB)
+2023-08-31T19:34:39.2334248Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.0/20.0 MB 56.7 MB/s eta 0:00:00
+2023-08-31T19:34:39.3344539Z Collecting intervaltree>=3.0.2 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:39.3421158Z   Downloading intervaltree-3.1.0.tar.gz (32 kB)
+2023-08-31T19:34:39.3619499Z   Installing build dependencies: started
+2023-08-31T19:34:41.6734587Z   Installing build dependencies: finished with status 'done'
+2023-08-31T19:34:41.6745476Z   Getting requirements to build wheel: started
+2023-08-31T19:34:41.9329296Z   Getting requirements to build wheel: finished with status 'done'
+2023-08-31T19:34:41.9352998Z   Preparing metadata (pyproject.toml): started
+2023-08-31T19:34:42.2397420Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:42.2942808Z Collecting joblib>=1.2.0 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:42.2951013Z   Obtaining dependency information for joblib>=1.2.0 from https://files.pythonhosted.org/packages/10/40/d551139c85db202f1f384ba8bcf96aca2f329440a844f924c8a0040b6d02/joblib-1.3.2-py3-none-any.whl.metadata
+2023-08-31T19:34:42.3009870Z   Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+2023-08-31T19:34:42.8377032Z Collecting numpy>=1.23.3 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:42.8380910Z   Obtaining dependency information for numpy>=1.23.3 from https://files.pythonhosted.org/packages/71/3c/3b1981c6a1986adc9ee7db760c0c34ea5b14ac3da9ecfcf1ea2a4ec6c398/numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+2023-08-31T19:34:42.8460194Z   Downloading numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+2023-08-31T19:34:42.9396344Z Collecting pytabix>=0.1 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:42.9469773Z   Downloading pytabix-0.1.tar.gz (45 kB)
+2023-08-31T19:34:42.9550151Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 7.7 MB/s eta 0:00:00
+2023-08-31T19:34:42.9676471Z   Installing build dependencies: started
+2023-08-31T19:34:45.3883256Z   Installing build dependencies: finished with status 'done'
+2023-08-31T19:34:45.3892111Z   Getting requirements to build wheel: started
+2023-08-31T19:34:45.6119212Z   Getting requirements to build wheel: finished with status 'done'
+2023-08-31T19:34:45.6144361Z   Preparing metadata (pyproject.toml): started
+2023-08-31T19:34:45.8682118Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:45.9640289Z Collecting bwapy>=0.1.4 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:46.0534185Z   Downloading bwapy-0.1.4.tar.gz (882 kB)
+2023-08-31T19:34:46.0700145Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 882.3/882.3 kB 69.8 MB/s eta 0:00:00
+2023-08-31T19:34:46.1670774Z   Installing build dependencies: started
+2023-08-31T19:34:48.4876707Z   Installing build dependencies: finished with status 'done'
+2023-08-31T19:34:48.4885438Z   Getting requirements to build wheel: started
+2023-08-31T19:34:48.7548379Z   Getting requirements to build wheel: finished with status 'done'
+2023-08-31T19:34:48.7581516Z   Preparing metadata (pyproject.toml): started
+2023-08-31T19:34:49.0454831Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:49.4103432Z Collecting pandas>=1.4.4 (from Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:49.4107457Z   Obtaining dependency information for pandas>=1.4.4 from https://files.pythonhosted.org/packages/fb/4f/4a4372b2e24439f559b73318683486831d75e59544ae02bf8dec8dd6f48b/pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+2023-08-31T19:34:49.4233054Z   Downloading pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+2023-08-31T19:34:49.4895880Z Collecting wheel>=0.34.2 (from bwapy>=0.1.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:49.4905506Z   Obtaining dependency information for wheel>=0.34.2 from https://files.pythonhosted.org/packages/b8/8b/31273bf66016be6ad22bb7345c37ff350276cfd46e389a0c2ac5da9d9073/wheel-0.41.2-py3-none-any.whl.metadata
+2023-08-31T19:34:49.4932661Z   Using cached wheel-0.41.2-py3-none-any.whl.metadata (2.2 kB)
+2023-08-31T19:34:49.4957444Z Requirement already satisfied: setuptools>=49.2.0 in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (from bwapy>=0.1.4->Truvari==4.1.1.dev0+79a342d) (68.1.2)
+2023-08-31T19:34:49.8117367Z Collecting cffi (from bwapy>=0.1.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:49.8168536Z   Downloading cffi-1.15.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
+2023-08-31T19:34:49.8280813Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 441.8/441.8 kB 59.2 MB/s eta 0:00:00
+2023-08-31T19:34:49.8736471Z Collecting sortedcontainers<3.0,>=2.0 (from intervaltree>=3.0.2->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:49.8826238Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2023-08-31T19:34:50.0813384Z Collecting python-dateutil>=2.8.2 (from pandas>=1.4.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.0865563Z   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+2023-08-31T19:34:50.0958509Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 44.3 MB/s eta 0:00:00
+2023-08-31T19:34:50.1949515Z Collecting pytz>=2020.1 (from pandas>=1.4.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.2003389Z   Downloading pytz-2023.3-py2.py3-none-any.whl (502 kB)
+2023-08-31T19:34:50.2123488Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 62.2 MB/s eta 0:00:00
+2023-08-31T19:34:50.2915121Z Collecting tzdata>=2022.1 (from pandas>=1.4.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.3060526Z   Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+2023-08-31T19:34:50.3165633Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 52.7 MB/s eta 0:00:00
+2023-08-31T19:34:50.3295429Z Requirement already satisfied: cython in /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages (from pysam>=0.19.1->Truvari==4.1.1.dev0+79a342d) (3.0.2)
+2023-08-31T19:34:50.3919681Z Collecting markdown-it-py>=2.2.0 (from rich>=12.5.1->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.3922472Z   Obtaining dependency information for markdown-it-py>=2.2.0 from https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl.metadata
+2023-08-31T19:34:50.3980698Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+2023-08-31T19:34:50.4586791Z Collecting pygments<3.0.0,>=2.13.0 (from rich>=12.5.1->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.4593716Z   Obtaining dependency information for pygments<3.0.0,>=2.13.0 from https://files.pythonhosted.org/packages/43/88/29adf0b44ba6ac85045e63734ae0997d3c58d8b1a91c914d240828d0d73d/Pygments-2.16.1-py3-none-any.whl.metadata
+2023-08-31T19:34:50.4644801Z   Downloading Pygments-2.16.1-py3-none-any.whl.metadata (2.5 kB)
+2023-08-31T19:34:50.5287786Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.5.1->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.5342791Z   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2023-08-31T19:34:50.5880333Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=1.4.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.5929748Z   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+2023-08-31T19:34:50.7076697Z Collecting pycparser (from cffi->bwapy>=0.1.4->Truvari==4.1.1.dev0+79a342d)
+2023-08-31T19:34:50.7140741Z   Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+2023-08-31T19:34:50.7216942Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 24.1 MB/s eta 0:00:00
+2023-08-31T19:34:50.7639123Z Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+2023-08-31T19:34:50.7732363Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 kB 49.4 MB/s eta 0:00:00
+2023-08-31T19:34:50.7814538Z Downloading numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+2023-08-31T19:34:51.0148902Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 63.6 MB/s eta 0:00:00
+2023-08-31T19:34:51.0260328Z Downloading pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+2023-08-31T19:34:51.1972800Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 70.9 MB/s eta 0:00:00
+2023-08-31T19:34:51.2034794Z Downloading rich-13.5.2-py3-none-any.whl (239 kB)
+2023-08-31T19:34:51.2200232Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.7/239.7 kB 20.4 MB/s eta 0:00:00
+2023-08-31T19:34:51.2255785Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+2023-08-31T19:34:51.2356631Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 11.5 MB/s eta 0:00:00
+2023-08-31T19:34:51.2401823Z Downloading Pygments-2.16.1-py3-none-any.whl (1.2 MB)
+2023-08-31T19:34:51.2579081Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 77.3 MB/s eta 0:00:00
+2023-08-31T19:34:51.2618946Z Using cached wheel-0.41.2-py3-none-any.whl (64 kB)
+2023-08-31T19:34:51.4389516Z Building wheels for collected packages: Truvari, bwapy, intervaltree, pytabix, pywfa
+2023-08-31T19:34:51.4407139Z   Building wheel for Truvari (pyproject.toml): started
+2023-08-31T19:34:51.9337096Z   Building wheel for Truvari (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:51.9357594Z   Created wheel for Truvari: filename=Truvari-4.1.1.dev0+79a342d-py3-none-any.whl size=91196 sha256=84232a502410bf5c47f66ad95ee085ee550249bf855d4498ee6081ad755eb763
+2023-08-31T19:34:51.9363552Z   Stored in directory: /tmp/pip-ephem-wheel-cache-2avbdgvz/wheels/ab/8f/62/40f9ac8c8a571f4e4d61121822691c555da5ad18e9e0764b46
+2023-08-31T19:34:51.9437425Z   Building wheel for bwapy (pyproject.toml): started
+2023-08-31T19:34:52.8018168Z   Building wheel for bwapy (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:52.8033331Z   Created wheel for bwapy: filename=bwapy-0.1.4-cp310-cp310-linux_x86_64.whl size=220724 sha256=bcec20e96d3499b6aff758813508c6f26e008458ef21744168d4c051fa57e22c
+2023-08-31T19:34:52.8037707Z   Stored in directory: /home/runner/.cache/pip/wheels/9f/00/83/af85b7b05b07bca59c20ae44d1aa693fae4e57439f08f3de13
+2023-08-31T19:34:52.8071255Z   Building wheel for intervaltree (pyproject.toml): started
+2023-08-31T19:34:53.1302023Z   Building wheel for intervaltree (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:53.1313472Z   Created wheel for intervaltree: filename=intervaltree-3.1.0-py2.py3-none-any.whl size=26094 sha256=cbaec35ca0b18e46c4bf25b7ed4940c2691423478fe6f13b836038a0a41846c5
+2023-08-31T19:34:53.1319722Z   Stored in directory: /home/runner/.cache/pip/wheels/fa/80/8c/43488a924a046b733b64de3fac99252674c892a4c3801c0a61
+2023-08-31T19:34:53.1363044Z   Building wheel for pytabix (pyproject.toml): started
+2023-08-31T19:34:55.8867652Z   Building wheel for pytabix (pyproject.toml): finished with status 'done'
+2023-08-31T19:34:55.8880315Z   Created wheel for pytabix: filename=pytabix-0.1-cp310-cp310-linux_x86_64.whl size=121467 sha256=c53b5884a13841847bb30cb1ddfa1819e818de0e02e80399fdd903d29ef2630b
+2023-08-31T19:34:55.8882737Z   Stored in directory: /home/runner/.cache/pip/wheels/ea/cb/a7/1d7bb3b01c1f6a75206fba17b6f453b35e3020a9f5f3bedfc6
+2023-08-31T19:34:55.8917451Z   Building wheel for pywfa (pyproject.toml): started
+2023-08-31T19:35:13.0013980Z   Building wheel for pywfa (pyproject.toml): finished with status 'done'
+2023-08-31T19:35:13.0166291Z   Created wheel for pywfa: filename=pywfa-0.5.1-py3-none-any.whl size=4612475 sha256=b75e6a0f25391b025644e1441b24f4e62583abc18126e546829bb2535d4e1f33
+2023-08-31T19:35:13.0169266Z   Stored in directory: /home/runner/.cache/pip/wheels/13/3b/18/24b7837bde94a14383336f60ee2b7ab4ed0e4bf0f956e34bc1
+2023-08-31T19:35:13.0211629Z Successfully built Truvari bwapy intervaltree pytabix pywfa
+2023-08-31T19:35:13.3072493Z Installing collected packages: sortedcontainers, pytz, pytabix, edlib, wheel, tzdata, six, pywfa, pysam, pygments, pycparser, numpy, mdurl, joblib, intervaltree, python-dateutil, markdown-it-py, cffi, rich, pandas, bwapy, Truvari
+2023-08-31T19:35:25.4423724Z Successfully installed Truvari-4.1.1.dev0+79a342d bwapy-0.1.4 cffi-1.15.1 edlib-1.3.9 intervaltree-3.1.0 joblib-1.3.2 markdown-it-py-3.0.0 mdurl-0.1.2 numpy-1.25.2 pandas-2.1.0 pycparser-2.21 pygments-2.16.1 pysam-0.21.0 pytabix-0.1 python-dateutil-2.8.2 pytz-2023.3 pywfa-0.5.1 rich-13.5.2 six-1.16.0 sortedcontainers-2.4.0 tzdata-2023.3 wheel-0.41.2
+2023-08-31T19:35:25.8697647Z ##[group]Run bash repo_utils/truvari_ssshtests.sh
+2023-08-31T19:35:25.8698075Z [36;1mbash repo_utils/truvari_ssshtests.sh[0m
+2023-08-31T19:35:25.8767110Z shell: /usr/bin/bash -e {0}
+2023-08-31T19:35:25.8767380Z env:
+2023-08-31T19:35:25.8767689Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:35:25.8768107Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:35:25.8768515Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:35:25.8768877Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:35:25.8769252Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:35:25.8769633Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:35:25.8769943Z ##[endgroup]
+2023-08-31T19:35:25.9112910Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2023-08-31T19:35:25.9117996Z                                  Dload  Upload   Total   Spent    Left  Speed
+2023-08-31T19:35:25.9118612Z 
+2023-08-31T19:35:26.2069382Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2023-08-31T19:35:26.2070093Z 100 11725  100 11725    0     0  39667      0 --:--:-- --:--:-- --:--:-- 39745
+2023-08-31T19:35:27.6438101Z 
+2023-08-31T19:35:27.6439690Z <FLAKY>[0;1mtest_anno_hompct[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:27.6479970Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 11)
+2023-08-31T19:35:27.9248714Z <FLAKY> [1;32mPASS[0m "bd43bd21947a5b64a7efe02ff80eeee3" == "bd43bd21947a5b64a7efe02ff80eeee3" (LINE 37)
+2023-08-31T19:35:29.1040112Z 
+2023-08-31T19:35:29.1041226Z <FLAKY>[0;1mtest_anno_remap[0m ran in 2 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:29.1084306Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 19)
+2023-08-31T19:35:29.3413298Z <FLAKY> [1;32mPASS[0m "5cd02ae6bab311ccc1c1fae98a6ca807" == "5cd02ae6bab311ccc1c1fae98a6ca807" (LINE 37)
+2023-08-31T19:35:30.5216194Z 
+2023-08-31T19:35:30.5217415Z <FLAKY>[0;1mtest_anno_gcpct[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:30.5274387Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 27)
+2023-08-31T19:35:30.7584829Z <FLAKY> [1;32mPASS[0m "a50df944b806c24b735e76877a7716cf" == "a50df944b806c24b735e76877a7716cf" (LINE 37)
+2023-08-31T19:35:31.8860374Z 
+2023-08-31T19:35:31.8861603Z <FLAKY>[0;1mtest_anno_gtcnt[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:31.8898058Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 35)
+2023-08-31T19:35:32.1349000Z <FLAKY> [1;32mPASS[0m "0165218b194c952347f7546c66003658" == "0165218b194c952347f7546c66003658" (LINE 37)
+2023-08-31T19:35:33.2551085Z 
+2023-08-31T19:35:33.2553520Z <FLAKY>[0;1mtest_anno_numneigh[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:33.2608173Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 43)
+2023-08-31T19:35:33.4867103Z <FLAKY> [1;32mPASS[0m "330112a58f4742a049271d32caaefb56" == "330112a58f4742a049271d32caaefb56" (LINE 37)
+2023-08-31T19:35:34.5830348Z 
+2023-08-31T19:35:34.5832165Z <FLAKY>[0;1mtest_anno_svinfo[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:35:34.5883851Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:35:34.8042472Z <FLAKY> [1;32mPASS[0m "04fdf06ecf5f944d5c537a9569f1c02a" == "04fdf06ecf5f944d5c537a9569f1c02a" (LINE 37)
+2023-08-31T19:35:36.0615071Z 
+2023-08-31T19:35:36.0616325Z <FLAKY>[0;1mtest_anno_grm[0m ran in 2 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:35:36.0655876Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 59)
+2023-08-31T19:35:36.6325401Z 
+2023-08-31T19:35:36.6326668Z [0;1mtest_anno_grm[0m ran in 0 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:35:36.6365445Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:35:38.8623982Z 
+2023-08-31T19:35:38.8625215Z <FLAKY>[0;1mtest_anno_trf[0m ran in 2 sec with 4/0 lines to STDERR/OUT
+2023-08-31T19:35:38.8663278Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 72)
+2023-08-31T19:36:13.3847408Z 
+2023-08-31T19:36:13.3848910Z <FLAKY>[0;1mtest_anno_trf_reg[0m ran in 35 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:36:13.3886514Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 83)
+2023-08-31T19:36:14.4009833Z 
+2023-08-31T19:36:14.4011747Z <FLAKY>[0;1mtest_anno_badparam[0m ran in 1 sec with 10/0 lines to STDERR/OUT
+2023-08-31T19:36:14.4050047Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 93)
+2023-08-31T19:36:15.5499832Z 
+2023-08-31T19:36:15.5501327Z <FLAKY>[0;1mtest_anno_repmask[0m ran in 1 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:36:15.5545377Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 104)
+2023-08-31T19:36:15.5649139Z <FLAKY> [1;32mPASS[0m "4362695661169049df2f00047ca7f4c7" == "4362695661169049df2f00047ca7f4c7" (LINE 105)
+2023-08-31T19:36:16.6494945Z 
+2023-08-31T19:36:16.6496293Z <FLAKY>[0;1mtest_anno_repmask_err[0m ran in 1 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:36:16.6538578Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 111)
+2023-08-31T19:36:17.7293491Z 
+2023-08-31T19:36:17.7294591Z <FLAKY>[0;1mtest_anno_bpovl[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:36:17.7330457Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 120)
+2023-08-31T19:36:18.2656021Z 
+2023-08-31T19:36:18.2658705Z [0;1mtest_anno_bpovl[0m ran in 1 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:36:18.2692264Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:36:19.4865364Z 
+2023-08-31T19:36:19.4866750Z <FLAKY>[0;1mtest_anno_density[0m ran in 1 sec with 23/0 lines to STDERR/OUT
+2023-08-31T19:36:19.4908435Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 130)
+2023-08-31T19:36:20.0079188Z 
+2023-08-31T19:36:20.0080454Z [0;1mtest_anno_density[0m ran in 0 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:36:20.0120276Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:36:21.1878715Z 
+2023-08-31T19:36:21.1880146Z <FLAKY>[0;1mtest_anno_dpcnt[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:36:21.1923013Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 138)
+2023-08-31T19:36:21.4467845Z <FLAKY> [1;32mPASS[0m "878a78e80894bc7c8f1006b3278ec6f6" == "878a78e80894bc7c8f1006b3278ec6f6" (LINE 37)
+2023-08-31T19:36:22.6150335Z 
+2023-08-31T19:36:22.6152389Z <FLAKY>[0;1mtest_anno_lcr[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:36:22.6189944Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 146)
+2023-08-31T19:36:22.8415224Z <FLAKY> [1;32mPASS[0m "02bd49835a163c53935af586ca429911" == "02bd49835a163c53935af586ca429911" (LINE 37)
+2023-08-31T19:36:24.0431913Z 
+2023-08-31T19:36:24.0433121Z <FLAKY>[0;1mtest_anno_grpaf[0m ran in 2 sec with 4/0 lines to STDERR/OUT
+2023-08-31T19:36:24.0472920Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 154)
+2023-08-31T19:36:24.0586241Z <FLAKY> [1;32mPASS[0m "6fbd72818ef308bd3b3ba42be0858e0e" == "6fbd72818ef308bd3b3ba42be0858e0e" (LINE 155)
+2023-08-31T19:36:25.0545888Z 
+2023-08-31T19:36:25.0547144Z <FLAKY>[0;1mtest_anno_grpaf_strict[0m ran in 1 sec with 8/0 lines to STDERR/OUT
+2023-08-31T19:36:25.0589635Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 161)
+2023-08-31T19:36:26.3024925Z 
+2023-08-31T19:36:26.3026139Z <FLAKY>[0;1mtest_anno_grpaf_subset[0m ran in 1 sec with 4/0 lines to STDERR/OUT
+2023-08-31T19:36:26.3069735Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 170)
+2023-08-31T19:36:26.3150649Z <FLAKY> [1;32mPASS[0m "9b8cbce8cc675829d6aa1273011a39b9" == "9b8cbce8cc675829d6aa1273011a39b9" (LINE 171)
+2023-08-31T19:36:27.3890001Z 
+2023-08-31T19:36:27.3890977Z <FLAKY>[0;1mtest_anno_addid[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:36:27.3927702Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 178)
+2023-08-31T19:36:27.4048617Z <FLAKY> [1;32mPASS[0m "e6c6100527f8b882acdf1eaf5e3ebc02" == "e6c6100527f8b882acdf1eaf5e3ebc02" (LINE 179)
+2023-08-31T19:36:28.5952686Z 
+2023-08-31T19:36:28.5953900Z <FLAKY>[0;1mtest_bench_12[0m ran in 1 sec with 84/0 lines to STDERR/OUT
+2023-08-31T19:36:28.5988794Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:28.6110704Z <FLAKY> [1;32mPASS[0m "e2d12efac60a4174a1b951506cbe04fa" == "e2d12efac60a4174a1b951506cbe04fa" (LINE 23)
+2023-08-31T19:36:28.6242771Z <FLAKY> [1;32mPASS[0m "d7fa8178cbf779525cac1e1ecb1060f7" == "d7fa8178cbf779525cac1e1ecb1060f7" (LINE 23)
+2023-08-31T19:36:28.6367040Z <FLAKY> [1;32mPASS[0m "ff2cd22e8064e3a13167d32ef3210704" == "ff2cd22e8064e3a13167d32ef3210704" (LINE 23)
+2023-08-31T19:36:28.6482124Z <FLAKY> [1;32mPASS[0m "834354c679ae5d13cf96c7e368ef980b" == "834354c679ae5d13cf96c7e368ef980b" (LINE 23)
+2023-08-31T19:36:29.9025173Z 
+2023-08-31T19:36:29.9026823Z <FLAKY>[0;1mtest_bench_13[0m ran in 1 sec with 83/0 lines to STDERR/OUT
+2023-08-31T19:36:29.9066168Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:29.9188782Z <FLAKY> [1;32mPASS[0m "e742241c29fab9028bd7cb730dad38d8" == "e742241c29fab9028bd7cb730dad38d8" (LINE 23)
+2023-08-31T19:36:29.9306506Z <FLAKY> [1;32mPASS[0m "f6cde13ed8e48fd10edd9c359e7d246f" == "f6cde13ed8e48fd10edd9c359e7d246f" (LINE 23)
+2023-08-31T19:36:29.9420513Z <FLAKY> [1;32mPASS[0m "5c5d5dad4d8b18dd4ab8e7133e2a1684" == "5c5d5dad4d8b18dd4ab8e7133e2a1684" (LINE 23)
+2023-08-31T19:36:29.9561729Z <FLAKY> [1;32mPASS[0m "51bbbf149a2a86199204a60a0efc406f" == "51bbbf149a2a86199204a60a0efc406f" (LINE 23)
+2023-08-31T19:36:31.1729956Z 
+2023-08-31T19:36:31.1731218Z <FLAKY>[0;1mtest_bench_23[0m ran in 2 sec with 79/0 lines to STDERR/OUT
+2023-08-31T19:36:31.1774715Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:31.1918709Z <FLAKY> [1;32mPASS[0m "917faa81e26ef38e47a9e3606df0a07b" == "917faa81e26ef38e47a9e3606df0a07b" (LINE 23)
+2023-08-31T19:36:31.2049371Z <FLAKY> [1;32mPASS[0m "a155fd43f3c36bc423598c05fc880750" == "a155fd43f3c36bc423598c05fc880750" (LINE 23)
+2023-08-31T19:36:31.2170302Z <FLAKY> [1;32mPASS[0m "6ee0daf8481eab5107aa9e8730801776" == "6ee0daf8481eab5107aa9e8730801776" (LINE 23)
+2023-08-31T19:36:31.2317043Z <FLAKY> [1;32mPASS[0m "a88c6e5e985db872df761b6e7eb34bf1" == "a88c6e5e985db872df761b6e7eb34bf1" (LINE 23)
+2023-08-31T19:36:32.4112033Z 
+2023-08-31T19:36:32.4113682Z <FLAKY>[0;1mtest_bench_13_includebed[0m ran in 1 sec with 81/0 lines to STDERR/OUT
+2023-08-31T19:36:32.4150688Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:32.4271828Z <FLAKY> [1;32mPASS[0m "271cd46d5a7e7f33ccd08630a36abcaf" == "271cd46d5a7e7f33ccd08630a36abcaf" (LINE 23)
+2023-08-31T19:36:32.4385252Z <FLAKY> [1;32mPASS[0m "372c3470bcca22333fcdd9bb4d495cab" == "372c3470bcca22333fcdd9bb4d495cab" (LINE 23)
+2023-08-31T19:36:32.4500534Z <FLAKY> [1;32mPASS[0m "96b2602f8a87b8781771d84777ac1ae4" == "96b2602f8a87b8781771d84777ac1ae4" (LINE 23)
+2023-08-31T19:36:32.4610723Z <FLAKY> [1;32mPASS[0m "553e5d57c8f35178ec81d2a94fae1956" == "553e5d57c8f35178ec81d2a94fae1956" (LINE 23)
+2023-08-31T19:36:33.6275985Z 
+2023-08-31T19:36:33.6277378Z <FLAKY>[0;1mtest_bench_13_extend[0m ran in 1 sec with 86/0 lines to STDERR/OUT
+2023-08-31T19:36:33.6314444Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:33.6435100Z <FLAKY> [1;32mPASS[0m "3a21f8a6b99cbd687284c342c1b15b7e" == "3a21f8a6b99cbd687284c342c1b15b7e" (LINE 23)
+2023-08-31T19:36:33.6552953Z <FLAKY> [1;32mPASS[0m "9c1bc081066a1a4c5b92a4f0ccff90eb" == "9c1bc081066a1a4c5b92a4f0ccff90eb" (LINE 23)
+2023-08-31T19:36:33.6666937Z <FLAKY> [1;32mPASS[0m "213ec2c30be74f72a8c64570192f228b" == "213ec2c30be74f72a8c64570192f228b" (LINE 23)
+2023-08-31T19:36:33.6787493Z <FLAKY> [1;32mPASS[0m "84c98536399ed54b34edf9ff1fb50ae8" == "84c98536399ed54b34edf9ff1fb50ae8" (LINE 23)
+2023-08-31T19:36:34.7354557Z 
+2023-08-31T19:36:34.7355368Z <FLAKY>[0;1mtest_bench_unroll[0m ran in 1 sec with 90/0 lines to STDERR/OUT
+2023-08-31T19:36:34.7393862Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:34.7535654Z <FLAKY> [1;32mPASS[0m "26d593b00ee495347eba1aa037c2f23c" == "26d593b00ee495347eba1aa037c2f23c" (LINE 23)
+2023-08-31T19:36:34.7656419Z <FLAKY> [1;32mPASS[0m "3e5150f84744b7ba7cc10c8940c1b508" == "3e5150f84744b7ba7cc10c8940c1b508" (LINE 23)
+2023-08-31T19:36:34.7781412Z <FLAKY> [1;32mPASS[0m "869fbfd94f9f59faa6e41a0fa66f1182" == "869fbfd94f9f59faa6e41a0fa66f1182" (LINE 23)
+2023-08-31T19:36:34.7901618Z <FLAKY> [1;32mPASS[0m "96511fe171c70e9b943b09aa7f4502dc" == "96511fe171c70e9b943b09aa7f4502dc" (LINE 23)
+2023-08-31T19:36:35.9562644Z 
+2023-08-31T19:36:35.9563878Z <FLAKY>[0;1mtest_bench_12_gtcomp[0m ran in 1 sec with 84/0 lines to STDERR/OUT
+2023-08-31T19:36:35.9601300Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:35.9715450Z <FLAKY> [1;32mPASS[0m "a1f5e8e034ce63c791da182965eeb9ad" == "a1f5e8e034ce63c791da182965eeb9ad" (LINE 23)
+2023-08-31T19:36:35.9836639Z <FLAKY> [1;32mPASS[0m "d7fa8178cbf779525cac1e1ecb1060f7" == "d7fa8178cbf779525cac1e1ecb1060f7" (LINE 23)
+2023-08-31T19:36:35.9950771Z <FLAKY> [1;32mPASS[0m "ee86689ff62fabd69d87f87a152dfb4e" == "ee86689ff62fabd69d87f87a152dfb4e" (LINE 23)
+2023-08-31T19:36:36.0066085Z <FLAKY> [1;32mPASS[0m "834354c679ae5d13cf96c7e368ef980b" == "834354c679ae5d13cf96c7e368ef980b" (LINE 23)
+2023-08-31T19:36:37.0623935Z 
+2023-08-31T19:36:37.0667632Z <FLAKY>[0;1mtest_bench_gtcomp_edgecase1[0m ran in 1 sec with 75/0 lines to STDERR/OUT
+2023-08-31T19:36:37.0668584Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:36:37.0785250Z <FLAKY> [1;32mPASS[0m "b0c92c095f7f176dc65d9d51b8d84a6f" == "b0c92c095f7f176dc65d9d51b8d84a6f" (LINE 23)
+2023-08-31T19:36:37.0906626Z <FLAKY> [1;32mPASS[0m "09e148e923d3c14a5c88813ca7d58a2b" == "09e148e923d3c14a5c88813ca7d58a2b" (LINE 23)
+2023-08-31T19:36:37.1022845Z <FLAKY> [1;32mPASS[0m "b22143a132e9d30b26d8a93e71b14ad0" == "b22143a132e9d30b26d8a93e71b14ad0" (LINE 23)
+2023-08-31T19:36:37.1141256Z <FLAKY> [1;32mPASS[0m "5a11eb0483101990dea8f9a572ef52b1" == "5a11eb0483101990dea8f9a572ef52b1" (LINE 23)
+2023-08-31T19:36:38.0896003Z 
+2023-08-31T19:36:38.0897158Z <FLAKY>[0;1mtest_bench_badparams[0m ran in 1 sec with 9/0 lines to STDERR/OUT
+2023-08-31T19:36:38.0940192Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 79)
+2023-08-31T19:36:39.1483617Z 
+2023-08-31T19:36:39.1485527Z <FLAKY>[0;1mtest_collapse_1[0m ran in 1 sec with 40/0 lines to STDERR/OUT
+2023-08-31T19:36:39.3347495Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 16)
+2023-08-31T19:36:39.3438171Z <FLAKY> [1;32mPASS[0m "1e02843131663fe2fe2608b2d441384c" == "1e02843131663fe2fe2608b2d441384c" (LINE 18)
+2023-08-31T19:36:39.3513057Z <FLAKY> [1;32mPASS[0m "b5d4e009c38258c843cd464208c17334" == "b5d4e009c38258c843cd464208c17334" (LINE 19)
+2023-08-31T19:36:40.3948604Z 
+2023-08-31T19:36:40.3949928Z <FLAKY>[0;1mtest_collapse_2[0m ran in 1 sec with 37/0 lines to STDERR/OUT
+2023-08-31T19:36:40.5783276Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 16)
+2023-08-31T19:36:40.5872245Z <FLAKY> [1;32mPASS[0m "a38e94347a17dd06afef8c8622bdd983" == "a38e94347a17dd06afef8c8622bdd983" (LINE 18)
+2023-08-31T19:36:40.5970961Z <FLAKY> [1;32mPASS[0m "9e2c43a1e5b1d4fce3973595d6eddd8f" == "9e2c43a1e5b1d4fce3973595d6eddd8f" (LINE 19)
+2023-08-31T19:36:41.6761039Z 
+2023-08-31T19:36:41.6762368Z <FLAKY>[0;1mtest_collapse_3[0m ran in 1 sec with 37/0 lines to STDERR/OUT
+2023-08-31T19:36:41.8612552Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 16)
+2023-08-31T19:36:41.8696403Z <FLAKY> [1;32mPASS[0m "185eed65ddc820a3e424555514d50d25" == "185eed65ddc820a3e424555514d50d25" (LINE 18)
+2023-08-31T19:36:41.8773400Z <FLAKY> [1;32mPASS[0m "758f9980e9ebe16f72033740c4ab719d" == "758f9980e9ebe16f72033740c4ab719d" (LINE 19)
+2023-08-31T19:36:43.0495752Z 
+2023-08-31T19:36:43.0497540Z [0;1mtest_collapse_multi_first[0m ran in 2 sec with 37/2 lines to STDERR/OUT
+2023-08-31T19:36:43.0536245Z  [1;32mPASS[0m EXIT CODE (LINE 33)
+2023-08-31T19:36:43.2485644Z  [1;32mPASS[0m "f325f4b6204f6cf25ee66d412766891b" == "f325f4b6204f6cf25ee66d412766891b" (LINE 38)
+2023-08-31T19:36:43.2599704Z  [1;32mPASS[0m "9e56264eea7e74a7347d7be213f63fbb" == "9e56264eea7e74a7347d7be213f63fbb" (LINE 39)
+2023-08-31T19:36:44.3968356Z 
+2023-08-31T19:36:44.3969509Z [0;1mtest_collapse_multi_common[0m ran in 1 sec with 37/2 lines to STDERR/OUT
+2023-08-31T19:36:44.4003415Z  [1;32mPASS[0m EXIT CODE (LINE 33)
+2023-08-31T19:36:44.6004702Z  [1;32mPASS[0m "f325f4b6204f6cf25ee66d412766891b" == "f325f4b6204f6cf25ee66d412766891b" (LINE 38)
+2023-08-31T19:36:44.6082551Z  [1;32mPASS[0m "9e56264eea7e74a7347d7be213f63fbb" == "9e56264eea7e74a7347d7be213f63fbb" (LINE 39)
+2023-08-31T19:36:45.7366743Z 
+2023-08-31T19:36:45.7368261Z [0;1mtest_collapse_multi_maxqual[0m ran in 1 sec with 37/2 lines to STDERR/OUT
+2023-08-31T19:36:45.7400809Z  [1;32mPASS[0m EXIT CODE (LINE 33)
+2023-08-31T19:36:45.9376363Z  [1;32mPASS[0m "f325f4b6204f6cf25ee66d412766891b" == "f325f4b6204f6cf25ee66d412766891b" (LINE 38)
+2023-08-31T19:36:45.9475462Z  [1;32mPASS[0m "9e56264eea7e74a7347d7be213f63fbb" == "9e56264eea7e74a7347d7be213f63fbb" (LINE 39)
+2023-08-31T19:36:46.9297411Z 
+2023-08-31T19:36:46.9299431Z <FLAKY>[0;1mtest_collapse_badparams[0m ran in 1 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:36:46.9339829Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 74)
+2023-08-31T19:36:48.0136208Z 
+2023-08-31T19:36:48.0137799Z <FLAKY>[0;1mtest_collapse_median[0m ran in 2 sec with 37/0 lines to STDERR/OUT
+2023-08-31T19:36:48.1999533Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 16)
+2023-08-31T19:36:48.2085686Z <FLAKY> [1;32mPASS[0m "20395d1eb54e9014c41f90e165206e9d" == "20395d1eb54e9014c41f90e165206e9d" (LINE 18)
+2023-08-31T19:36:48.2161353Z <FLAKY> [1;32mPASS[0m "b5d4e009c38258c843cd464208c17334" == "b5d4e009c38258c843cd464208c17334" (LINE 19)
+2023-08-31T19:36:49.2305009Z 
+2023-08-31T19:36:49.2306312Z [0;1mtest_consistency[0m ran in 1 sec with 0/25 lines to STDERR/OUT
+2023-08-31T19:36:49.2406558Z  [1;32mPASS[0m "1cd959db07eb657997005baaaba0cfc1" == "1cd959db07eb657997005baaaba0cfc1" (LINE 7)
+2023-08-31T19:36:50.2512092Z 
+2023-08-31T19:36:50.2513523Z [0;1mtest_consistency_json[0m ran in 1 sec with 0/89 lines to STDERR/OUT
+2023-08-31T19:36:50.2585999Z  [1;32mPASS[0m "ddf531cb753e72beba784dd6885067d6" == "ddf531cb753e72beba784dd6885067d6" (LINE 12)
+2023-08-31T19:36:51.5272531Z 
+2023-08-31T19:36:51.5274161Z <FLAKY>[0;1mtest_divide[0m ran in 1 sec with 11/0 lines to STDERR/OUT
+2023-08-31T19:36:51.5318115Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 6)
+2023-08-31T19:36:51.5472044Z 
+2023-08-31T19:36:51.5473670Z [0;1mtest_divide_result[0m ran in 0 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:36:51.5567101Z  [1;32mPASS[0m "f6c62ecc91bccbae18d3688bc88acef1" == "f6c62ecc91bccbae18d3688bc88acef1" (LINE 11)
+2023-08-31T19:36:51.5671231Z  [1;32mPASS[0m "ee83154ca06d0fbf00b07c5bb5e35ea6" == "ee83154ca06d0fbf00b07c5bb5e35ea6" (LINE 11)
+2023-08-31T19:36:51.5764190Z  [1;32mPASS[0m "02863958298dc2f3d7f538d8c47ed9e8" == "02863958298dc2f3d7f538d8c47ed9e8" (LINE 11)
+2023-08-31T19:36:51.5855641Z  [1;32mPASS[0m "99b320b838561ca4904e2e809f7c9556" == "99b320b838561ca4904e2e809f7c9556" (LINE 11)
+2023-08-31T19:36:51.5951111Z  [1;32mPASS[0m "6bc9de806be2c2d39028dbbe460d183d" == "6bc9de806be2c2d39028dbbe460d183d" (LINE 11)
+2023-08-31T19:36:51.6039333Z  [1;32mPASS[0m "d19d52d003046312136021cd734cb1f0" == "d19d52d003046312136021cd734cb1f0" (LINE 11)
+2023-08-31T19:36:51.6128836Z  [1;32mPASS[0m "4bd35ca592752cc15d8a37d78a96c37c" == "4bd35ca592752cc15d8a37d78a96c37c" (LINE 11)
+2023-08-31T19:36:51.6222004Z  [1;32mPASS[0m "140213c714a2118c4fff2bb24a19d14c" == "140213c714a2118c4fff2bb24a19d14c" (LINE 11)
+2023-08-31T19:36:51.6313582Z  [1;32mPASS[0m "904e7fe811e47d08ee4917cc403a61dd" == "904e7fe811e47d08ee4917cc403a61dd" (LINE 11)
+2023-08-31T19:36:51.6425766Z  [1;32mPASS[0m "3f9e12d4fb0295643884c3d894d57f94" == "3f9e12d4fb0295643884c3d894d57f94" (LINE 11)
+2023-08-31T19:36:51.6514301Z  [1;32mPASS[0m "52b9d0371a1611c741044c8d84eb0302" == "52b9d0371a1611c741044c8d84eb0302" (LINE 11)
+2023-08-31T19:36:51.6605598Z  [1;32mPASS[0m "84edf5aec07be42257160df4a0350d5c" == "84edf5aec07be42257160df4a0350d5c" (LINE 11)
+2023-08-31T19:36:51.6693420Z  [1;32mPASS[0m "e0d59dcf637280aeb956f9643ca393a7" == "e0d59dcf637280aeb956f9643ca393a7" (LINE 11)
+2023-08-31T19:36:51.6780397Z  [1;32mPASS[0m "fd2efc4e60110b896ad5f5d55d59726c" == "fd2efc4e60110b896ad5f5d55d59726c" (LINE 11)
+2023-08-31T19:36:51.6866239Z  [1;32mPASS[0m "88b3cdcbb6964e6a3778501f00d22ec3" == "88b3cdcbb6964e6a3778501f00d22ec3" (LINE 11)
+2023-08-31T19:36:51.6957425Z  [1;32mPASS[0m "2ae29b5f08c0dd038255866ad8d2c2db" == "2ae29b5f08c0dd038255866ad8d2c2db" (LINE 11)
+2023-08-31T19:36:51.7049772Z  [1;32mPASS[0m "75870ac4e1810ebaf2c716a5cad1a9d0" == "75870ac4e1810ebaf2c716a5cad1a9d0" (LINE 11)
+2023-08-31T19:36:51.7136904Z  [1;32mPASS[0m "be5abb6c34c25ea9ac5b28670aa82e5f" == "be5abb6c34c25ea9ac5b28670aa82e5f" (LINE 11)
+2023-08-31T19:36:51.7230829Z  [1;32mPASS[0m "224dc63c6d01be4c3803aed370dc0919" == "224dc63c6d01be4c3803aed370dc0919" (LINE 11)
+2023-08-31T19:36:51.7317612Z  [1;32mPASS[0m "da3e66fc8ceacbebd3355a127e351dda" == "da3e66fc8ceacbebd3355a127e351dda" (LINE 11)
+2023-08-31T19:36:51.7416071Z  [1;32mPASS[0m "8ee6b05864153441f236d1fea04e0497" == "8ee6b05864153441f236d1fea04e0497" (LINE 11)
+2023-08-31T19:36:51.7523017Z  [1;32mPASS[0m "723bebb6cda554c056f4d73e27c602f8" == "723bebb6cda554c056f4d73e27c602f8" (LINE 11)
+2023-08-31T19:36:51.7616374Z  [1;32mPASS[0m "25031da8f5e3d14a59a83440d9782987" == "25031da8f5e3d14a59a83440d9782987" (LINE 11)
+2023-08-31T19:36:55.0160255Z 
+2023-08-31T19:36:55.0161944Z [0;1mtest_doctests[0m ran in 4 sec with 1/6 lines to STDERR/OUT
+2023-08-31T19:36:55.0207983Z  [1;32mPASS[0m EXIT CODE (LINE 6)
+2023-08-31T19:36:56.0136884Z 
+2023-08-31T19:36:56.0137813Z <FLAKY>[0;1mtest_help[0m ran in 1 sec with 24/0 lines to STDERR/OUT
+2023-08-31T19:36:56.0175699Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 6)
+2023-08-31T19:36:56.0252766Z <FLAKY> [1;32mPASS[0m "89091c8edbd79d3f16e71786750cac95" == "89091c8edbd79d3f16e71786750cac95" (LINE 7)
+2023-08-31T19:36:57.0322216Z 
+2023-08-31T19:36:57.0323809Z <FLAKY>[0;1mtest_help_error[0m ran in 1 sec with 7/0 lines to STDERR/OUT
+2023-08-31T19:36:57.0363172Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 12)
+2023-08-31T19:37:23.1813548Z 
+2023-08-31T19:37:23.1814802Z <FLAKY>[0;1mtest_phab[0m ran in 26 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:37:23.1878439Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 11)
+2023-08-31T19:37:23.1958297Z <FLAKY> [1;32mPASS[0m "c6875ffc1fe6c865a5605ba18f5d249d" == "c6875ffc1fe6c865a5605ba18f5d249d" (LINE 12)
+2023-08-31T19:37:49.2552633Z 
+2023-08-31T19:37:49.2553929Z <FLAKY>[0;1mtest_phab_wfa[0m ran in 26 sec with 6/0 lines to STDERR/OUT
+2023-08-31T19:37:49.2594022Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 21)
+2023-08-31T19:37:49.2677247Z <FLAKY> [1;32mPASS[0m "262324fe7d9efe410287eb1eb5c082fa" == "262324fe7d9efe410287eb1eb5c082fa" (LINE 22)
+2023-08-31T19:37:50.2959887Z 
+2023-08-31T19:37:50.2961861Z <FLAKY>[0;1mtest_phab_badparams[0m ran in 1 sec with 12/0 lines to STDERR/OUT
+2023-08-31T19:37:50.3005630Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 31)
+2023-08-31T19:37:52.4223960Z 
+2023-08-31T19:37:52.4225542Z <FLAKY>[0;1mtest_refine_one[0m ran in 2 sec with 86/0 lines to STDERR/OUT
+2023-08-31T19:37:58.9026275Z 
+2023-08-31T19:37:58.9028076Z <FLAKY>[0;1mtest_refine_one[0m ran in 6 sec with 28/0 lines to STDERR/OUT
+2023-08-31T19:37:58.9066866Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 12)
+2023-08-31T19:37:58.9153654Z <FLAKY> [1;32mPASS[0m "77ad510e5d7280710ba1d5ee87ede014" == "77ad510e5d7280710ba1d5ee87ede014" (LINE 13)
+2023-08-31T19:37:58.9232930Z <FLAKY> [1;32mPASS[0m "75382cdd33670f2a4991bd1ba087e378" == "75382cdd33670f2a4991bd1ba087e378" (LINE 15)
+2023-08-31T19:37:58.9314028Z <FLAKY> [1;32mPASS[0m "1b5738ab5d889e38cd88e3379aecbd67" == "1b5738ab5d889e38cd88e3379aecbd67" (LINE 17)
+2023-08-31T19:38:01.1474839Z 
+2023-08-31T19:38:01.1476910Z <FLAKY>[0;1mtest_refine_two[0m ran in 3 sec with 86/0 lines to STDERR/OUT
+2023-08-31T19:38:06.3117552Z 
+2023-08-31T19:38:06.3119064Z <FLAKY>[0;1mtest_refine_two[0m ran in 5 sec with 28/0 lines to STDERR/OUT
+2023-08-31T19:38:06.3163736Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 31)
+2023-08-31T19:38:06.3242763Z <FLAKY> [1;32mPASS[0m "eb1d708554c31426c205f5f01727dad5" == "eb1d708554c31426c205f5f01727dad5" (LINE 32)
+2023-08-31T19:38:06.3322023Z <FLAKY> [1;32mPASS[0m "89650da9c9726528bb209af53cc8e539" == "89650da9c9726528bb209af53cc8e539" (LINE 34)
+2023-08-31T19:38:06.3404431Z <FLAKY> [1;32mPASS[0m "f1798958852de9e513c9c4671d091648" == "f1798958852de9e513c9c4671d091648" (LINE 36)
+2023-08-31T19:38:08.4907598Z 
+2023-08-31T19:38:08.4909126Z <FLAKY>[0;1mtest_refine_three[0m ran in 2 sec with 86/0 lines to STDERR/OUT
+2023-08-31T19:38:13.7237033Z 
+2023-08-31T19:38:13.7238281Z <FLAKY>[0;1mtest_refine_three[0m ran in 5 sec with 28/0 lines to STDERR/OUT
+2023-08-31T19:38:13.7281979Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 50)
+2023-08-31T19:38:13.7364650Z <FLAKY> [1;32mPASS[0m "314a4a853123a7f985589e0faad7e500" == "314a4a853123a7f985589e0faad7e500" (LINE 51)
+2023-08-31T19:38:13.7447025Z <FLAKY> [1;32mPASS[0m "c092634faaa634851dbe4186f82407ed" == "c092634faaa634851dbe4186f82407ed" (LINE 53)
+2023-08-31T19:38:13.7528655Z <FLAKY> [1;32mPASS[0m "8a95fef377f1ef08b28640629996afff" == "8a95fef377f1ef08b28640629996afff" (LINE 55)
+2023-08-31T19:38:15.0132443Z 
+2023-08-31T19:38:15.0133636Z <FLAKY>[0;1mtest_segment[0m ran in 2 sec with 4/0 lines to STDERR/OUT
+2023-08-31T19:38:15.0177878Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 6)
+2023-08-31T19:38:15.0287072Z <FLAKY> [1;32mPASS[0m "c080394c4b944b59884328ef808fbb80" == "c080394c4b944b59884328ef808fbb80" (LINE 7)
+2023-08-31T19:38:16.0472217Z 
+2023-08-31T19:38:16.0474002Z <FLAKY>[0;1mtest_stratify[0m ran in 1 sec with 3/0 lines to STDERR/OUT
+2023-08-31T19:38:16.0513354Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 9)
+2023-08-31T19:38:16.0614000Z <FLAKY> [1;32mPASS[0m "1c9e25777142bcb8df0621b40969146c" == "1c9e25777142bcb8df0621b40969146c" (LINE 10)
+2023-08-31T19:38:17.2343087Z 
+2023-08-31T19:38:17.2344481Z <FLAKY>[0;1mtest_vcf2df_bare[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:17.2388573Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 6)
+2023-08-31T19:38:17.7733949Z 
+2023-08-31T19:38:17.7736186Z [0;1mtest_vcf2df_bare[0m ran in 0 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:17.7774410Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:19.0982181Z 
+2023-08-31T19:38:19.0983304Z <FLAKY>[0;1mtest_vcf2df[0m ran in 2 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:19.1023712Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 12)
+2023-08-31T19:38:19.6684747Z 
+2023-08-31T19:38:19.6686228Z [0;1mtest_vcf2df[0m ran in 0 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:19.6726757Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:20.8071362Z 
+2023-08-31T19:38:20.8072583Z <FLAKY>[0;1mtest_vcf2df_dir[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:20.8112978Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 18)
+2023-08-31T19:38:21.4038936Z 
+2023-08-31T19:38:21.4040204Z [0;1mtest_vcf2df_dif[0m ran in 1 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:21.4082200Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:22.7151322Z 
+2023-08-31T19:38:22.7152654Z <FLAKY>[0;1mtest_vcf2df_single[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:22.7193709Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 24)
+2023-08-31T19:38:23.2861099Z 
+2023-08-31T19:38:23.2862625Z [0;1mtest_vcf2df_single[0m ran in 1 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:23.2903261Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:24.7745574Z 
+2023-08-31T19:38:24.7746780Z <FLAKY>[0;1mtest_vcf2df_subset[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:24.7789687Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 30)
+2023-08-31T19:38:25.3849370Z 
+2023-08-31T19:38:25.3851345Z [0;1mtest_vcf2df_subset[0m ran in 1 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:25.3893545Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:26.9672800Z 
+2023-08-31T19:38:26.9674218Z <FLAKY>[0;1mtest_vcf2df_multi[0m ran in 1 sec with 5/0 lines to STDERR/OUT
+2023-08-31T19:38:26.9717733Z <FLAKY> [1;32mPASS[0m EXIT CODE (LINE 36)
+2023-08-31T19:38:27.5805529Z 
+2023-08-31T19:38:27.5807049Z [0;1mtest_vcf2df_multi[0m ran in 1 sec with 0/0 lines to STDERR/OUT
+2023-08-31T19:38:27.5851161Z  [1;32mPASS[0m EXIT CODE (LINE 51)
+2023-08-31T19:38:28.6713551Z 
+2023-08-31T19:38:28.6714819Z [0;1mtest_version[0m ran in 1 sec with 0/1 lines to STDERR/OUT
+2023-08-31T19:38:29.3717647Z  [1;32mPASS[0m STDOUT CONTAINS "Truvari v4.1.1-dev" (LINE 6)
+2023-08-31T19:38:29.3718579Z 
+2023-08-31T19:38:29.3720088Z [0;1mgenerating test coverage reports[0m
+2023-08-31T19:38:29.7558144Z /opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/coverage/data.py:166: CoverageWarning: Data file '/home/runner/work/truvari/truvari/.coverage.fv-az262-840.5393.496325' doesn't seem to be a coverage data file: 
+2023-08-31T19:38:29.7559203Z   data._warn(str(exc))
+2023-08-31T19:38:29.7562488Z Combined data file .coverage.fv-az262-840.4940.896642
+2023-08-31T19:38:29.7563198Z Skipping duplicate data .coverage.fv-az262-840.4791.941020
+2023-08-31T19:38:29.7563905Z Combined data file .coverage.fv-az262-840.3078.822816
+2023-08-31T19:38:29.7564509Z Combined data file .coverage.fv-az262-840.4655.664751
+2023-08-31T19:38:29.7565074Z Combined data file .coverage.fv-az262-840.2875.161497
+2023-08-31T19:38:29.7565652Z Combined data file .coverage.fv-az262-840.5735.114793
+2023-08-31T19:38:29.7566326Z Skipping duplicate data .coverage.fv-az262-840.4914.295209
+2023-08-31T19:38:29.7566934Z Skipping duplicate data .coverage.fv-az262-840.4814.351223
+2023-08-31T19:38:29.7567523Z Skipping duplicate data .coverage.fv-az262-840.4663.873452
+2023-08-31T19:38:29.7568441Z Skipping duplicate data .coverage.fv-az262-840.4722.810536
+2023-08-31T19:38:29.7569195Z Skipping duplicate data .coverage.fv-az262-840.5021.897402
+2023-08-31T19:38:29.7570146Z Combined data file .coverage.fv-az262-840.5571.357025
+2023-08-31T19:38:29.7570803Z Combined data file .coverage.fv-az262-840.2824.381126
+2023-08-31T19:38:29.7571817Z Skipping duplicate data .coverage.fv-az262-840.4658.258931
+2023-08-31T19:38:29.7572558Z Skipping duplicate data .coverage.fv-az262-840.5045.759660
+2023-08-31T19:38:29.7573148Z Combined data file .coverage.fv-az262-840.4073.324372
+2023-08-31T19:38:29.7573726Z Skipping duplicate data .coverage.fv-az262-840.4819.407694
+2023-08-31T19:38:29.7574306Z Combined data file .coverage.fv-az262-840.5313.683881
+2023-08-31T19:38:29.7574887Z Skipping duplicate data .coverage.fv-az262-840.4905.397912
+2023-08-31T19:38:29.7575490Z Skipping duplicate data .coverage.fv-az262-840.5002.739908
+2023-08-31T19:38:29.7576080Z Skipping duplicate data .coverage.fv-az262-840.3026.917464
+2023-08-31T19:38:29.7576665Z Combined data file .coverage.fv-az262-840.3024.505460
+2023-08-31T19:38:29.7577400Z Skipping duplicate data .coverage.fv-az262-840.4982.038739
+2023-08-31T19:38:29.7578135Z Skipping duplicate data .coverage.fv-az262-840.4954.123312
+2023-08-31T19:38:29.7578674Z Combined data file .coverage.fv-az262-840.2725.682798
+2023-08-31T19:38:29.7579464Z Skipping duplicate data .coverage.fv-az262-840.5330.823420
+2023-08-31T19:38:29.7580067Z Skipping duplicate data .coverage.fv-az262-840.4947.685619
+2023-08-31T19:38:29.7580622Z Combined data file .coverage.fv-az262-840.2944.939179
+2023-08-31T19:38:29.7581149Z Combined data file .coverage.fv-az262-840.4637.575201
+2023-08-31T19:38:29.7581805Z Skipping duplicate data .coverage.fv-az262-840.4671.362112
+2023-08-31T19:38:29.7582541Z Skipping duplicate data .coverage.fv-az262-840.2924.522983
+2023-08-31T19:38:29.7583269Z Combined data file .coverage.fv-az262-840.5323.003619
+2023-08-31T19:38:29.7583858Z Skipping duplicate data .coverage.fv-az262-840.5026.988293
+2023-08-31T19:38:29.7584432Z Skipping duplicate data .coverage.fv-az262-840.4799.931530
+2023-08-31T19:38:29.7584997Z Combined data file .coverage.fv-az262-840.2762.514724
+2023-08-31T19:38:29.7585573Z Skipping duplicate data .coverage.fv-az262-840.2967.003523
+2023-08-31T19:38:29.7586129Z Combined data file .coverage.fv-az262-840.2929.516019
+2023-08-31T19:38:29.7586901Z Combined data file .coverage.fv-az262-840.2822.562313
+2023-08-31T19:38:29.7587828Z Skipping duplicate data .coverage.fv-az262-840.4782.812243
+2023-08-31T19:38:29.7588646Z Skipping duplicate data .coverage.fv-az262-840.5017.340174
+2023-08-31T19:38:29.7589213Z Skipping duplicate data .coverage.fv-az262-840.4844.210882
+2023-08-31T19:38:29.7589795Z Skipping duplicate data .coverage.fv-az262-840.4999.258814
+2023-08-31T19:38:29.7590369Z Skipping duplicate data .coverage.fv-az262-840.2885.014628
+2023-08-31T19:38:29.7590934Z Combined data file .coverage.fv-az262-840.4590.917030
+2023-08-31T19:38:29.7591821Z Skipping duplicate data .coverage.fv-az262-840.4848.094313
+2023-08-31T19:38:29.7592559Z Skipping duplicate data .coverage.fv-az262-840.5459.518178
+2023-08-31T19:38:29.7593290Z Skipping duplicate data .coverage.fv-az262-840.5060.293470
+2023-08-31T19:38:29.7593889Z Skipping duplicate data .coverage.fv-az262-840.4662.559397
+2023-08-31T19:38:29.7594463Z Combined data file .coverage.fv-az262-840.5662.537082
+2023-08-31T19:38:29.7595072Z Skipping duplicate data .coverage.fv-az262-840.4998.057452
+2023-08-31T19:38:29.7595988Z Combined data file .coverage.fv-az262-840.2988.667853
+2023-08-31T19:38:29.7596790Z Skipping duplicate data .coverage.fv-az262-840.4689.645099
+2023-08-31T19:38:29.7597304Z Combined data file .coverage.fv-az262-840.2951.305137
+2023-08-31T19:38:29.7598478Z Skipping duplicate data .coverage.fv-az262-840.3031.487252
+2023-08-31T19:38:29.7599191Z Skipping duplicate data .coverage.fv-az262-840.4896.469952
+2023-08-31T19:38:29.7599918Z Skipping duplicate data .coverage.fv-az262-840.4751.412660
+2023-08-31T19:38:29.7600377Z Skipping duplicate data .coverage.fv-az262-840.4723.866736
+2023-08-31T19:38:29.7601338Z Skipping duplicate data .coverage.fv-az262-840.4683.373408
+2023-08-31T19:38:29.7602575Z Combined data file .coverage.fv-az262-840.2652.555987
+2023-08-31T19:38:29.7603303Z Skipping duplicate data .coverage.fv-az262-840.4687.157294
+2023-08-31T19:38:29.7603786Z Skipping duplicate data .coverage.fv-az262-840.4715.638272
+2023-08-31T19:38:29.7604456Z Combined data file .coverage.fv-az262-840.2949.779118
+2023-08-31T19:38:29.7604908Z Combined data file .coverage.fv-az262-840.2816.331601
+2023-08-31T19:38:29.7605356Z Skipping duplicate data .coverage.fv-az262-840.5145.655294
+2023-08-31T19:38:29.7605835Z Skipping duplicate data .coverage.fv-az262-840.4780.889711
+2023-08-31T19:38:29.7606470Z Skipping duplicate data .coverage.fv-az262-840.4833.263465
+2023-08-31T19:38:29.7607082Z Combined data file .coverage.fv-az262-840.2947.762561
+2023-08-31T19:38:29.7607692Z Combined data file .coverage.fv-az262-840.2751.349329
+2023-08-31T19:38:29.7608293Z Skipping duplicate data .coverage.fv-az262-840.4727.083760
+2023-08-31T19:38:29.7608721Z Skipping duplicate data .coverage.fv-az262-840.4931.855264
+2023-08-31T19:38:29.7609169Z Skipping duplicate data .coverage.fv-az262-840.4966.000026
+2023-08-31T19:38:29.7609919Z Skipping duplicate data .coverage.fv-az262-840.4707.418356
+2023-08-31T19:38:29.7613340Z Skipping duplicate data .coverage.fv-az262-840.4891.521118
+2023-08-31T19:38:29.7614785Z Skipping duplicate data .coverage.fv-az262-840.2803.845669
+2023-08-31T19:38:29.7707326Z Skipping duplicate data .coverage.fv-az262-840.2945.004940
+2023-08-31T19:38:29.7707814Z Skipping duplicate data .coverage.fv-az262-840.5037.428075
+2023-08-31T19:38:29.7708277Z Skipping duplicate data .coverage.fv-az262-840.4824.623390
+2023-08-31T19:38:29.7708727Z Combined data file .coverage.fv-az262-840.2865.561465
+2023-08-31T19:38:29.7709164Z Skipping duplicate data .coverage.fv-az262-840.4665.330407
+2023-08-31T19:38:29.7709678Z Skipping duplicate data .coverage.fv-az262-840.4795.306481
+2023-08-31T19:38:29.7710121Z Combined data file .coverage.fv-az262-840.2620.770479
+2023-08-31T19:38:29.7710570Z Skipping duplicate data .coverage.fv-az262-840.2761.217775
+2023-08-31T19:38:29.7711023Z Skipping duplicate data .coverage.fv-az262-840.4827.974751
+2023-08-31T19:38:29.7711487Z Skipping duplicate data .coverage.fv-az262-840.3017.944477
+2023-08-31T19:38:29.7711950Z Skipping duplicate data .coverage.fv-az262-840.4798.391727
+2023-08-31T19:38:29.7712372Z Combined data file .coverage.fv-az262-840.2815.900995
+2023-08-31T19:38:29.7713061Z Skipping duplicate data .coverage.fv-az262-840.2936.567572
+2023-08-31T19:38:29.7713536Z Skipping duplicate data .coverage.fv-az262-840.4786.541937
+2023-08-31T19:38:29.7713972Z Combined data file .coverage.fv-az262-840.2907.566786
+2023-08-31T19:38:29.7714434Z Skipping duplicate data .coverage.fv-az262-840.4682.669654
+2023-08-31T19:38:29.7714887Z Combined data file .coverage.fv-az262-840.5473.020056
+2023-08-31T19:38:29.7715349Z Skipping duplicate data .coverage.fv-az262-840.2861.697803
+2023-08-31T19:38:29.7715785Z Combined data file .coverage.fv-az262-840.2905.052403
+2023-08-31T19:38:29.7716231Z Combined data file .coverage.fv-az262-840.2833.015230
+2023-08-31T19:38:29.7716696Z Skipping duplicate data .coverage.fv-az262-840.4813.689379
+2023-08-31T19:38:29.7717152Z Skipping duplicate data .coverage.fv-az262-840.2842.233970
+2023-08-31T19:38:29.7717634Z Skipping duplicate data .coverage.fv-az262-840.2909.661000
+2023-08-31T19:38:29.7718104Z Skipping duplicate data .coverage.fv-az262-840.4809.086956
+2023-08-31T19:38:29.7718540Z Combined data file .coverage.fv-az262-840.5333.926082
+2023-08-31T19:38:29.7718987Z Combined data file .coverage.fv-az262-840.2797.637621
+2023-08-31T19:38:29.7719448Z Skipping duplicate data .coverage.fv-az262-840.4847.691463
+2023-08-31T19:38:29.7719920Z Skipping duplicate data .coverage.fv-az262-840.5147.094013
+2023-08-31T19:38:29.7720373Z Skipping duplicate data .coverage.fv-az262-840.3016.172264
+2023-08-31T19:38:29.7720829Z Combined data file .coverage.fv-az262-840.3505.960433
+2023-08-31T19:38:29.7721294Z Skipping duplicate data .coverage.fv-az262-840.4933.457058
+2023-08-31T19:38:29.7721749Z Skipping duplicate data .coverage.fv-az262-840.4981.359353
+2023-08-31T19:38:29.7722555Z Skipping duplicate data .coverage.fv-az262-840.5042.597837
+2023-08-31T19:38:29.7723075Z Skipping duplicate data .coverage.fv-az262-840.2930.617748
+2023-08-31T19:38:29.7723724Z Skipping duplicate data .coverage.fv-az262-840.5020.745184
+2023-08-31T19:38:29.7724187Z Skipping duplicate data .coverage.fv-az262-840.4818.240334
+2023-08-31T19:38:29.7724657Z Skipping duplicate data .coverage.fv-az262-840.5016.543350
+2023-08-31T19:38:29.7725117Z Combined data file .coverage.fv-az262-840.2886.387456
+2023-08-31T19:38:29.7725607Z Combined data file .coverage.fv-az262-840.2912.792919
+2023-08-31T19:38:29.7726068Z Skipping duplicate data .coverage.fv-az262-840.2781.801955
+2023-08-31T19:38:29.7726540Z Skipping duplicate data .coverage.fv-az262-840.2874.535444
+2023-08-31T19:38:29.7726995Z Skipping duplicate data .coverage.fv-az262-840.4781.753735
+2023-08-31T19:38:29.7727452Z Combined data file .coverage.fv-az262-840.2757.584599
+2023-08-31T19:38:29.7727915Z Skipping duplicate data .coverage.fv-az262-840.4705.908057
+2023-08-31T19:38:29.7728376Z Skipping duplicate data .coverage.fv-az262-840.2938.101531
+2023-08-31T19:38:29.7728833Z Combined data file .coverage.fv-az262-840.5095.374894
+2023-08-31T19:38:29.7729289Z Combined data file .coverage.fv-az262-840.3308.301340
+2023-08-31T19:38:29.7729730Z Combined data file .coverage.fv-az262-840.3014.445059
+2023-08-31T19:38:29.7730172Z Skipping duplicate data .coverage.fv-az262-840.4945.059901
+2023-08-31T19:38:29.7730822Z Skipping duplicate data .coverage.fv-az262-840.2910.647640
+2023-08-31T19:38:29.7731278Z Skipping duplicate data .coverage.fv-az262-840.4709.560623
+2023-08-31T19:38:29.7731713Z Skipping duplicate data .coverage.fv-az262-840.2977.325153
+2023-08-31T19:38:29.7732165Z Skipping duplicate data .coverage.fv-az262-840.2953.463799
+2023-08-31T19:38:29.7732866Z Skipping duplicate data .coverage.fv-az262-840.4702.742468
+2023-08-31T19:38:29.7733334Z Skipping duplicate data .coverage.fv-az262-840.4973.289543
+2023-08-31T19:38:29.7733806Z Skipping duplicate data .coverage.fv-az262-840.2962.328308
+2023-08-31T19:38:29.7734260Z Skipping duplicate data .coverage.fv-az262-840.3011.531260
+2023-08-31T19:38:29.7734724Z Skipping duplicate data .coverage.fv-az262-840.2788.611526
+2023-08-31T19:38:29.7735202Z Skipping duplicate data .coverage.fv-az262-840.4800.808350
+2023-08-31T19:38:29.7735672Z Skipping duplicate data .coverage.fv-az262-840.4976.801811
+2023-08-31T19:38:29.7736119Z Skipping duplicate data .coverage.fv-az262-840.4932.323678
+2023-08-31T19:38:29.7736591Z Skipping duplicate data .coverage.fv-az262-840.4763.019825
+2023-08-31T19:38:29.7737056Z Skipping duplicate data .coverage.fv-az262-840.2778.394634
+2023-08-31T19:38:29.7737491Z Combined data file .coverage.fv-az262-840.2869.755566
+2023-08-31T19:38:29.7738273Z Couldn't combine data file .coverage.fv-az262-840.5393.496325: Data file '/home/runner/work/truvari/truvari/.coverage.fv-az262-840.5393.496325' doesn't seem to be a coverage data file: 
+2023-08-31T19:38:29.7738922Z Skipping duplicate data .coverage.fv-az262-840.2812.752720
+2023-08-31T19:38:29.9300308Z Skipping duplicate data .coverage.fv-az262-840.4883.398075
+2023-08-31T19:38:29.9300847Z Skipping duplicate data .coverage.fv-az262-840.2934.321976
+2023-08-31T19:38:29.9301312Z Skipping duplicate data .coverage.fv-az262-840.5464.800382
+2023-08-31T19:38:29.9301937Z Skipping duplicate data .coverage.fv-az262-840.2928.686701
+2023-08-31T19:38:29.9302749Z Skipping duplicate data .coverage.fv-az262-840.4913.966642
+2023-08-31T19:38:29.9303439Z Skipping duplicate data .coverage.fv-az262-840.4718.603412
+2023-08-31T19:38:29.9303909Z Combined data file .coverage.fv-az262-840.3060.238769
+2023-08-31T19:38:29.9304380Z Skipping duplicate data .coverage.fv-az262-840.2937.634666
+2023-08-31T19:38:29.9304855Z Skipping duplicate data .coverage.fv-az262-840.4925.278252
+2023-08-31T19:38:29.9305315Z Skipping duplicate data .coverage.fv-az262-840.2856.183074
+2023-08-31T19:38:29.9305793Z Skipping duplicate data .coverage.fv-az262-840.4990.333585
+2023-08-31T19:38:29.9306613Z Skipping duplicate data .coverage.fv-az262-840.3004.725708
+2023-08-31T19:38:29.9307274Z Skipping duplicate data .coverage.fv-az262-840.4808.967623
+2023-08-31T19:38:29.9307880Z Skipping duplicate data .coverage.fv-az262-840.4733.496726
+2023-08-31T19:38:29.9308572Z Combined data file .coverage.fv-az262-840.3021.691926
+2023-08-31T19:38:29.9309010Z Skipping duplicate data .coverage.fv-az262-840.4929.334605
+2023-08-31T19:38:29.9309436Z Skipping duplicate data .coverage.fv-az262-840.2775.017558
+2023-08-31T19:38:29.9309869Z Combined data file .coverage.fv-az262-840.3263.486396
+2023-08-31T19:38:29.9310305Z Skipping duplicate data .coverage.fv-az262-840.4915.536692
+2023-08-31T19:38:29.9310734Z Skipping duplicate data .coverage.fv-az262-840.5054.602277
+2023-08-31T19:38:29.9311175Z Skipping duplicate data .coverage.fv-az262-840.2849.628063
+2023-08-31T19:38:29.9311615Z Skipping duplicate data .coverage.fv-az262-840.3020.364794
+2023-08-31T19:38:29.9312035Z Skipping duplicate data .coverage.fv-az262-840.3042.485466
+2023-08-31T19:38:29.9312487Z Skipping duplicate data .coverage.fv-az262-840.4767.516055
+2023-08-31T19:38:29.9313114Z Skipping duplicate data .coverage.fv-az262-840.4731.161243
+2023-08-31T19:38:29.9313760Z Skipping duplicate data .coverage.fv-az262-840.3003.234032
+2023-08-31T19:38:29.9314209Z Skipping duplicate data .coverage.fv-az262-840.4959.374877
+2023-08-31T19:38:29.9314800Z Skipping duplicate data .coverage.fv-az262-840.4821.302181
+2023-08-31T19:38:29.9315278Z Combined data file .coverage.fv-az262-840.4329.803388
+2023-08-31T19:38:29.9315728Z Skipping duplicate data .coverage.fv-az262-840.5063.493192
+2023-08-31T19:38:29.9316203Z Skipping duplicate data .coverage.fv-az262-840.5050.485768
+2023-08-31T19:38:29.9316671Z Skipping duplicate data .coverage.fv-az262-840.4812.649385
+2023-08-31T19:38:29.9317122Z Skipping duplicate data .coverage.fv-az262-840.2989.130689
+2023-08-31T19:38:29.9317588Z Skipping duplicate data .coverage.fv-az262-840.4842.804644
+2023-08-31T19:38:29.9318058Z Skipping duplicate data .coverage.fv-az262-840.4754.394541
+2023-08-31T19:38:29.9318677Z Combined data file .coverage.fv-az262-840.5296.294927
+2023-08-31T19:38:29.9319274Z Combined data file .coverage.fv-az262-840.5476.349740
+2023-08-31T19:38:29.9319751Z Skipping duplicate data .coverage.fv-az262-840.4937.753169
+2023-08-31T19:38:29.9320705Z Skipping duplicate data .coverage.fv-az262-840.2899.714575
+2023-08-31T19:38:29.9321144Z Skipping duplicate data .coverage.fv-az262-840.2982.445966
+2023-08-31T19:38:29.9321584Z Combined data file .coverage.fv-az262-840.5336.106615
+2023-08-31T19:38:29.9322366Z Skipping duplicate data .coverage.fv-az262-840.4777.846444
+2023-08-31T19:38:29.9322989Z Skipping duplicate data .coverage.fv-az262-840.4779.199481
+2023-08-31T19:38:29.9323456Z Skipping duplicate data .coverage.fv-az262-840.2826.758890
+2023-08-31T19:38:29.9323912Z Combined data file .coverage.fv-az262-840.2866.154697
+2023-08-31T19:38:29.9324377Z Skipping duplicate data .coverage.fv-az262-840.4760.557069
+2023-08-31T19:38:29.9324830Z Skipping duplicate data .coverage.fv-az262-840.5023.112383
+2023-08-31T19:38:29.9325306Z Skipping duplicate data .coverage.fv-az262-840.4906.406380
+2023-08-31T19:38:29.9325775Z Skipping duplicate data .coverage.fv-az262-840.4980.073187
+2023-08-31T19:38:29.9326868Z Skipping duplicate data .coverage.fv-az262-840.3033.565575
+2023-08-31T19:38:29.9327586Z Skipping duplicate data .coverage.fv-az262-840.4700.806628
+2023-08-31T19:38:29.9328055Z Combined data file .coverage.fv-az262-840.4030.851892
+2023-08-31T19:38:29.9328513Z Skipping duplicate data .coverage.fv-az262-840.2830.930476
+2023-08-31T19:38:29.9328973Z Combined data file .coverage.fv-az262-840.2935.001400
+2023-08-31T19:38:29.9329585Z Skipping duplicate data .coverage.fv-az262-840.4688.367087
+2023-08-31T19:38:29.9330044Z Skipping duplicate data .coverage.fv-az262-840.4924.775891
+2023-08-31T19:38:29.9330489Z Skipping duplicate data .coverage.fv-az262-840.2836.945925
+2023-08-31T19:38:29.9330949Z Skipping duplicate data .coverage.fv-az262-840.5044.240455
+2023-08-31T19:38:29.9331669Z Combined data file .coverage.fv-az262-840.3025.952092
+2023-08-31T19:38:29.9332158Z Skipping duplicate data .coverage.fv-az262-840.4746.892831
+2023-08-31T19:38:29.9332792Z Combined data file .coverage.fv-az262-840.2837.045913
+2023-08-31T19:38:29.9333434Z Skipping duplicate data .coverage.fv-az262-840.4739.573786
+2023-08-31T19:38:29.9333895Z Skipping duplicate data .coverage.fv-az262-840.2783.521799
+2023-08-31T19:38:29.9334365Z Skipping duplicate data .coverage.fv-az262-840.4757.785320
+2023-08-31T19:38:29.9334835Z Skipping duplicate data .coverage.fv-az262-840.4978.637585
+2023-08-31T19:38:29.9335307Z Skipping duplicate data .coverage.fv-az262-840.4678.671072
+2023-08-31T19:38:29.9335959Z Skipping duplicate data .coverage.fv-az262-840.5012.149241
+2023-08-31T19:38:29.9336403Z Skipping duplicate data .coverage.fv-az262-840.3027.073377
+2023-08-31T19:38:29.9336839Z Skipping duplicate data .coverage.fv-az262-840.4950.797606
+2023-08-31T19:38:29.9337256Z Skipping duplicate data .coverage.fv-az262-840.5472.392722
+2023-08-31T19:38:29.9337882Z Skipping duplicate data .coverage.fv-az262-840.2771.160444
+2023-08-31T19:38:29.9338564Z Combined data file .coverage.fv-az262-840.2915.028878
+2023-08-31T19:38:29.9338981Z Skipping duplicate data .coverage.fv-az262-840.2902.370228
+2023-08-31T19:38:29.9340120Z Skipping duplicate data .coverage.fv-az262-840.4956.314681
+2023-08-31T19:38:29.9340625Z Skipping duplicate data .coverage.fv-az262-840.2772.807689
+2023-08-31T19:38:29.9341080Z Skipping duplicate data .coverage.fv-az262-840.2913.821117
+2023-08-31T19:38:29.9341514Z Skipping duplicate data .coverage.fv-az262-840.2850.145540
+2023-08-31T19:38:29.9342108Z Combined data file .coverage.fv-az262-840.2927.086723
+2023-08-31T19:38:29.9342954Z Combined data file .coverage.fv-az262-840.2790.392104
+2023-08-31T19:38:29.9343372Z Combined data file .coverage.fv-az262-840.2941.407953
+2023-08-31T19:38:29.9343822Z Skipping duplicate data .coverage.fv-az262-840.2768.009818
+2023-08-31T19:38:29.9344277Z Skipping duplicate data .coverage.fv-az262-840.4719.733874
+2023-08-31T19:38:29.9344922Z Skipping duplicate data .coverage.fv-az262-840.4952.044808
+2023-08-31T19:38:29.9345381Z Skipping duplicate data .coverage.fv-az262-840.4690.726507
+2023-08-31T19:38:29.9345863Z Skipping duplicate data .coverage.fv-az262-840.4764.089444
+2023-08-31T19:38:29.9346330Z Skipping duplicate data .coverage.fv-az262-840.2940.210653
+2023-08-31T19:38:29.9346924Z Skipping duplicate data .coverage.fv-az262-840.2760.103653
+2023-08-31T19:38:29.9347379Z Skipping duplicate data .coverage.fv-az262-840.2985.340325
+2023-08-31T19:38:29.9347831Z Skipping duplicate data .coverage.fv-az262-840.3039.004931
+2023-08-31T19:38:29.9348458Z Skipping duplicate data .coverage.fv-az262-840.5058.679990
+2023-08-31T19:38:29.9348930Z Skipping duplicate data .coverage.fv-az262-840.4744.661860
+2023-08-31T19:38:29.9349403Z Skipping duplicate data .coverage.fv-az262-840.4910.025011
+2023-08-31T19:38:29.9349869Z Skipping duplicate data .coverage.fv-az262-840.4685.788585
+2023-08-31T19:38:29.9350320Z Skipping duplicate data .coverage.fv-az262-840.4923.394157
+2023-08-31T19:38:29.9350931Z Combined data file .coverage.fv-az262-840.2589.252584
+2023-08-31T19:38:29.9351378Z Skipping duplicate data .coverage.fv-az262-840.4997.642236
+2023-08-31T19:38:29.9351823Z Skipping duplicate data .coverage.fv-az262-840.5113.683628
+2023-08-31T19:38:29.9352265Z Combined data file .coverage.fv-az262-840.2804.462597
+2023-08-31T19:38:29.9352695Z Combined data file .coverage.fv-az262-840.2820.735363
+2023-08-31T19:38:29.9353123Z Skipping duplicate data .coverage.fv-az262-840.4704.050211
+2023-08-31T19:38:29.9353577Z Skipping duplicate data .coverage.fv-az262-840.4749.933203
+2023-08-31T19:38:29.9354029Z Skipping duplicate data .coverage.fv-az262-840.4969.102379
+2023-08-31T19:38:29.9354480Z Skipping duplicate data .coverage.fv-az262-840.2777.561694
+2023-08-31T19:38:29.9354902Z Combined data file .coverage.fv-az262-840.5319.534178
+2023-08-31T19:38:29.9355348Z Skipping duplicate data .coverage.fv-az262-840.4922.430178
+2023-08-31T19:38:29.9356000Z Skipping duplicate data .coverage.fv-az262-840.4917.532798
+2023-08-31T19:38:29.9356463Z Combined data file .coverage.fv-az262-840.3009.709274
+2023-08-31T19:38:29.9356912Z Skipping duplicate data .coverage.fv-az262-840.2832.259190
+2023-08-31T19:38:29.9357545Z Skipping duplicate data .coverage.fv-az262-840.5326.645391
+2023-08-31T19:38:29.9357983Z Skipping duplicate data .coverage.fv-az262-840.4949.177740
+2023-08-31T19:38:29.9358432Z Skipping duplicate data .coverage.fv-az262-840.2939.342152
+2023-08-31T19:38:29.9358888Z Skipping duplicate data .coverage.fv-az262-840.4971.471236
+2023-08-31T19:38:29.9359328Z Combined data file .coverage.fv-az262-840.2931.773989
+2023-08-31T19:38:29.9359829Z Combined data file .coverage.fv-az262-840.2846.539850
+2023-08-31T19:38:29.9360279Z Skipping duplicate data .coverage.fv-az262-840.5062.895744
+2023-08-31T19:38:29.9360733Z Skipping duplicate data .coverage.fv-az262-840.2950.721470
+2023-08-31T19:38:29.9361345Z Skipping duplicate data .coverage.fv-az262-840.4831.040673
+2023-08-31T19:38:29.9361827Z Skipping duplicate data .coverage.fv-az262-840.2975.248889
+2023-08-31T19:38:29.9362298Z Skipping duplicate data .coverage.fv-az262-840.5003.152357
+2023-08-31T19:38:29.9362734Z Combined data file .coverage.fv-az262-840.2986.358785
+2023-08-31T19:38:29.9363207Z Skipping duplicate data .coverage.fv-az262-840.4994.008656
+2023-08-31T19:38:29.9363677Z Skipping duplicate data .coverage.fv-az262-840.4807.582267
+2023-08-31T19:38:29.9364146Z Skipping duplicate data .coverage.fv-az262-840.4964.940691
+2023-08-31T19:38:29.9364598Z Skipping duplicate data .coverage.fv-az262-840.4699.530438
+2023-08-31T19:38:29.9365068Z Skipping duplicate data .coverage.fv-az262-840.4846.005154
+2023-08-31T19:38:29.9365536Z Skipping duplicate data .coverage.fv-az262-840.2867.468845
+2023-08-31T19:38:29.9365987Z Skipping duplicate data .coverage.fv-az262-840.4740.379493
+2023-08-31T19:38:29.9366444Z Combined data file .coverage.fv-az262-840.4306.722162
+2023-08-31T19:38:29.9366906Z Skipping duplicate data .coverage.fv-az262-840.4942.486112
+2023-08-31T19:38:29.9367367Z Skipping duplicate data .coverage.fv-az262-840.5032.874216
+2023-08-31T19:38:29.9367835Z Skipping duplicate data .coverage.fv-az262-840.2734.331908
+2023-08-31T19:38:29.9368316Z Skipping duplicate data .coverage.fv-az262-840.2894.608808
+2023-08-31T19:38:29.9368781Z Skipping duplicate data .coverage.fv-az262-840.4805.779283
+2023-08-31T19:38:29.9369230Z Skipping duplicate data .coverage.fv-az262-840.3023.735359
+2023-08-31T19:38:29.9369700Z Skipping duplicate data .coverage.fv-az262-840.2901.180765
+2023-08-31T19:38:29.9370166Z Skipping duplicate data .coverage.fv-az262-840.4963.359205
+2023-08-31T19:38:29.9370617Z Skipping duplicate data .coverage.fv-az262-840.4728.675484
+2023-08-31T19:38:29.9371072Z Combined data file .coverage.fv-az262-840.5131.794234
+2023-08-31T19:38:29.9371534Z Skipping duplicate data .coverage.fv-az262-840.4759.490200
+2023-08-31T19:38:29.9371986Z Skipping duplicate data .coverage.fv-az262-840.2863.698768
+2023-08-31T19:38:29.9372454Z Skipping duplicate data .coverage.fv-az262-840.4911.674402
+2023-08-31T19:38:30.1046734Z Skipping duplicate data .coverage.fv-az262-840.5013.469947
+2023-08-31T19:38:30.1047273Z Skipping duplicate data .coverage.fv-az262-840.4708.025225
+2023-08-31T19:38:30.1047926Z Skipping duplicate data .coverage.fv-az262-840.4908.284099
+2023-08-31T19:38:30.1048352Z Skipping duplicate data .coverage.fv-az262-840.5471.368102
+2023-08-31T19:38:30.1049373Z Skipping duplicate data .coverage.fv-az262-840.5475.939159
+2023-08-31T19:38:30.1049809Z Skipping duplicate data .coverage.fv-az262-840.4836.998993
+2023-08-31T19:38:30.1050213Z Combined data file .coverage.fv-az262-840.4125.064167
+2023-08-31T19:38:30.1050634Z Skipping duplicate data .coverage.fv-az262-840.4801.852921
+2023-08-31T19:38:30.1051064Z Skipping duplicate data .coverage.fv-az262-840.2897.518761
+2023-08-31T19:38:30.1051662Z Skipping duplicate data .coverage.fv-az262-840.5019.479605
+2023-08-31T19:38:30.1052673Z Combined data file .coverage.fv-az262-840.2955.933722
+2023-08-31T19:38:30.1053656Z Skipping duplicate data .coverage.fv-az262-840.5024.240264
+2023-08-31T19:38:30.1054570Z Skipping duplicate data .coverage.fv-az262-840.4934.630904
+2023-08-31T19:38:30.1055237Z Skipping duplicate data .coverage.fv-az262-840.2769.367734
+2023-08-31T19:38:30.1056363Z Skipping duplicate data .coverage.fv-az262-840.5046.478968
+2023-08-31T19:38:30.1056866Z Skipping duplicate data .coverage.fv-az262-840.4961.518923
+2023-08-31T19:38:30.1057678Z Skipping duplicate data .coverage.fv-az262-840.4734.748397
+2023-08-31T19:38:30.1058330Z Skipping duplicate data .coverage.fv-az262-840.5139.986062
+2023-08-31T19:38:30.1058787Z Skipping duplicate data .coverage.fv-az262-840.2838.597123
+2023-08-31T19:38:30.1059634Z Skipping duplicate data .coverage.fv-az262-840.2979.543491
+2023-08-31T19:38:30.1060278Z Skipping duplicate data .coverage.fv-az262-840.5025.758665
+2023-08-31T19:38:30.1060745Z Skipping duplicate data .coverage.fv-az262-840.4748.266958
+2023-08-31T19:38:30.1061172Z Combined data file .coverage.fv-az262-840.5808.039166
+2023-08-31T19:38:30.1061604Z Skipping duplicate data .coverage.fv-az262-840.4822.860539
+2023-08-31T19:38:30.1062049Z Skipping duplicate data .coverage.fv-az262-840.4902.295283
+2023-08-31T19:38:30.1063087Z Skipping duplicate data .coverage.fv-az262-840.4895.356122
+2023-08-31T19:38:30.1063731Z Skipping duplicate data .coverage.fv-az262-840.4916.113907
+2023-08-31T19:38:30.1064228Z Skipping duplicate data .coverage.fv-az262-840.4667.197968
+2023-08-31T19:38:30.1065062Z Skipping duplicate data .coverage.fv-az262-840.2981.101048
+2023-08-31T19:38:30.1065702Z Skipping duplicate data .coverage.fv-az262-840.5010.946093
+2023-08-31T19:38:30.1066728Z Skipping duplicate data .coverage.fv-az262-840.4904.543396
+2023-08-31T19:38:30.1067489Z Combined data file .coverage.fv-az262-840.3107.584910
+2023-08-31T19:38:30.1068115Z Skipping duplicate data .coverage.fv-az262-840.4755.660006
+2023-08-31T19:38:30.1068563Z Skipping duplicate data .coverage.fv-az262-840.4983.095085
+2023-08-31T19:38:30.1069004Z Skipping duplicate data .coverage.fv-az262-840.4736.136537
+2023-08-31T19:38:30.1069506Z Skipping duplicate data .coverage.fv-az262-840.4837.150769
+2023-08-31T19:38:30.1069920Z Combined data file .coverage.fv-az262-840.2954.036093
+2023-08-31T19:38:30.1070358Z Skipping duplicate data .coverage.fv-az262-840.2961.048896
+2023-08-31T19:38:30.1070800Z Skipping duplicate data .coverage.fv-az262-840.5056.382570
+2023-08-31T19:38:30.1071238Z Skipping duplicate data .coverage.fv-az262-840.4698.268378
+2023-08-31T19:38:30.1071845Z Skipping duplicate data .coverage.fv-az262-840.4826.390977
+2023-08-31T19:38:30.1072303Z Skipping duplicate data .coverage.fv-az262-840.4776.541300
+2023-08-31T19:38:30.1073127Z Skipping duplicate data .coverage.fv-az262-840.4912.211199
+2023-08-31T19:38:30.1073566Z Skipping duplicate data .coverage.fv-az262-840.4694.986809
+2023-08-31T19:38:30.1074193Z Skipping duplicate data .coverage.fv-az262-840.2911.217548
+2023-08-31T19:38:30.1074669Z Skipping duplicate data .coverage.fv-az262-840.4830.220821
+2023-08-31T19:38:30.1075480Z Skipping duplicate data .coverage.fv-az262-840.5467.368285
+2023-08-31T19:38:30.1076139Z Combined data file .coverage.fv-az262-840.2971.165064
+2023-08-31T19:38:30.1076613Z Skipping duplicate data .coverage.fv-az262-840.3001.962089
+2023-08-31T19:38:30.1077403Z Skipping duplicate data .coverage.fv-az262-840.4938.045591
+2023-08-31T19:38:30.1077995Z Skipping duplicate data .coverage.fv-az262-840.2990.657247
+2023-08-31T19:38:30.1078456Z Skipping duplicate data .coverage.fv-az262-840.4986.634269
+2023-08-31T19:38:30.1079075Z Skipping duplicate data .coverage.fv-az262-840.2918.591551
+2023-08-31T19:38:30.1079502Z Skipping duplicate data .coverage.fv-az262-840.4996.166335
+2023-08-31T19:38:30.1079929Z Combined data file .coverage.fv-az262-840.2686.724355
+2023-08-31T19:38:30.1080361Z Skipping duplicate data .coverage.fv-az262-840.2968.861042
+2023-08-31T19:38:30.1080782Z Skipping duplicate data .coverage.fv-az262-840.4825.870565
+2023-08-31T19:38:30.1081220Z Skipping duplicate data .coverage.fv-az262-840.4692.999461
+2023-08-31T19:38:30.1081890Z Skipping duplicate data .coverage.fv-az262-840.4737.799918
+2023-08-31T19:38:30.1082364Z Skipping duplicate data .coverage.fv-az262-840.4677.594235
+2023-08-31T19:38:30.1083382Z Skipping duplicate data .coverage.fv-az262-840.5156.750825
+2023-08-31T19:38:30.1084107Z Skipping duplicate data .coverage.fv-az262-840.3028.068651
+2023-08-31T19:38:30.1084985Z Combined data file .coverage.fv-az262-840.5155.235069
+2023-08-31T19:38:30.1085626Z Skipping duplicate data .coverage.fv-az262-840.4778.398999
+2023-08-31T19:38:30.1086118Z Skipping duplicate data .coverage.fv-az262-840.4958.316079
+2023-08-31T19:38:30.1086586Z Skipping duplicate data .coverage.fv-az262-840.4888.182258
+2023-08-31T19:38:30.1087357Z Combined data file .coverage.fv-az262-840.3162.197155
+2023-08-31T19:38:30.1087792Z Skipping duplicate data .coverage.fv-az262-840.4889.946900
+2023-08-31T19:38:30.1088222Z Combined data file .coverage.fv-az262-840.3030.240080
+2023-08-31T19:38:30.1088651Z Skipping duplicate data .coverage.fv-az262-840.5030.386975
+2023-08-31T19:38:30.1089073Z Combined data file .coverage.fv-az262-840.5129.205894
+2023-08-31T19:38:30.1089511Z Skipping duplicate data .coverage.fv-az262-840.3010.006236
+2023-08-31T19:38:30.1089950Z Skipping duplicate data .coverage.fv-az262-840.5057.365122
+2023-08-31T19:38:30.1090381Z Skipping duplicate data .coverage.fv-az262-840.5018.447048
+2023-08-31T19:38:30.1090805Z Combined data file .coverage.fv-az262-840.2952.448987
+2023-08-31T19:38:30.1091238Z Skipping duplicate data .coverage.fv-az262-840.4985.028206
+2023-08-31T19:38:30.1091663Z Skipping duplicate data .coverage.fv-az262-840.5009.038763
+2023-08-31T19:38:30.1092310Z Skipping duplicate data .coverage.fv-az262-840.4926.623804
+2023-08-31T19:38:30.1093475Z Combined data file .coverage.fv-az262-840.4244.798022
+2023-08-31T19:38:30.1094133Z Skipping duplicate data .coverage.fv-az262-840.2785.986644
+2023-08-31T19:38:30.1094612Z Skipping duplicate data .coverage.fv-az262-840.5033.302860
+2023-08-31T19:38:30.1095071Z Combined data file .coverage.fv-az262-840.2857.795196
+2023-08-31T19:38:30.1095543Z Skipping duplicate data .coverage.fv-az262-840.4741.657617
+2023-08-31T19:38:30.1096004Z Skipping duplicate data .coverage.fv-az262-840.2796.385996
+2023-08-31T19:38:30.1096649Z Combined data file .coverage.fv-az262-840.2852.923657
+2023-08-31T19:38:30.1097090Z Combined data file .coverage.fv-az262-840.2728.186277
+2023-08-31T19:38:30.1097499Z Combined data file .coverage.fv-az262-840.2806.613880
+2023-08-31T19:38:30.1097943Z Skipping duplicate data .coverage.fv-az262-840.2853.451181
+2023-08-31T19:38:30.1098398Z Skipping duplicate data .coverage.fv-az262-840.4810.210102
+2023-08-31T19:38:30.1098855Z Skipping duplicate data .coverage.fv-az262-840.4953.399584
+2023-08-31T19:38:30.1099434Z Skipping duplicate data .coverage.fv-az262-840.4794.829459
+2023-08-31T19:38:30.1099904Z Skipping duplicate data .coverage.fv-az262-840.4730.958662
+2023-08-31T19:38:30.1100358Z Skipping duplicate data .coverage.fv-az262-840.4693.872934
+2023-08-31T19:38:30.1100796Z Skipping duplicate data .coverage.fv-az262-840.4901.308834
+2023-08-31T19:38:30.1101247Z Combined data file .coverage.fv-az262-840.2784.309436
+2023-08-31T19:38:30.1101915Z Skipping duplicate data .coverage.fv-az262-840.5040.362308
+2023-08-31T19:38:30.1102380Z Skipping duplicate data .coverage.fv-az262-840.5324.540705
+2023-08-31T19:38:30.1103077Z Skipping duplicate data .coverage.fv-az262-840.5034.740539
+2023-08-31T19:38:30.1103742Z Skipping duplicate data .coverage.fv-az262-840.2926.934746
+2023-08-31T19:38:30.1104416Z Skipping duplicate data .coverage.fv-az262-840.2862.109336
+2023-08-31T19:38:30.1105242Z Skipping duplicate data .coverage.fv-az262-840.4696.179715
+2023-08-31T19:38:30.1105746Z Skipping duplicate data .coverage.fv-az262-840.2993.797869
+2023-08-31T19:38:30.1106406Z Skipping duplicate data .coverage.fv-az262-840.3035.042608
+2023-08-31T19:38:30.1107040Z Skipping duplicate data .coverage.fv-az262-840.2996.317917
+2023-08-31T19:38:30.1107715Z Skipping duplicate data .coverage.fv-az262-840.4783.186651
+2023-08-31T19:38:30.1108352Z Combined data file .coverage.fv-az262-840.2942.722246
+2023-08-31T19:38:30.1109330Z Skipping duplicate data .coverage.fv-az262-840.4703.809193
+2023-08-31T19:38:30.1110212Z Skipping duplicate data .coverage.fv-az262-840.4717.657759
+2023-08-31T19:38:30.1111443Z Skipping duplicate data .coverage.fv-az262-840.4769.834427
+2023-08-31T19:38:30.1112302Z Skipping duplicate data .coverage.fv-az262-840.4668.540918
+2023-08-31T19:38:30.1112935Z Skipping duplicate data .coverage.fv-az262-840.2883.259430
+2023-08-31T19:38:30.1113434Z Skipping duplicate data .coverage.fv-az262-840.5008.670238
+2023-08-31T19:38:30.1114245Z Combined data file .coverage.fv-az262-840.3034.434230
+2023-08-31T19:38:30.1114717Z Skipping duplicate data .coverage.fv-az262-840.4711.884135
+2023-08-31T19:38:30.1115388Z Skipping duplicate data .coverage.fv-az262-840.4993.417540
+2023-08-31T19:38:30.1116080Z Skipping duplicate data .coverage.fv-az262-840.3002.284143
+2023-08-31T19:38:30.1116532Z Skipping duplicate data .coverage.fv-az262-840.4967.307546
+2023-08-31T19:38:30.1116977Z Skipping duplicate data .coverage.fv-az262-840.4747.652292
+2023-08-31T19:38:30.1117435Z Skipping duplicate data .coverage.fv-az262-840.5011.741943
+2023-08-31T19:38:30.1117887Z Skipping duplicate data .coverage.fv-az262-840.5059.396851
+2023-08-31T19:38:30.1118538Z Skipping duplicate data .coverage.fv-az262-840.4710.229322
+2023-08-31T19:38:30.1119001Z Skipping duplicate data .coverage.fv-az262-840.4991.219360
+2023-08-31T19:38:30.1119632Z Skipping duplicate data .coverage.fv-az262-840.2799.886074
+2023-08-31T19:38:30.1120065Z Combined data file .coverage.fv-az262-840.2805.122608
+2023-08-31T19:38:30.1120516Z Skipping duplicate data .coverage.fv-az262-840.4806.137595
+2023-08-31T19:38:30.1120974Z Skipping duplicate data .coverage.fv-az262-840.2904.204583
+2023-08-31T19:38:30.1121588Z Combined data file .coverage.fv-az262-840.5772.393320
+2023-08-31T19:38:30.1122255Z Skipping duplicate data .coverage.fv-az262-840.4987.998855
+2023-08-31T19:38:30.1122931Z Skipping duplicate data .coverage.fv-az262-840.4750.086316
+2023-08-31T19:38:30.1123414Z Skipping duplicate data .coverage.fv-az262-840.4840.422939
+2023-08-31T19:38:30.1124190Z Skipping duplicate data .coverage.fv-az262-840.2963.459950
+2023-08-31T19:38:30.1124677Z Skipping duplicate data .coverage.fv-az262-840.4977.033636
+2023-08-31T19:38:30.1125150Z Skipping duplicate data .coverage.fv-az262-840.2973.571123
+2023-08-31T19:38:30.1125793Z Combined data file .coverage.fv-az262-840.3363.006606
+2023-08-31T19:38:30.1126596Z Combined data file .coverage.fv-az262-840.2780.573051
+2023-08-31T19:38:30.1127051Z Skipping duplicate data .coverage.fv-az262-840.4772.631148
+2023-08-31T19:38:30.1127703Z Skipping duplicate data .coverage.fv-az262-840.2970.384890
+2023-08-31T19:38:30.1128148Z Skipping duplicate data .coverage.fv-az262-840.5043.641631
+2023-08-31T19:38:30.1128605Z Skipping duplicate data .coverage.fv-az262-840.5007.326276
+2023-08-31T19:38:30.1129059Z Skipping duplicate data .coverage.fv-az262-840.5031.353072
+2023-08-31T19:38:30.3395567Z Combined data file .coverage.fv-az262-840.5157.648360
+2023-08-31T19:38:30.3396327Z Skipping duplicate data .coverage.fv-az262-840.5460.150376
+2023-08-31T19:38:30.3396973Z Skipping duplicate data .coverage.fv-az262-840.2920.592171
+2023-08-31T19:38:30.3397496Z Skipping duplicate data .coverage.fv-az262-840.2851.895727
+2023-08-31T19:38:30.3397978Z Skipping duplicate data .coverage.fv-az262-840.2839.206527
+2023-08-31T19:38:30.3398421Z Combined data file .coverage.fv-az262-840.3008.637792
+2023-08-31T19:38:30.3398889Z Skipping duplicate data .coverage.fv-az262-840.4714.837628
+2023-08-31T19:38:30.3399366Z Skipping duplicate data .coverage.fv-az262-840.2877.226769
+2023-08-31T19:38:30.3399843Z Skipping duplicate data .coverage.fv-az262-840.4802.852146
+2023-08-31T19:38:30.3400286Z Combined data file .coverage.fv-az262-840.5599.580406
+2023-08-31T19:38:30.3400898Z Skipping duplicate data .coverage.fv-az262-840.2997.266900
+2023-08-31T19:38:30.3401327Z Combined data file .coverage.fv-az262-840.3576.706081
+2023-08-31T19:38:30.3402105Z Skipping duplicate data .coverage.fv-az262-840.4960.161464
+2023-08-31T19:38:30.3402913Z Combined data file .coverage.fv-az262-840.5844.577573
+2023-08-31T19:38:30.3403412Z Combined data file .coverage.fv-az262-840.2811.226350
+2023-08-31T19:38:30.3404085Z Skipping duplicate data .coverage.fv-az262-840.4845.845582
+2023-08-31T19:38:30.3404564Z Skipping duplicate data .coverage.fv-az262-840.2873.633905
+2023-08-31T19:38:30.3405039Z Skipping duplicate data .coverage.fv-az262-840.2786.875530
+2023-08-31T19:38:30.3405509Z Skipping duplicate data .coverage.fv-az262-840.5442.792459
+2023-08-31T19:38:30.3405959Z Skipping duplicate data .coverage.fv-az262-840.5000.941524
+2023-08-31T19:38:30.3406431Z Skipping duplicate data .coverage.fv-az262-840.4775.233461
+2023-08-31T19:38:30.3406901Z Skipping duplicate data .coverage.fv-az262-840.4972.338593
+2023-08-31T19:38:30.3407435Z Skipping duplicate data .coverage.fv-az262-840.2814.461155
+2023-08-31T19:38:30.3407908Z Skipping duplicate data .coverage.fv-az262-840.4675.443026
+2023-08-31T19:38:30.3409503Z Skipping duplicate data .coverage.fv-az262-840.5041.794224
+2023-08-31T19:38:30.3409977Z Skipping duplicate data .coverage.fv-az262-840.2825.591087
+2023-08-31T19:38:30.3410433Z Combined data file .coverage.fv-az262-840.3950.980090
+2023-08-31T19:38:30.3410909Z Skipping duplicate data .coverage.fv-az262-840.4716.229242
+2023-08-31T19:38:30.3411382Z Skipping duplicate data .coverage.fv-az262-840.4742.059428
+2023-08-31T19:38:30.3411835Z Skipping duplicate data .coverage.fv-az262-840.4679.149179
+2023-08-31T19:38:30.3412294Z Combined data file .coverage.fv-az262-840.3647.313915
+2023-08-31T19:38:30.3412760Z Skipping duplicate data .coverage.fv-az262-840.4695.622635
+2023-08-31T19:38:30.3413215Z Skipping duplicate data .coverage.fv-az262-840.4670.277701
+2023-08-31T19:38:30.3413676Z Combined data file .coverage.fv-az262-840.3717.280152
+2023-08-31T19:38:30.3414143Z Skipping duplicate data .coverage.fv-az262-840.2895.987824
+2023-08-31T19:38:30.3414596Z Skipping duplicate data .coverage.fv-az262-840.4735.896987
+2023-08-31T19:38:30.3415075Z Skipping duplicate data .coverage.fv-az262-840.4758.494239
+2023-08-31T19:38:30.3415544Z Skipping duplicate data .coverage.fv-az262-840.5047.851716
+2023-08-31T19:38:30.3415996Z Combined data file .coverage.fv-az262-840.5626.850451
+2023-08-31T19:38:30.3416606Z Skipping duplicate data .coverage.fv-az262-840.3043.031060
+2023-08-31T19:38:30.3417250Z Skipping duplicate data .coverage.fv-az262-840.4992.465462
+2023-08-31T19:38:30.3417702Z Combined data file .coverage.fv-az262-840.2983.207313
+2023-08-31T19:38:30.3418310Z Skipping duplicate data .coverage.fv-az262-840.4828.597276
+2023-08-31T19:38:30.3418763Z Skipping duplicate data .coverage.fv-az262-840.2789.515765
+2023-08-31T19:38:30.3420711Z Combined data file .coverage.fv-az262-840.4610.084033
+2023-08-31T19:38:30.3421258Z Skipping duplicate data .coverage.fv-az262-840.2914.065396
+2023-08-31T19:38:30.3421693Z Skipping duplicate data .coverage.fv-az262-840.4955.505914
+2023-08-31T19:38:30.3422130Z Skipping duplicate data .coverage.fv-az262-840.2919.259479
+2023-08-31T19:38:30.3422579Z Skipping duplicate data .coverage.fv-az262-840.5055.510750
+2023-08-31T19:38:30.3423199Z Skipping duplicate data .coverage.fv-az262-840.4761.104531
+2023-08-31T19:38:30.3423682Z Skipping duplicate data .coverage.fv-az262-840.4898.504424
+2023-08-31T19:38:30.3424151Z Skipping duplicate data .coverage.fv-az262-840.2878.736345
+2023-08-31T19:38:30.3424601Z Skipping duplicate data .coverage.fv-az262-840.5146.097181
+2023-08-31T19:38:30.3425222Z Skipping duplicate data .coverage.fv-az262-840.4774.792032
+2023-08-31T19:38:30.3425669Z Skipping duplicate data .coverage.fv-az262-840.4752.307855
+2023-08-31T19:38:30.3426092Z Combined data file .coverage.fv-az262-840.2964.093774
+2023-08-31T19:38:30.3427870Z Combined data file .coverage.fv-az262-840.2998.678718
+2023-08-31T19:38:30.3428759Z Skipping duplicate data .coverage.fv-az262-840.2879.680794
+2023-08-31T19:38:30.3429393Z Skipping duplicate data .coverage.fv-az262-840.2948.375301
+2023-08-31T19:38:30.3429830Z Skipping duplicate data .coverage.fv-az262-840.5005.569400
+2023-08-31T19:38:30.3430607Z Skipping duplicate data .coverage.fv-az262-840.5028.035785
+2023-08-31T19:38:30.3431111Z Skipping duplicate data .coverage.fv-az262-840.2900.158720
+2023-08-31T19:38:30.3432222Z Skipping duplicate data .coverage.fv-az262-840.4829.945113
+2023-08-31T19:38:30.3432850Z Skipping duplicate data .coverage.fv-az262-840.4793.510058
+2023-08-31T19:38:30.3433453Z Combined data file .coverage.fv-az262-840.2921.725086
+2023-08-31T19:38:30.3433887Z Combined data file .coverage.fv-az262-840.5455.663732
+2023-08-31T19:38:30.3434689Z Skipping duplicate data .coverage.fv-az262-840.4936.474885
+2023-08-31T19:38:30.3435141Z Skipping duplicate data .coverage.fv-az262-840.4974.921076
+2023-08-31T19:38:30.3435588Z Skipping duplicate data .coverage.fv-az262-840.4948.402677
+2023-08-31T19:38:30.3436011Z Skipping duplicate data .coverage.fv-az262-840.5314.272250
+2023-08-31T19:38:30.3436627Z Skipping duplicate data .coverage.fv-az262-840.5133.039661
+2023-08-31T19:38:30.3437224Z Combined data file .coverage.fv-az262-840.2880.588130
+2023-08-31T19:38:30.3437657Z Skipping duplicate data .coverage.fv-az262-840.4989.277131
+2023-08-31T19:38:30.3438103Z Skipping duplicate data .coverage.fv-az262-840.4946.573432
+2023-08-31T19:38:30.3438557Z Skipping duplicate data .coverage.fv-az262-840.4968.421404
+2023-08-31T19:38:30.3438997Z Skipping duplicate data .coverage.fv-az262-840.2908.649626
+2023-08-31T19:38:30.3439418Z Skipping duplicate data .coverage.fv-az262-840.4762.163427
+2023-08-31T19:38:30.3439857Z Skipping duplicate data .coverage.fv-az262-840.4919.957004
+2023-08-31T19:38:30.3440304Z Skipping duplicate data .coverage.fv-az262-840.3032.065706
+2023-08-31T19:38:30.3440727Z Skipping duplicate data .coverage.fv-az262-840.4804.808993
+2023-08-31T19:38:30.3441287Z Skipping duplicate data .coverage.fv-az262-840.5325.907430
+2023-08-31T19:38:30.3441726Z Skipping duplicate data .coverage.fv-az262-840.5022.885251
+2023-08-31T19:38:30.3442320Z Skipping duplicate data .coverage.fv-az262-840.4928.560964
+2023-08-31T19:38:30.3442787Z Skipping duplicate data .coverage.fv-az262-840.4907.175604
+2023-08-31T19:38:30.3443244Z Skipping duplicate data .coverage.fv-az262-840.2969.891124
+2023-08-31T19:38:30.3443693Z Skipping duplicate data .coverage.fv-az262-840.4745.619408
+2023-08-31T19:38:30.3444132Z Skipping duplicate data .coverage.fv-az262-840.4927.562060
+2023-08-31T19:38:30.3444587Z Skipping duplicate data .coverage.fv-az262-840.4909.437977
+2023-08-31T19:38:30.3445026Z Combined data file .coverage.fv-az262-840.3019.571597
+2023-08-31T19:38:30.3445459Z Skipping duplicate data .coverage.fv-az262-840.2896.151254
+2023-08-31T19:38:30.3445914Z Skipping duplicate data .coverage.fv-az262-840.4684.701303
+2023-08-31T19:38:30.3446353Z Combined data file .coverage.fv-az262-840.3858.922651
+2023-08-31T19:38:30.3446789Z Skipping duplicate data .coverage.fv-az262-840.2770.587974
+2023-08-31T19:38:30.3447240Z Skipping duplicate data .coverage.fv-az262-840.4941.141813
+2023-08-31T19:38:30.3447695Z Skipping duplicate data .coverage.fv-az262-840.2767.153136
+2023-08-31T19:38:30.3448159Z Skipping duplicate data .coverage.fv-az262-840.2831.162101
+2023-08-31T19:38:30.3449830Z Skipping duplicate data .coverage.fv-az262-840.2687.670791
+2023-08-31T19:38:30.3450314Z Combined data file .coverage.fv-az262-840.2819.874783
+2023-08-31T19:38:30.3450762Z Combined data file .coverage.fv-az262-840.2813.212542
+2023-08-31T19:38:30.3451205Z Skipping duplicate data .coverage.fv-az262-840.2872.634139
+2023-08-31T19:38:30.3451661Z Combined data file .coverage.fv-az262-840.2978.128055
+2023-08-31T19:38:30.3452267Z Combined data file .coverage.fv-az262-840.2844.544468
+2023-08-31T19:38:30.3452696Z Skipping duplicate data .coverage.fv-az262-840.5053.888768
+2023-08-31T19:38:30.3453148Z Skipping duplicate data .coverage.fv-az262-840.2793.211513
+2023-08-31T19:38:30.3453590Z Combined data file .coverage.fv-az262-840.2958.184200
+2023-08-31T19:38:30.3454019Z Combined data file .coverage.fv-az262-840.3126.046229
+2023-08-31T19:38:30.3454445Z Skipping duplicate data .coverage.fv-az262-840.2821.972742
+2023-08-31T19:38:30.3455136Z Skipping duplicate data .coverage.fv-az262-840.4691.099328
+2023-08-31T19:38:30.3455637Z Skipping duplicate data .coverage.fv-az262-840.4765.494290
+2023-08-31T19:38:30.3456239Z Skipping duplicate data .coverage.fv-az262-840.4701.949360
+2023-08-31T19:38:30.3456680Z Combined data file .coverage.fv-az262-840.2807.406563
+2023-08-31T19:38:30.3457127Z Skipping duplicate data .coverage.fv-az262-840.4732.568012
+2023-08-31T19:38:30.3457549Z Combined data file .coverage.fv-az262-840.4176.740553
+2023-08-31T19:38:30.3457992Z Skipping duplicate data .coverage.fv-az262-840.4930.265408
+2023-08-31T19:38:30.3458444Z Skipping duplicate data .coverage.fv-az262-840.4820.347467
+2023-08-31T19:38:30.3458898Z Skipping duplicate data .coverage.fv-az262-840.4770.226044
+2023-08-31T19:38:30.3459320Z Combined data file .coverage.fv-az262-840.5335.341484
+2023-08-31T19:38:30.3460017Z Skipping duplicate data .coverage.fv-az262-840.4686.923327
+2023-08-31T19:38:30.3460471Z Skipping duplicate data .coverage.fv-az262-840.4823.566506
+2023-08-31T19:38:30.3460902Z Combined data file .coverage.fv-az262-840.5698.630871
+2023-08-31T19:38:30.3461350Z Skipping duplicate data .coverage.fv-az262-840.4773.140506
+2023-08-31T19:38:30.3461818Z Skipping duplicate data .coverage.fv-az262-840.4681.310280
+2023-08-31T19:38:30.3462275Z Skipping duplicate data .coverage.fv-az262-840.5001.839875
+2023-08-31T19:38:30.3462876Z Combined data file .coverage.fv-az262-840.2972.672064
+2023-08-31T19:38:30.3463343Z Skipping duplicate data .coverage.fv-az262-840.2974.678364
+2023-08-31T19:38:30.3463812Z Skipping duplicate data .coverage.fv-az262-840.3015.018219
+2023-08-31T19:38:30.3464268Z Skipping duplicate data .coverage.fv-az262-840.4785.739007
+2023-08-31T19:38:30.3464742Z Skipping duplicate data .coverage.fv-az262-840.2887.954788
+2023-08-31T19:38:30.3465211Z Skipping duplicate data .coverage.fv-az262-840.4784.626389
+2023-08-31T19:38:30.3465659Z Skipping duplicate data .coverage.fv-az262-840.4697.610296
+2023-08-31T19:38:30.3466134Z Skipping duplicate data .coverage.fv-az262-840.4962.058069
+2023-08-31T19:38:30.3466778Z Skipping duplicate data .coverage.fv-az262-840.3041.183720
+2023-08-31T19:38:30.3467217Z Combined data file .coverage.fv-az262-840.2976.558113
+2023-08-31T19:38:30.3467659Z Skipping duplicate data .coverage.fv-az262-840.4811.472125
+2023-08-31T19:38:30.3468121Z Skipping duplicate data .coverage.fv-az262-840.3029.304041
+2023-08-31T19:38:30.3468562Z Combined data file .coverage.fv-az262-840.3199.709295
+2023-08-31T19:38:30.3468993Z Skipping duplicate data .coverage.fv-az262-840.4725.376068
+2023-08-31T19:38:30.3469435Z Combined data file .coverage.fv-az262-840.2684.297973
+2023-08-31T19:38:30.3469880Z Skipping duplicate data .coverage.fv-az262-840.4918.029175
+2023-08-31T19:38:30.3470317Z Skipping duplicate data .coverage.fv-az262-840.3038.682015
+2023-08-31T19:38:30.3470770Z Skipping duplicate data .coverage.fv-az262-840.4680.472971
+2023-08-31T19:38:30.5111311Z Combined data file .coverage.fv-az262-840.5309.134251
+2023-08-31T19:38:30.5111858Z Skipping duplicate data .coverage.fv-az262-840.2847.485758
+2023-08-31T19:38:30.5112333Z Skipping duplicate data .coverage.fv-az262-840.2794.975652
+2023-08-31T19:38:30.5112786Z Skipping duplicate data .coverage.fv-az262-840.2779.398702
+2023-08-31T19:38:30.5113236Z Skipping duplicate data .coverage.fv-az262-840.5039.306161
+2023-08-31T19:38:30.5113685Z Skipping duplicate data .coverage.fv-az262-840.3018.923665
+2023-08-31T19:38:30.5114116Z Combined data file .coverage.fv-az262-840.3335.190827
+2023-08-31T19:38:30.5114555Z Skipping duplicate data .coverage.fv-az262-840.3040.881237
+2023-08-31T19:38:30.5114979Z Skipping duplicate data .coverage.fv-az262-840.4743.867714
+2023-08-31T19:38:30.5124674Z Skipping duplicate data .coverage.fv-az262-840.4753.216451
+2023-08-31T19:38:30.5125638Z Skipping duplicate data .coverage.fv-az262-840.2890.393436
+2023-08-31T19:38:30.5126122Z Skipping duplicate data .coverage.fv-az262-840.4899.879187
+2023-08-31T19:38:30.5126794Z Skipping duplicate data .coverage.fv-az262-840.4900.628509
+2023-08-31T19:38:30.5127626Z Skipping duplicate data .coverage.fv-az262-840.4975.641917
+2023-08-31T19:38:30.5128133Z Skipping duplicate data .coverage.fv-az262-840.3036.091771
+2023-08-31T19:38:30.5128822Z Combined data file .coverage.fv-az262-840.2558.453285
+2023-08-31T19:38:30.5129280Z Skipping duplicate data .coverage.fv-az262-840.4957.231803
+2023-08-31T19:38:30.5129748Z Skipping duplicate data .coverage.fv-az262-840.2868.600344
+2023-08-31T19:38:30.5130191Z Skipping duplicate data .coverage.fv-az262-840.5051.987615
+2023-08-31T19:38:30.5130654Z Skipping duplicate data .coverage.fv-az262-840.5466.852186
+2023-08-31T19:38:30.5131112Z Skipping duplicate data .coverage.fv-az262-840.5465.427225
+2023-08-31T19:38:30.5131551Z Skipping duplicate data .coverage.fv-az262-840.2848.857895
+2023-08-31T19:38:30.5132011Z Skipping duplicate data .coverage.fv-az262-840.4892.808898
+2023-08-31T19:38:30.5132456Z Combined data file .coverage.fv-az262-840.5474.336604
+2023-08-31T19:38:30.5132878Z Combined data file .coverage.fv-az262-840.3005.835458
+2023-08-31T19:38:30.5133532Z Skipping duplicate data .coverage.fv-az262-840.4835.023003
+2023-08-31T19:38:30.5134078Z Skipping duplicate data .coverage.fv-az262-840.4674.290967
+2023-08-31T19:38:30.5134549Z Skipping duplicate data .coverage.fv-az262-840.4756.511671
+2023-08-31T19:38:30.5134978Z Combined data file .coverage.fv-az262-840.2526.740991
+2023-08-31T19:38:30.5135417Z Combined data file .coverage.fv-az262-840.2891.888172
+2023-08-31T19:38:30.5136175Z Skipping duplicate data .coverage.fv-az262-840.2888.709059
+2023-08-31T19:38:30.5136688Z Skipping duplicate data .coverage.fv-az262-840.5014.247183
+2023-08-31T19:38:30.5137210Z Skipping duplicate data .coverage.fv-az262-840.4669.927058
+2023-08-31T19:38:30.5137652Z Skipping duplicate data .coverage.fv-az262-840.2876.305205
+2023-08-31T19:38:30.5138063Z Combined data file .coverage.fv-az262-840.2946.601695
+2023-08-31T19:38:30.5138505Z Skipping duplicate data .coverage.fv-az262-840.4893.931506
+2023-08-31T19:38:30.5138950Z Skipping duplicate data .coverage.fv-az262-840.2925.413609
+2023-08-31T19:38:30.5139773Z Skipping duplicate data .coverage.fv-az262-840.5052.150204
+2023-08-31T19:38:30.5140394Z Skipping duplicate data .coverage.fv-az262-840.2823.324777
+2023-08-31T19:38:30.5140828Z Combined data file .coverage.fv-az262-840.5334.075565
+2023-08-31T19:38:30.5141266Z Skipping duplicate data .coverage.fv-az262-840.4890.496084
+2023-08-31T19:38:30.5141686Z Skipping duplicate data .coverage.fv-az262-840.4979.996303
+2023-08-31T19:38:30.5142113Z Combined data file .coverage.fv-az262-840.3232.604652
+2023-08-31T19:38:30.5142545Z Skipping duplicate data .coverage.fv-az262-840.2994.029145
+2023-08-31T19:38:30.5143313Z Skipping duplicate data .coverage.fv-az262-840.3012.419266
+2023-08-31T19:38:30.5143751Z Skipping duplicate data .coverage.fv-az262-840.5027.914000
+2023-08-31T19:38:30.5144192Z Skipping duplicate data .coverage.fv-az262-840.4766.482080
+2023-08-31T19:38:30.5144615Z Combined data file .coverage.fv-az262-840.2495.864881
+2023-08-31T19:38:30.5145027Z Combined data file .coverage.fv-az262-840.2800.445705
+2023-08-31T19:38:30.5145465Z Skipping duplicate data .coverage.fv-az262-840.4988.151307
+2023-08-31T19:38:30.5145906Z Skipping duplicate data .coverage.fv-az262-840.4965.302393
+2023-08-31T19:38:30.5146336Z Skipping duplicate data .coverage.fv-az262-840.4713.822160
+2023-08-31T19:38:30.5146779Z Skipping duplicate data .coverage.fv-az262-840.4666.181779
+2023-08-31T19:38:30.5147217Z Skipping duplicate data .coverage.fv-az262-840.2995.194248
+2023-08-31T19:38:30.5147795Z Combined data file .coverage.fv-az262-840.5318.915088
+2023-08-31T19:38:30.5148243Z Skipping duplicate data .coverage.fv-az262-840.2843.138881
+2023-08-31T19:38:30.5148684Z Combined data file .coverage.fv-az262-840.2858.466340
+2023-08-31T19:38:30.5149131Z Skipping duplicate data .coverage.fv-az262-840.4706.686700
+2023-08-31T19:38:30.5149569Z Skipping duplicate data .coverage.fv-az262-840.4816.998016
+2023-08-31T19:38:30.5150025Z Skipping duplicate data .coverage.fv-az262-840.5048.083757
+2023-08-31T19:38:30.5150698Z Skipping duplicate data .coverage.fv-az262-840.4887.119461
+2023-08-31T19:38:30.5151178Z Skipping duplicate data .coverage.fv-az262-840.2864.634884
+2023-08-31T19:38:30.5151717Z Skipping duplicate data .coverage.fv-az262-840.5015.685426
+2023-08-31T19:38:30.5152590Z Skipping duplicate data .coverage.fv-az262-840.2753.000418
+2023-08-31T19:38:30.5153044Z Skipping duplicate data .coverage.fv-az262-840.3022.242605
+2023-08-31T19:38:30.5153502Z Combined data file .coverage.fv-az262-840.4881.715098
+2023-08-31T19:38:30.5153968Z Skipping duplicate data .coverage.fv-az262-840.4920.517348
+2023-08-31T19:38:30.5154426Z Combined data file .coverage.fv-az262-840.4284.267252
+2023-08-31T19:38:30.5154869Z Skipping duplicate data .coverage.fv-az262-840.2854.773976
+2023-08-31T19:38:30.5155337Z Skipping duplicate data .coverage.fv-az262-840.4797.532249
+2023-08-31T19:38:30.5155807Z Skipping duplicate data .coverage.fv-az262-840.3037.995828
+2023-08-31T19:38:30.5156244Z Combined data file .coverage.fv-az262-840.3929.014908
+2023-08-31T19:38:30.5158141Z Skipping duplicate data .coverage.fv-az262-840.4970.151248
+2023-08-31T19:38:30.5158675Z Skipping duplicate data .coverage.fv-az262-840.4943.591645
+2023-08-31T19:38:30.5159321Z Skipping duplicate data .coverage.fv-az262-840.2906.735890
+2023-08-31T19:38:30.5159767Z Skipping duplicate data .coverage.fv-az262-840.4771.150220
+2023-08-31T19:38:30.5160232Z Skipping duplicate data .coverage.fv-az262-840.4834.807093
+2023-08-31T19:38:30.5160696Z Skipping duplicate data .coverage.fv-az262-840.4721.564274
+2023-08-31T19:38:30.5161141Z Skipping duplicate data .coverage.fv-az262-840.2898.379016
+2023-08-31T19:38:30.5161591Z Combined data file .coverage.fv-az262-840.3434.650779
+2023-08-31T19:38:30.5162045Z Skipping duplicate data .coverage.fv-az262-840.2798.300658
+2023-08-31T19:38:30.5162490Z Skipping duplicate data .coverage.fv-az262-840.4768.352898
+2023-08-31T19:38:30.5163143Z Skipping duplicate data .coverage.fv-az262-840.2782.081830
+2023-08-31T19:38:30.5163618Z Skipping duplicate data .coverage.fv-az262-840.4738.621885
+2023-08-31T19:38:30.5164437Z Skipping duplicate data .coverage.fv-az262-840.4894.838864
+2023-08-31T19:38:30.5164892Z Skipping duplicate data .coverage.fv-az262-840.4843.857477
+2023-08-31T19:38:30.5165374Z Skipping duplicate data .coverage.fv-az262-840.2773.825339
+2023-08-31T19:38:30.5165844Z Skipping duplicate data .coverage.fv-az262-840.3013.581351
+2023-08-31T19:38:30.5166296Z Skipping duplicate data .coverage.fv-az262-840.4815.461253
+2023-08-31T19:38:30.5167346Z Skipping duplicate data .coverage.fv-az262-840.5035.742994
+2023-08-31T19:38:30.5167943Z Combined data file .coverage.fv-az262-840.5066.477510
+2023-08-31T19:38:30.5168388Z Combined data file .coverage.fv-az262-840.4226.528684
+2023-08-31T19:38:30.5168859Z Skipping duplicate data .coverage.fv-az262-840.5144.296569
+2023-08-31T19:38:30.5169319Z Combined data file .coverage.fv-az262-840.3290.650171
+2023-08-31T19:38:30.5169780Z Skipping duplicate data .coverage.fv-az262-840.2787.331668
+2023-08-31T19:38:30.5170238Z Skipping duplicate data .coverage.fv-az262-840.2827.156879
+2023-08-31T19:38:30.5170720Z Skipping duplicate data .coverage.fv-az262-840.4712.816158
+2023-08-31T19:38:30.5171195Z Skipping duplicate data .coverage.fv-az262-840.4724.727030
+2023-08-31T19:38:30.5171640Z Combined data file .coverage.fv-az262-840.4849.075728
+2023-08-31T19:38:30.5172108Z Skipping duplicate data .coverage.fv-az262-840.2810.877684
+2023-08-31T19:38:30.5172576Z Skipping duplicate data .coverage.fv-az262-840.2889.344355
+2023-08-31T19:38:30.5173033Z Skipping duplicate data .coverage.fv-az262-840.5153.880083
+2023-08-31T19:38:30.5173501Z Skipping duplicate data .coverage.fv-az262-840.5036.912108
+2023-08-31T19:38:30.5173976Z Skipping duplicate data .coverage.fv-az262-840.4935.098922
+2023-08-31T19:38:30.5174442Z Skipping duplicate data .coverage.fv-az262-840.4729.538530
+2023-08-31T19:38:30.5174892Z Skipping duplicate data .coverage.fv-az262-840.4796.087419
+2023-08-31T19:38:30.5175362Z Skipping duplicate data .coverage.fv-az262-840.2845.111140
+2023-08-31T19:38:30.5176316Z Skipping duplicate data .coverage.fv-az262-840.2984.654657
+2023-08-31T19:38:30.5176801Z Skipping duplicate data .coverage.fv-az262-840.5006.440459
+2023-08-31T19:38:30.5177258Z Skipping duplicate data .coverage.fv-az262-840.2774.012498
+2023-08-31T19:38:30.5177880Z Skipping duplicate data .coverage.fv-az262-840.5154.155018
+2023-08-31T19:38:30.5178316Z Skipping duplicate data .coverage.fv-az262-840.4995.949280
+2023-08-31T19:38:30.5178770Z Skipping duplicate data .coverage.fv-az262-840.4676.172721
+2023-08-31T19:38:30.5179228Z Skipping duplicate data .coverage.fv-az262-840.2903.108377
+2023-08-31T19:38:30.5180022Z Skipping duplicate data .coverage.fv-az262-840.5138.466369
+2023-08-31T19:38:30.5180460Z Skipping duplicate data .coverage.fv-az262-840.4897.896401
+2023-08-31T19:38:30.5180915Z Skipping duplicate data .coverage.fv-az262-840.4951.048776
+2023-08-31T19:38:30.5181366Z Skipping duplicate data .coverage.fv-az262-840.5152.789132
+2023-08-31T19:38:30.5181802Z Skipping duplicate data .coverage.fv-az262-840.5331.091639
+2023-08-31T19:38:30.5182255Z Combined data file .coverage.fv-az262-840.3990.822877
+2023-08-31T19:38:30.5182897Z Skipping duplicate data .coverage.fv-az262-840.4944.833151
+2023-08-31T19:38:30.5183517Z Skipping duplicate data .coverage.fv-az262-840.2943.345656
+2023-08-31T19:38:30.5183972Z Skipping duplicate data .coverage.fv-az262-840.5064.337301
+2023-08-31T19:38:30.5184425Z Skipping duplicate data .coverage.fv-az262-840.5004.340676
+2023-08-31T19:38:30.5184874Z Skipping duplicate data .coverage.fv-az262-840.5049.132733
+2023-08-31T19:38:30.5185307Z Skipping duplicate data .coverage.fv-az262-840.2776.716179
+2023-08-31T19:38:30.5185759Z Skipping duplicate data .coverage.fv-az262-840.2766.755428
+2023-08-31T19:38:30.5186209Z Skipping duplicate data .coverage.fv-az262-840.2884.406827
+2023-08-31T19:38:30.5186820Z Skipping duplicate data .coverage.fv-az262-840.5029.346886
+2023-08-31T19:38:30.5187287Z Skipping duplicate data .coverage.fv-az262-840.4921.187940
+2023-08-31T19:38:30.5187804Z Skipping duplicate data .coverage.fv-az262-840.4803.705360
+2023-08-31T19:38:30.5188278Z Skipping duplicate data .coverage.fv-az262-840.4832.469332
+2023-08-31T19:38:30.5188729Z Skipping duplicate data .coverage.fv-az262-840.2980.145240
+2023-08-31T19:38:30.5189193Z Combined data file .coverage.fv-az262-840.3788.953352
+2023-08-31T19:38:31.2872544Z Name                               Stmts   Miss Branch BrPart  Cover
+2023-08-31T19:38:31.2873460Z --------------------------------------------------------------------
+2023-08-31T19:38:31.2873809Z truvari/__init__.py                   11      0      0      0   100%
+2023-08-31T19:38:31.2874170Z truvari/__main__.py                   46      1     10      4    91%
+2023-08-31T19:38:31.2874502Z truvari/anno.py                       18      2      2      0    90%
+2023-08-31T19:38:31.2874867Z truvari/annotations/__init__.py       16      0      0      0   100%
+2023-08-31T19:38:31.2875239Z truvari/annotations/addid.py          30      0      8      0   100%
+2023-08-31T19:38:31.2875783Z truvari/annotations/af_calc.py        66      4     32      5    91%
+2023-08-31T19:38:31.2876147Z truvari/annotations/bpovl.py          62      4     18      4    90%
+2023-08-31T19:38:31.2876513Z truvari/annotations/density.py        66      0     20      1    99%
+2023-08-31T19:38:31.2876890Z truvari/annotations/dpcnt.py          63      5     26      8    85%
+2023-08-31T19:38:31.2877238Z truvari/annotations/gccontent.py      40      3      8      1    92%
+2023-08-31T19:38:31.2877596Z truvari/annotations/grm.py           207     19     50      9    89%
+2023-08-31T19:38:31.2878045Z truvari/annotations/grpaf.py          75      3     20      1    96%
+2023-08-31T19:38:31.2878396Z truvari/annotations/gtcnt.py          46      6     16      3    85%
+2023-08-31T19:38:31.2878754Z truvari/annotations/hompct.py         45      2     16      3    92%
+2023-08-31T19:38:31.2879112Z truvari/annotations/lcr.py            51      1     16      1    97%
+2023-08-31T19:38:31.2879469Z truvari/annotations/numneigh.py       95     13     32      6    82%
+2023-08-31T19:38:31.2880240Z truvari/annotations/remap.py         108      8     42      5    90%
+2023-08-31T19:38:31.2880631Z truvari/annotations/repmask.py       116      1     30      2    98%
+2023-08-31T19:38:31.2882444Z truvari/annotations/svinfo.py         33      0      8      1    98%
+2023-08-31T19:38:31.2883184Z truvari/annotations/trf.py           413     44    164     15    87%
+2023-08-31T19:38:31.2884182Z truvari/bench.py                     452     23    152     14    94%
+2023-08-31T19:38:31.2885190Z truvari/collapse.py                  277     20    102     10    91%
+2023-08-31T19:38:31.2886331Z truvari/comparisons.py               170     16     66     12    87%
+2023-08-31T19:38:31.2886746Z truvari/consistency.py                83      0     37      0   100%
+2023-08-31T19:38:31.2887084Z truvari/divide.py                     75     10     22      6    84%
+2023-08-31T19:38:31.2887420Z truvari/matching.py                  217     23     70     11    87%
+2023-08-31T19:38:31.2887750Z truvari/msatovcf.py                   92      2     46      1    96%
+2023-08-31T19:38:31.2888086Z truvari/phab.py                      250     26    112     12    88%
+2023-08-31T19:38:31.2888426Z truvari/refine.py                    259     27     72     17    87%
+2023-08-31T19:38:31.2888855Z truvari/region_vcf_iter.py            87      6     40      3    93%
+2023-08-31T19:38:31.2889195Z truvari/segmentation.py               71      1     22      1    98%
+2023-08-31T19:38:31.2889529Z truvari/stratify.py                   62      2     26      3    94%
+2023-08-31T19:38:31.2890024Z truvari/utils.py                     176     14     56      5    92%
+2023-08-31T19:38:31.2890484Z truvari/vcf2df.py                    201     16     98     11    90%
+2023-08-31T19:38:31.2890885Z --------------------------------------------------------------------
+2023-08-31T19:38:31.2891180Z TOTAL                               4079    302   1439    175    91%
+2023-08-31T19:38:33.0716369Z Wrote HTML report to test_results/htmlcov/index.html
+2023-08-31T19:38:33.9373976Z Wrote JSON report to test_results/coverage.json
+2023-08-31T19:38:34.0163268Z 
+2023-08-31T19:38:34.0163971Z sshtest v0.1.5
+2023-08-31T19:38:34.0164276Z 
+2023-08-31T19:38:34.0164875Z [0m162       [0mTests
+2023-08-31T19:38:34.0165294Z [1;31m0         [0mFailures
+2023-08-31T19:38:34.0166797Z [1;32m162       [0m[0;1mSuccesses[0m
+2023-08-31T19:38:34.0209328Z ##[group]Run actions/upload-artifact@v3
+2023-08-31T19:38:34.0209630Z with:
+2023-08-31T19:38:34.0209824Z   name: htmlcov
+2023-08-31T19:38:34.0210060Z   path: test_results/htmlcov
+2023-08-31T19:38:34.0210314Z   if-no-files-found: warn
+2023-08-31T19:38:34.0210520Z env:
+2023-08-31T19:38:34.0210792Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:34.0211162Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:38:34.0211551Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:34.0211904Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:34.0212245Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:34.0212573Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:38:34.0212867Z ##[endgroup]
+2023-08-31T19:38:34.1452133Z With the provided path, there will be 42 files uploaded
+2023-08-31T19:38:34.1455403Z Starting artifact upload
+2023-08-31T19:38:34.1456916Z For more detailed logs during the artifact upload process, enable step-debugging: https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging#enabling-step-debug-logging
+2023-08-31T19:38:34.1458241Z Artifact name is valid!
+2023-08-31T19:38:34.4845299Z Container for artifact "htmlcov" successfully created. Starting upload of file(s)
+2023-08-31T19:38:41.0561544Z Total size of all the files uploaded is 281558 bytes
+2023-08-31T19:38:41.0562912Z File upload process has finished. Finalizing the artifact upload
+2023-08-31T19:38:41.3194875Z Artifact has been finalized. All files have been successfully uploaded!
+2023-08-31T19:38:41.3195347Z 
+2023-08-31T19:38:41.3195687Z The raw size of all the files that were specified for upload is 2528897 bytes
+2023-08-31T19:38:41.3196369Z The size of all the files that were uploaded is 281558 bytes. This takes into account any gzip compression used to reduce the upload size, time and storage
+2023-08-31T19:38:41.3197451Z 
+2023-08-31T19:38:41.3198667Z Note: The size of downloaded zips can differ significantly from the reported size. For more information see: https://github.com/actions/upload-artifact#zipped-artifact-downloads 
+2023-08-31T19:38:41.3199149Z 
+2023-08-31T19:38:41.3199504Z Artifact htmlcov has been successfully uploaded!
+2023-08-31T19:38:41.3307981Z ##[group]Run git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+2023-08-31T19:38:41.3308757Z [36;1mgit config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"[0m
+2023-08-31T19:38:41.3309797Z [36;1mgit config --local user.name "github-actions[bot]"[0m
+2023-08-31T19:38:41.3310231Z [36;1mgit commit -m "Update coverage score" -a || echo "No changes to commit"[0m
+2023-08-31T19:38:41.3375410Z shell: /usr/bin/bash -e {0}
+2023-08-31T19:38:41.3375703Z env:
+2023-08-31T19:38:41.3376081Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.3376529Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:38:41.3377235Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.3377618Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.3378030Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.3378534Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:38:41.3378931Z ##[endgroup]
+2023-08-31T19:38:41.4898777Z On branch develop
+2023-08-31T19:38:41.4900675Z Your branch is up to date with 'origin/develop'.
+2023-08-31T19:38:41.4901116Z 
+2023-08-31T19:38:41.4901798Z nothing to commit, working tree clean
+2023-08-31T19:38:41.4903755Z No changes to commit
+2023-08-31T19:38:41.5113304Z ##[group]Run ad-m/github-push-action@master
+2023-08-31T19:38:41.5113590Z with:
+2023-08-31T19:38:41.5114295Z   github_token: ***
+2023-08-31T19:38:41.5114567Z   branch: refs/heads/develop
+2023-08-31T19:38:41.5114816Z   github_url: https://github.com
+2023-08-31T19:38:41.5115061Z   directory: .
+2023-08-31T19:38:41.5115255Z env:
+2023-08-31T19:38:41.5115508Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.5115868Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+2023-08-31T19:38:41.5116224Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.5116557Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.5116872Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+2023-08-31T19:38:41.5117205Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
+2023-08-31T19:38:41.5117480Z ##[endgroup]
+2023-08-31T19:38:41.5738016Z Push to branch refs/heads/develop
+2023-08-31T19:38:41.9882878Z Everything up-to-date
+2023-08-31T19:38:42.1024934Z Post job cleanup.
+2023-08-31T19:38:42.3295903Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/truvari/truvari --files-from manifest.txt --use-compress-program zstdmt
+2023-08-31T19:38:46.4349384Z Failed to save: Unable to reserve cache with key /opt/hostedtoolcache/Python/3.10.4/x64-0c2620a39504e3c92e7e494735ebe3843e03c26dc9deca33b7d0045da761d73d, another job may be creating this cache. More details: Cache already exists. Scope: refs/heads/develop, Key: /opt/hostedtoolcache/Python/3.10.4/x64-0c2620a39504e3c92e7e494735ebe3843e03c26dc9deca33b7d0045da761d73d, Version: 5e73492abcf739df713571be46610b07cd66ae416b510f2b9751ccbfe5f7971a
+2023-08-31T19:38:46.4729149Z Post job cleanup.
+2023-08-31T19:38:46.6791901Z Post job cleanup.
+2023-08-31T19:38:46.8157489Z [command]/usr/bin/git version
+2023-08-31T19:38:46.8222821Z git version 2.41.0
+2023-08-31T19:38:46.8302196Z Temporarily overriding HOME='/home/runner/work/_temp/74f24e5b-4745-4cec-b57f-6600f75684a8' before making global git config changes
+2023-08-31T19:38:46.8307298Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-31T19:38:46.8316848Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/truvari/truvari
+2023-08-31T19:38:46.8387120Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-31T19:38:46.8433387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-31T19:38:46.8823211Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-31T19:38:46.8874251Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-31T19:38:46.9523853Z Cleaning up orphan processes

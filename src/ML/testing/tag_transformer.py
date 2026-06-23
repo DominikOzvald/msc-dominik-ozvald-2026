@@ -1,3 +1,5 @@
+import os.path
+
 import numpy as np
 from torch.utils.data import DataLoader
 from src.ML.models.embedder import ConvEmbedder
@@ -24,8 +26,9 @@ def format_matrix_display(disp):
 
 
 if __name__ == "__main__":
-    data_folder = "../../../test_data"
-    save_folder = "../../../models"
+    file_path = os.path.dirname(os.path.abspath(__file__))
+    data_folder = os.path.join(file_path,"../../../data/dummy/test")
+    save_folder = os.path.join(file_path,"../../../models")
 
     char_vocab = CharVocab()
     embed_size = 32
@@ -43,9 +46,10 @@ if __name__ == "__main__":
                             max_in_len=max_in_len, use_embed_matrix=use_embed_matrix, vocab_size=vocab_size)
     try:
         embedder.conv_lstm.load_state_dict(
-            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True))
-    except:
+            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True, map_location=torch.device('cpu')))
+    except Exception as e:
         print("Can not load ConvLstmEncoder", lstm_conv_name)
+        print(e)
         exit(-1)
 
     enc_layer = 2
@@ -57,7 +61,7 @@ if __name__ == "__main__":
                               num_class=5)
 
     try:
-        model.load_state_dict(torch.load(path.join(save_folder, transformer_name) + ".pt", weights_only=True))
+        model.load_state_dict(torch.load(path.join(save_folder, transformer_name) + ".pt", weights_only=True, map_location=torch.device('cpu')))
     except:
         print("Can not load Transformer", transformer_name)
         exit(-1)

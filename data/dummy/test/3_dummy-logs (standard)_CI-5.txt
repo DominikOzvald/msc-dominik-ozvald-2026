@@ -1,0 +1,240 @@
+﻿2026-05-09T14:15:48.5309289Z Current runner version: '2.334.0'
+2026-05-09T14:15:48.5344530Z ##[group]Runner Image Provisioner
+2026-05-09T14:15:48.5345990Z Hosted Compute Agent
+2026-05-09T14:15:48.5346745Z Version: 20260213.493
+2026-05-09T14:15:48.5347638Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-09T14:15:48.5348746Z Build Date: 2026-02-13T00:28:41Z
+2026-05-09T14:15:48.5349726Z Worker ID: {2e8c77fc-d2c8-4ec0-bd5a-f90409039086}
+2026-05-09T14:15:48.5350723Z Azure Region: westcentralus
+2026-05-09T14:15:48.5351714Z ##[endgroup]
+2026-05-09T14:15:48.5353674Z ##[group]Operating System
+2026-05-09T14:15:48.5354860Z Ubuntu
+2026-05-09T14:15:48.5355609Z 24.04.4
+2026-05-09T14:15:48.5356332Z LTS
+2026-05-09T14:15:48.5357037Z ##[endgroup]
+2026-05-09T14:15:48.5357868Z ##[group]Runner Image
+2026-05-09T14:15:48.5358779Z Image: ubuntu-24.04
+2026-05-09T14:15:48.5359509Z Version: 20260413.86.1
+2026-05-09T14:15:48.5361446Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-09T14:15:48.5363707Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-05-09T14:15:48.5365618Z ##[endgroup]
+2026-05-09T14:15:48.5367199Z ##[group]GITHUB_TOKEN Permissions
+2026-05-09T14:15:48.5369648Z Contents: read
+2026-05-09T14:15:48.5370588Z Metadata: read
+2026-05-09T14:15:48.5371718Z Packages: read
+2026-05-09T14:15:48.5372509Z ##[endgroup]
+2026-05-09T14:15:48.5375775Z Secret source: Actions
+2026-05-09T14:15:48.5376876Z Prepare workflow directory
+2026-05-09T14:15:48.5976925Z Prepare all required actions
+2026-05-09T14:15:48.6032581Z Getting action download info
+2026-05-09T14:15:49.0969969Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-09T14:15:49.3167765Z Complete job name: dummy-logs (standard)
+2026-05-09T14:15:49.4192055Z ##[group]Run actions/checkout@v4
+2026-05-09T14:15:49.4192930Z with:
+2026-05-09T14:15:49.4193388Z   repository: DominikOzvald/dummy
+2026-05-09T14:15:49.4194165Z   token: ***
+2026-05-09T14:15:49.4194822Z   ssh-strict: true
+2026-05-09T14:15:49.4195277Z   ssh-user: git
+2026-05-09T14:15:49.4195722Z   persist-credentials: true
+2026-05-09T14:15:49.4196237Z   clean: true
+2026-05-09T14:15:49.4196689Z   sparse-checkout-cone-mode: true
+2026-05-09T14:15:49.4197230Z   fetch-depth: 1
+2026-05-09T14:15:49.4197679Z   fetch-tags: false
+2026-05-09T14:15:49.4198139Z   show-progress: true
+2026-05-09T14:15:49.4198603Z   lfs: false
+2026-05-09T14:15:49.4199033Z   submodules: false
+2026-05-09T14:15:49.4199482Z   set-safe-directory: true
+2026-05-09T14:15:49.4200184Z ##[endgroup]
+2026-05-09T14:15:49.5540081Z Syncing repository: DominikOzvald/dummy
+2026-05-09T14:15:49.5542691Z ##[group]Getting Git version info
+2026-05-09T14:15:49.5543902Z Working directory is '/home/runner/work/dummy/dummy'
+2026-05-09T14:15:49.5546220Z [command]/usr/bin/git version
+2026-05-09T14:15:49.9427361Z git version 2.53.0
+2026-05-09T14:15:49.9455700Z ##[endgroup]
+2026-05-09T14:15:49.9464760Z Temporarily overriding HOME='/home/runner/work/_temp/8d70c1d3-8dab-4ed1-a2f0-e56cefa7635f' before making global git config changes
+2026-05-09T14:15:49.9469059Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T14:15:49.9472329Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T14:15:49.9480790Z Deleting the contents of '/home/runner/work/dummy/dummy'
+2026-05-09T14:15:49.9483381Z ##[group]Initializing the repository
+2026-05-09T14:15:49.9485472Z [command]/usr/bin/git init /home/runner/work/dummy/dummy
+2026-05-09T14:15:49.9487809Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-09T14:15:49.9490435Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-09T14:15:49.9493048Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-09T14:15:49.9495338Z hint: call:
+2026-05-09T14:15:49.9496285Z hint:
+2026-05-09T14:15:49.9497545Z hint: 	git config --global init.defaultBranch <name>
+2026-05-09T14:15:49.9499873Z hint:
+2026-05-09T14:15:49.9501398Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-09T14:15:49.9504464Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-09T14:15:49.9506929Z hint:
+2026-05-09T14:15:49.9508247Z hint: 	git branch -m <name>
+2026-05-09T14:15:49.9509902Z hint:
+2026-05-09T14:15:49.9511932Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-09T14:15:49.9515444Z Initialized empty Git repository in /home/runner/work/dummy/dummy/.git/
+2026-05-09T14:15:49.9520965Z [command]/usr/bin/git remote add origin https://github.com/DominikOzvald/dummy
+2026-05-09T14:15:49.9526678Z ##[endgroup]
+2026-05-09T14:15:49.9529141Z ##[group]Disabling automatic garbage collection
+2026-05-09T14:15:49.9531478Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-09T14:15:49.9536505Z ##[endgroup]
+2026-05-09T14:15:49.9538736Z ##[group]Setting up auth
+2026-05-09T14:15:49.9541009Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T14:15:49.9548804Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T14:15:49.9556816Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T14:15:49.9565752Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T14:15:49.9702851Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T14:15:49.9738169Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T14:15:50.0007922Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-09T14:15:50.0060140Z ##[endgroup]
+2026-05-09T14:15:50.0061937Z ##[group]Fetching the repository
+2026-05-09T14:15:50.0065318Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +494c45bb25c6686ba094749e1bd1cf91177077ed:refs/remotes/origin/main
+2026-05-09T14:15:50.3867808Z From https://github.com/DominikOzvald/dummy
+2026-05-09T14:15:50.3870587Z  * [new ref]         494c45bb25c6686ba094749e1bd1cf91177077ed -> origin/main
+2026-05-09T14:15:50.3921640Z ##[endgroup]
+2026-05-09T14:15:50.3923750Z ##[group]Determining the checkout info
+2026-05-09T14:15:50.3926492Z ##[endgroup]
+2026-05-09T14:15:50.3931971Z [command]/usr/bin/git sparse-checkout disable
+2026-05-09T14:15:50.3978577Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-09T14:15:50.4036220Z ##[group]Checking out the ref
+2026-05-09T14:15:50.4079392Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-09T14:15:50.4117351Z Switched to a new branch 'main'
+2026-05-09T14:15:50.4119369Z branch 'main' set up to track 'origin/main'.
+2026-05-09T14:15:50.4126073Z ##[endgroup]
+2026-05-09T14:15:50.4302379Z [command]/usr/bin/git log -1 --format=%H
+2026-05-09T14:15:50.4304667Z 494c45bb25c6686ba094749e1bd1cf91177077ed
+2026-05-09T14:15:50.4484034Z ##[group]Run python build.py --mode standard
+2026-05-09T14:15:50.4485578Z [36;1mpython build.py --mode standard[0m
+2026-05-09T14:15:50.4512800Z shell: /usr/bin/bash -e {0}
+2026-05-09T14:15:50.4513754Z ##[endgroup]
+2026-05-09T14:15:50.4862926Z 
+2026-05-09T14:15:50.4863986Z 
+2026-05-09T14:15:50.4867493Z INFO > build
+2026-05-09T14:15:50.4869317Z INFO > npm run clean && tsc && npm run copy-views && npm run copy-public
+2026-05-09T14:15:50.4870915Z 
+2026-05-09T14:15:50.4870927Z 
+2026-05-09T14:15:50.4871360Z INFO > clean
+2026-05-09T14:15:50.4872477Z INFO > shx rm -rf dist
+2026-05-09T14:15:50.4874707Z INFO Initializing build dependency installation: Node v20.11.0, PNPM v8.15.4
+2026-05-09T14:15:50.4877940Z INFO Resolving dependency installation form package.json
+2026-05-09T14:15:50.4880766Z INFO Resolving dependency package dotenv version f^17.2.3 matches config version ^17.2.3
+2026-05-09T14:15:50.4883433Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4885342Z INFO 	Downloading packages ... 29.52%
+2026-05-09T14:15:50.4886905Z INFO 	Downloading packages ... 62.92%
+2026-05-09T14:15:50.4888466Z INFO 	Downloading packages ... 94.33%
+2026-05-09T14:15:50.4890969Z INFO Resolving dependency package express version f^5.2.1 matches config version ^5.2.1
+2026-05-09T14:15:50.4893571Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4895542Z INFO 	Downloading packages ... 15.82%
+2026-05-09T14:15:50.4897090Z INFO 	Downloading packages ... 35.36%
+2026-05-09T14:15:50.4898609Z INFO 	Downloading packages ... 58.25%
+2026-05-09T14:15:50.4900157Z INFO 	Downloading packages ... 78.31%
+2026-05-09T14:15:50.4902483Z INFO Resolving dependency package http version f^0.0.1 matches config version ^0.0.1
+2026-05-09T14:15:50.4905606Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4907102Z INFO 	Downloading packages ... 25.61%
+2026-05-09T14:15:50.4908553Z INFO 	Downloading packages ... 46.45%
+2026-05-09T14:15:50.4910270Z INFO 	Downloading packages ... 76.64%
+2026-05-09T14:15:50.4912606Z INFO Resolving dependency package pg version f^8.16.3 matches config version ^8.16.3
+2026-05-09T14:15:50.4916245Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4917606Z INFO 	Downloading packages ... 27.79%
+2026-05-09T14:15:50.4919055Z INFO 	Downloading packages ... 60.42%
+2026-05-09T14:15:50.4921203Z INFO 	Downloading packages ... 84.47%
+2026-05-09T14:15:50.4923412Z INFO Resolving dependency package pug version f^3.0.3 matches config version ^3.0.3
+2026-05-09T14:15:50.4925630Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4926703Z INFO 	Downloading packages ... 21.65%
+2026-05-09T14:15:50.4927750Z INFO 	Downloading packages ... 44.18%
+2026-05-09T14:15:50.4928868Z INFO 	Downloading packages ... 78.97%
+2026-05-09T14:15:50.4930638Z INFO Resolving dependency package swagger-jsdoc version f^6.2.8 matches config version ^6.2.8
+2026-05-09T14:15:50.4932472Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4933536Z INFO 	Downloading packages ... 30.06%
+2026-05-09T14:15:50.4934779Z INFO 	Downloading packages ... 62.05%
+2026-05-09T14:15:50.4935828Z INFO 	Downloading packages ... 80.92%
+2026-05-09T14:15:50.4937662Z INFO Resolving dependency package swagger-ui-express version f^5.0.1 matches config version ^5.0.1
+2026-05-09T14:15:50.4939585Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4940621Z INFO 	Downloading packages ... 35.62%
+2026-05-09T14:15:50.4941655Z INFO 	Downloading packages ... 63.91%
+2026-05-09T14:15:50.4942678Z INFO 	Downloading packages ... 84.61%
+2026-05-09T14:15:50.4944500Z INFO Resolving dependency package jest version f^30.2.0 matches config version ^30.2.0
+2026-05-09T14:15:50.4946224Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4947253Z INFO 	Downloading packages ... 29.95%
+2026-05-09T14:15:50.4948303Z INFO 	Downloading packages ... 45.27%
+2026-05-09T14:15:50.4949331Z INFO 	Downloading packages ... 65.75%
+2026-05-09T14:15:50.4950400Z INFO 	Downloading packages ... 90.12%
+2026-05-09T14:15:50.4952314Z INFO Resolving dependency package shx version f^0.4.0 matches config version ^0.4.0
+2026-05-09T14:15:50.4953969Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4955272Z INFO 	Downloading packages ... 35.21%
+2026-05-09T14:15:50.4956310Z INFO 	Downloading packages ... 63.71%
+2026-05-09T14:15:50.4957354Z INFO 	Downloading packages ... 99.24%
+2026-05-09T14:15:50.4958993Z INFO Resolving dependency package supertest version f^7.1.4 matches config version ^7.1.4
+2026-05-09T14:15:50.4960748Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4961851Z INFO 	Downloading packages ... 27.71%
+2026-05-09T14:15:50.4962896Z INFO 	Downloading packages ... 54.53%
+2026-05-09T14:15:50.4963935Z INFO 	Downloading packages ... 83.49%
+2026-05-09T14:15:50.4966188Z INFO Resolving dependency package ts-jest version f^29.4.6 matches config version ^29.4.6
+2026-05-09T14:15:50.4967919Z INFO 	Downloading packages ... 0.00%
+2026-05-09T14:15:50.4968951Z INFO 	Downloading packages ... 20.69%
+2026-05-09T14:15:50.4969982Z INFO 	Downloading packages ... 38.96%
+2026-05-09T14:15:50.4971024Z INFO 	Downloading packages ... 61.33%
+2026-05-09T14:15:50.4972054Z INFO 	Downloading packages ... 87.92%
+2026-05-09T14:15:50.4973178Z INFO added 3 packages, audited 536 packages in 16s
+2026-05-09T14:15:50.4974563Z INFO 49 package is looking for funding
+2026-05-09T14:15:50.4975605Z INFO run `npm fund` for details
+2026-05-09T14:15:50.4976543Z INFO found 0 vulnerabilities
+2026-05-09T14:15:50.4977116Z 
+2026-05-09T14:15:50.4977124Z 
+2026-05-09T14:15:50.4977437Z INFO > copy-views
+2026-05-09T14:15:50.4978204Z INFO > shx cp -r src/views dist
+2026-05-09T14:15:50.4978795Z 
+2026-05-09T14:15:50.4978801Z 
+2026-05-09T14:15:50.4979107Z INFO > copy-public
+2026-05-09T14:15:50.4979911Z INFO > shx cp -r src/public dist/public
+2026-05-09T14:15:50.5046568Z ##[group]Run python test.py --mode standard | python tagger.py
+2026-05-09T14:15:50.5048116Z [36;1mpython test.py --mode standard | python tagger.py[0m
+2026-05-09T14:15:50.5072333Z shell: /usr/bin/bash -e {0}
+2026-05-09T14:15:50.5073178Z ##[endgroup]
+2026-05-09T14:15:50.5937534Z 
+2026-05-09T14:15:50.5938471Z ==============================Testing GET Methods==============================
+2026-05-09T14:15:50.5945687Z test_authorization (__main__.TestGetMethods.test_authorization) ... ok
+2026-05-09T14:15:50.5948515Z test_found (__main__.TestGetMethods.test_found) ... ok
+2026-05-09T14:15:50.5950008Z 
+2026-05-09T14:15:50.5951009Z ----------------------------------------------------------------------
+2026-05-09T14:15:50.5953009Z Ran 2 tests in 0.000s
+2026-05-09T14:15:50.5954002Z 
+2026-05-09T14:15:50.5954792Z OK
+2026-05-09T14:15:50.5955523Z 
+2026-05-09T14:15:50.5956421Z ==============================Testing POST Methods==============================
+2026-05-09T14:15:50.5958996Z test_created (__main__.TestPostMethods.test_created) ... ok
+2026-05-09T14:15:50.5960612Z 
+2026-05-09T14:15:50.5961490Z ----------------------------------------------------------------------
+2026-05-09T14:15:50.5963504Z Ran 1 test in 0.000s
+2026-05-09T14:15:50.5964739Z 
+2026-05-09T14:15:50.5965211Z OK
+2026-05-09T14:15:50.5965700Z 
+2026-05-09T14:15:50.5966422Z ==============================Testing PUT Methods==============================
+2026-05-09T14:15:50.5968466Z test_update (__main__.TestPutMethods.test_update) ... ok
+2026-05-09T14:15:50.5969703Z 
+2026-05-09T14:15:50.5970419Z ----------------------------------------------------------------------
+2026-05-09T14:15:50.5972690Z Ran 1 test in 0.000s
+2026-05-09T14:15:50.5973341Z 
+2026-05-09T14:15:50.5973707Z OK
+2026-05-09T14:15:50.5974333Z 
+2026-05-09T14:15:50.5975116Z ==============================Testing DELETE Methods==============================
+2026-05-09T14:15:50.5977202Z test_delete (__main__.TestDeleteMethods.test_delete) ... ok
+2026-05-09T14:15:50.5978144Z 
+2026-05-09T14:15:50.5978670Z ----------------------------------------------------------------------
+2026-05-09T14:15:50.5979873Z Ran 1 test in 0.000s
+2026-05-09T14:15:50.5980325Z 
+2026-05-09T14:15:50.5980600Z OK
+2026-05-09T14:15:50.6165922Z Post job cleanup.
+2026-05-09T14:15:50.7173290Z [command]/usr/bin/git version
+2026-05-09T14:15:50.7214803Z git version 2.53.0
+2026-05-09T14:15:50.7262990Z Temporarily overriding HOME='/home/runner/work/_temp/d5f428e4-c9b1-47a5-8dba-9e3753bd7c37' before making global git config changes
+2026-05-09T14:15:50.7268037Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T14:15:50.7271329Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T14:15:50.7333350Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T14:15:50.7402429Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T14:15:50.7778769Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T14:15:50.7825598Z http.https://github.com/.extraheader
+2026-05-09T14:15:50.7856410Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-09T14:15:50.7922601Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T14:15:50.8271151Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T14:15:50.8343857Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T14:15:50.8858598Z Cleaning up orphan processes
+2026-05-09T14:15:50.9302133Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

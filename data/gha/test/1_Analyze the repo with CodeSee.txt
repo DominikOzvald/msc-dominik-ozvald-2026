@@ -1,0 +1,1196 @@
+2023-09-22T00:37:55.6595863Z Requested labels: ubuntu-latest
+2023-09-22T00:37:55.6596133Z Job defined at: AIStream-Peelout/flow-forecast/.github/workflows/codesee-arch-diagram.yml@refs/heads/master
+2023-09-22T00:37:55.6596241Z Waiting for a runner to pick up this job...
+2023-09-22T00:37:56.2541934Z Job is waiting for a hosted runner to come online.
+2023-09-22T00:37:59.9558363Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-09-22T00:38:02.2233686Z Current runner version: '2.309.0'
+2023-09-22T00:38:02.2260536Z ##[group]Operating System
+2023-09-22T00:38:02.2261114Z Ubuntu
+2023-09-22T00:38:02.2261430Z 22.04.3
+2023-09-22T00:38:02.2261684Z LTS
+2023-09-22T00:38:02.2262147Z ##[endgroup]
+2023-09-22T00:38:02.2262510Z ##[group]Runner Image
+2023-09-22T00:38:02.2262890Z Image: ubuntu-22.04
+2023-09-22T00:38:02.2263198Z Version: 20230917.1.0
+2023-09-22T00:38:02.2263838Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230917.1/images/linux/Ubuntu2204-Readme.md
+2023-09-22T00:38:02.2264541Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230917.1
+2023-09-22T00:38:02.2265044Z ##[endgroup]
+2023-09-22T00:38:02.2265375Z ##[group]Runner Image Provisioner
+2023-09-22T00:38:02.2265776Z 2.0.299.1
+2023-09-22T00:38:02.2266164Z ##[endgroup]
+2023-09-22T00:38:02.2267219Z ##[group]GITHUB_TOKEN Permissions
+2023-09-22T00:38:02.2268959Z Actions: read
+2023-09-22T00:38:02.2269452Z Checks: read
+2023-09-22T00:38:02.2270024Z Contents: read
+2023-09-22T00:38:02.2270453Z Deployments: read
+2023-09-22T00:38:02.2270926Z Discussions: read
+2023-09-22T00:38:02.2271221Z Issues: read
+2023-09-22T00:38:02.2271557Z Metadata: read
+2023-09-22T00:38:02.2271909Z Packages: read
+2023-09-22T00:38:02.2272199Z Pages: read
+2023-09-22T00:38:02.2272623Z PullRequests: read
+2023-09-22T00:38:02.2273008Z RepositoryProjects: read
+2023-09-22T00:38:02.2273397Z SecurityEvents: read
+2023-09-22T00:38:02.2273734Z Statuses: read
+2023-09-22T00:38:02.2274138Z ##[endgroup]
+2023-09-22T00:38:02.2277647Z Secret source: Actions
+2023-09-22T00:38:02.2278173Z Prepare workflow directory
+2023-09-22T00:38:02.3016043Z Prepare all required actions
+2023-09-22T00:38:02.3207076Z Getting action download info
+2023-09-22T00:38:02.5573319Z Download action repository 'Codesee-io/codesee-action@v2' (SHA:4782354e8e7602f6e4449d1a0ef4dc9341fc95d0)
+2023-09-22T00:38:03.2975955Z Getting action download info
+2023-09-22T00:38:03.5004469Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-09-22T00:38:04.0438619Z Download action repository 'actions/setup-node@v3' (SHA:5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d)
+2023-09-22T00:38:04.6196556Z Download action repository 'actions/setup-java@v3' (SHA:0ab4596768b603586c0de567f2430c30f5b0d2b0)
+2023-09-22T00:38:05.2319596Z Download action repository 'actions/setup-python@v4' (SHA:61a6322f88396a6271a6ee3565807d608ecaddd1)
+2023-09-22T00:38:05.7904662Z Download action repository 'dtolnay/rust-toolchain@stable' (SHA:d76c2a93c593483c9892fd8d2538734f73ed8588)
+2023-09-22T00:38:06.0971868Z Download action repository 'actions/setup-dotnet@v3' (SHA:3447fd6a9f9e57506b15f895c5b76d3b197dc7c2)
+2023-09-22T00:38:06.7405273Z Complete job name: Analyze the repo with CodeSee
+2023-09-22T00:38:06.8410313Z ##[group]Run Codesee-io/codesee-action@v2
+2023-09-22T00:38:06.8410623Z with:
+2023-09-22T00:38:06.8411240Z   codesee-token: ***
+2023-09-22T00:38:06.8411494Z   lang-setup: all
+2023-09-22T00:38:06.8411713Z ##[endgroup]
+2023-09-22T00:38:06.8667702Z ##[group]Run actions/checkout@v3
+2023-09-22T00:38:06.8667967Z with:
+2023-09-22T00:38:06.8668225Z   repository: AIStream-Peelout/flow-forecast
+2023-09-22T00:38:06.8668532Z   ref: dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:06.8668788Z   fetch-depth: 0
+2023-09-22T00:38:06.8669201Z   token: ***
+2023-09-22T00:38:06.8669407Z   ssh-strict: true
+2023-09-22T00:38:06.8669653Z   persist-credentials: true
+2023-09-22T00:38:06.8669900Z   clean: true
+2023-09-22T00:38:06.8670147Z   sparse-checkout-cone-mode: true
+2023-09-22T00:38:06.8670396Z   fetch-tags: false
+2023-09-22T00:38:06.8670614Z   lfs: false
+2023-09-22T00:38:06.8670830Z   submodules: false
+2023-09-22T00:38:06.8671066Z   set-safe-directory: true
+2023-09-22T00:38:06.8671380Z ##[endgroup]
+2023-09-22T00:38:07.1066443Z Syncing repository: AIStream-Peelout/flow-forecast
+2023-09-22T00:38:07.1068313Z ##[group]Getting Git version info
+2023-09-22T00:38:07.1068896Z Working directory is '/home/runner/work/flow-forecast/flow-forecast'
+2023-09-22T00:38:07.1070421Z [command]/usr/bin/git version
+2023-09-22T00:38:07.1110937Z git version 2.42.0
+2023-09-22T00:38:07.1138151Z ##[endgroup]
+2023-09-22T00:38:07.1155278Z Temporarily overriding HOME='/home/runner/work/_temp/212ad410-a228-416c-b7f6-fc1cbfa9aa92' before making global git config changes
+2023-09-22T00:38:07.1155843Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-22T00:38:07.1163050Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flow-forecast/flow-forecast
+2023-09-22T00:38:07.1205832Z Deleting the contents of '/home/runner/work/flow-forecast/flow-forecast'
+2023-09-22T00:38:07.1213317Z ##[group]Initializing the repository
+2023-09-22T00:38:07.1217117Z [command]/usr/bin/git init /home/runner/work/flow-forecast/flow-forecast
+2023-09-22T00:38:07.1283188Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-22T00:38:07.1284467Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-22T00:38:07.1285008Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-22T00:38:07.1285332Z hint: 
+2023-09-22T00:38:07.1285804Z hint: 	git config --global init.defaultBranch <name>
+2023-09-22T00:38:07.1286091Z hint: 
+2023-09-22T00:38:07.1286479Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-22T00:38:07.1286997Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-22T00:38:07.1287301Z hint: 
+2023-09-22T00:38:07.1287783Z hint: 	git branch -m <name>
+2023-09-22T00:38:07.1296914Z Initialized empty Git repository in /home/runner/work/flow-forecast/flow-forecast/.git/
+2023-09-22T00:38:07.1305092Z [command]/usr/bin/git remote add origin https://github.com/AIStream-Peelout/flow-forecast
+2023-09-22T00:38:07.1345949Z ##[endgroup]
+2023-09-22T00:38:07.1346633Z ##[group]Disabling automatic garbage collection
+2023-09-22T00:38:07.1349337Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-22T00:38:07.1384646Z ##[endgroup]
+2023-09-22T00:38:07.1385251Z ##[group]Setting up auth
+2023-09-22T00:38:07.1391128Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-22T00:38:07.1426485Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-22T00:38:07.1846031Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-22T00:38:07.1881790Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-22T00:38:07.2150888Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-22T00:38:07.2219455Z ##[endgroup]
+2023-09-22T00:38:07.2220228Z ##[group]Fetching the repository
+2023-09-22T00:38:07.2232457Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2023-09-22T00:38:07.6523827Z remote: Enumerating objects: 19581, done.        
+2023-09-22T00:38:07.6526152Z remote: Counting objects:   0% (1/807)        
+2023-09-22T00:38:07.6542832Z remote: Counting objects:   1% (9/807)        
+2023-09-22T00:38:07.6551167Z remote: Counting objects:   2% (17/807)        
+2023-09-22T00:38:07.6556623Z remote: Counting objects:   3% (25/807)        
+2023-09-22T00:38:07.6562028Z remote: Counting objects:   4% (33/807)        
+2023-09-22T00:38:07.6566277Z remote: Counting objects:   5% (41/807)        
+2023-09-22T00:38:07.6570178Z remote: Counting objects:   6% (49/807)        
+2023-09-22T00:38:07.6574443Z remote: Counting objects:   7% (57/807)        
+2023-09-22T00:38:07.6578918Z remote: Counting objects:   8% (65/807)        
+2023-09-22T00:38:07.6583653Z remote: Counting objects:   9% (73/807)        
+2023-09-22T00:38:07.6588395Z remote: Counting objects:  10% (81/807)        
+2023-09-22T00:38:07.6592028Z remote: Counting objects:  11% (89/807)        
+2023-09-22T00:38:07.6595592Z remote: Counting objects:  12% (97/807)        
+2023-09-22T00:38:07.6599067Z remote: Counting objects:  13% (105/807)        
+2023-09-22T00:38:07.6602439Z remote: Counting objects:  14% (113/807)        
+2023-09-22T00:38:07.6606483Z remote: Counting objects:  15% (122/807)        
+2023-09-22T00:38:07.6610714Z remote: Counting objects:  16% (130/807)        
+2023-09-22T00:38:07.6613364Z remote: Counting objects:  17% (138/807)        
+2023-09-22T00:38:07.6615876Z remote: Counting objects:  18% (146/807)        
+2023-09-22T00:38:07.6619541Z remote: Counting objects:  19% (154/807)        
+2023-09-22T00:38:07.6622164Z remote: Counting objects:  20% (162/807)        
+2023-09-22T00:38:07.6624571Z remote: Counting objects:  21% (170/807)        
+2023-09-22T00:38:07.6627008Z remote: Counting objects:  22% (178/807)        
+2023-09-22T00:38:07.6629353Z remote: Counting objects:  23% (186/807)        
+2023-09-22T00:38:07.6631768Z remote: Counting objects:  24% (194/807)        
+2023-09-22T00:38:07.6634371Z remote: Counting objects:  25% (202/807)        
+2023-09-22T00:38:07.6636255Z remote: Counting objects:  26% (210/807)        
+2023-09-22T00:38:07.6638060Z remote: Counting objects:  27% (218/807)        
+2023-09-22T00:38:07.6640772Z remote: Counting objects:  28% (226/807)        
+2023-09-22T00:38:07.6642838Z remote: Counting objects:  29% (235/807)        
+2023-09-22T00:38:07.6644769Z remote: Counting objects:  30% (243/807)        
+2023-09-22T00:38:07.6646579Z remote: Counting objects:  31% (251/807)        
+2023-09-22T00:38:07.6749753Z remote: Counting objects:  32% (259/807)        
+2023-09-22T00:38:07.6750105Z remote: Counting objects:  33% (267/807)        
+2023-09-22T00:38:07.6750411Z remote: Counting objects:  34% (275/807)        
+2023-09-22T00:38:07.6750712Z remote: Counting objects:  35% (283/807)        
+2023-09-22T00:38:07.6751010Z remote: Counting objects:  36% (291/807)        
+2023-09-22T00:38:07.6751308Z remote: Counting objects:  37% (299/807)        
+2023-09-22T00:38:07.6751608Z remote: Counting objects:  38% (307/807)        
+2023-09-22T00:38:07.6751959Z remote: Counting objects:  39% (315/807)        
+2023-09-22T00:38:07.6767315Z remote: Counting objects:  40% (323/807)        
+2023-09-22T00:38:07.6767792Z remote: Counting objects:  41% (331/807)        
+2023-09-22T00:38:07.6768100Z remote: Counting objects:  42% (339/807)        
+2023-09-22T00:38:07.6768403Z remote: Counting objects:  43% (348/807)        
+2023-09-22T00:38:07.6768708Z remote: Counting objects:  44% (356/807)        
+2023-09-22T00:38:07.6769011Z remote: Counting objects:  45% (364/807)        
+2023-09-22T00:38:07.6779470Z remote: Counting objects:  46% (372/807)        
+2023-09-22T00:38:07.6788550Z remote: Counting objects:  47% (380/807)        
+2023-09-22T00:38:07.6792073Z remote: Counting objects:  48% (388/807)        
+2023-09-22T00:38:07.6800099Z remote: Counting objects:  49% (396/807)        
+2023-09-22T00:38:07.6805446Z remote: Counting objects:  50% (404/807)        
+2023-09-22T00:38:07.6805783Z remote: Counting objects:  51% (412/807)        
+2023-09-22T00:38:07.6806094Z remote: Counting objects:  52% (420/807)        
+2023-09-22T00:38:07.6806389Z remote: Counting objects:  53% (428/807)        
+2023-09-22T00:38:07.6806671Z remote: Counting objects:  54% (436/807)        
+2023-09-22T00:38:07.6806969Z remote: Counting objects:  55% (444/807)        
+2023-09-22T00:38:07.6807260Z remote: Counting objects:  56% (452/807)        
+2023-09-22T00:38:07.6807709Z remote: Counting objects:  57% (460/807)        
+2023-09-22T00:38:07.6808007Z remote: Counting objects:  58% (469/807)        
+2023-09-22T00:38:07.6808305Z remote: Counting objects:  59% (477/807)        
+2023-09-22T00:38:07.6808602Z remote: Counting objects:  60% (485/807)        
+2023-09-22T00:38:07.6808903Z remote: Counting objects:  61% (493/807)        
+2023-09-22T00:38:07.6809204Z remote: Counting objects:  62% (501/807)        
+2023-09-22T00:38:07.6809729Z remote: Counting objects:  63% (509/807)        
+2023-09-22T00:38:07.6810174Z remote: Counting objects:  64% (517/807)        
+2023-09-22T00:38:07.6810475Z remote: Counting objects:  65% (525/807)        
+2023-09-22T00:38:07.6810781Z remote: Counting objects:  66% (533/807)        
+2023-09-22T00:38:07.6811085Z remote: Counting objects:  67% (541/807)        
+2023-09-22T00:38:07.6811384Z remote: Counting objects:  68% (549/807)        
+2023-09-22T00:38:07.6811670Z remote: Counting objects:  69% (557/807)        
+2023-09-22T00:38:07.6811967Z remote: Counting objects:  70% (565/807)        
+2023-09-22T00:38:07.6812267Z remote: Counting objects:  71% (573/807)        
+2023-09-22T00:38:07.6812568Z remote: Counting objects:  72% (582/807)        
+2023-09-22T00:38:07.6812853Z remote: Counting objects:  73% (590/807)        
+2023-09-22T00:38:07.6813149Z remote: Counting objects:  74% (598/807)        
+2023-09-22T00:38:07.6813444Z remote: Counting objects:  75% (606/807)        
+2023-09-22T00:38:07.6813747Z remote: Counting objects:  76% (614/807)        
+2023-09-22T00:38:07.6814044Z remote: Counting objects:  77% (622/807)        
+2023-09-22T00:38:07.6814328Z remote: Counting objects:  78% (630/807)        
+2023-09-22T00:38:07.6814626Z remote: Counting objects:  79% (638/807)        
+2023-09-22T00:38:07.6814921Z remote: Counting objects:  80% (646/807)        
+2023-09-22T00:38:07.6815213Z remote: Counting objects:  81% (654/807)        
+2023-09-22T00:38:07.6815495Z remote: Counting objects:  82% (662/807)        
+2023-09-22T00:38:07.6815790Z remote: Counting objects:  83% (670/807)        
+2023-09-22T00:38:07.6816088Z remote: Counting objects:  84% (678/807)        
+2023-09-22T00:38:07.6816387Z remote: Counting objects:  85% (686/807)        
+2023-09-22T00:38:07.6816671Z remote: Counting objects:  86% (695/807)        
+2023-09-22T00:38:07.6816968Z remote: Counting objects:  87% (703/807)        
+2023-09-22T00:38:07.6817262Z remote: Counting objects:  88% (711/807)        
+2023-09-22T00:38:07.6817565Z remote: Counting objects:  89% (719/807)        
+2023-09-22T00:38:07.6817861Z remote: Counting objects:  90% (727/807)        
+2023-09-22T00:38:07.6818144Z remote: Counting objects:  91% (735/807)        
+2023-09-22T00:38:07.6818435Z remote: Counting objects:  92% (743/807)        
+2023-09-22T00:38:07.6818731Z remote: Counting objects:  93% (751/807)        
+2023-09-22T00:38:07.6819025Z remote: Counting objects:  94% (759/807)        
+2023-09-22T00:38:07.6819307Z remote: Counting objects:  95% (767/807)        
+2023-09-22T00:38:07.6819600Z remote: Counting objects:  96% (775/807)        
+2023-09-22T00:38:07.6819896Z remote: Counting objects:  97% (783/807)        
+2023-09-22T00:38:07.6820308Z remote: Counting objects:  98% (791/807)        
+2023-09-22T00:38:07.6820614Z remote: Counting objects:  99% (799/807)        
+2023-09-22T00:38:07.6820898Z remote: Counting objects: 100% (807/807)        
+2023-09-22T00:38:07.6821212Z remote: Counting objects: 100% (807/807), done.        
+2023-09-22T00:38:07.6821563Z remote: Compressing objects:   0% (1/302)        
+2023-09-22T00:38:07.6821887Z remote: Compressing objects:   1% (4/302)        
+2023-09-22T00:38:07.6822197Z remote: Compressing objects:   2% (7/302)        
+2023-09-22T00:38:07.6822520Z remote: Compressing objects:   3% (10/302)        
+2023-09-22T00:38:07.6822835Z remote: Compressing objects:   4% (13/302)        
+2023-09-22T00:38:07.6823153Z remote: Compressing objects:   5% (16/302)        
+2023-09-22T00:38:07.6823453Z remote: Compressing objects:   6% (19/302)        
+2023-09-22T00:38:07.6823760Z remote: Compressing objects:   7% (22/302)        
+2023-09-22T00:38:07.6824071Z remote: Compressing objects:   8% (25/302)        
+2023-09-22T00:38:07.6824390Z remote: Compressing objects:   9% (28/302)        
+2023-09-22T00:38:07.6824702Z remote: Compressing objects:  10% (31/302)        
+2023-09-22T00:38:07.6825001Z remote: Compressing objects:  11% (34/302)        
+2023-09-22T00:38:07.6825316Z remote: Compressing objects:  12% (37/302)        
+2023-09-22T00:38:07.6825753Z remote: Compressing objects:  13% (40/302)        
+2023-09-22T00:38:07.6826062Z remote: Compressing objects:  14% (43/302)        
+2023-09-22T00:38:07.6826360Z remote: Compressing objects:  15% (46/302)        
+2023-09-22T00:38:07.6826671Z remote: Compressing objects:  16% (49/302)        
+2023-09-22T00:38:07.6826986Z remote: Compressing objects:  17% (52/302)        
+2023-09-22T00:38:07.6827300Z remote: Compressing objects:  18% (55/302)        
+2023-09-22T00:38:07.6827616Z remote: Compressing objects:  19% (58/302)        
+2023-09-22T00:38:07.6829033Z remote: Compressing objects:  20% (61/302)        
+2023-09-22T00:38:07.6829340Z remote: Compressing objects:  21% (64/302)        
+2023-09-22T00:38:07.6829662Z remote: Compressing objects:  22% (67/302)        
+2023-09-22T00:38:07.6829975Z remote: Compressing objects:  23% (70/302)        
+2023-09-22T00:38:07.6830285Z remote: Compressing objects:  24% (73/302)        
+2023-09-22T00:38:07.6830595Z remote: Compressing objects:  25% (76/302)        
+2023-09-22T00:38:07.6830900Z remote: Compressing objects:  26% (79/302)        
+2023-09-22T00:38:07.6831211Z remote: Compressing objects:  27% (82/302)        
+2023-09-22T00:38:07.6831523Z remote: Compressing objects:  28% (85/302)        
+2023-09-22T00:38:07.6831833Z remote: Compressing objects:  29% (88/302)        
+2023-09-22T00:38:07.6832130Z remote: Compressing objects:  30% (91/302)        
+2023-09-22T00:38:07.6832440Z remote: Compressing objects:  31% (94/302)        
+2023-09-22T00:38:07.6832750Z remote: Compressing objects:  32% (97/302)        
+2023-09-22T00:38:07.6833062Z remote: Compressing objects:  33% (100/302)        
+2023-09-22T00:38:07.6833369Z remote: Compressing objects:  34% (103/302)        
+2023-09-22T00:38:07.6833694Z remote: Compressing objects:  35% (106/302)        
+2023-09-22T00:38:07.6834012Z remote: Compressing objects:  36% (109/302)        
+2023-09-22T00:38:07.6834328Z remote: Compressing objects:  37% (112/302)        
+2023-09-22T00:38:07.6834647Z remote: Compressing objects:  38% (115/302)        
+2023-09-22T00:38:07.6834954Z remote: Compressing objects:  39% (118/302)        
+2023-09-22T00:38:07.6835267Z remote: Compressing objects:  40% (121/302)        
+2023-09-22T00:38:07.6835582Z remote: Compressing objects:  41% (124/302)        
+2023-09-22T00:38:07.6835891Z remote: Compressing objects:  42% (127/302)        
+2023-09-22T00:38:07.6836189Z remote: Compressing objects:  43% (130/302)        
+2023-09-22T00:38:07.6836499Z remote: Compressing objects:  44% (133/302)        
+2023-09-22T00:38:07.6836813Z remote: Compressing objects:  45% (136/302)        
+2023-09-22T00:38:07.6837126Z remote: Compressing objects:  46% (139/302)        
+2023-09-22T00:38:07.6837575Z remote: Compressing objects:  47% (142/302)        
+2023-09-22T00:38:07.6837879Z remote: Compressing objects:  48% (145/302)        
+2023-09-22T00:38:07.6838183Z remote: Compressing objects:  49% (148/302)        
+2023-09-22T00:38:07.6838493Z remote: Compressing objects:  50% (151/302)        
+2023-09-22T00:38:07.6838810Z remote: Compressing objects:  51% (155/302)        
+2023-09-22T00:38:07.6839107Z remote: Compressing objects:  52% (158/302)        
+2023-09-22T00:38:07.6839418Z remote: Compressing objects:  53% (161/302)        
+2023-09-22T00:38:07.6839732Z remote: Compressing objects:  54% (164/302)        
+2023-09-22T00:38:07.6840041Z remote: Compressing objects:  55% (167/302)        
+2023-09-22T00:38:07.6840355Z remote: Compressing objects:  56% (170/302)        
+2023-09-22T00:38:07.6840651Z remote: Compressing objects:  57% (173/302)        
+2023-09-22T00:38:07.6840956Z remote: Compressing objects:  58% (176/302)        
+2023-09-22T00:38:07.6841254Z remote: Compressing objects:  59% (179/302)        
+2023-09-22T00:38:07.6841564Z remote: Compressing objects:  60% (182/302)        
+2023-09-22T00:38:07.6841855Z remote: Compressing objects:  61% (185/302)        
+2023-09-22T00:38:07.6842167Z remote: Compressing objects:  62% (188/302)        
+2023-09-22T00:38:07.6842479Z remote: Compressing objects:  63% (191/302)        
+2023-09-22T00:38:07.6842889Z remote: Compressing objects:  64% (194/302)        
+2023-09-22T00:38:07.6843189Z remote: Compressing objects:  65% (197/302)        
+2023-09-22T00:38:07.6843497Z remote: Compressing objects:  66% (200/302)        
+2023-09-22T00:38:07.6843806Z remote: Compressing objects:  67% (203/302)        
+2023-09-22T00:38:07.6844119Z remote: Compressing objects:  68% (206/302)        
+2023-09-22T00:38:07.6844429Z remote: Compressing objects:  69% (209/302)        
+2023-09-22T00:38:07.6844727Z remote: Compressing objects:  70% (212/302)        
+2023-09-22T00:38:07.6845039Z remote: Compressing objects:  71% (215/302)        
+2023-09-22T00:38:07.6845352Z remote: Compressing objects:  72% (218/302)        
+2023-09-22T00:38:07.6845666Z remote: Compressing objects:  73% (221/302)        
+2023-09-22T00:38:07.6845962Z remote: Compressing objects:  74% (224/302)        
+2023-09-22T00:38:07.6846262Z remote: Compressing objects:  75% (227/302)        
+2023-09-22T00:38:07.6846565Z remote: Compressing objects:  76% (230/302)        
+2023-09-22T00:38:07.6846883Z remote: Compressing objects:  77% (233/302)        
+2023-09-22T00:38:07.6847191Z remote: Compressing objects:  78% (236/302)        
+2023-09-22T00:38:07.6847688Z remote: Compressing objects:  79% (239/302)        
+2023-09-22T00:38:07.6848010Z remote: Compressing objects:  80% (242/302)        
+2023-09-22T00:38:07.6848317Z remote: Compressing objects:  81% (245/302)        
+2023-09-22T00:38:07.6848625Z remote: Compressing objects:  82% (248/302)        
+2023-09-22T00:38:07.6848922Z remote: Compressing objects:  83% (251/302)        
+2023-09-22T00:38:07.6849235Z remote: Compressing objects:  84% (254/302)        
+2023-09-22T00:38:07.6849552Z remote: Compressing objects:  85% (257/302)        
+2023-09-22T00:38:07.6849864Z remote: Compressing objects:  86% (260/302)        
+2023-09-22T00:38:07.6850162Z remote: Compressing objects:  87% (263/302)        
+2023-09-22T00:38:07.6850477Z remote: Compressing objects:  88% (266/302)        
+2023-09-22T00:38:07.6850793Z remote: Compressing objects:  89% (269/302)        
+2023-09-22T00:38:07.6851116Z remote: Compressing objects:  90% (272/302)        
+2023-09-22T00:38:07.6851428Z remote: Compressing objects:  91% (275/302)        
+2023-09-22T00:38:07.6851737Z remote: Compressing objects:  92% (278/302)        
+2023-09-22T00:38:07.6852080Z remote: Compressing objects:  93% (281/302)        
+2023-09-22T00:38:07.6852376Z remote: Compressing objects:  94% (284/302)        
+2023-09-22T00:38:07.6852685Z remote: Compressing objects:  95% (287/302)        
+2023-09-22T00:38:07.6852996Z remote: Compressing objects:  96% (290/302)        
+2023-09-22T00:38:07.6853296Z remote: Compressing objects:  97% (293/302)        
+2023-09-22T00:38:07.6853712Z remote: Compressing objects:  98% (296/302)        
+2023-09-22T00:38:07.6854026Z remote: Compressing objects:  99% (299/302)        
+2023-09-22T00:38:07.6854326Z remote: Compressing objects: 100% (302/302)        
+2023-09-22T00:38:07.6854644Z remote: Compressing objects: 100% (302/302), done.        
+2023-09-22T00:38:07.6991424Z Receiving objects:   0% (1/19581)
+2023-09-22T00:38:07.7234610Z Receiving objects:   1% (196/19581)
+2023-09-22T00:38:07.7265049Z Receiving objects:   2% (392/19581)
+2023-09-22T00:38:07.7433618Z Receiving objects:   3% (588/19581)
+2023-09-22T00:38:07.7448812Z Receiving objects:   4% (784/19581)
+2023-09-22T00:38:07.7467150Z Receiving objects:   5% (980/19581)
+2023-09-22T00:38:07.7488199Z Receiving objects:   6% (1175/19581)
+2023-09-22T00:38:07.7500660Z Receiving objects:   7% (1371/19581)
+2023-09-22T00:38:07.7515471Z Receiving objects:   8% (1567/19581)
+2023-09-22T00:38:07.7530774Z Receiving objects:   9% (1763/19581)
+2023-09-22T00:38:07.7595859Z Receiving objects:  10% (1959/19581)
+2023-09-22T00:38:07.7659680Z Receiving objects:  11% (2154/19581)
+2023-09-22T00:38:07.7677560Z Receiving objects:  12% (2350/19581)
+2023-09-22T00:38:07.7696704Z Receiving objects:  13% (2546/19581)
+2023-09-22T00:38:07.7717265Z Receiving objects:  14% (2742/19581)
+2023-09-22T00:38:07.7735879Z Receiving objects:  15% (2938/19581)
+2023-09-22T00:38:07.7756057Z Receiving objects:  16% (3133/19581)
+2023-09-22T00:38:07.7774631Z Receiving objects:  17% (3329/19581)
+2023-09-22T00:38:07.7788870Z Receiving objects:  18% (3525/19581)
+2023-09-22T00:38:07.7804790Z Receiving objects:  19% (3721/19581)
+2023-09-22T00:38:07.7824086Z Receiving objects:  20% (3917/19581)
+2023-09-22T00:38:07.7844265Z Receiving objects:  21% (4113/19581)
+2023-09-22T00:38:07.7963743Z Receiving objects:  22% (4308/19581)
+2023-09-22T00:38:07.9290057Z Receiving objects:  23% (4504/19581)
+2023-09-22T00:38:07.9294972Z Receiving objects:  24% (4700/19581)
+2023-09-22T00:38:07.9315241Z Receiving objects:  25% (4896/19581)
+2023-09-22T00:38:07.9329353Z Receiving objects:  26% (5092/19581)
+2023-09-22T00:38:07.9347237Z Receiving objects:  27% (5287/19581)
+2023-09-22T00:38:08.0440207Z Receiving objects:  28% (5483/19581)
+2023-09-22T00:38:08.0441827Z Receiving objects:  29% (5679/19581)
+2023-09-22T00:38:08.0445477Z Receiving objects:  30% (5875/19581)
+2023-09-22T00:38:08.0448587Z Receiving objects:  31% (6071/19581)
+2023-09-22T00:38:08.0453267Z Receiving objects:  32% (6266/19581)
+2023-09-22T00:38:08.0457751Z Receiving objects:  33% (6462/19581)
+2023-09-22T00:38:08.0462108Z Receiving objects:  34% (6658/19581)
+2023-09-22T00:38:08.0467515Z Receiving objects:  35% (6854/19581)
+2023-09-22T00:38:08.0471092Z Receiving objects:  36% (7050/19581)
+2023-09-22T00:38:08.0472278Z Receiving objects:  37% (7245/19581)
+2023-09-22T00:38:08.0475842Z Receiving objects:  38% (7441/19581)
+2023-09-22T00:38:08.0478088Z Receiving objects:  39% (7637/19581)
+2023-09-22T00:38:08.0482161Z Receiving objects:  40% (7833/19581)
+2023-09-22T00:38:08.0483956Z Receiving objects:  41% (8029/19581)
+2023-09-22T00:38:08.0487688Z Receiving objects:  42% (8225/19581)
+2023-09-22T00:38:08.0491325Z Receiving objects:  43% (8420/19581)
+2023-09-22T00:38:08.0494490Z Receiving objects:  44% (8616/19581)
+2023-09-22T00:38:08.0498433Z Receiving objects:  45% (8812/19581)
+2023-09-22T00:38:08.0503944Z Receiving objects:  46% (9008/19581)
+2023-09-22T00:38:08.0505489Z Receiving objects:  47% (9204/19581)
+2023-09-22T00:38:08.0512304Z Receiving objects:  48% (9399/19581)
+2023-09-22T00:38:08.0518042Z Receiving objects:  49% (9595/19581)
+2023-09-22T00:38:08.0525026Z Receiving objects:  50% (9791/19581)
+2023-09-22T00:38:08.0528833Z Receiving objects:  51% (9987/19581)
+2023-09-22T00:38:08.0533881Z Receiving objects:  52% (10183/19581)
+2023-09-22T00:38:08.0542924Z Receiving objects:  53% (10378/19581)
+2023-09-22T00:38:08.0547218Z Receiving objects:  54% (10574/19581)
+2023-09-22T00:38:08.0553244Z Receiving objects:  55% (10770/19581)
+2023-09-22T00:38:08.0555685Z Receiving objects:  56% (10966/19581)
+2023-09-22T00:38:08.0560213Z Receiving objects:  57% (11162/19581)
+2023-09-22T00:38:08.0562487Z Receiving objects:  58% (11357/19581)
+2023-09-22T00:38:08.0566199Z Receiving objects:  59% (11553/19581)
+2023-09-22T00:38:08.0571585Z Receiving objects:  60% (11749/19581)
+2023-09-22T00:38:08.0575026Z Receiving objects:  61% (11945/19581)
+2023-09-22T00:38:08.0577324Z Receiving objects:  62% (12141/19581)
+2023-09-22T00:38:08.0580823Z Receiving objects:  63% (12337/19581)
+2023-09-22T00:38:08.0584010Z Receiving objects:  64% (12532/19581)
+2023-09-22T00:38:08.0586563Z Receiving objects:  65% (12728/19581)
+2023-09-22T00:38:08.0590761Z Receiving objects:  66% (12924/19581)
+2023-09-22T00:38:08.0594230Z Receiving objects:  67% (13120/19581)
+2023-09-22T00:38:08.0596733Z Receiving objects:  68% (13316/19581)
+2023-09-22T00:38:08.0599126Z Receiving objects:  69% (13511/19581)
+2023-09-22T00:38:08.0603979Z Receiving objects:  70% (13707/19581)
+2023-09-22T00:38:08.0607964Z Receiving objects:  71% (13903/19581)
+2023-09-22T00:38:08.0612164Z Receiving objects:  72% (14099/19581)
+2023-09-22T00:38:08.0617509Z Receiving objects:  73% (14295/19581)
+2023-09-22T00:38:08.0625680Z Receiving objects:  74% (14490/19581)
+2023-09-22T00:38:08.0630187Z Receiving objects:  75% (14686/19581)
+2023-09-22T00:38:08.0634067Z Receiving objects:  76% (14882/19581)
+2023-09-22T00:38:08.0638464Z Receiving objects:  77% (15078/19581)
+2023-09-22T00:38:08.0645028Z Receiving objects:  78% (15274/19581)
+2023-09-22T00:38:08.0648306Z Receiving objects:  79% (15469/19581)
+2023-09-22T00:38:08.0651030Z Receiving objects:  80% (15665/19581)
+2023-09-22T00:38:08.0653653Z Receiving objects:  81% (15861/19581)
+2023-09-22T00:38:08.0656439Z Receiving objects:  82% (16057/19581)
+2023-09-22T00:38:08.0658466Z Receiving objects:  83% (16253/19581)
+2023-09-22T00:38:08.0660356Z Receiving objects:  84% (16449/19581)
+2023-09-22T00:38:08.0663973Z Receiving objects:  85% (16644/19581)
+2023-09-22T00:38:08.0664387Z Receiving objects:  86% (16840/19581)
+2023-09-22T00:38:08.0667627Z Receiving objects:  87% (17036/19581)
+2023-09-22T00:38:08.0671271Z Receiving objects:  88% (17232/19581)
+2023-09-22T00:38:08.0671544Z Receiving objects:  89% (17428/19581)
+2023-09-22T00:38:08.0673959Z Receiving objects:  90% (17623/19581)
+2023-09-22T00:38:08.0676410Z Receiving objects:  91% (17819/19581)
+2023-09-22T00:38:08.0678702Z Receiving objects:  92% (18015/19581)
+2023-09-22T00:38:08.0680595Z Receiving objects:  93% (18211/19581)
+2023-09-22T00:38:08.0683278Z Receiving objects:  94% (18407/19581)
+2023-09-22T00:38:08.0689859Z Receiving objects:  95% (18602/19581)
+2023-09-22T00:38:08.0706960Z Receiving objects:  96% (18798/19581)
+2023-09-22T00:38:08.0707271Z Receiving objects:  97% (18994/19581)
+2023-09-22T00:38:08.0722934Z Receiving objects:  98% (19190/19581)
+2023-09-22T00:38:08.0752489Z Receiving objects:  99% (19386/19581)
+2023-09-22T00:38:08.0753182Z remote: Total 19581 (delta 558), reused 689 (delta 493), pack-reused 18774        
+2023-09-22T00:38:08.0777799Z Receiving objects: 100% (19581/19581)
+2023-09-22T00:38:08.0778159Z Receiving objects: 100% (19581/19581), 7.31 MiB | 18.82 MiB/s, done.
+2023-09-22T00:38:08.0820940Z Resolving deltas:   0% (0/14112)
+2023-09-22T00:38:08.0844226Z Resolving deltas:   1% (142/14112)
+2023-09-22T00:38:08.0853309Z Resolving deltas:   2% (283/14112)
+2023-09-22T00:38:08.0864454Z Resolving deltas:   3% (424/14112)
+2023-09-22T00:38:08.0895065Z Resolving deltas:   4% (565/14112)
+2023-09-22T00:38:08.0922005Z Resolving deltas:   5% (706/14112)
+2023-09-22T00:38:08.0956456Z Resolving deltas:   6% (847/14112)
+2023-09-22T00:38:08.0978963Z Resolving deltas:   7% (988/14112)
+2023-09-22T00:38:08.0994917Z Resolving deltas:   8% (1129/14112)
+2023-09-22T00:38:08.1038509Z Resolving deltas:   9% (1271/14112)
+2023-09-22T00:38:08.1083475Z Resolving deltas:  10% (1412/14112)
+2023-09-22T00:38:08.1123003Z Resolving deltas:  11% (1553/14112)
+2023-09-22T00:38:08.1141402Z Resolving deltas:  12% (1694/14112)
+2023-09-22T00:38:08.1165671Z Resolving deltas:  13% (1835/14112)
+2023-09-22T00:38:08.1185683Z Resolving deltas:  14% (1976/14112)
+2023-09-22T00:38:08.1198724Z Resolving deltas:  15% (2117/14112)
+2023-09-22T00:38:08.1210514Z Resolving deltas:  16% (2258/14112)
+2023-09-22T00:38:08.1222815Z Resolving deltas:  17% (2400/14112)
+2023-09-22T00:38:08.1232771Z Resolving deltas:  18% (2541/14112)
+2023-09-22T00:38:08.1251316Z Resolving deltas:  19% (2682/14112)
+2023-09-22T00:38:08.1326544Z Resolving deltas:  20% (2823/14112)
+2023-09-22T00:38:08.1344728Z Resolving deltas:  21% (2964/14112)
+2023-09-22T00:38:08.1355804Z Resolving deltas:  22% (3105/14112)
+2023-09-22T00:38:08.1361180Z Resolving deltas:  23% (3246/14112)
+2023-09-22T00:38:08.1371982Z Resolving deltas:  24% (3387/14112)
+2023-09-22T00:38:08.1398825Z Resolving deltas:  25% (3528/14112)
+2023-09-22T00:38:08.1413047Z Resolving deltas:  26% (3670/14112)
+2023-09-22T00:38:08.1419216Z Resolving deltas:  27% (3811/14112)
+2023-09-22T00:38:08.1428372Z Resolving deltas:  28% (3952/14112)
+2023-09-22T00:38:08.1465859Z Resolving deltas:  29% (4093/14112)
+2023-09-22T00:38:08.1498383Z Resolving deltas:  30% (4234/14112)
+2023-09-22T00:38:08.1520509Z Resolving deltas:  31% (4375/14112)
+2023-09-22T00:38:08.1525791Z Resolving deltas:  32% (4516/14112)
+2023-09-22T00:38:08.1539806Z Resolving deltas:  33% (4657/14112)
+2023-09-22T00:38:08.1574803Z Resolving deltas:  34% (4799/14112)
+2023-09-22T00:38:08.1618441Z Resolving deltas:  35% (4940/14112)
+2023-09-22T00:38:08.1628514Z Resolving deltas:  36% (5081/14112)
+2023-09-22T00:38:08.1638403Z Resolving deltas:  37% (5222/14112)
+2023-09-22T00:38:08.1652294Z Resolving deltas:  38% (5363/14112)
+2023-09-22T00:38:08.1657680Z Resolving deltas:  39% (5504/14112)
+2023-09-22T00:38:08.1665863Z Resolving deltas:  40% (5645/14112)
+2023-09-22T00:38:08.1677520Z Resolving deltas:  41% (5786/14112)
+2023-09-22T00:38:08.1686070Z Resolving deltas:  42% (5928/14112)
+2023-09-22T00:38:08.1695764Z Resolving deltas:  43% (6069/14112)
+2023-09-22T00:38:08.1704765Z Resolving deltas:  44% (6210/14112)
+2023-09-22T00:38:08.1715246Z Resolving deltas:  45% (6351/14112)
+2023-09-22T00:38:08.1721650Z Resolving deltas:  46% (6492/14112)
+2023-09-22T00:38:08.1727788Z Resolving deltas:  47% (6633/14112)
+2023-09-22T00:38:08.1733956Z Resolving deltas:  48% (6774/14112)
+2023-09-22T00:38:08.1740610Z Resolving deltas:  49% (6915/14112)
+2023-09-22T00:38:08.1796004Z Resolving deltas:  50% (7056/14112)
+2023-09-22T00:38:08.1834825Z Resolving deltas:  51% (7198/14112)
+2023-09-22T00:38:08.1847162Z Resolving deltas:  52% (7339/14112)
+2023-09-22T00:38:08.1863639Z Resolving deltas:  53% (7480/14112)
+2023-09-22T00:38:08.1871817Z Resolving deltas:  54% (7621/14112)
+2023-09-22T00:38:08.1938758Z Resolving deltas:  55% (7762/14112)
+2023-09-22T00:38:08.1956611Z Resolving deltas:  56% (7903/14112)
+2023-09-22T00:38:08.1971753Z Resolving deltas:  57% (8044/14112)
+2023-09-22T00:38:08.1978365Z Resolving deltas:  58% (8185/14112)
+2023-09-22T00:38:08.1988495Z Resolving deltas:  59% (8327/14112)
+2023-09-22T00:38:08.1997585Z Resolving deltas:  60% (8468/14112)
+2023-09-22T00:38:08.2003983Z Resolving deltas:  61% (8609/14112)
+2023-09-22T00:38:08.2012379Z Resolving deltas:  62% (8750/14112)
+2023-09-22T00:38:08.2020956Z Resolving deltas:  63% (8891/14112)
+2023-09-22T00:38:08.2029923Z Resolving deltas:  64% (9032/14112)
+2023-09-22T00:38:08.2043127Z Resolving deltas:  65% (9173/14112)
+2023-09-22T00:38:08.2056736Z Resolving deltas:  66% (9314/14112)
+2023-09-22T00:38:08.2064828Z Resolving deltas:  67% (9456/14112)
+2023-09-22T00:38:08.2071288Z Resolving deltas:  68% (9597/14112)
+2023-09-22T00:38:08.2078333Z Resolving deltas:  69% (9738/14112)
+2023-09-22T00:38:08.2089717Z Resolving deltas:  70% (9879/14112)
+2023-09-22T00:38:08.2105608Z Resolving deltas:  71% (10020/14112)
+2023-09-22T00:38:08.2119450Z Resolving deltas:  72% (10161/14112)
+2023-09-22T00:38:08.2156476Z Resolving deltas:  73% (10302/14112)
+2023-09-22T00:38:08.2171770Z Resolving deltas:  74% (10443/14112)
+2023-09-22T00:38:08.2178323Z Resolving deltas:  75% (10584/14112)
+2023-09-22T00:38:08.2188035Z Resolving deltas:  76% (10726/14112)
+2023-09-22T00:38:08.2195645Z Resolving deltas:  77% (10867/14112)
+2023-09-22T00:38:08.2206760Z Resolving deltas:  78% (11008/14112)
+2023-09-22T00:38:08.2217868Z Resolving deltas:  79% (11149/14112)
+2023-09-22T00:38:08.2224996Z Resolving deltas:  80% (11290/14112)
+2023-09-22T00:38:08.2237993Z Resolving deltas:  81% (11431/14112)
+2023-09-22T00:38:08.2251551Z Resolving deltas:  82% (11572/14112)
+2023-09-22T00:38:08.2507732Z Resolving deltas:  83% (11713/14112)
+2023-09-22T00:38:08.2518235Z Resolving deltas:  84% (11855/14112)
+2023-09-22T00:38:08.2529236Z Resolving deltas:  85% (11996/14112)
+2023-09-22T00:38:08.2538128Z Resolving deltas:  86% (12137/14112)
+2023-09-22T00:38:08.2544690Z Resolving deltas:  87% (12278/14112)
+2023-09-22T00:38:08.2551428Z Resolving deltas:  88% (12419/14112)
+2023-09-22T00:38:08.2558021Z Resolving deltas:  89% (12560/14112)
+2023-09-22T00:38:08.2564304Z Resolving deltas:  90% (12701/14112)
+2023-09-22T00:38:08.2574841Z Resolving deltas:  91% (12842/14112)
+2023-09-22T00:38:08.2583469Z Resolving deltas:  92% (12984/14112)
+2023-09-22T00:38:08.2591288Z Resolving deltas:  93% (13125/14112)
+2023-09-22T00:38:08.2597870Z Resolving deltas:  94% (13266/14112)
+2023-09-22T00:38:08.2606392Z Resolving deltas:  95% (13407/14112)
+2023-09-22T00:38:08.2618930Z Resolving deltas:  96% (13548/14112)
+2023-09-22T00:38:08.2629385Z Resolving deltas:  97% (13689/14112)
+2023-09-22T00:38:08.2656234Z Resolving deltas:  98% (13830/14112)
+2023-09-22T00:38:08.2975404Z Resolving deltas:  99% (13971/14112)
+2023-09-22T00:38:08.2976332Z Resolving deltas: 100% (14112/14112)
+2023-09-22T00:38:08.2977118Z Resolving deltas: 100% (14112/14112), done.
+2023-09-22T00:38:08.3763311Z From https://github.com/AIStream-Peelout/flow-forecast
+2023-09-22T00:38:08.3764154Z  * [new branch]        1_classification_support_full -> origin/1_classification_support_full
+2023-09-22T00:38:08.3767733Z  * [new branch]        1fix_impute             -> origin/1fix_impute
+2023-09-22T00:38:08.3771107Z  * [new branch]        23                      -> origin/23
+2023-09-22T00:38:08.3774934Z  * [new branch]        44                      -> origin/44
+2023-09-22T00:38:08.3776633Z  * [new branch]        45                      -> origin/45
+2023-09-22T00:38:08.3778433Z  * [new branch]        80-flake8-linting       -> origin/80-flake8-linting
+2023-09-22T00:38:08.3779919Z  * [new branch]        97harsh-patch-1         -> origin/97harsh-patch-1
+2023-09-22T00:38:08.3781654Z  * [new branch]        97harsh-patch-2         -> origin/97harsh-patch-2
+2023-09-22T00:38:08.3783103Z  * [new branch]        PROB_5                  -> origin/PROB_5
+2023-09-22T00:38:08.3785382Z  * [new branch]        a_classification        -> origin/a_classification
+2023-09-22T00:38:08.3788115Z  * [new branch]        add-license-1           -> origin/add-license-1
+2023-09-22T00:38:08.3789542Z  * [new branch]        add_activation_stuff    -> origin/add_activation_stuff
+2023-09-22T00:38:08.3791750Z  * [new branch]        add_autoformer2         -> origin/add_autoformer2
+2023-09-22T00:38:08.3793140Z  * [new branch]        add_autoformer_3        -> origin/add_autoformer_3
+2023-09-22T00:38:08.3794987Z  * [new branch]        add_branch_class        -> origin/add_branch_class
+2023-09-22T00:38:08.3797526Z  * [new branch]        add_code_see            -> origin/add_code_see
+2023-09-22T00:38:08.3798931Z  * [new branch]        add_coverage_reports    -> origin/add_coverage_reports
+2023-09-22T00:38:08.3800910Z  * [new branch]        add_d_linear            -> origin/add_d_linear
+2023-09-22T00:38:08.3802422Z  * [new branch]        add_d_linear_and_cross_former -> origin/add_d_linear_and_cross_former
+2023-09-22T00:38:08.3804524Z  * [new branch]        add_dataloader          -> origin/add_dataloader
+2023-09-22T00:38:08.3805977Z  * [new branch]        add_deepar              -> origin/add_deepar
+2023-09-22T00:38:08.3807750Z  * [new branch]        add_deployment_m        -> origin/add_deployment_m
+2023-09-22T00:38:08.3810165Z  * [new branch]        add_df_support          -> origin/add_df_support
+2023-09-22T00:38:08.3811766Z  * [new branch]        add_heatmap             -> origin/add_heatmap
+2023-09-22T00:38:08.3813628Z  * [new branch]        add_loss                -> origin/add_loss
+2023-09-22T00:38:08.3815016Z  * [new branch]        add_loss_function       -> origin/add_loss_function
+2023-09-22T00:38:08.3817115Z  * [new branch]        add_loss_penalties      -> origin/add_loss_penalties
+2023-09-22T00:38:08.3817922Z  * [new branch]        add_loss_supervised_auto -> origin/add_loss_supervised_auto
+2023-09-22T00:38:08.3820061Z  * [new branch]        add_mase                -> origin/add_mase
+2023-09-22T00:38:08.3820771Z  * [new branch]        add_minute_temporal     -> origin/add_minute_temporal
+2023-09-22T00:38:08.3822545Z  * [new branch]        add_new_loss            -> origin/add_new_loss
+2023-09-22T00:38:08.3823909Z  * [new branch]        add_profiling           -> origin/add_profiling
+2023-09-22T00:38:08.3825614Z  * [new branch]        add_profiling_2         -> origin/add_profiling_2
+2023-09-22T00:38:08.3827027Z  * [new branch]        add_regularizations     -> origin/add_regularizations
+2023-09-22T00:38:08.3828711Z  * [new branch]        add_shap                -> origin/add_shap
+2023-09-22T00:38:08.3830111Z  * [new branch]        add_shap_summary_plot   -> origin/add_shap_summary_plot
+2023-09-22T00:38:08.3831828Z  * [new branch]        add_squash_layer        -> origin/add_squash_layer
+2023-09-22T00:38:08.3834012Z  * [new branch]        add_test_ci             -> origin/add_test_ci
+2023-09-22T00:38:08.3835726Z  * [new branch]        add_torch_typing        -> origin/add_torch_typing
+2023-09-22T00:38:08.3837136Z  * [new branch]        add_tpoc_paper          -> origin/add_tpoc_paper
+2023-09-22T00:38:08.3838812Z  * [new branch]        adding_activation       -> origin/adding_activation
+2023-09-22T00:38:08.3840234Z  * [new branch]        adding_captum           -> origin/adding_captum
+2023-09-22T00:38:08.3842280Z  * [new branch]        adding_test_results     -> origin/adding_test_results
+2023-09-22T00:38:08.3842790Z  * [new branch]        adjust_shap_subplots    -> origin/adjust_shap_subplots
+2023-09-22T00:38:08.3845481Z  * [new branch]        adverserial_transformer -> origin/adverserial_transformer
+2023-09-22T00:38:08.3845980Z  * [new branch]        ae_auto_multi_support   -> origin/ae_auto_multi_support
+2023-09-22T00:38:08.3848670Z  * [new branch]        allow_forecasting_unscaled -> origin/allow_forecasting_unscaled
+2023-09-22T00:38:08.3849180Z  * [new branch]        allow_no_scale          -> origin/allow_no_scale
+2023-09-22T00:38:08.3851730Z  * [new branch]        anomaly_transformer     -> origin/anomaly_transformer
+2023-09-22T00:38:08.3852249Z  * [new branch]        anomaly_transformer1.0  -> origin/anomaly_transformer1.0
+2023-09-22T00:38:08.3854756Z  * [new branch]        auto_encoder_support_dt -> origin/auto_encoder_support_dt
+2023-09-22T00:38:08.3855222Z  * [new branch]        autoencode              -> origin/autoencode
+2023-09-22T00:38:08.3857991Z  * [new branch]        autoencoder_temporal_variable -> origin/autoencoder_temporal_variable
+2023-09-22T00:38:08.3858514Z  * [new branch]        backup_branch           -> origin/backup_branch
+2023-09-22T00:38:08.3860980Z  * [new branch]        badge_updates           -> origin/badge_updates
+2023-09-22T00:38:08.3861436Z  * [new branch]        batch_scalers           -> origin/batch_scalers
+2023-09-22T00:38:08.3863966Z  * [new branch]        bottleneck              -> origin/bottleneck
+2023-09-22T00:38:08.3864428Z  * [new branch]        branch_fixes            -> origin/branch_fixes
+2023-09-22T00:38:08.3866889Z  * [new branch]        bug                     -> origin/bug
+2023-09-22T00:38:08.3867309Z  * [new branch]        bug_error               -> origin/bug_error
+2023-09-22T00:38:08.3869974Z  * [new branch]        bug_fix                 -> origin/bug_fix
+2023-09-22T00:38:08.3870389Z  * [new branch]        bug_fix_df              -> origin/bug_fix_df
+2023-09-22T00:38:08.3872335Z  * [new branch]        bug_fix_tests           -> origin/bug_fix_tests
+2023-09-22T00:38:08.3875195Z  * [new branch]        bug_fix_today           -> origin/bug_fix_today
+2023-09-22T00:38:08.3875655Z  * [new branch]        bug_fixe                -> origin/bug_fixe
+2023-09-22T00:38:08.3878205Z  * [new branch]        bug_fixed               -> origin/bug_fixed
+2023-09-22T00:38:08.3878629Z  * [new branch]        bug_fixed2              -> origin/bug_fixed2
+2023-09-22T00:38:08.3880746Z  * [new branch]        bug_fixes_              -> origin/bug_fixes_
+2023-09-22T00:38:08.3882978Z  * [new branch]        bugfix/multiple_prediction_samples_for_decoded_model -> origin/bugfix/multiple_prediction_samples_for_decoded_model
+2023-09-22T00:38:08.3885528Z  * [new branch]        circleci_unit_test_configs -> origin/circleci_unit_test_configs
+2023-09-22T00:38:08.3885997Z  * [new branch]        class                   -> origin/class
+2023-09-22T00:38:08.3888860Z  * [new branch]        class_2_s               -> origin/class_2_s
+2023-09-22T00:38:08.3889308Z  * [new branch]        classification_4        -> origin/classification_4
+2023-09-22T00:38:08.3891874Z  * [new branch]        classification_dataloader -> origin/classification_dataloader
+2023-09-22T00:38:08.3892420Z  * [new branch]        classification_pr_clean -> origin/classification_pr_clean
+2023-09-22T00:38:08.3894870Z  * [new branch]        classification_small    -> origin/classification_small
+2023-09-22T00:38:08.3895658Z  * [new branch]        classification_test_loader -> origin/classification_test_loader
+2023-09-22T00:38:08.3898446Z  * [new branch]        codesee                 -> origin/codesee
+2023-09-22T00:38:08.3899078Z  * [new branch]        codesee-arch-diagram-workflow-1636570046685 -> origin/codesee-arch-diagram-workflow-1636570046685
+2023-09-22T00:38:08.3901696Z  * [new branch]        colab_compatible        -> origin/colab_compatible
+2023-09-22T00:38:08.3902186Z  * [new branch]        compute_loss_tests      -> origin/compute_loss_tests
+2023-09-22T00:38:08.3904674Z  * [new branch]        config_e                -> origin/config_e
+2023-09-22T00:38:08.3905125Z  * [new branch]        config_ease             -> origin/config_ease
+2023-09-22T00:38:08.3907585Z  * [new branch]        covid_fixes             -> origin/covid_fixes
+2023-09-22T00:38:08.3908051Z  * [new branch]        covid_integration       -> origin/covid_integration
+2023-09-22T00:38:08.3910716Z  * [new branch]        covid_prep              -> origin/covid_prep
+2023-09-22T00:38:08.3911166Z  * [new branch]        crossfo                 -> origin/crossfo
+2023-09-22T00:38:08.3912990Z  * [new branch]        crossforme              -> origin/crossforme
+2023-09-22T00:38:08.3915431Z  * [new branch]        crossforme3             -> origin/crossforme3
+2023-09-22T00:38:08.3915907Z  * [new branch]        crossformer             -> origin/crossformer
+2023-09-22T00:38:08.3917812Z  * [new branch]        crossformer_full        -> origin/crossformer_full
+2023-09-22T00:38:08.3919732Z  * [new branch]        cuda-fix                -> origin/cuda-fix
+2023-09-22T00:38:08.3922181Z  * [new branch]        custom_issues           -> origin/custom_issues
+2023-09-22T00:38:08.3922622Z  * [new branch]        da_ii_meta              -> origin/da_ii_meta
+2023-09-22T00:38:08.3924540Z  * [new branch]        dataloader_enhancements -> origin/dataloader_enhancements
+2023-09-22T00:38:08.3926404Z  * [new branch]        dataloader_params       -> origin/dataloader_params
+2023-09-22T00:38:08.3928530Z  * [new branch]        date_time_core          -> origin/date_time_core
+2023-09-22T00:38:08.3932178Z  * [new branch]        datetime_core           -> origin/datetime_core
+2023-09-22T00:38:08.3934132Z  * [new branch]        datetime_features       -> origin/datetime_features
+2023-09-22T00:38:08.3935911Z  * [new branch]        debug                   -> origin/debug
+2023-09-22T00:38:08.3937764Z  * [new branch]        decoder_fix             -> origin/decoder_fix
+2023-09-22T00:38:08.3939612Z  * [new branch]        decoder_fixes           -> origin/decoder_fixes
+2023-09-22T00:38:08.3942480Z  * [new branch]        dependabot/add-v2-config-file -> origin/dependabot/add-v2-config-file
+2023-09-22T00:38:08.3946387Z  * [new branch]        dependabot/pip/plotly-approx-eq-5.17.0 -> origin/dependabot/pip/plotly-approx-eq-5.17.0
+2023-09-22T00:38:08.3948210Z  * [new branch]        dependabot/pip/setuptools-approx-eq-68.2.2 -> origin/dependabot/pip/setuptools-approx-eq-68.2.2
+2023-09-22T00:38:08.3949938Z  * [new branch]        dependabot/pip/wandb-0.15.11 -> origin/dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:08.3951433Z  * [new branch]        dev                     -> origin/dev
+2023-09-22T00:38:08.3952884Z  * [new branch]        df_or_csv               -> origin/df_or_csv
+2023-09-22T00:38:08.3954271Z  * [new branch]        dic_series_id           -> origin/dic_series_id
+2023-09-22T00:38:08.3954736Z  * [new branch]        dilate_loss_v_bump      -> origin/dilate_loss_v_bump
+2023-09-22T00:38:08.3957547Z  * [new branch]        doc_updates             -> origin/doc_updates
+2023-09-22T00:38:08.3959374Z  * [new branch]        doc_updates_2.0         -> origin/doc_updates_2.0
+2023-09-22T00:38:08.3960880Z  * [new branch]        doc_updates_3.0         -> origin/doc_updates_3.0
+2023-09-22T00:38:08.3961336Z  * [new branch]        docstrings              -> origin/docstrings
+2023-09-22T00:38:08.3963181Z  * [new branch]        done_done               -> origin/done_done
+2023-09-22T00:38:08.3965885Z  * [new branch]        dropout                 -> origin/dropout
+2023-09-22T00:38:08.3966295Z  * [new branch]        dsanet                  -> origin/dsanet
+2023-09-22T00:38:08.3968382Z  * [new branch]        dsanet_3                -> origin/dsanet_3
+2023-09-22T00:38:08.3971913Z  * [new branch]        dtw_loss                -> origin/dtw_loss
+2023-09-22T00:38:08.3973725Z  * [new branch]        early_addition          -> origin/early_addition
+2023-09-22T00:38:08.3975581Z  * [new branch]        early_stopping          -> origin/early_stopping
+2023-09-22T00:38:08.3977110Z  * [new branch]        embedding_utils         -> origin/embedding_utils
+2023-09-22T00:38:08.3977578Z  * [new branch]        enhance_eval_test       -> origin/enhance_eval_test
+2023-09-22T00:38:08.3980448Z  * [new branch]        enhanced_resume         -> origin/enhanced_resume
+2023-09-22T00:38:08.3981987Z  * [new branch]        error_traceback         -> origin/error_traceback
+2023-09-22T00:38:08.3982433Z  * [new branch]        f_l_final               -> origin/f_l_final
+2023-09-22T00:38:08.3984236Z  * [new branch]        final_activation        -> origin/final_activation
+2023-09-22T00:38:08.3986139Z  * [new branch]        final_branch_fixes      -> origin/final_branch_fixes
+2023-09-22T00:38:08.3987921Z  * [new branch]        final_fixes             -> origin/final_fixes
+2023-09-22T00:38:08.3990672Z  * [new branch]        final_meta              -> origin/final_meta
+2023-09-22T00:38:08.3992516Z  * [new branch]        final_meta4             -> origin/final_meta4
+2023-09-22T00:38:08.3994052Z  * [new branch]        finish_series_id        -> origin/finish_series_id
+2023-09-22T00:38:08.3995518Z  * [new branch]        finish_series_id_9      -> origin/finish_series_id_9
+2023-09-22T00:38:08.3997057Z  * [new branch]        finish_series_id_loader -> origin/finish_series_id_loader
+2023-09-22T00:38:08.3997565Z  * [new branch]        finish_series_id_loader_5 -> origin/finish_series_id_loader_5
+2023-09-22T00:38:08.3999451Z  * [new branch]        fix-cuda                -> origin/fix-cuda
+2023-09-22T00:38:08.4002295Z  * [new branch]        fix-full-transformer-timeout -> origin/fix-full-transformer-timeout
+2023-09-22T00:38:08.4003862Z  * [new branch]        fix-gcp-bug             -> origin/fix-gcp-bug
+2023-09-22T00:38:08.4004343Z  * [new branch]        fix-test-on-master      -> origin/fix-test-on-master
+2023-09-22T00:38:08.4007140Z  * [new branch]        fix1                    -> origin/fix1
+2023-09-22T00:38:08.4008083Z  * [new branch]        fix_ae                  -> origin/fix_ae
+2023-09-22T00:38:08.4009951Z  * [new branch]        fix_ci_bug              -> origin/fix_ci_bug
+2023-09-22T00:38:08.4011720Z  * [new branch]        fix_d                   -> origin/fix_d
+2023-09-22T00:38:08.4014762Z  * [new branch]        fix_final_bug           -> origin/fix_final_bug
+2023-09-22T00:38:08.4016520Z  * [new branch]        fix_forward_params      -> origin/fix_forward_params
+2023-09-22T00:38:08.4017956Z  * [new branch]        fix_front_readme        -> origin/fix_front_readme
+2023-09-22T00:38:08.4019546Z  * [new branch]        fix_fspec_error         -> origin/fix_fspec_error
+2023-09-22T00:38:08.4021053Z  * [new branch]        fix_fucking_circle_ci_bug -> origin/fix_fucking_circle_ci_bug
+2023-09-22T00:38:08.4021947Z  * [new branch]        fix_impute              -> origin/fix_impute
+2023-09-22T00:38:08.4024799Z  * [new branch]        fix_inference_params    -> origin/fix_inference_params
+2023-09-22T00:38:08.4026646Z  * [new branch]        fix_mase                -> origin/fix_mase
+2023-09-22T00:38:08.4028418Z  * [new branch]        fix_mase1               -> origin/fix_mase1
+2023-09-22T00:38:08.4030170Z  * [new branch]        fix_now4                -> origin/fix_now4
+2023-09-22T00:38:08.4032062Z  * [new branch]        fix_to_transfo_decoder  -> origin/fix_to_transfo_decoder
+2023-09-22T00:38:08.4033489Z  * [new branch]        fix_train_loop          -> origin/fix_train_loop
+2023-09-22T00:38:08.4033974Z  * [new branch]        fix_transformer_bugs    -> origin/fix_transformer_bugs
+2023-09-22T00:38:08.4036912Z  * [new branch]        fix_up_infe_2           -> origin/fix_up_infe_2
+2023-09-22T00:38:08.4038329Z  * [new branch]        fix_ut_1                -> origin/fix_ut_1
+2023-09-22T00:38:08.4039773Z  * [new branch]        fixe3                   -> origin/fixe3
+2023-09-22T00:38:08.4040231Z  * [new branch]        fixes_scale_deploy3     -> origin/fixes_scale_deploy3
+2023-09-22T00:38:08.4043275Z  * [new branch]        fixes_scaling_deploy    -> origin/fixes_scaling_deploy
+2023-09-22T00:38:08.4045179Z  * [new branch]        fixes_to_loss_tests     -> origin/fixes_to_loss_tests
+2023-09-22T00:38:08.4046706Z  * [new branch]        fixing-_readme_badge_2  -> origin/fixing-_readme_badge_2
+2023-09-22T00:38:08.4047172Z  * [new branch]        fixing_info2            -> origin/fixing_info2
+2023-09-22T00:38:08.4049278Z  * [new branch]        fixing_informer         -> origin/fixing_informer
+2023-09-22T00:38:08.4051661Z  * [new branch]        fixing_informer_2       -> origin/fixing_informer_2
+2023-09-22T00:38:08.4054541Z  * [new branch]        fixing_multi_inform     -> origin/fixing_multi_inform
+2023-09-22T00:38:08.4056466Z  * [new branch]        fixing_multitask_inform -> origin/fixing_multitask_inform
+2023-09-22T00:38:08.4057353Z  * [new branch]        fixing_readme_badge     -> origin/fixing_readme_badge
+2023-09-22T00:38:08.4058848Z  * [new branch]        fixing_series_id_loaders4 -> origin/fixing_series_id_loaders4
+2023-09-22T00:38:08.4061634Z  * [new branch]        fixing_sklearn_errors   -> origin/fixing_sklearn_errors
+2023-09-22T00:38:08.4065138Z  * [new branch]        fixing_test_2           -> origin/fixing_test_2
+2023-09-22T00:38:08.4068615Z  * [new branch]        fixing_unit_tests       -> origin/fixing_unit_tests
+2023-09-22T00:38:08.4072171Z  * [new branch]        fixing_version_3        -> origin/fixing_version_3
+2023-09-22T00:38:08.4075516Z  * [new branch]        flake8_fish             -> origin/flake8_fish
+2023-09-22T00:38:08.4078827Z  * [new branch]        flake8_fix              -> origin/flake8_fix
+2023-09-22T00:38:08.4082247Z  * [new branch]        focal_loss              -> origin/focal_loss
+2023-09-22T00:38:08.4085564Z  * [new branch]        focal_loss_bug          -> origin/focal_loss_bug
+2023-09-22T00:38:08.4088314Z  * [new branch]        frozen_lay              -> origin/frozen_lay
+2023-09-22T00:38:08.4090925Z  * [new branch]        frozen_layers           -> origin/frozen_layers
+2023-09-22T00:38:08.4093552Z  * [new branch]        full_classification_support -> origin/full_classification_support
+2023-09-22T00:38:08.4096083Z  * [new branch]        full_good_eval          -> origin/full_good_eval
+2023-09-22T00:38:08.4098752Z  * [new branch]        gaussian_loss_backup    -> origin/gaussian_loss_backup
+2023-09-22T00:38:08.4101193Z  * [new branch]        gaussian_loss_fixes     -> origin/gaussian_loss_fixes
+2023-09-22T00:38:08.4103775Z  * [new branch]        gcs_integration         -> origin/gcs_integration
+2023-09-22T00:38:08.4106482Z  * [new branch]        generate_prediction_samples_from_dropout -> origin/generate_prediction_samples_from_dropout
+2023-09-22T00:38:08.4109194Z  * [new branch]        gpu-bug-fixes-cass_1    -> origin/gpu-bug-fixes-cass_1
+2023-09-22T00:38:08.4111704Z  * [new branch]        gpu_class_bug           -> origin/gpu_class_bug
+2023-09-22T00:38:08.4114115Z  * [new branch]        gpu_classification_bug  -> origin/gpu_classification_bug
+2023-09-22T00:38:08.4116588Z  * [new branch]        gpu_inf                 -> origin/gpu_inf
+2023-09-22T00:38:08.4119064Z  * [new branch]        graph_bug_docs          -> origin/graph_bug_docs
+2023-09-22T00:38:08.4121491Z  * [new branch]        gru-10                  -> origin/gru-10
+2023-09-22T00:38:08.4123863Z  * [new branch]        gru_auto                -> origin/gru_auto
+2023-09-22T00:38:08.4126430Z  * [new branch]        gru_vanilla             -> origin/gru_vanilla
+2023-09-22T00:38:08.4129441Z  * [new branch]        guassian_loss_tests     -> origin/guassian_loss_tests
+2023-09-22T00:38:08.4131986Z  * [new branch]        hot_fix                 -> origin/hot_fix
+2023-09-22T00:38:08.4134738Z  * [new branch]        hot_fix_4               -> origin/hot_fix_4
+2023-09-22T00:38:08.4137192Z  * [new branch]        hotfix2                 -> origin/hotfix2
+2023-09-22T00:38:08.4139556Z  * [new branch]        id_support              -> origin/id_support
+2023-09-22T00:38:08.4142414Z  * [new branch]        imputation_fixes        -> origin/imputation_fixes
+2023-09-22T00:38:08.4144896Z  * [new branch]        infer_3.0               -> origin/infer_3.0
+2023-09-22T00:38:08.4147317Z  * [new branch]        infer_allee             -> origin/infer_allee
+2023-09-22T00:38:08.4149747Z  * [new branch]        infer_bug               -> origin/infer_bug
+2023-09-22T00:38:08.4152179Z  * [new branch]        infer_classifcaition    -> origin/infer_classifcaition
+2023-09-22T00:38:08.4154844Z  * [new branch]        infer_classification    -> origin/infer_classification
+2023-09-22T00:38:08.4157392Z  * [new branch]        infer_csv               -> origin/infer_csv
+2023-09-22T00:38:08.4160131Z  * [new branch]        infer_csv3              -> origin/infer_csv3
+2023-09-22T00:38:08.4162399Z  * [new branch]        infer_csv_2             -> origin/infer_csv_2
+2023-09-22T00:38:08.4164823Z  * [new branch]        infer_errors            -> origin/infer_errors
+2023-09-22T00:38:08.4167017Z  * [new branch]        infer_iii               -> origin/infer_iii
+2023-09-22T00:38:08.4167756Z  * [new branch]        infer_mode              -> origin/infer_mode
+2023-09-22T00:38:08.4170234Z  * [new branch]        infer_mode_4            -> origin/infer_mode_4
+2023-09-22T00:38:08.4170889Z  * [new branch]        infer_mode_final        -> origin/infer_mode_final
+2023-09-22T00:38:08.4172370Z  * [new branch]        infer_v                 -> origin/infer_v
+2023-09-22T00:38:08.4172973Z  * [new branch]        infer_vi                -> origin/infer_vi
+2023-09-22T00:38:08.4174487Z  * [new branch]        informer_fixes_3        -> origin/informer_fixes_3
+2023-09-22T00:38:08.4175146Z  * [new branch]        informer_gpu            -> origin/informer_gpu
+2023-09-22T00:38:08.4176680Z  * [new branch]        informer_gpu2           -> origin/informer_gpu2
+2023-09-22T00:38:08.4177331Z  * [new branch]        informer_model          -> origin/informer_model
+2023-09-22T00:38:08.4178990Z  * [new branch]        informer_shap           -> origin/informer_shap
+2023-09-22T00:38:08.4181257Z  * [new branch]        interpretable_inference -> origin/interpretable_inference
+2023-09-22T00:38:08.4181936Z  * [new branch]        isaacmg-patch-1         -> origin/isaacmg-patch-1
+2023-09-22T00:38:08.4183514Z  * [new branch]        isaacmg-patch-2         -> origin/isaacmg-patch-2
+2023-09-22T00:38:08.4184340Z  * [new branch]        justin                  -> origin/justin
+2023-09-22T00:38:08.4185868Z  * [new branch]        last_fixs               -> origin/last_fixs
+2023-09-22T00:38:08.4186506Z  * [new branch]        loggin_new_model        -> origin/loggin_new_model
+2023-09-22T00:38:08.4188020Z  * [new branch]        logging                 -> origin/logging
+2023-09-22T00:38:08.4190223Z  * [new branch]        loss_loop_refactor      -> origin/loss_loop_refactor
+2023-09-22T00:38:08.4190855Z  * [new branch]        mase-2                  -> origin/mase-2
+2023-09-22T00:38:08.4192340Z  * [new branch]        mase2.0                 -> origin/mase2.0
+2023-09-22T00:38:08.4192934Z  * [new branch]        mase_r                  -> origin/mase_r
+2023-09-22T00:38:08.4194407Z  * [new branch]        massive_multi_dl        -> origin/massive_multi_dl
+2023-09-22T00:38:08.4196579Z  * [new branch]        master                  -> origin/master
+2023-09-22T00:38:08.4197159Z  * [new branch]        masterr                 -> origin/masterr
+2023-09-22T00:38:08.4198630Z  * [new branch]        meta_da_rnn             -> origin/meta_da_rnn
+2023-09-22T00:38:08.4200828Z  * [new branch]        meta_data_v2            -> origin/meta_data_v2
+2023-09-22T00:38:08.4201447Z  * [new branch]        meta_data_v3            -> origin/meta_data_v3
+2023-09-22T00:38:08.4203251Z  * [new branch]        meta_stuff              -> origin/meta_stuff
+2023-09-22T00:38:08.4203884Z  * [new branch]        metadat_backup_v1       -> origin/metadat_backup_v1
+2023-09-22T00:38:08.4205333Z  * [new branch]        metadata                -> origin/metadata
+2023-09-22T00:38:08.4207697Z  * [new branch]        metadata3               -> origin/metadata3
+2023-09-22T00:38:08.4208331Z  * [new branch]        metadata4               -> origin/metadata4
+2023-09-22T00:38:08.4209910Z  * [new branch]        metadata_da             -> origin/metadata_da
+2023-09-22T00:38:08.4212210Z  * [new branch]        metadata_model          -> origin/metadata_model
+2023-09-22T00:38:08.4212855Z  * [new branch]        metadata_v2             -> origin/metadata_v2
+2023-09-22T00:38:08.4214366Z  * [new branch]        metadata_v4             -> origin/metadata_v4
+2023-09-22T00:38:08.4214981Z  * [new branch]        metadata_v5             -> origin/metadata_v5
+2023-09-22T00:38:08.4216492Z  * [new branch]        metrics_test            -> origin/metrics_test
+2023-09-22T00:38:08.4218786Z  * [new branch]        model_with_dropout2     -> origin/model_with_dropout2
+2023-09-22T00:38:08.4219474Z  * [new branch]        more_fixes              -> origin/more_fixes
+2023-09-22T00:38:08.4220992Z  * [new branch]        more_test_coverage      -> origin/more_test_coverage
+2023-09-22T00:38:08.4221678Z  * [new branch]        more_testing            -> origin/more_testing
+2023-09-22T00:38:08.4223135Z  * [new branch]        more_tests              -> origin/more_tests
+2023-09-22T00:38:08.4225464Z  * [new branch]        more_train_test         -> origin/more_train_test
+2023-09-22T00:38:08.4226177Z  * [new branch]        multi_dataloader_2      -> origin/multi_dataloader_2
+2023-09-22T00:38:08.4227664Z  * [new branch]        multi_infer             -> origin/multi_infer
+2023-09-22T00:38:08.4228338Z  * [new branch]        multi_task_check        -> origin/multi_task_check
+2023-09-22T00:38:08.4229899Z  * [new branch]        multi_time_infer        -> origin/multi_time_infer
+2023-09-22T00:38:08.4230585Z  * [new branch]        multiple_t              -> origin/multiple_t
+2023-09-22T00:38:08.4232077Z  * [new branch]        multistep_improvements  -> origin/multistep_improvements
+2023-09-22T00:38:08.4234379Z  * [new branch]        multitask_and_entmax    -> origin/multitask_and_entmax
+2023-09-22T00:38:08.4235027Z  * [new branch]        n_linear+readme         -> origin/n_linear+readme
+2023-09-22T00:38:08.4236470Z  * [new branch]        n_targ_ds               -> origin/n_targ_ds
+2023-09-22T00:38:08.4237093Z  * [new branch]        naieve_hot_fix          -> origin/naieve_hot_fix
+2023-09-22T00:38:08.4238773Z  * [new branch]        naieve_mode_test        -> origin/naieve_mode_test
+2023-09-22T00:38:08.4241085Z  * [new branch]        neural_ode_2.0          -> origin/neural_ode_2.0
+2023-09-22T00:38:08.4241715Z  * [new branch]        neural_ode_3.0          -> origin/neural_ode_3.0
+2023-09-22T00:38:08.4243223Z  * [new branch]        new_bug_fixes           -> origin/new_bug_fixes
+2023-09-22T00:38:08.4243858Z  * [new branch]        new_models              -> origin/new_models
+2023-09-22T00:38:08.4245298Z  * [new branch]        new_models2             -> origin/new_models2
+2023-09-22T00:38:08.4247754Z  * [new branch]        new_models_core         -> origin/new_models_core
+2023-09-22T00:38:08.4248401Z  * [new branch]        no_wandb_fix            -> origin/no_wandb_fix
+2023-09-22T00:38:08.4249994Z  * [new branch]        norm_chan               -> origin/norm_chan
+2023-09-22T00:38:08.4250594Z  * [new branch]        numba_fixes             -> origin/numba_fixes
+2023-09-22T00:38:08.4252247Z  * [new branch]        numpy_fix               -> origin/numpy_fix
+2023-09-22T00:38:08.4254600Z  * [new branch]        plot_confidence_interval_in_wandb -> origin/plot_confidence_interval_in_wandb
+2023-09-22T00:38:08.4255280Z  * [new branch]        pr/70                   -> origin/pr/70
+2023-09-22T00:38:08.4256794Z  * [new branch]        prettify-readme         -> origin/prettify-readme
+2023-09-22T00:38:08.4259293Z  * [new branch]        print_fixes             -> origin/print_fixes
+2023-09-22T00:38:08.4259896Z  * [new branch]        prob_bug                -> origin/prob_bug
+2023-09-22T00:38:08.4261682Z  * [new branch]        prob_final              -> origin/prob_final
+2023-09-22T00:38:08.4262132Z  * [new branch]        prob_final_2            -> origin/prob_final_2
+2023-09-22T00:38:08.4263949Z  * [new branch]        prob_final_4            -> origin/prob_final_4
+2023-09-22T00:38:08.4265695Z  * [new branch]        prob_unit               -> origin/prob_unit
+2023-09-22T00:38:08.4266149Z  * [new branch]        probab_unit_test_fix    -> origin/probab_unit_test_fix
+2023-09-22T00:38:08.4267861Z  * [new branch]        probabilistic_dnns      -> origin/probabilistic_dnns
+2023-09-22T00:38:08.4269761Z  * [new branch]        probablistic_gr         -> origin/probablistic_gr
+2023-09-22T00:38:08.4270246Z  * [new branch]        probablistic_gru        -> origin/probablistic_gru
+2023-09-22T00:38:08.4271974Z  * [new branch]        publish-pypi            -> origin/publish-pypi
+2023-09-22T00:38:08.4295551Z  * [new branch]        pypi                    -> origin/pypi
+2023-09-22T00:38:08.4295971Z  * [new branch]        read                    -> origin/read
+2023-09-22T00:38:08.4296423Z  * [new branch]        read_the_docs_fixes     -> origin/read_the_docs_fixes
+2023-09-22T00:38:08.4296874Z  * [new branch]        readme_1                -> origin/readme_1
+2023-09-22T00:38:08.4297299Z  * [new branch]        readme_fixes            -> origin/readme_fixes
+2023-09-22T00:38:08.4299657Z  * [new branch]        refactor_args           -> origin/refactor_args
+2023-09-22T00:38:08.4300152Z  * [new branch]        refactor_dl_and_ts      -> origin/refactor_dl_and_ts
+2023-09-22T00:38:08.4302438Z  * [new branch]        remove_annoying_print   -> origin/remove_annoying_print
+2023-09-22T00:38:08.4304493Z  * [new branch]        remove_versions         -> origin/remove_versions
+2023-09-22T00:38:08.4304972Z  * [new branch]        replace_dict            -> origin/replace_dict
+2023-09-22T00:38:08.4306910Z  * [new branch]        resume_train            -> origin/resume_train
+2023-09-22T00:38:08.4308829Z  * [new branch]        revert-105-fix_final_bug -> origin/revert-105-fix_final_bug
+2023-09-22T00:38:08.4310753Z  * [new branch]        revert-76-add_heatmap   -> origin/revert-76-add_heatmap
+2023-09-22T00:38:08.4312672Z  * [new branch]        robust_testing          -> origin/robust_testing
+2023-09-22T00:38:08.4314546Z  * [new branch]        sample_better           -> origin/sample_better
+2023-09-22T00:38:08.4317154Z  * [new branch]        scale_norm_changes      -> origin/scale_norm_changes
+2023-09-22T00:38:08.4317814Z  * [new branch]        scale_shuffle           -> origin/scale_shuffle
+2023-09-22T00:38:08.4320294Z  * [new branch]        scaling_additions       -> origin/scaling_additions
+2023-09-22T00:38:08.4320776Z  * [new branch]        scaling_and_norm        -> origin/scaling_and_norm
+2023-09-22T00:38:08.4323254Z  * [new branch]        series_id_done_done     -> origin/series_id_done_done
+2023-09-22T00:38:08.4323762Z  * [new branch]        series_id_finish_loader -> origin/series_id_finish_loader
+2023-09-22T00:38:08.4325636Z  * [new branch]        series_id_full          -> origin/series_id_full
+2023-09-22T00:38:08.4327666Z  * [new branch]        series_id_interp        -> origin/series_id_interp
+2023-09-22T00:38:08.4329534Z  * [new branch]        series_id_loader        -> origin/series_id_loader
+2023-09-22T00:38:08.4331382Z  * [new branch]        series_id_loader_2      -> origin/series_id_loader_2
+2023-09-22T00:38:08.4333161Z  * [new branch]        series_id_support       -> origin/series_id_support
+2023-09-22T00:38:08.4335140Z  * [new branch]        series_id_ts_4          -> origin/series_id_ts_4
+2023-09-22T00:38:08.4336988Z  * [new branch]        simple_config           -> origin/simple_config
+2023-09-22T00:38:08.4339306Z  * [new branch]        small_merge_fixes       -> origin/small_merge_fixes
+2023-09-22T00:38:08.4339993Z  * [new branch]        sparse_attn             -> origin/sparse_attn
+2023-09-22T00:38:08.4341962Z  * [new branch]        speed_up_da_rnn         -> origin/speed_up_da_rnn
+2023-09-22T00:38:08.4351200Z  * [new branch]        spelling                -> origin/spelling
+2023-09-22T00:38:08.4353775Z  * [new branch]        stupid_ggh              -> origin/stupid_ggh
+2023-09-22T00:38:08.4354263Z  * [new branch]        supervised_auto_tests   -> origin/supervised_auto_tests
+2023-09-22T00:38:08.4354722Z  * [new branch]        test_coverage           -> origin/test_coverage
+2023-09-22T00:38:08.4356624Z  * [new branch]        test_fixes              -> origin/test_fixes
+2023-09-22T00:38:08.4357070Z  * [new branch]        tests_more_             -> origin/tests_more_
+2023-09-22T00:38:08.4359130Z  * [new branch]        tests_softmax           -> origin/tests_softmax
+2023-09-22T00:38:08.4360990Z  * [new branch]        time2vec                -> origin/time2vec
+2023-09-22T00:38:08.4362802Z  * [new branch]        time2vec3               -> origin/time2vec3
+2023-09-22T00:38:08.4364588Z  * [new branch]        tope                    -> origin/tope
+2023-09-22T00:38:08.4366367Z  * [new branch]        torch2.0                -> origin/torch2.0
+2023-09-22T00:38:08.4368806Z  * [new branch]        torch_script            -> origin/torch_script
+2023-09-22T00:38:08.4371264Z  * [new branch]        torch_typing            -> origin/torch_typing
+2023-09-22T00:38:08.4371719Z  * [new branch]        torch_upgrade           -> origin/torch_upgrade
+2023-09-22T00:38:08.4373645Z  * [new branch]        trans                   -> origin/trans
+2023-09-22T00:38:08.4375477Z  * [new branch]        trans2                  -> origin/trans2
+2023-09-22T00:38:08.4377234Z  * [new branch]        trans2_copy             -> origin/trans2_copy
+2023-09-22T00:38:08.4379075Z  * [new branch]        transformations         -> origin/transformations
+2023-09-22T00:38:08.4380867Z  * [new branch]        transformer4            -> origin/transformer4
+2023-09-22T00:38:08.4382720Z  * [new branch]        transformer_auto_encoder -> origin/transformer_auto_encoder
+2023-09-22T00:38:08.4384987Z  * [new branch]        transformer_backup2     -> origin/transformer_backup2
+2023-09-22T00:38:08.4386871Z  * [new branch]        transformer_backup3     -> origin/transformer_backup3
+2023-09-22T00:38:08.4388850Z  * [new branch]        transformer_bottleneck  -> origin/transformer_bottleneck
+2023-09-22T00:38:08.4390839Z  * [new branch]        transformer_bottleneck_2 -> origin/transformer_bottleneck_2
+2023-09-22T00:38:08.4392434Z  * [new branch]        transformer_timeout     -> origin/transformer_timeout
+2023-09-22T00:38:08.4394857Z  * [new branch]        transformer_timeout2    -> origin/transformer_timeout2
+2023-09-22T00:38:08.4397183Z  * [new branch]        transformer_xl          -> origin/transformer_xl
+2023-09-22T00:38:08.4397642Z  * [new branch]        unit_fixes              -> origin/unit_fixes
+2023-09-22T00:38:08.4399482Z  * [new branch]        unit_test_validation_loop -> origin/unit_test_validation_loop
+2023-09-22T00:38:08.4401332Z  * [new branch]        unscale_batch           -> origin/unscale_batch
+2023-09-22T00:38:08.4403250Z  * [new branch]        update_docs             -> origin/update_docs
+2023-09-22T00:38:08.4405114Z  * [new branch]        update_readme           -> origin/update_readme
+2023-09-22T00:38:08.4407299Z  * [new branch]        update_readme1          -> origin/update_readme1
+2023-09-22T00:38:08.4407952Z  * [new branch]        use_any_test            -> origin/use_any_test
+2023-09-22T00:38:08.4409896Z  * [new branch]        utilize_multistep_forecast -> origin/utilize_multistep_forecast
+2023-09-22T00:38:08.4411770Z  * [new branch]        version                 -> origin/version
+2023-09-22T00:38:08.4414249Z  * [new branch]        version2.0              -> origin/version2.0
+2023-09-22T00:38:08.4416589Z  * [new branch]        version_changes         -> origin/version_changes
+2023-09-22T00:38:08.4417059Z  * [new branch]        version_fixes           -> origin/version_fixes
+2023-09-22T00:38:08.4419732Z  * [new branch]        version_updates         -> origin/version_updates
+2023-09-22T00:38:08.4420196Z  * [new branch]        wandb_fixes             -> origin/wandb_fixes
+2023-09-22T00:38:08.4422785Z  * [new branch]        weight_path_gcs         -> origin/weight_path_gcs
+2023-09-22T00:38:08.4423189Z  * [new tag]           0.53                    -> 0.53
+2023-09-22T00:38:08.4423544Z  * [new tag]           0.6                     -> 0.6
+2023-09-22T00:38:08.4425324Z  * [new tag]           0.70                    -> 0.70
+2023-09-22T00:38:08.4425680Z  * [new tag]           0.95                    -> 0.95
+2023-09-22T00:38:08.4426041Z  * [new tag]           0.956                   -> 0.956
+2023-09-22T00:38:08.4428269Z  * [new tag]           0.98                    -> 0.98
+2023-09-22T00:38:08.4428639Z  * [new tag]           0.981                   -> 0.981
+2023-09-22T00:38:08.4429010Z  * [new tag]           0.981_flow              -> 0.981_flow
+2023-09-22T00:38:08.4429437Z  * [new tag]           FF_FIXES_BRANCH_VER     -> FF_FIXES_BRANCH_VER
+2023-09-22T00:38:08.4432105Z  * [new tag]           flow.08                 -> flow.08
+2023-09-22T00:38:08.4432483Z  * [new tag]           flow.991                -> flow.991
+2023-09-22T00:38:08.4432859Z  * [new tag]           flow_.066               -> flow_.066
+2023-09-22T00:38:08.4433230Z  * [new tag]           flow_.09                -> flow_.09
+2023-09-22T00:38:08.4433594Z  * [new tag]           flow_.93                -> flow_.93
+2023-09-22T00:38:08.4436677Z  * [new tag]           flow_0.4                -> flow_0.4
+2023-09-22T00:38:08.4437049Z  * [new tag]           flow_0.41               -> flow_0.41
+2023-09-22T00:38:08.4437426Z  * [new tag]           flow_0.5                -> flow_0.5
+2023-09-22T00:38:08.4437797Z  * [new tag]           flow_0.52               -> flow_0.52
+2023-09-22T00:38:08.4438170Z  * [new tag]           flow_0.92               -> flow_0.92
+2023-09-22T00:38:08.4438531Z  * [new tag]           flow_al_1.0             -> flow_al_1.0
+2023-09-22T00:38:08.4441155Z  * [new tag]           flow_bug                -> flow_bug
+2023-09-22T00:38:08.4441578Z  * [new tag]           flow_forecast.88        -> flow_forecast.88
+2023-09-22T00:38:08.4441977Z  * [new tag]           forecast                -> forecast
+2023-09-22T00:38:08.4442366Z  * [new tag]           forecast_0.0            -> forecast_0.0
+2023-09-22T00:38:08.4442748Z  * [new tag]           forecast_0.1            -> forecast_0.1
+2023-09-22T00:38:08.4445626Z  * [new tag]           forecast_0.2            -> forecast_0.2
+2023-09-22T00:38:08.4446037Z  * [new tag]           forecast_0.45           -> forecast_0.45
+2023-09-22T00:38:08.4446635Z  * [new tag]           forecast_0.5            -> forecast_0.5
+2023-09-22T00:38:08.4447317Z  * [new tag]           forecast_0.51           -> forecast_0.51
+2023-09-22T00:38:08.4449710Z  * [new tag]           forecast_0.52           -> forecast_0.52
+2023-09-22T00:38:08.4450115Z  * [new tag]           forecast_0.56           -> forecast_0.56
+2023-09-22T00:38:08.4452051Z  * [new tag]           forecast_0.67           -> forecast_0.67
+2023-09-22T00:38:08.4452459Z  * [new tag]           forecast_0.92           -> forecast_0.92
+2023-09-22T00:38:08.4452850Z  * [new tag]           forecast_0.93           -> forecast_0.93
+2023-09-22T00:38:08.4453229Z  * [new tag]           forecast_0.97           -> forecast_0.97
+2023-09-22T00:38:08.4453619Z  * [new tag]           forecast_0.99           -> forecast_0.99
+2023-09-22T00:38:08.4454023Z  * [new tag]           forecast_0.999          -> forecast_0.999
+2023-09-22T00:38:08.4454414Z  * [new tag]           infer_ff                -> infer_ff
+2023-09-22T00:38:08.4529797Z ##[endgroup]
+2023-09-22T00:38:08.4530438Z ##[group]Determining the checkout info
+2023-09-22T00:38:08.4531365Z [command]/usr/bin/git branch --list --remote origin/dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:08.4589379Z   origin/dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:08.4593854Z ##[endgroup]
+2023-09-22T00:38:08.4594772Z ##[group]Checking out the ref
+2023-09-22T00:38:08.4598371Z [command]/usr/bin/git checkout --progress --force -B dependabot/pip/wandb-0.15.11 refs/remotes/origin/dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:08.5391225Z Switched to a new branch 'dependabot/pip/wandb-0.15.11'
+2023-09-22T00:38:08.5392195Z branch 'dependabot/pip/wandb-0.15.11' set up to track 'origin/dependabot/pip/wandb-0.15.11'.
+2023-09-22T00:38:08.5401355Z ##[endgroup]
+2023-09-22T00:38:08.5449429Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-22T00:38:08.5480641Z 'aeef507d800c8cf4611556e8278ae7f7ddb7f612'
+2023-09-22T00:38:08.5788388Z ##[group]Run actions/setup-node@v3
+2023-09-22T00:38:08.5788667Z with:
+2023-09-22T00:38:08.5789033Z   node-version: 18
+2023-09-22T00:38:08.5789415Z   always-auth: false
+2023-09-22T00:38:08.5789743Z   check-latest: false
+2023-09-22T00:38:08.5790181Z   token: ***
+2023-09-22T00:38:08.5790491Z ##[endgroup]
+2023-09-22T00:38:08.7932273Z Found in cache @ /opt/hostedtoolcache/node/18.17.1/x64
+2023-09-22T00:38:08.7944070Z ##[group]Environment details
+2023-09-22T00:38:12.1569507Z node: v18.17.1
+2023-09-22T00:38:12.1570167Z npm: 9.6.7
+2023-09-22T00:38:12.1570862Z yarn: 1.22.19
+2023-09-22T00:38:12.1571950Z ##[endgroup]
+2023-09-22T00:38:12.1754267Z ##[group]Run node /home/runner/work/_actions/Codesee-io/codesee-action/v2/detect-lang/dist/index.js
+2023-09-22T00:38:12.1754880Z [36;1mnode /home/runner/work/_actions/Codesee-io/codesee-action/v2/detect-lang/dist/index.js[0m
+2023-09-22T00:38:12.1820963Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-09-22T00:38:12.1821390Z ##[endgroup]
+2023-09-22T00:38:12.2527987Z ##[group]Removing .npmrc if exists
+2023-09-22T00:38:12.2547710Z ##[endgroup]
+2023-09-22T00:38:12.2550287Z ##[group]Detect Languages
+2023-09-22T00:38:12.2600459Z [command]/opt/hostedtoolcache/node/18.17.1/x64/bin/npx codesee@latest detect-languages
+2023-09-22T00:38:14.3284178Z <DRIFT>npm WARN exec The following package was not found and will be installed: codesee@0.696.0
+2023-09-22T00:38:19.6227604Z <DRIFT>npm WARN deprecated text-encoding@0.7.0: no longer maintained
+2023-09-22T00:38:29.1568879Z codesee v0.696.0
+2023-09-22T00:38:29.2088729Z {"javascript":false,"python":true,"java":false,"golang":false,"rust":false,"dot-net":false,"kotlin":false}
+2023-09-22T00:38:29.2535001Z ##[endgroup]
+2023-09-22T00:38:29.2694909Z ##[group]Run actions/setup-python@v4
+2023-09-22T00:38:29.2695317Z with:
+2023-09-22T00:38:29.2695581Z   python-version: 3.x
+2023-09-22T00:38:29.2695918Z   architecture: x64
+2023-09-22T00:38:29.2696230Z   check-latest: false
+2023-09-22T00:38:29.2696735Z   token: ***
+2023-09-22T00:38:29.2697060Z   update-environment: true
+2023-09-22T00:38:29.2697350Z   allow-prereleases: false
+2023-09-22T00:38:29.2697667Z ##[endgroup]
+2023-09-22T00:38:29.4432657Z ##[group]Installed versions
+2023-09-22T00:38:29.4532206Z Successfully set up CPython (3.11.5)
+2023-09-22T00:38:29.4533036Z ##[endgroup]
+2023-09-22T00:38:29.4635684Z ##[group]Run node /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js
+2023-09-22T00:38:29.4636165Z [36;1mnode /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js[0m
+2023-09-22T00:38:29.4696562Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-09-22T00:38:29.4696884Z env:
+2023-09-22T00:38:29.4697163Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:38:29.4697552Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib/pkgconfig
+2023-09-22T00:38:29.4697928Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:38:29.4698283Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:38:29.4698636Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:38:29.4698990Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib
+2023-09-22T00:38:29.4699274Z   step: map
+2023-09-22T00:38:29.4699645Z   api_token: ***
+2023-09-22T00:38:29.4699887Z   github_ref: refs/heads/master
+2023-09-22T00:38:29.4700286Z   languages: {"javascript":false,"python":true,"java":false,"golang":false,"rust":false,"dot-net":false,"kotlin":false}
+
+2023-09-22T00:38:29.4700827Z   codesee_url: 
+2023-09-22T00:38:29.4701088Z   NODE_OPTIONS: --max-old-space-size=6144
+2023-09-22T00:38:29.4701351Z ##[endgroup]
+2023-09-22T00:38:29.5485228Z ##[group]Setup
+2023-09-22T00:38:29.5496820Z ##[group]Checkout HEAD Ref
+2023-09-22T00:38:29.5556505Z [command]/usr/bin/git checkout dependabot/pip/wandb-0.15.11
+2023-09-22T00:38:29.6348292Z Already on 'dependabot/pip/wandb-0.15.11'
+2023-09-22T00:38:29.6367637Z Your branch is up to date with 'origin/dependabot/pip/wandb-0.15.11'.
+2023-09-22T00:38:29.6386064Z ##[endgroup]
+2023-09-22T00:38:29.6408537Z ##[endgroup]
+2023-09-22T00:38:29.6409159Z Running step generate
+2023-09-22T00:38:29.6412553Z ##[group]Generate Map Data
+2023-09-22T00:38:29.6413149Z Detected no insecure configuration, allowing all languages
+2023-09-22T00:38:29.6427544Z [command]/opt/hostedtoolcache/node/18.17.1/x64/bin/npx codesee@latest map -o codesee.map.json -a *** --languages {"javascript":false,"python":true,"java":false,"golang":false,"rust":false,"dot-net":false,"kotlin":false} --repo https://github.com/AIStream-Peelout/flow-forecast /home/runner/work/flow-forecast/flow-forecast
+2023-09-22T00:38:31.3805393Z codesee v0.696.0
+2023-09-22T00:38:31.4158187Z found repo root /home/runner/work/flow-forecast/flow-forecast/ from /home/runner/work/flow-forecast/flow-forecast
+2023-09-22T00:38:31.8204017Z 
+2023-09-22T00:38:31.8205625Z Fetching c81d19c373eb01a9cb62e6a94fdc5eace893a07b from https://github.com/AIStream-Peelout/flow-forecast.git
+2023-09-22T00:38:32.2102800Z Attempting to generate an incremental dependency map.
+2023-09-22T00:38:38.8645811Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:38.8646126Z 
+2023-09-22T00:38:39.0343325Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:39.0343909Z 
+2023-09-22T00:38:43.3073444Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:43.3076611Z 
+2023-09-22T00:38:43.3122918Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:43.3123422Z 
+2023-09-22T00:38:45.2097083Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:45.2116501Z 
+2023-09-22T00:38:45.7567080Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:45.7568413Z 
+2023-09-22T00:38:47.1490999Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:47.1491428Z 
+2023-09-22T00:38:47.8671537Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:47.8672107Z 
+2023-09-22T00:38:48.0376805Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:48.0377706Z 
+2023-09-22T00:38:49.0925852Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:49.0926126Z 
+2023-09-22T00:38:49.2611467Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:49.2620154Z 
+2023-09-22T00:38:50.0100183Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:50.0100591Z 
+2023-09-22T00:38:51.2442587Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:51.2442891Z 
+2023-09-22T00:38:51.4160755Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:51.4161027Z 
+2023-09-22T00:38:51.9981170Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:51.9981621Z 
+2023-09-22T00:38:53.3630593Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:53.3633815Z 
+2023-09-22T00:38:53.5298714Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:53.5299214Z 
+2023-09-22T00:38:53.9372649Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:53.9376000Z 
+2023-09-22T00:38:55.4990053Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:55.4990614Z 
+2023-09-22T00:38:55.6722048Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:55.6722550Z 
+2023-09-22T00:38:55.8498363Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:55.8501329Z 
+2023-09-22T00:38:55.8773868Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:55.8774365Z 
+2023-09-22T00:38:56.0204092Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:56.0204694Z 
+2023-09-22T00:38:56.1890595Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:56.1891153Z 
+2023-09-22T00:38:56.3629499Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:56.3630065Z 
+2023-09-22T00:38:57.8721892Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:57.8722426Z 
+2023-09-22T00:38:58.0650226Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:58.0650795Z 
+2023-09-22T00:38:58.3282812Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:58.3283084Z 
+2023-09-22T00:38:58.4981120Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:38:58.4982493Z 
+2023-09-22T00:39:00.0921122Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:00.0921553Z 
+2023-09-22T00:39:00.4122394Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:00.4122676Z 
+2023-09-22T00:39:02.2035878Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:02.2036290Z 
+2023-09-22T00:39:02.5824687Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:02.5825262Z 
+2023-09-22T00:39:04.2169498Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:04.2170057Z 
+2023-09-22T00:39:04.4944111Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:04.4944893Z 
+2023-09-22T00:39:04.6645785Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:04.6649965Z 
+2023-09-22T00:39:06.2030911Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:06.2031311Z 
+2023-09-22T00:39:06.6691055Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:06.6691651Z 
+2023-09-22T00:39:08.1698081Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:08.1698494Z 
+2023-09-22T00:39:08.3548339Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:08.3549028Z 
+2023-09-22T00:39:08.5191313Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:08.5191879Z 
+2023-09-22T00:39:08.6171039Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:08.6171593Z 
+2023-09-22T00:39:10.4839125Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:10.4839677Z 
+2023-09-22T00:39:10.5996780Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:10.5997324Z 
+2023-09-22T00:39:10.6532076Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:10.6532613Z 
+2023-09-22T00:39:12.5092104Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:12.5092620Z 
+2023-09-22T00:39:12.6324589Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:12.6325136Z 
+2023-09-22T00:39:12.8030157Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:12.8030438Z 
+2023-09-22T00:39:12.9781762Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:12.9782274Z 
+2023-09-22T00:39:13.1451292Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:13.1454639Z 
+2023-09-22T00:39:13.3161441Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:13.3162320Z 
+2023-09-22T00:39:13.4841297Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:13.4844949Z 
+2023-09-22T00:39:13.6879094Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:13.6879604Z 
+2023-09-22T00:39:14.5005732Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:14.5006170Z 
+2023-09-22T00:39:14.6686130Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:14.6686522Z 
+2023-09-22T00:39:14.8331217Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:14.8334443Z 
+2023-09-22T00:39:15.0035426Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:15.0036153Z 
+2023-09-22T00:39:15.6765815Z pydeps found: running pydeps version pydeps v1.12.4
+2023-09-22T00:39:15.6769509Z 
+2023-09-22T00:39:17.6258833Z 
+2023-09-22T00:39:17.6259887Z <SILENT>Warning: Pruned 270 links referencing files that don't exist from intermediate output.
+2023-09-22T00:39:17.6573268Z ##[endgroup]
+2023-09-22T00:39:17.6641941Z ##[group]Run node /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js
+2023-09-22T00:39:17.6642441Z [36;1mnode /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js[0m
+2023-09-22T00:39:17.6704190Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-09-22T00:39:17.6704498Z env:
+2023-09-22T00:39:17.6704787Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:17.6705194Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib/pkgconfig
+2023-09-22T00:39:17.6705585Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:17.6705975Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:17.6706345Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:17.6706713Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib
+2023-09-22T00:39:17.6707017Z   step: mapUpload
+2023-09-22T00:39:17.6707420Z   ***: ***
+2023-09-22T00:39:17.6707663Z   github_ref: refs/heads/master
+2023-09-22T00:39:17.6707914Z   codesee_url: 
+2023-09-22T00:39:17.6708187Z   NODE_OPTIONS: --max-old-space-size=6144
+2023-09-22T00:39:17.6708464Z ##[endgroup]
+2023-09-22T00:39:17.7494461Z ##[group]Setup
+2023-09-22T00:39:17.7501132Z ##[group]Checkout HEAD Ref
+2023-09-22T00:39:17.7555022Z [command]/usr/bin/git checkout dependabot/pip/wandb-0.15.11
+2023-09-22T00:39:17.7620170Z Already on 'dependabot/pip/wandb-0.15.11'
+2023-09-22T00:39:17.7634442Z Your branch is up to date with 'origin/dependabot/pip/wandb-0.15.11'.
+2023-09-22T00:39:17.7648573Z ##[endgroup]
+2023-09-22T00:39:17.7668797Z ##[endgroup]
+2023-09-22T00:39:17.7669200Z Running step requireApiToken
+2023-09-22T00:39:17.7670646Z Running step upload
+2023-09-22T00:39:17.7673757Z ##[group]Upload Map to Codesee Server
+2023-09-22T00:39:17.7691068Z [command]/opt/hostedtoolcache/node/18.17.1/x64/bin/npx codesee@latest upload --type map --repo https://github.com/AIStream-Peelout/flow-forecast -a *** -f dependabot/pip/wandb-0.15.11 -b master -s c81d19c373eb01a9cb62e6a94fdc5eace893a07b -p 707 codesee.map.json
+2023-09-22T00:39:19.2799563Z codesee v0.696.0
+2023-09-22T00:39:19.3143040Z 
+2023-09-22T00:39:19.3144447Z Fetching master from https://github.com/AIStream-Peelout/flow-forecast.git
+2023-09-22T00:39:19.6801647Z 
+2023-09-22T00:39:19.6803053Z Fetching c81d19c373eb01a9cb62e6a94fdc5eace893a07b from https://github.com/AIStream-Peelout/flow-forecast.git
+2023-09-22T00:39:20.0468373Z Uploading to https://app.codesee.io
+2023-09-22T00:39:20.4107791Z Uploaded successfully
+2023-09-22T00:39:20.4365159Z ##[endgroup]
+2023-09-22T00:39:20.4436545Z ##[group]Run node /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js
+2023-09-22T00:39:20.4437042Z [36;1mnode /home/runner/work/_actions/Codesee-io/codesee-action/v2/map/dist/index.js[0m
+2023-09-22T00:39:20.4498084Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-09-22T00:39:20.4498384Z env:
+2023-09-22T00:39:20.4498688Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:20.4499093Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib/pkgconfig
+2023-09-22T00:39:20.4499489Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:20.4499856Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:20.4500220Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.5/x64
+2023-09-22T00:39:20.4500589Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.5/x64/lib
+2023-09-22T00:39:20.4500879Z   step: insights
+2023-09-22T00:39:20.4501290Z   ***: ***
+2023-09-22T00:39:20.4501531Z   github_ref: refs/heads/master
+2023-09-22T00:39:20.4501783Z   codesee_url: 
+2023-09-22T00:39:20.4502065Z   NODE_OPTIONS: --max-old-space-size=6144
+2023-09-22T00:39:20.4502341Z ##[endgroup]
+2023-09-22T00:39:20.5272668Z ##[group]Setup
+2023-09-22T00:39:20.5278794Z ##[group]Checkout HEAD Ref
+2023-09-22T00:39:20.5335258Z [command]/usr/bin/git checkout dependabot/pip/wandb-0.15.11
+2023-09-22T00:39:20.5401417Z Already on 'dependabot/pip/wandb-0.15.11'
+2023-09-22T00:39:20.5415778Z Your branch is up to date with 'origin/dependabot/pip/wandb-0.15.11'.
+2023-09-22T00:39:20.5429773Z ##[endgroup]
+2023-09-22T00:39:20.5449594Z ##[endgroup]
+2023-09-22T00:39:20.5450501Z Running step requireApiToken
+2023-09-22T00:39:20.5451024Z Running step insights
+2023-09-22T00:39:20.5452860Z Running on a pull request so skipping insight collection
+2023-09-22T00:39:20.5631196Z Post job cleanup.
+2023-09-22T00:39:20.5669432Z Post job cleanup.
+2023-09-22T00:39:20.7340998Z Post job cleanup.
+2023-09-22T00:39:20.9026014Z Post job cleanup.
+2023-09-22T00:39:21.0090314Z [command]/usr/bin/git version
+2023-09-22T00:39:21.0145780Z git version 2.42.0
+2023-09-22T00:39:21.0205444Z Temporarily overriding HOME='/home/runner/work/_temp/aebb9b8b-43fd-4620-9fc3-5b2ac7d169d2' before making global git config changes
+2023-09-22T00:39:21.0211011Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-22T00:39:21.0220532Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/flow-forecast/flow-forecast
+2023-09-22T00:39:21.0283352Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-22T00:39:21.0335767Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-22T00:39:21.0643287Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-22T00:39:21.0676309Z http.https://github.com/.extraheader
+2023-09-22T00:39:21.0704400Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-22T00:39:21.0737838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-22T00:39:21.1259356Z Cleaning up orphan processes

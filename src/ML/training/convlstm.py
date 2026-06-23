@@ -8,8 +8,9 @@ from os import path
 from torch import save
 
 if __name__ == "__main__":
-    data_folder = "../../../train_data"
-    save_folder = "../../../models"
+    file_path = path.dirname(path.abspath(__file__))
+    data_folder = path.join(file_path, "../../../train_data")
+    save_folder = path.join(file_path,"../../../models")
 
     char_vocab = CharVocab()
     embed_size = 32

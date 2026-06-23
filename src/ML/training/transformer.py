@@ -9,9 +9,9 @@ from torch import save
 from src.ML.models.embedder import ConvEmbedder
 
 if __name__ == "__main__":
-
-    data_folder = "../../../train_data_std"
-    save_folder = "../../../models"
+    file_path = path.dirname(path.abspath(__file__))
+    data_folder = path.join(file_path,"../../../train_data_std")
+    save_folder = path.join(file_path,"../../../models")
     # ----------------------------------------------------------------------------
     char_vocab = CharVocab()
     embed_size = 32
@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     try:
         embedder.conv_lstm.load_state_dict(
-            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True))
+            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True,map_location=torch.device('cpu')))
     except Exception as e:
         print("Can not load ConvLSTM", lstm_conv_name)
         print(e)

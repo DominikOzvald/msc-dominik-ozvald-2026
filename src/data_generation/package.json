@@ -1,0 +1,36 @@
+{
+	"scripts": {
+		"build-start": "npm run build && npm run start",
+		"build": "npm run clean && tsc && npm run copy-views && npm run copy-public",
+		"clean": "shx rm -rf dist",
+		"copy-views": "shx cp -r src/views dist",
+		"copy-public": "shx cp -r src/public dist/public",
+		"start": "node dist/webapp.js",
+		"test": "jest"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.3",
+		"express": "^5.2.1",
+		"http": "^0.0.1",
+		"pg": "^8.16.3",
+		"pug": "^3.0.3",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-express": "^5.0.1",
+		"jest": "^30.2.0",
+		"shx": "^0.4.0",
+		"supertest": "^7.1.4",
+		"ts-jest": "^29.4.6"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.6",
+		"@types/jest": "^30.0.0",
+		"@types/pg": "^8.15.6",
+		"@types/supertest": "^6.0.3",
+		"@types/swagger-jsdoc": "^6.0.4",
+		"@types/swagger-ui-express": "^4.1.8",
+		"jest": "^30.2.0",
+		"shx": "^0.4.0",
+		"supertest": "^7.1.4",
+		"ts-jest": "^29.4.6"
+	}
+}

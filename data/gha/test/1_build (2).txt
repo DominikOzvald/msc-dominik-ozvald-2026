@@ -1,0 +1,1259 @@
+2023-09-01T20:18:06.2161382Z Requested labels: ubuntu-latest
+2023-09-01T20:18:06.2161746Z Job defined at: ACRA/acra/.github/workflows/release-build.yml@refs/tags/acra-5.11.2
+2023-09-01T20:18:06.2161906Z Waiting for a runner to pick up this job...
+2023-09-01T20:18:06.7472381Z Job is waiting for a hosted runner to come online.
+2023-09-01T20:18:09.4251193Z Job is about to start running on the hosted runner: GitHub Actions 7 (hosted)
+2023-09-01T20:18:11.6766077Z Current runner version: '2.308.0'
+2023-09-01T20:18:11.6802005Z ##[group]Operating System
+2023-09-01T20:18:11.6803294Z Ubuntu
+2023-09-01T20:18:11.6804188Z 22.04.3
+2023-09-01T20:18:11.6805128Z LTS
+2023-09-01T20:18:11.6806094Z ##[endgroup]
+2023-09-01T20:18:11.6807063Z ##[group]Runner Image
+2023-09-01T20:18:11.6808108Z Image: ubuntu-22.04
+2023-09-01T20:18:11.6809114Z Version: 20230821.1.0
+2023-09-01T20:18:11.6810658Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230821.1/images/linux/Ubuntu2204-Readme.md
+2023-09-01T20:18:11.6812512Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230821.1
+2023-09-01T20:18:11.6813856Z ##[endgroup]
+2023-09-01T20:18:11.6814836Z ##[group]Runner Image Provisioner
+2023-09-01T20:18:11.6815950Z 2.0.264.1
+2023-09-01T20:18:11.6816931Z ##[endgroup]
+2023-09-01T20:18:11.6819381Z ##[group]GITHUB_TOKEN Permissions
+2023-09-01T20:18:11.6820848Z Actions: write
+2023-09-01T20:18:11.6821830Z Checks: write
+2023-09-01T20:18:11.6823068Z Contents: write
+2023-09-01T20:18:11.6824202Z Deployments: write
+2023-09-01T20:18:11.6825250Z Discussions: write
+2023-09-01T20:18:11.6826188Z Issues: write
+2023-09-01T20:18:11.6827151Z Metadata: read
+2023-09-01T20:18:11.6828161Z Packages: write
+2023-09-01T20:18:11.6829193Z Pages: write
+2023-09-01T20:18:11.6830150Z PullRequests: write
+2023-09-01T20:18:11.6831220Z RepositoryProjects: write
+2023-09-01T20:18:11.6832253Z SecurityEvents: write
+2023-09-01T20:18:11.6833306Z Statuses: write
+2023-09-01T20:18:11.6834283Z ##[endgroup]
+2023-09-01T20:18:11.6839023Z Secret source: Actions
+2023-09-01T20:18:11.6840470Z Prepare workflow directory
+2023-09-01T20:18:11.7812111Z Prepare all required actions
+2023-09-01T20:18:11.8020970Z Getting action download info
+2023-09-01T20:18:11.9968466Z Download action repository 'actions/setup-java@v3.12.0' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-09-01T20:18:12.4276511Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-09-01T20:18:12.8135645Z Complete job name: build
+2023-09-01T20:18:12.9427185Z ##[group]Run actions/setup-java@v3.12.0
+2023-09-01T20:18:12.9428328Z with:
+2023-09-01T20:18:12.9429291Z   distribution: temurin
+2023-09-01T20:18:12.9430242Z   java-version: 17
+2023-09-01T20:18:12.9431178Z   java-package: jdk
+2023-09-01T20:18:12.9432103Z   check-latest: false
+2023-09-01T20:18:12.9433108Z   server-id: github
+2023-09-01T20:18:12.9434042Z   server-username: GITHUB_ACTOR
+2023-09-01T20:18:12.9435056Z   server-password: GITHUB_TOKEN
+2023-09-01T20:18:12.9436021Z   overwrite-settings: true
+2023-09-01T20:18:12.9437008Z   job-status: success
+2023-09-01T20:18:12.9438260Z   token: ***
+2023-09-01T20:18:12.9439190Z ##[endgroup]
+2023-09-01T20:18:13.3497181Z ##[group]Installed distributions
+2023-09-01T20:18:13.3525494Z Resolved Java 17.0.8+7 from tool-cache
+2023-09-01T20:18:13.3526218Z Setting Java 17.0.8+7 as the default
+2023-09-01T20:18:13.3526939Z Creating toolchains.xml for JDK version 17 from temurin
+2023-09-01T20:18:13.3628906Z Writing to /home/runner/.m2/toolchains.xml
+2023-09-01T20:18:13.3629951Z 
+2023-09-01T20:18:13.3630949Z Java configuration:
+2023-09-01T20:18:13.3632062Z   Distribution: temurin
+2023-09-01T20:18:13.3633291Z   Version: 17.0.8+7
+2023-09-01T20:18:13.3634597Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-09-01T20:18:13.3635776Z 
+2023-09-01T20:18:13.3636954Z ##[endgroup]
+2023-09-01T20:18:13.3817424Z Creating settings.xml with server-id: github
+2023-09-01T20:18:13.3818285Z Writing to /home/runner/.m2/settings.xml
+2023-09-01T20:18:13.4076361Z ##[group]Run actions/checkout@v3
+2023-09-01T20:18:13.4077024Z with:
+2023-09-01T20:18:13.4077632Z   ref: refs/tags/acra-5.11.2
+2023-09-01T20:18:13.4078230Z   repository: ACRA/acra
+2023-09-01T20:18:13.4079103Z   token: ***
+2023-09-01T20:18:13.4079669Z   ssh-strict: true
+2023-09-01T20:18:13.4080455Z   persist-credentials: true
+2023-09-01T20:18:13.4081046Z   clean: true
+2023-09-01T20:18:13.4081648Z   sparse-checkout-cone-mode: true
+2023-09-01T20:18:13.4082277Z   fetch-depth: 1
+2023-09-01T20:18:13.4083120Z   fetch-tags: false
+2023-09-01T20:18:13.4083667Z   lfs: false
+2023-09-01T20:18:13.4084225Z   submodules: false
+2023-09-01T20:18:13.4084806Z   set-safe-directory: true
+2023-09-01T20:18:13.4085393Z env:
+2023-09-01T20:18:13.4086087Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-09-01T20:18:13.4087027Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-09-01T20:18:13.4087841Z ##[endgroup]
+2023-09-01T20:18:13.5184520Z Syncing repository: ACRA/acra
+2023-09-01T20:18:13.5186293Z ##[group]Getting Git version info
+2023-09-01T20:18:13.5187411Z Working directory is '/home/runner/work/acra/acra'
+2023-09-01T20:18:13.5221243Z [command]/usr/bin/git version
+2023-09-01T20:18:13.5399779Z git version 2.41.0
+2023-09-01T20:18:13.5426829Z ##[endgroup]
+2023-09-01T20:18:13.5448677Z Temporarily overriding HOME='/home/runner/work/_temp/4277139e-0ca6-4268-87a7-df94ef808869' before making global git config changes
+2023-09-01T20:18:13.5450274Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-01T20:18:13.5451808Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acra/acra
+2023-09-01T20:18:13.5495887Z Deleting the contents of '/home/runner/work/acra/acra'
+2023-09-01T20:18:13.5500598Z ##[group]Initializing the repository
+2023-09-01T20:18:13.5504408Z [command]/usr/bin/git init /home/runner/work/acra/acra
+2023-09-01T20:18:13.5587638Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-09-01T20:18:13.5589014Z hint: is subject to change. To configure the initial branch name to use in all
+2023-09-01T20:18:13.5590553Z hint: of your new repositories, which will suppress this warning, call:
+2023-09-01T20:18:13.5591552Z hint: 
+2023-09-01T20:18:13.5592684Z hint: 	git config --global init.defaultBranch <name>
+2023-09-01T20:18:13.5593620Z hint: 
+2023-09-01T20:18:13.5594810Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-09-01T20:18:13.5596072Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-09-01T20:18:13.5597276Z hint: 
+2023-09-01T20:18:13.5598070Z hint: 	git branch -m <name>
+2023-09-01T20:18:13.5603013Z Initialized empty Git repository in /home/runner/work/acra/acra/.git/
+2023-09-01T20:18:13.5613182Z [command]/usr/bin/git remote add origin https://github.com/ACRA/acra
+2023-09-01T20:18:13.5664301Z ##[endgroup]
+2023-09-01T20:18:13.5665539Z ##[group]Disabling automatic garbage collection
+2023-09-01T20:18:13.5667224Z [command]/usr/bin/git config --local gc.auto 0
+2023-09-01T20:18:13.5703075Z ##[endgroup]
+2023-09-01T20:18:13.5704272Z ##[group]Setting up auth
+2023-09-01T20:18:13.5709175Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-01T20:18:13.5747212Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-01T20:18:13.6219944Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-01T20:18:13.6222498Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-01T20:18:13.6514633Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-09-01T20:18:13.6517058Z ##[endgroup]
+2023-09-01T20:18:13.6518026Z ##[group]Fetching the repository
+2023-09-01T20:18:13.6519310Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +refs/tags/acra-5.11.2:refs/tags/acra-5.11.2
+2023-09-01T20:18:14.0280628Z remote: Enumerating objects: 10327, done.        
+2023-09-01T20:18:14.0281437Z remote: Counting objects:   0% (1/10327)        
+2023-09-01T20:18:14.0282175Z remote: Counting objects:   1% (104/10327)        
+2023-09-01T20:18:14.0283311Z remote: Counting objects:   2% (207/10327)        
+2023-09-01T20:18:14.0284026Z remote: Counting objects:   3% (310/10327)        
+2023-09-01T20:18:14.0284739Z remote: Counting objects:   4% (414/10327)        
+2023-09-01T20:18:14.0285445Z remote: Counting objects:   5% (517/10327)        
+2023-09-01T20:18:14.0286157Z remote: Counting objects:   6% (620/10327)        
+2023-09-01T20:18:14.0287042Z remote: Counting objects:   7% (723/10327)        
+2023-09-01T20:18:14.0287784Z remote: Counting objects:   8% (827/10327)        
+2023-09-01T20:18:14.0289051Z remote: Counting objects:   9% (930/10327)        
+2023-09-01T20:18:14.0289774Z remote: Counting objects:  10% (1033/10327)        
+2023-09-01T20:18:14.0290527Z remote: Counting objects:  11% (1136/10327)        
+2023-09-01T20:18:14.0291264Z remote: Counting objects:  12% (1240/10327)        
+2023-09-01T20:18:14.0291974Z remote: Counting objects:  13% (1343/10327)        
+2023-09-01T20:18:14.0292674Z remote: Counting objects:  14% (1446/10327)        
+2023-09-01T20:18:14.0293393Z remote: Counting objects:  15% (1550/10327)        
+2023-09-01T20:18:14.0294105Z remote: Counting objects:  16% (1653/10327)        
+2023-09-01T20:18:14.0294810Z remote: Counting objects:  17% (1756/10327)        
+2023-09-01T20:18:14.0295509Z remote: Counting objects:  18% (1859/10327)        
+2023-09-01T20:18:14.0296229Z remote: Counting objects:  19% (1963/10327)        
+2023-09-01T20:18:14.0297143Z remote: Counting objects:  20% (2066/10327)        
+2023-09-01T20:18:14.0297857Z remote: Counting objects:  21% (2169/10327)        
+2023-09-01T20:18:14.0298795Z remote: Counting objects:  22% (2272/10327)        
+2023-09-01T20:18:14.0299524Z remote: Counting objects:  23% (2376/10327)        
+2023-09-01T20:18:14.0300242Z remote: Counting objects:  24% (2479/10327)        
+2023-09-01T20:18:14.0300960Z remote: Counting objects:  25% (2582/10327)        
+2023-09-01T20:18:14.0301680Z remote: Counting objects:  26% (2686/10327)        
+2023-09-01T20:18:14.0302532Z remote: Counting objects:  27% (2789/10327)        
+2023-09-01T20:18:14.0303294Z remote: Counting objects:  28% (2892/10327)        
+2023-09-01T20:18:14.0304010Z remote: Counting objects:  29% (2995/10327)        
+2023-09-01T20:18:14.0304728Z remote: Counting objects:  30% (3099/10327)        
+2023-09-01T20:18:14.0307089Z remote: Counting objects:  31% (3202/10327)        
+2023-09-01T20:18:14.0307954Z remote: Counting objects:  32% (3305/10327)        
+2023-09-01T20:18:14.0308783Z remote: Counting objects:  33% (3408/10327)        
+2023-09-01T20:18:14.0309501Z remote: Counting objects:  34% (3512/10327)        
+2023-09-01T20:18:14.0310201Z remote: Counting objects:  35% (3615/10327)        
+2023-09-01T20:18:14.0311022Z remote: Counting objects:  36% (3718/10327)        
+2023-09-01T20:18:14.0311838Z remote: Counting objects:  37% (3821/10327)        
+2023-09-01T20:18:14.0312550Z remote: Counting objects:  38% (3925/10327)        
+2023-09-01T20:18:14.0313248Z remote: Counting objects:  39% (4028/10327)        
+2023-09-01T20:18:14.0313991Z remote: Counting objects:  40% (4131/10327)        
+2023-09-01T20:18:14.0314789Z remote: Counting objects:  41% (4235/10327)        
+2023-09-01T20:18:14.0315505Z remote: Counting objects:  42% (4338/10327)        
+2023-09-01T20:18:14.0316228Z remote: Counting objects:  43% (4441/10327)        
+2023-09-01T20:18:14.0317037Z remote: Counting objects:  44% (4544/10327)        
+2023-09-01T20:18:14.0317752Z remote: Counting objects:  45% (4648/10327)        
+2023-09-01T20:18:14.0318950Z remote: Counting objects:  46% (4751/10327)        
+2023-09-01T20:18:14.0319824Z remote: Counting objects:  47% (4854/10327)        
+2023-09-01T20:18:14.0320715Z remote: Counting objects:  48% (4957/10327)        
+2023-09-01T20:18:14.0321424Z remote: Counting objects:  49% (5061/10327)        
+2023-09-01T20:18:14.0322134Z remote: Counting objects:  50% (5164/10327)        
+2023-09-01T20:18:14.0322851Z remote: Counting objects:  51% (5267/10327)        
+2023-09-01T20:18:14.0323683Z remote: Counting objects:  52% (5371/10327)        
+2023-09-01T20:18:14.0324691Z remote: Counting objects:  53% (5474/10327)        
+2023-09-01T20:18:14.0325403Z remote: Counting objects:  54% (5577/10327)        
+2023-09-01T20:18:14.0326108Z remote: Counting objects:  55% (5680/10327)        
+2023-09-01T20:18:14.0326813Z remote: Counting objects:  56% (5784/10327)        
+2023-09-01T20:18:14.0327505Z remote: Counting objects:  57% (5887/10327)        
+2023-09-01T20:18:14.0328207Z remote: Counting objects:  58% (5990/10327)        
+2023-09-01T20:18:14.0328921Z remote: Counting objects:  59% (6093/10327)        
+2023-09-01T20:18:14.0329648Z remote: Counting objects:  60% (6197/10327)        
+2023-09-01T20:18:14.0330349Z remote: Counting objects:  61% (6300/10327)        
+2023-09-01T20:18:14.0331050Z remote: Counting objects:  62% (6403/10327)        
+2023-09-01T20:18:14.0331740Z remote: Counting objects:  63% (6507/10327)        
+2023-09-01T20:18:14.0332450Z remote: Counting objects:  64% (6610/10327)        
+2023-09-01T20:18:14.0333158Z remote: Counting objects:  65% (6713/10327)        
+2023-09-01T20:18:14.0334028Z remote: Counting objects:  66% (6816/10327)        
+2023-09-01T20:18:14.0334738Z remote: Counting objects:  67% (6920/10327)        
+2023-09-01T20:18:14.0335458Z remote: Counting objects:  68% (7023/10327)        
+2023-09-01T20:18:14.0336174Z remote: Counting objects:  69% (7126/10327)        
+2023-09-01T20:18:14.0336881Z remote: Counting objects:  70% (7229/10327)        
+2023-09-01T20:18:14.0337603Z remote: Counting objects:  71% (7333/10327)        
+2023-09-01T20:18:14.0338309Z remote: Counting objects:  72% (7436/10327)        
+2023-09-01T20:18:14.0339000Z remote: Counting objects:  73% (7539/10327)        
+2023-09-01T20:18:14.0339697Z remote: Counting objects:  74% (7642/10327)        
+2023-09-01T20:18:14.0340396Z remote: Counting objects:  75% (7746/10327)        
+2023-09-01T20:18:14.0341101Z remote: Counting objects:  76% (7849/10327)        
+2023-09-01T20:18:14.0342128Z remote: Counting objects:  77% (7952/10327)        
+2023-09-01T20:18:14.0342900Z remote: Counting objects:  78% (8056/10327)        
+2023-09-01T20:18:14.0343607Z remote: Counting objects:  79% (8159/10327)        
+2023-09-01T20:18:14.0344302Z remote: Counting objects:  80% (8262/10327)        
+2023-09-01T20:18:14.0344993Z remote: Counting objects:  81% (8365/10327)        
+2023-09-01T20:18:14.0345702Z remote: Counting objects:  82% (8469/10327)        
+2023-09-01T20:18:14.0346425Z remote: Counting objects:  83% (8572/10327)        
+2023-09-01T20:18:14.0347175Z remote: Counting objects:  84% (8675/10327)        
+2023-09-01T20:18:14.0347900Z remote: Counting objects:  85% (8778/10327)        
+2023-09-01T20:18:14.0348611Z remote: Counting objects:  86% (8882/10327)        
+2023-09-01T20:18:14.0349342Z remote: Counting objects:  87% (8985/10327)        
+2023-09-01T20:18:14.0350086Z remote: Counting objects:  88% (9088/10327)        
+2023-09-01T20:18:14.0350814Z remote: Counting objects:  89% (9192/10327)        
+2023-09-01T20:18:14.0352004Z remote: Counting objects:  90% (9295/10327)        
+2023-09-01T20:18:14.0352736Z remote: Counting objects:  91% (9398/10327)        
+2023-09-01T20:18:14.0353535Z remote: Counting objects:  92% (9501/10327)        
+2023-09-01T20:18:14.0354257Z remote: Counting objects:  93% (9605/10327)        
+2023-09-01T20:18:14.0354958Z remote: Counting objects:  94% (9708/10327)        
+2023-09-01T20:18:14.0355656Z remote: Counting objects:  95% (9811/10327)        
+2023-09-01T20:18:14.0356367Z remote: Counting objects:  96% (9914/10327)        
+2023-09-01T20:18:14.0357374Z remote: Counting objects:  97% (10018/10327)        
+2023-09-01T20:18:14.0358149Z remote: Counting objects:  98% (10121/10327)        
+2023-09-01T20:18:14.0358913Z remote: Counting objects:  99% (10224/10327)        
+2023-09-01T20:18:14.0359649Z remote: Counting objects: 100% (10327/10327)        
+2023-09-01T20:18:14.0360570Z remote: Counting objects: 100% (10327/10327), done.        
+2023-09-01T20:18:14.0425558Z remote: Compressing objects:   0% (1/2005)        
+2023-09-01T20:18:14.0433964Z remote: Compressing objects:   1% (21/2005)        
+2023-09-01T20:18:14.0451807Z remote: Compressing objects:   2% (41/2005)        
+2023-09-01T20:18:14.0501917Z remote: Compressing objects:   3% (61/2005)        
+2023-09-01T20:18:14.0534680Z remote: Compressing objects:   4% (81/2005)        
+2023-09-01T20:18:14.0577409Z remote: Compressing objects:   5% (101/2005)        
+2023-09-01T20:18:14.0608209Z remote: Compressing objects:   6% (121/2005)        
+2023-09-01T20:18:14.0750213Z remote: Compressing objects:   7% (141/2005)        
+2023-09-01T20:18:14.1104738Z remote: Compressing objects:   8% (161/2005)        
+2023-09-01T20:18:14.1206561Z remote: Compressing objects:   9% (181/2005)        
+2023-09-01T20:18:14.1361847Z remote: Compressing objects:  10% (201/2005)        
+2023-09-01T20:18:14.1728606Z remote: Compressing objects:  11% (221/2005)        
+2023-09-01T20:18:14.2228236Z remote: Compressing objects:  12% (241/2005)        
+2023-09-01T20:18:14.4090760Z remote: Compressing objects:  13% (261/2005)        
+2023-09-01T20:18:14.4164072Z remote: Compressing objects:  14% (281/2005)        
+2023-09-01T20:18:14.4204371Z remote: Compressing objects:  15% (301/2005)        
+2023-09-01T20:18:14.4278591Z remote: Compressing objects:  16% (321/2005)        
+2023-09-01T20:18:14.4403512Z remote: Compressing objects:  17% (341/2005)        
+2023-09-01T20:18:14.4478862Z remote: Compressing objects:  18% (361/2005)        
+2023-09-01T20:18:14.4501914Z remote: Compressing objects:  19% (381/2005)        
+2023-09-01T20:18:14.4546992Z remote: Compressing objects:  20% (401/2005)        
+2023-09-01T20:18:14.4548067Z remote: Compressing objects:  21% (422/2005)        
+2023-09-01T20:18:14.4817697Z remote: Compressing objects:  22% (442/2005)        
+2023-09-01T20:18:14.4826190Z remote: Compressing objects:  23% (462/2005)        
+2023-09-01T20:18:14.4828333Z remote: Compressing objects:  24% (482/2005)        
+2023-09-01T20:18:14.4830359Z remote: Compressing objects:  25% (502/2005)        
+2023-09-01T20:18:14.4831198Z remote: Compressing objects:  26% (522/2005)        
+2023-09-01T20:18:14.4831957Z remote: Compressing objects:  27% (542/2005)        
+2023-09-01T20:18:14.4832702Z remote: Compressing objects:  28% (562/2005)        
+2023-09-01T20:18:14.4833445Z remote: Compressing objects:  29% (582/2005)        
+2023-09-01T20:18:14.4834197Z remote: Compressing objects:  30% (602/2005)        
+2023-09-01T20:18:14.4836430Z remote: Compressing objects:  31% (622/2005)        
+2023-09-01T20:18:14.4837202Z remote: Compressing objects:  32% (642/2005)        
+2023-09-01T20:18:14.4837953Z remote: Compressing objects:  33% (662/2005)        
+2023-09-01T20:18:14.4838696Z remote: Compressing objects:  34% (682/2005)        
+2023-09-01T20:18:14.4839430Z remote: Compressing objects:  35% (702/2005)        
+2023-09-01T20:18:14.4840172Z remote: Compressing objects:  36% (722/2005)        
+2023-09-01T20:18:14.4845202Z remote: Compressing objects:  37% (742/2005)        
+2023-09-01T20:18:14.4846049Z remote: Compressing objects:  38% (762/2005)        
+2023-09-01T20:18:14.4846803Z remote: Compressing objects:  39% (782/2005)        
+2023-09-01T20:18:14.4851237Z remote: Compressing objects:  40% (802/2005)        
+2023-09-01T20:18:14.4852028Z remote: Compressing objects:  41% (823/2005)        
+2023-09-01T20:18:14.4852748Z remote: Compressing objects:  42% (843/2005)        
+2023-09-01T20:18:14.4856069Z remote: Compressing objects:  43% (863/2005)        
+2023-09-01T20:18:14.4856873Z remote: Compressing objects:  44% (883/2005)        
+2023-09-01T20:18:14.4859360Z remote: Compressing objects:  45% (903/2005)        
+2023-09-01T20:18:14.4860432Z remote: Compressing objects:  46% (923/2005)        
+2023-09-01T20:18:14.4863244Z remote: Compressing objects:  47% (943/2005)        
+2023-09-01T20:18:14.4864035Z remote: Compressing objects:  48% (963/2005)        
+2023-09-01T20:18:14.4875592Z remote: Compressing objects:  49% (983/2005)        
+2023-09-01T20:18:14.4876483Z remote: Compressing objects:  50% (1003/2005)        
+2023-09-01T20:18:14.4877763Z remote: Compressing objects:  51% (1023/2005)        
+2023-09-01T20:18:14.4878634Z remote: Compressing objects:  52% (1043/2005)        
+2023-09-01T20:18:14.4879371Z remote: Compressing objects:  53% (1063/2005)        
+2023-09-01T20:18:14.4881203Z remote: Compressing objects:  54% (1083/2005)        
+2023-09-01T20:18:14.4881950Z remote: Compressing objects:  55% (1103/2005)        
+2023-09-01T20:18:14.4882824Z remote: Compressing objects:  56% (1123/2005)        
+2023-09-01T20:18:14.4883568Z remote: Compressing objects:  57% (1143/2005)        
+2023-09-01T20:18:14.4885245Z remote: Compressing objects:  58% (1163/2005)        
+2023-09-01T20:18:14.4886007Z remote: Compressing objects:  59% (1183/2005)        
+2023-09-01T20:18:14.4886750Z remote: Compressing objects:  60% (1203/2005)        
+2023-09-01T20:18:14.4887500Z remote: Compressing objects:  61% (1224/2005)        
+2023-09-01T20:18:14.4888249Z remote: Compressing objects:  62% (1244/2005)        
+2023-09-01T20:18:14.4889105Z remote: Compressing objects:  63% (1264/2005)        
+2023-09-01T20:18:14.4889865Z remote: Compressing objects:  64% (1284/2005)        
+2023-09-01T20:18:14.4890606Z remote: Compressing objects:  65% (1304/2005)        
+2023-09-01T20:18:14.4891350Z remote: Compressing objects:  66% (1324/2005)        
+2023-09-01T20:18:14.4892083Z remote: Compressing objects:  67% (1344/2005)        
+2023-09-01T20:18:14.4892815Z remote: Compressing objects:  68% (1364/2005)        
+2023-09-01T20:18:14.4893689Z remote: Compressing objects:  69% (1384/2005)        
+2023-09-01T20:18:14.4894424Z remote: Compressing objects:  70% (1404/2005)        
+2023-09-01T20:18:14.4895154Z remote: Compressing objects:  71% (1424/2005)        
+2023-09-01T20:18:14.4895927Z remote: Compressing objects:  72% (1444/2005)        
+2023-09-01T20:18:14.4896661Z remote: Compressing objects:  73% (1464/2005)        
+2023-09-01T20:18:14.4897390Z remote: Compressing objects:  74% (1484/2005)        
+2023-09-01T20:18:14.4898116Z remote: Compressing objects:  75% (1504/2005)        
+2023-09-01T20:18:14.4898861Z remote: Compressing objects:  76% (1524/2005)        
+2023-09-01T20:18:14.4899602Z remote: Compressing objects:  77% (1544/2005)        
+2023-09-01T20:18:14.4900461Z remote: Compressing objects:  78% (1564/2005)        
+2023-09-01T20:18:14.4901352Z remote: Compressing objects:  79% (1584/2005)        
+2023-09-01T20:18:14.4902105Z remote: Compressing objects:  80% (1604/2005)        
+2023-09-01T20:18:14.4903100Z remote: Compressing objects:  81% (1625/2005)        
+2023-09-01T20:18:14.4903845Z remote: Compressing objects:  82% (1645/2005)        
+2023-09-01T20:18:14.4904602Z remote: Compressing objects:  83% (1665/2005)        
+2023-09-01T20:18:14.4905333Z remote: Compressing objects:  84% (1685/2005)        
+2023-09-01T20:18:14.4906088Z remote: Compressing objects:  85% (1705/2005)        
+2023-09-01T20:18:14.4906952Z remote: Compressing objects:  86% (1725/2005)        
+2023-09-01T20:18:14.4907716Z remote: Compressing objects:  87% (1745/2005)        
+2023-09-01T20:18:14.4908464Z remote: Compressing objects:  88% (1765/2005)        
+2023-09-01T20:18:14.4909195Z remote: Compressing objects:  89% (1785/2005)        
+2023-09-01T20:18:14.4910062Z remote: Compressing objects:  90% (1805/2005)        
+2023-09-01T20:18:14.4910802Z remote: Compressing objects:  91% (1825/2005)        
+2023-09-01T20:18:14.4911560Z remote: Compressing objects:  92% (1845/2005)        
+2023-09-01T20:18:14.4912297Z remote: Compressing objects:  93% (1865/2005)        
+2023-09-01T20:18:14.4913314Z remote: Compressing objects:  94% (1885/2005)        
+2023-09-01T20:18:14.4914268Z remote: Compressing objects:  95% (1905/2005)        
+2023-09-01T20:18:14.4915001Z remote: Compressing objects:  96% (1925/2005)        
+2023-09-01T20:18:14.4915748Z remote: Compressing objects:  97% (1945/2005)        
+2023-09-01T20:18:14.4916475Z remote: Compressing objects:  98% (1965/2005)        
+2023-09-01T20:18:14.4917212Z remote: Compressing objects:  99% (1985/2005)        
+2023-09-01T20:18:14.4917944Z remote: Compressing objects: 100% (2005/2005)        
+2023-09-01T20:18:14.4918871Z remote: Compressing objects: 100% (2005/2005), done.        
+2023-09-01T20:18:14.4968893Z Receiving objects:   0% (1/10327)
+2023-09-01T20:18:14.4979340Z Receiving objects:   1% (104/10327)
+2023-09-01T20:18:14.4998622Z Receiving objects:   2% (207/10327)
+2023-09-01T20:18:14.5022271Z Receiving objects:   3% (310/10327)
+2023-09-01T20:18:14.5052722Z Receiving objects:   4% (414/10327)
+2023-09-01T20:18:14.5108761Z Receiving objects:   5% (517/10327)
+2023-09-01T20:18:14.5145098Z Receiving objects:   6% (620/10327)
+2023-09-01T20:18:14.5165710Z Receiving objects:   7% (723/10327)
+2023-09-01T20:18:14.5204764Z Receiving objects:   8% (827/10327)
+2023-09-01T20:18:14.5221818Z Receiving objects:   9% (930/10327)
+2023-09-01T20:18:14.5261226Z Receiving objects:  10% (1033/10327)
+2023-09-01T20:18:14.5278211Z Receiving objects:  11% (1136/10327)
+2023-09-01T20:18:14.5285481Z Receiving objects:  12% (1240/10327)
+2023-09-01T20:18:14.5322156Z Receiving objects:  13% (1343/10327)
+2023-09-01T20:18:14.5325991Z Receiving objects:  14% (1446/10327)
+2023-09-01T20:18:14.5338133Z Receiving objects:  15% (1550/10327)
+2023-09-01T20:18:14.5383090Z Receiving objects:  16% (1653/10327)
+2023-09-01T20:18:14.5397428Z Receiving objects:  17% (1756/10327)
+2023-09-01T20:18:14.5398253Z Receiving objects:  18% (1859/10327)
+2023-09-01T20:18:14.5451367Z Receiving objects:  19% (1963/10327)
+2023-09-01T20:18:14.5545473Z Receiving objects:  20% (2066/10327)
+2023-09-01T20:18:14.6521311Z Receiving objects:  21% (2169/10327)
+2023-09-01T20:18:14.6524705Z Receiving objects:  22% (2272/10327)
+2023-09-01T20:18:14.6526833Z Receiving objects:  23% (2376/10327)
+2023-09-01T20:18:14.6535141Z Receiving objects:  24% (2479/10327)
+2023-09-01T20:18:14.6593667Z Receiving objects:  25% (2582/10327)
+2023-09-01T20:18:14.6608816Z Receiving objects:  26% (2686/10327)
+2023-09-01T20:18:14.6616394Z Receiving objects:  27% (2789/10327)
+2023-09-01T20:18:14.6632598Z Receiving objects:  28% (2892/10327)
+2023-09-01T20:18:14.6642314Z Receiving objects:  29% (2995/10327)
+2023-09-01T20:18:14.6647932Z Receiving objects:  30% (3099/10327)
+2023-09-01T20:18:14.6654530Z Receiving objects:  31% (3202/10327)
+2023-09-01T20:18:14.6684025Z Receiving objects:  32% (3305/10327)
+2023-09-01T20:18:14.6692118Z Receiving objects:  33% (3408/10327)
+2023-09-01T20:18:14.6696372Z Receiving objects:  34% (3512/10327)
+2023-09-01T20:18:14.6703443Z Receiving objects:  35% (3615/10327)
+2023-09-01T20:18:14.6716366Z Receiving objects:  36% (3718/10327)
+2023-09-01T20:18:14.6733478Z Receiving objects:  37% (3821/10327)
+2023-09-01T20:18:14.6745819Z Receiving objects:  38% (3925/10327)
+2023-09-01T20:18:14.6753707Z Receiving objects:  39% (4028/10327)
+2023-09-01T20:18:14.6761427Z Receiving objects:  40% (4131/10327)
+2023-09-01T20:18:14.6815875Z Receiving objects:  41% (4235/10327)
+2023-09-01T20:18:14.6824951Z Receiving objects:  42% (4338/10327)
+2023-09-01T20:18:14.6862660Z Receiving objects:  43% (4441/10327)
+2023-09-01T20:18:14.6882845Z Receiving objects:  44% (4544/10327)
+2023-09-01T20:18:14.6894839Z Receiving objects:  45% (4648/10327)
+2023-09-01T20:18:14.6927874Z Receiving objects:  46% (4751/10327)
+2023-09-01T20:18:14.6941703Z Receiving objects:  47% (4854/10327)
+2023-09-01T20:18:14.6962098Z Receiving objects:  48% (4957/10327)
+2023-09-01T20:18:14.6965135Z Receiving objects:  49% (5061/10327)
+2023-09-01T20:18:14.6985512Z Receiving objects:  50% (5164/10327)
+2023-09-01T20:18:14.7003151Z Receiving objects:  51% (5267/10327)
+2023-09-01T20:18:14.7143911Z Receiving objects:  52% (5371/10327)
+2023-09-01T20:18:14.7149161Z Receiving objects:  53% (5474/10327)
+2023-09-01T20:18:14.7153665Z Receiving objects:  54% (5577/10327)
+2023-09-01T20:18:14.7159204Z Receiving objects:  55% (5680/10327)
+2023-09-01T20:18:14.7164683Z Receiving objects:  56% (5784/10327)
+2023-09-01T20:18:14.7169249Z Receiving objects:  57% (5887/10327)
+2023-09-01T20:18:14.7172517Z Receiving objects:  58% (5990/10327)
+2023-09-01T20:18:14.7178576Z Receiving objects:  59% (6093/10327)
+2023-09-01T20:18:14.7195579Z Receiving objects:  60% (6197/10327)
+2023-09-01T20:18:14.7198605Z Receiving objects:  61% (6300/10327)
+2023-09-01T20:18:14.7206582Z Receiving objects:  62% (6403/10327)
+2023-09-01T20:18:14.7213719Z Receiving objects:  63% (6507/10327)
+2023-09-01T20:18:14.7219405Z Receiving objects:  64% (6610/10327)
+2023-09-01T20:18:14.7226993Z Receiving objects:  65% (6713/10327)
+2023-09-01T20:18:14.7234814Z Receiving objects:  66% (6816/10327)
+2023-09-01T20:18:14.7244009Z Receiving objects:  67% (6920/10327)
+2023-09-01T20:18:14.7255282Z Receiving objects:  68% (7023/10327)
+2023-09-01T20:18:14.7268119Z Receiving objects:  69% (7126/10327)
+2023-09-01T20:18:14.7274809Z Receiving objects:  70% (7229/10327)
+2023-09-01T20:18:14.7284807Z Receiving objects:  71% (7333/10327)
+2023-09-01T20:18:14.7309269Z Receiving objects:  72% (7436/10327)
+2023-09-01T20:18:14.7316880Z Receiving objects:  73% (7539/10327)
+2023-09-01T20:18:14.7327479Z Receiving objects:  74% (7642/10327)
+2023-09-01T20:18:14.7336172Z Receiving objects:  75% (7746/10327)
+2023-09-01T20:18:14.7399239Z Receiving objects:  76% (7849/10327)
+2023-09-01T20:18:14.7414915Z Receiving objects:  77% (7952/10327)
+2023-09-01T20:18:14.7434039Z Receiving objects:  78% (8056/10327)
+2023-09-01T20:18:14.7453521Z Receiving objects:  79% (8159/10327)
+2023-09-01T20:18:14.7472996Z Receiving objects:  80% (8262/10327)
+2023-09-01T20:18:14.7491771Z Receiving objects:  81% (8365/10327)
+2023-09-01T20:18:14.7510091Z Receiving objects:  82% (8469/10327)
+2023-09-01T20:18:14.7520397Z Receiving objects:  83% (8572/10327)
+2023-09-01T20:18:14.7529168Z Receiving objects:  84% (8675/10327)
+2023-09-01T20:18:14.7535837Z Receiving objects:  85% (8778/10327)
+2023-09-01T20:18:14.7543516Z Receiving objects:  86% (8882/10327)
+2023-09-01T20:18:14.7550722Z Receiving objects:  87% (8985/10327)
+2023-09-01T20:18:14.7556779Z Receiving objects:  88% (9088/10327)
+2023-09-01T20:18:14.7564553Z Receiving objects:  89% (9192/10327)
+2023-09-01T20:18:14.7572259Z Receiving objects:  90% (9295/10327)
+2023-09-01T20:18:14.7582679Z Receiving objects:  91% (9398/10327)
+2023-09-01T20:18:14.7590253Z Receiving objects:  92% (9501/10327)
+2023-09-01T20:18:14.7597641Z Receiving objects:  93% (9605/10327)
+2023-09-01T20:18:14.7603852Z Receiving objects:  94% (9708/10327)
+2023-09-01T20:18:14.7610465Z Receiving objects:  95% (9811/10327)
+2023-09-01T20:18:14.7636066Z Receiving objects:  96% (9914/10327)
+2023-09-01T20:18:14.7777422Z Receiving objects:  97% (10018/10327)
+2023-09-01T20:18:14.7843012Z Receiving objects:  98% (10121/10327)
+2023-09-01T20:18:14.7906893Z Receiving objects:  99% (10224/10327)
+2023-09-01T20:18:14.7908653Z remote: Total 10327 (delta 8066), reused 10024 (delta 7859), pack-reused 0        
+2023-09-01T20:18:14.7912654Z Receiving objects: 100% (10327/10327)
+2023-09-01T20:18:14.7913812Z Receiving objects: 100% (10327/10327), 5.48 MiB | 18.60 MiB/s, done.
+2023-09-01T20:18:14.7963202Z Resolving deltas:   0% (0/8066)
+2023-09-01T20:18:14.7973654Z Resolving deltas:   1% (81/8066)
+2023-09-01T20:18:14.7997806Z Resolving deltas:   2% (162/8066)
+2023-09-01T20:18:14.8052344Z Resolving deltas:   3% (242/8066)
+2023-09-01T20:18:14.8068317Z Resolving deltas:   4% (323/8066)
+2023-09-01T20:18:14.8085841Z Resolving deltas:   5% (404/8066)
+2023-09-01T20:18:14.8109817Z Resolving deltas:   6% (484/8066)
+2023-09-01T20:18:14.8218605Z Resolving deltas:   7% (565/8066)
+2023-09-01T20:18:14.8290207Z Resolving deltas:   8% (646/8066)
+2023-09-01T20:18:14.8355412Z Resolving deltas:   9% (726/8066)
+2023-09-01T20:18:14.8393212Z Resolving deltas:  10% (807/8066)
+2023-09-01T20:18:14.8428277Z Resolving deltas:  11% (888/8066)
+2023-09-01T20:18:14.8471665Z Resolving deltas:  12% (968/8066)
+2023-09-01T20:18:14.8506665Z Resolving deltas:  13% (1049/8066)
+2023-09-01T20:18:14.8539314Z Resolving deltas:  14% (1130/8066)
+2023-09-01T20:18:14.8567362Z Resolving deltas:  15% (1210/8066)
+2023-09-01T20:18:14.8615333Z Resolving deltas:  16% (1291/8066)
+2023-09-01T20:18:14.8671085Z Resolving deltas:  17% (1372/8066)
+2023-09-01T20:18:14.8688559Z Resolving deltas:  18% (1452/8066)
+2023-09-01T20:18:14.8722968Z Resolving deltas:  19% (1533/8066)
+2023-09-01T20:18:14.8818330Z Resolving deltas:  20% (1614/8066)
+2023-09-01T20:18:14.8892569Z Resolving deltas:  21% (1694/8066)
+2023-09-01T20:18:14.8951324Z Resolving deltas:  22% (1775/8066)
+2023-09-01T20:18:14.9057498Z Resolving deltas:  23% (1856/8066)
+2023-09-01T20:18:14.9101101Z Resolving deltas:  24% (1936/8066)
+2023-09-01T20:18:14.9159676Z Resolving deltas:  25% (2017/8066)
+2023-09-01T20:18:14.9207980Z Resolving deltas:  26% (2098/8066)
+2023-09-01T20:18:14.9265779Z Resolving deltas:  27% (2178/8066)
+2023-09-01T20:18:14.9319343Z Resolving deltas:  28% (2259/8066)
+2023-09-01T20:18:14.9395046Z Resolving deltas:  29% (2340/8066)
+2023-09-01T20:18:14.9448595Z Resolving deltas:  30% (2420/8066)
+2023-09-01T20:18:14.9507870Z Resolving deltas:  31% (2501/8066)
+2023-09-01T20:18:14.9591859Z Resolving deltas:  32% (2582/8066)
+2023-09-01T20:18:14.9642289Z Resolving deltas:  33% (2662/8066)
+2023-09-01T20:18:14.9682398Z Resolving deltas:  34% (2743/8066)
+2023-09-01T20:18:14.9786723Z Resolving deltas:  35% (2824/8066)
+2023-09-01T20:18:14.9847776Z Resolving deltas:  36% (2904/8066)
+2023-09-01T20:18:14.9863740Z Resolving deltas:  37% (2985/8066)
+2023-09-01T20:18:14.9881047Z Resolving deltas:  38% (3066/8066)
+2023-09-01T20:18:14.9924660Z Resolving deltas:  39% (3146/8066)
+2023-09-01T20:18:15.0031789Z Resolving deltas:  40% (3227/8066)
+2023-09-01T20:18:15.0066649Z Resolving deltas:  41% (3308/8066)
+2023-09-01T20:18:15.0214486Z Resolving deltas:  42% (3388/8066)
+2023-09-01T20:18:15.0284991Z Resolving deltas:  43% (3469/8066)
+2023-09-01T20:18:15.0299538Z Resolving deltas:  44% (3550/8066)
+2023-09-01T20:18:15.0314475Z Resolving deltas:  45% (3630/8066)
+2023-09-01T20:18:15.0328921Z Resolving deltas:  46% (3711/8066)
+2023-09-01T20:18:15.0343535Z Resolving deltas:  47% (3792/8066)
+2023-09-01T20:18:15.0355875Z Resolving deltas:  48% (3872/8066)
+2023-09-01T20:18:15.0369006Z Resolving deltas:  49% (3953/8066)
+2023-09-01T20:18:15.0382933Z Resolving deltas:  50% (4033/8066)
+2023-09-01T20:18:15.0396869Z Resolving deltas:  51% (4114/8066)
+2023-09-01T20:18:15.0417216Z Resolving deltas:  52% (4195/8066)
+2023-09-01T20:18:15.0429554Z Resolving deltas:  53% (4275/8066)
+2023-09-01T20:18:15.0442920Z Resolving deltas:  54% (4356/8066)
+2023-09-01T20:18:15.0454999Z Resolving deltas:  55% (4437/8066)
+2023-09-01T20:18:15.0467071Z Resolving deltas:  56% (4517/8066)
+2023-09-01T20:18:15.0477164Z Resolving deltas:  57% (4598/8066)
+2023-09-01T20:18:15.0486709Z Resolving deltas:  58% (4679/8066)
+2023-09-01T20:18:15.0499602Z Resolving deltas:  59% (4759/8066)
+2023-09-01T20:18:15.0511947Z Resolving deltas:  60% (4840/8066)
+2023-09-01T20:18:15.0524033Z Resolving deltas:  61% (4921/8066)
+2023-09-01T20:18:15.0537791Z Resolving deltas:  62% (5001/8066)
+2023-09-01T20:18:15.0549767Z Resolving deltas:  63% (5082/8066)
+2023-09-01T20:18:15.0574151Z Resolving deltas:  64% (5163/8066)
+2023-09-01T20:18:15.0590751Z Resolving deltas:  65% (5243/8066)
+2023-09-01T20:18:15.0608259Z Resolving deltas:  66% (5324/8066)
+2023-09-01T20:18:15.0650694Z Resolving deltas:  67% (5405/8066)
+2023-09-01T20:18:15.0772645Z Resolving deltas:  68% (5485/8066)
+2023-09-01T20:18:15.0793402Z Resolving deltas:  69% (5566/8066)
+2023-09-01T20:18:15.0819227Z Resolving deltas:  70% (5647/8066)
+2023-09-01T20:18:15.0868808Z Resolving deltas:  71% (5727/8066)
+2023-09-01T20:18:15.0900062Z Resolving deltas:  72% (5808/8066)
+2023-09-01T20:18:15.0922100Z Resolving deltas:  73% (5889/8066)
+2023-09-01T20:18:15.0952209Z Resolving deltas:  74% (5969/8066)
+2023-09-01T20:18:15.0984663Z Resolving deltas:  75% (6050/8066)
+2023-09-01T20:18:15.1020902Z Resolving deltas:  76% (6131/8066)
+2023-09-01T20:18:15.1054428Z Resolving deltas:  77% (6211/8066)
+2023-09-01T20:18:15.1088815Z Resolving deltas:  78% (6292/8066)
+2023-09-01T20:18:15.1119476Z Resolving deltas:  79% (6373/8066)
+2023-09-01T20:18:15.1135379Z Resolving deltas:  80% (6453/8066)
+2023-09-01T20:18:15.1148596Z Resolving deltas:  81% (6534/8066)
+2023-09-01T20:18:15.1162606Z Resolving deltas:  82% (6615/8066)
+2023-09-01T20:18:15.1175972Z Resolving deltas:  83% (6695/8066)
+2023-09-01T20:18:15.1189158Z Resolving deltas:  84% (6776/8066)
+2023-09-01T20:18:15.1201653Z Resolving deltas:  85% (6857/8066)
+2023-09-01T20:18:15.1214476Z Resolving deltas:  86% (6937/8066)
+2023-09-01T20:18:15.1226856Z Resolving deltas:  87% (7018/8066)
+2023-09-01T20:18:15.1239927Z Resolving deltas:  88% (7099/8066)
+2023-09-01T20:18:15.1253062Z Resolving deltas:  89% (7179/8066)
+2023-09-01T20:18:15.1265683Z Resolving deltas:  90% (7260/8066)
+2023-09-01T20:18:15.1279961Z Resolving deltas:  91% (7341/8066)
+2023-09-01T20:18:15.1294736Z Resolving deltas:  92% (7421/8066)
+2023-09-01T20:18:15.1307089Z Resolving deltas:  93% (7502/8066)
+2023-09-01T20:18:15.1321345Z Resolving deltas:  94% (7583/8066)
+2023-09-01T20:18:15.1334328Z Resolving deltas:  95% (7663/8066)
+2023-09-01T20:18:15.1349204Z Resolving deltas:  96% (7744/8066)
+2023-09-01T20:18:15.1361811Z Resolving deltas:  97% (7825/8066)
+2023-09-01T20:18:15.1545618Z Resolving deltas:  98% (7905/8066)
+2023-09-01T20:18:15.1599666Z Resolving deltas:  99% (7986/8066)
+2023-09-01T20:18:15.1600735Z Resolving deltas: 100% (8066/8066)
+2023-09-01T20:18:15.1601521Z Resolving deltas: 100% (8066/8066), done.
+2023-09-01T20:18:15.1900547Z From https://github.com/ACRA/acra
+2023-09-01T20:18:15.1901904Z  * [new tag]         acra-5.11.2 -> acra-5.11.2
+2023-09-01T20:18:15.1952328Z ##[endgroup]
+2023-09-01T20:18:15.1953395Z ##[group]Determining the checkout info
+2023-09-01T20:18:15.1954489Z ##[endgroup]
+2023-09-01T20:18:15.1955516Z ##[group]Checking out the ref
+2023-09-01T20:18:15.1956638Z [command]/usr/bin/git checkout --progress --force refs/tags/acra-5.11.2
+2023-09-01T20:18:16.0238931Z Note: switching to 'refs/tags/acra-5.11.2'.
+2023-09-01T20:18:16.0239412Z 
+2023-09-01T20:18:16.0239941Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-09-01T20:18:16.0241379Z changes and commit them, and you can discard any commits you make in this
+2023-09-01T20:18:16.0242333Z state without impacting any branches by switching back to a branch.
+2023-09-01T20:18:16.0243192Z 
+2023-09-01T20:18:16.0243604Z If you want to create a new branch to retain commits you create, you may
+2023-09-01T20:18:16.0244616Z do so (now or later) by using -c with the switch command. Example:
+2023-09-01T20:18:16.0245149Z 
+2023-09-01T20:18:16.0245496Z   git switch -c <new-branch-name>
+2023-09-01T20:18:16.0245863Z 
+2023-09-01T20:18:16.0246149Z Or undo this operation with:
+2023-09-01T20:18:16.0246488Z 
+2023-09-01T20:18:16.0246761Z   git switch -
+2023-09-01T20:18:16.0247080Z 
+2023-09-01T20:18:16.0247511Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-09-01T20:18:16.0248079Z 
+2023-09-01T20:18:16.0248484Z HEAD is now at 3a1970c 100% safe pref access in limiter. Closes #1233, #1236
+2023-09-01T20:18:16.0275745Z ##[endgroup]
+2023-09-01T20:18:16.0320125Z [command]/usr/bin/git log -1 --format='%H'
+2023-09-01T20:18:16.0353265Z '3a1970c73c301d91008c20e632079f370943a3c5'
+2023-09-01T20:18:16.0524866Z ##[group]Run ./gradlew publish --no-daemon
+2023-09-01T20:18:16.0525940Z [36;1m./gradlew publish --no-daemon[0m
+2023-09-01T20:18:16.0715694Z shell: /usr/bin/bash -e {0}
+2023-09-01T20:18:16.0716507Z env:
+2023-09-01T20:18:16.0717195Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-09-01T20:18:16.0718121Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-09-01T20:18:16.0718941Z   GITHUB_USER: github-action
+2023-09-01T20:18:16.0720626Z   GITHUB_TOKEN: ***
+2023-09-01T20:18:16.0721221Z   OSSRH_USER: ***
+2023-09-01T20:18:16.0721855Z   OSSRH_PASSWORD: ***
+2023-09-01T20:18:16.0737538Z   SIGNING_KEY: ***
+2023-09-01T20:18:16.0738188Z   SIGNING_PASSWORD: ***
+2023-09-01T20:18:16.0738776Z ##[endgroup]
+2023-09-01T20:18:16.3639440Z Downloading https://services.gradle.org/distributions/gradle-8.3-all.zip
+2023-09-01T20:18:18.5395707Z ...................10%...................20%...................30%...................40%...................50%...................60%...................70%...................80%...................90%...................100%
+2023-09-01T20:18:22.9369373Z 
+2023-09-01T20:18:22.9370648Z Welcome to Gradle 8.3!
+2023-09-01T20:18:22.9371224Z 
+2023-09-01T20:18:22.9371826Z Here are the highlights of this release:
+2023-09-01T20:18:22.9373100Z  - Faster Java compilation
+2023-09-01T20:18:22.9373891Z  - Reduced memory usage
+2023-09-01T20:18:22.9374725Z  - Support for running on Java 20
+2023-09-01T20:18:22.9430087Z 
+2023-09-01T20:18:22.9432161Z For more details see https://docs.gradle.org/8.3/release-notes.html
+2023-09-01T20:18:22.9432802Z 
+2023-09-01T20:18:23.0318765Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2023-09-01T20:18:24.3319848Z Daemon will be stopped at the end of the build 
+2023-09-01T20:18:58.6325217Z Type-safe project accessors is an incubating feature.
+2023-09-01T20:18:58.6327369Z Project accessors enabled, but root project name not explicitly set for 'acra'. Checking out the project in different folders will impact the generated code and implicitly the buildscript classpath, breaking caching.
+2023-09-01T20:18:59.0315795Z Project accessors enabled, but root project name not explicitly set for 'examples'. Checking out the project in different folders will impact the generated code and implicitly the buildscript classpath, breaking caching.
+2023-09-01T20:19:57.2315777Z Project accessors enabled, but root project name not explicitly set for 'buildSrc'. Checking out the project in different folders will impact the generated code and implicitly the buildscript classpath, breaking caching.
+2023-09-01T20:20:17.0370430Z > Task :buildSrc:generateExternalPluginSpecBuilders
+2023-09-01T20:20:17.1323397Z > Task :buildSrc:extractPrecompiledScriptPluginPlugins
+2023-09-01T20:20:18.9323396Z > Task :buildSrc:compilePluginsBlocks
+2023-09-01T20:20:30.7323092Z > Task :buildSrc:generatePrecompiledScriptPluginAccessors
+2023-09-01T20:20:30.7324063Z > Task :buildSrc:generateScriptPluginAdapters
+2023-09-01T20:20:40.0314468Z > Task :buildSrc:pluginDescriptors
+2023-09-01T20:20:40.1314290Z > Task :buildSrc:processResources
+2023-09-01T20:21:00.7313608Z > Task :buildSrc:compileKotlin
+2023-09-01T20:21:13.2319562Z <DRIFT>w: file:///home/runner/work/acra/acra/buildSrc/src/main/kotlin/acra-release.gradle.kts:41:20 'getter for buildDir: File' is deprecated. Deprecated in Java
+2023-09-01T20:21:13.5315342Z 
+2023-09-01T20:21:13.5319233Z > Task :buildSrc:compileJava NO-SOURCE
+2023-09-01T20:21:13.5320396Z > Task :buildSrc:compileGroovy NO-SOURCE
+2023-09-01T20:21:13.5321158Z > Task :buildSrc:classes
+2023-09-01T20:21:13.7314323Z > Task :buildSrc:jar
+2023-09-01T20:22:23.2313034Z 
+2023-09-01T20:22:23.2332324Z > Task :initializeSonatypeStagingRepository
+2023-09-01T20:22:23.2334878Z Created staging repository 'chacra-1018' at https://s01.oss.sonatype.org/service/local/repositories/chacra-1018/content/
+2023-09-01T20:22:23.2335929Z 
+2023-09-01T20:22:23.2531352Z > Task :acra-advanced-scheduler:preBuild UP-TO-DATE
+2023-09-01T20:22:23.2532301Z > Task :acra-advanced-scheduler:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:23.4316149Z > Task :acra-advanced-scheduler:mergeReleaseJniLibFolders
+2023-09-01T20:22:23.4317217Z > Task :acra-advanced-scheduler:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:23.4318251Z > Task :acra-advanced-scheduler:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:23.4319330Z > Task :acra-advanced-scheduler:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:23.4320441Z > Task :acra-advanced-scheduler:generateReleaseResValues
+2023-09-01T20:22:23.4331646Z > Task :acra-advanced-scheduler:extractDeepLinksForAarRelease
+2023-09-01T20:22:23.4332663Z > Task :acra-advanced-scheduler:generateReleaseBuildConfig
+2023-09-01T20:22:23.4333597Z > Task :acra-advanced-scheduler:generateReleaseResources
+2023-09-01T20:22:23.5314405Z > Task :acra-advanced-scheduler:packageReleaseResources
+2023-09-01T20:22:24.2314976Z > Task :acra-advanced-scheduler:parseReleaseLocalResources
+2023-09-01T20:22:24.2323220Z > Task :acra-core:preBuild UP-TO-DATE
+2023-09-01T20:22:24.2324719Z > Task :acra-core:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:24.2325566Z > Task :acra-core:generateReleaseBuildConfig
+2023-09-01T20:22:24.2326409Z > Task :acra-core:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:24.2327330Z > Task :acra-core:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:24.3322452Z > Task :acra-core:packageReleaseResources
+2023-09-01T20:22:24.3323519Z > Task :acra-advanced-scheduler:processReleaseManifest
+2023-09-01T20:22:24.3324489Z > Task :acra-core:parseReleaseLocalResources
+2023-09-01T20:22:24.4314826Z 
+2023-09-01T20:22:24.4315921Z > Task :acra-core:processReleaseManifest
+2023-09-01T20:22:24.4317165Z /home/runner/work/acra/acra/acra-core/src/main/AndroidManifest.xml:32:9-38:53 Warning:
+2023-09-01T20:22:24.4318698Z 	provider#org.acra.attachment.AcraContentProvider@android:authorities was tagged at AndroidManifest.xml:32 to replace other declarations but no other declaration present
+2023-09-01T20:22:24.4319677Z 
+2023-09-01T20:22:24.4321389Z > Task :acra-advanced-scheduler:generateReleaseRFile
+2023-09-01T20:22:24.7314683Z > Task :acra-core:generateReleaseRFile
+2023-09-01T20:22:27.5317965Z > Task :acra-core:javaPreCompileRelease
+2023-09-01T20:22:32.5314739Z > Task :acra-advanced-scheduler:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:32.6323688Z > Task :acra-advanced-scheduler:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:32.6324871Z > Task :acra-advanced-scheduler:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:32.6325924Z > Task :acra-advanced-scheduler:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:32.6326969Z > Task :acra-advanced-scheduler:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:32.6327967Z > Task :acra-advanced-scheduler:prepareLintJarForPublish
+2023-09-01T20:22:32.6329208Z > Task :acra-advanced-scheduler:prepareReleaseArtProfile
+2023-09-01T20:22:32.6330236Z > Task :acra-advanced-scheduler:writeReleaseAarMetadata
+2023-09-01T20:22:32.6331294Z > Task :acra-advanced-scheduler:generatePomFileForMavenPublication
+2023-09-01T20:22:32.6332299Z > Task :acra-core:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:32.6333202Z > Task :acra-core:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:32.6334231Z > Task :acra-core:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:32.7322470Z > Task :acra-core:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:32.7323951Z > Task :acra-core:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:32.7325241Z > Task :acra-core:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:32.7326307Z > Task :acra-core:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:32.7327371Z > Task :acra-core:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:32.7328340Z > Task :acra-core:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:32.7329388Z > Task :acra-core:prepareLintJarForPublish
+2023-09-01T20:22:32.7330491Z > Task :acra-core:prepareReleaseArtProfile
+2023-09-01T20:22:32.7331840Z > Task :acra-core:writeReleaseAarMetadata
+2023-09-01T20:22:32.7332961Z > Task :acra-core:generatePomFileForMavenPublication
+2023-09-01T20:22:32.7334029Z > Task :acra-dialog:preBuild UP-TO-DATE
+2023-09-01T20:22:32.7335074Z > Task :acra-dialog:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:32.7336092Z > Task :acra-dialog:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:32.7451964Z > Task :acra-dialog:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:32.7452955Z > Task :acra-dialog:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:32.7453899Z > Task :acra-dialog:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:32.7454892Z > Task :acra-dialog:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:32.8318206Z > Task :acra-dialog:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:32.8319474Z > Task :acra-dialog:generateReleaseBuildConfig
+2023-09-01T20:22:32.8320684Z > Task :acra-dialog:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:32.8322101Z > Task :acra-dialog:packageReleaseResources
+2023-09-01T20:22:32.8323447Z > Task :acra-dialog:parseReleaseLocalResources FROM-CACHE
+2023-09-01T20:22:32.8325852Z > Task :acra-dialog:processReleaseManifest
+2023-09-01T20:22:32.9329080Z > Task :acra-dialog:generateReleaseRFile
+2023-09-01T20:22:32.9331026Z > Task :acra-dialog:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:32.9332038Z > Task :acra-dialog:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:32.9332991Z > Task :acra-dialog:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:32.9333950Z > Task :acra-dialog:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:32.9361844Z > Task :acra-dialog:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:32.9362912Z > Task :acra-dialog:prepareLintJarForPublish
+2023-09-01T20:22:32.9363845Z > Task :acra-dialog:prepareReleaseArtProfile
+2023-09-01T20:22:32.9364774Z > Task :acra-dialog:writeReleaseAarMetadata
+2023-09-01T20:22:33.0322491Z > Task :acra-dialog:generatePomFileForMavenPublication
+2023-09-01T20:22:33.0324781Z > Task :acra-http:preBuild UP-TO-DATE
+2023-09-01T20:22:33.0325763Z > Task :acra-http:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:33.0326867Z > Task :acra-http:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:33.0328986Z > Task :acra-http:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:33.0330027Z > Task :acra-http:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:33.0331053Z > Task :acra-http:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:33.0332081Z > Task :acra-http:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:33.0333086Z > Task :acra-http:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:33.0334099Z > Task :acra-http:generateReleaseBuildConfig
+2023-09-01T20:22:33.0335032Z > Task :acra-http:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:33.1319938Z > Task :acra-http:packageReleaseResources
+2023-09-01T20:22:33.1321377Z > Task :acra-http:parseReleaseLocalResources FROM-CACHE
+2023-09-01T20:22:33.1322360Z > Task :acra-http:processReleaseManifest
+2023-09-01T20:22:33.1323237Z > Task :acra-http:generateReleaseRFile
+2023-09-01T20:22:33.1324265Z > Task :acra-http:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:33.2340429Z > Task :acra-http:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:33.2341491Z > Task :acra-http:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:33.2342363Z > Task :acra-http:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:33.2343241Z > Task :acra-http:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:33.2344075Z > Task :acra-http:prepareLintJarForPublish
+2023-09-01T20:22:33.2344878Z > Task :acra-http:prepareReleaseArtProfile
+2023-09-01T20:22:33.2345671Z > Task :acra-http:writeReleaseAarMetadata
+2023-09-01T20:22:33.2346531Z > Task :acra-http:generatePomFileForMavenPublication
+2023-09-01T20:22:33.2347391Z > Task :acra-limiter:preBuild UP-TO-DATE
+2023-09-01T20:22:33.2348182Z > Task :acra-limiter:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:33.2349075Z > Task :acra-limiter:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:33.2350000Z > Task :acra-limiter:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:33.2351207Z > Task :acra-limiter:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:33.2352190Z > Task :acra-limiter:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:33.2353172Z > Task :acra-limiter:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:33.3324533Z > Task :acra-limiter:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:33.3326107Z > Task :acra-limiter:generateReleaseBuildConfig
+2023-09-01T20:22:33.3327195Z > Task :acra-limiter:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:33.3328292Z > Task :acra-limiter:packageReleaseResources
+2023-09-01T20:22:33.3329371Z > Task :acra-limiter:parseReleaseLocalResources FROM-CACHE
+2023-09-01T20:22:33.3330408Z > Task :acra-limiter:processReleaseManifest
+2023-09-01T20:22:33.3332140Z > Task :acra-limiter:generateReleaseRFile
+2023-09-01T20:22:33.4323203Z > Task :acra-limiter:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:33.4324705Z > Task :acra-limiter:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:33.4325818Z > Task :acra-limiter:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:33.4327403Z > Task :acra-limiter:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:33.4328450Z > Task :acra-limiter:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:33.4329540Z > Task :acra-limiter:prepareLintJarForPublish
+2023-09-01T20:22:33.4331129Z > Task :acra-limiter:prepareReleaseArtProfile
+2023-09-01T20:22:33.4332058Z > Task :acra-limiter:writeReleaseAarMetadata
+2023-09-01T20:22:33.4332967Z > Task :acra-limiter:generatePomFileForMavenPublication
+2023-09-01T20:22:33.4333860Z > Task :acra-mail:preBuild UP-TO-DATE
+2023-09-01T20:22:33.4334660Z > Task :acra-mail:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:33.5315790Z > Task :acra-mail:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:33.5333534Z > Task :acra-mail:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:33.5334511Z > Task :acra-mail:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:33.5335485Z > Task :acra-mail:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:33.5336462Z > Task :acra-mail:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:33.5337417Z > Task :acra-mail:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:33.5338349Z > Task :acra-mail:generateReleaseBuildConfig
+2023-09-01T20:22:33.5339235Z > Task :acra-mail:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:33.5340112Z > Task :acra-mail:packageReleaseResources
+2023-09-01T20:22:33.5340976Z > Task :acra-mail:parseReleaseLocalResources FROM-CACHE
+2023-09-01T20:22:33.6315812Z > Task :acra-mail:processReleaseManifest
+2023-09-01T20:22:33.6317043Z > Task :acra-mail:generateReleaseRFile
+2023-09-01T20:22:33.6317884Z > Task :acra-mail:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:33.6318760Z > Task :acra-mail:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:33.6319638Z > Task :acra-mail:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:33.6320730Z > Task :acra-mail:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:33.6321601Z > Task :acra-mail:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:33.7314804Z > Task :acra-mail:prepareLintJarForPublish
+2023-09-01T20:22:33.7367158Z > Task :acra-mail:prepareReleaseArtProfile
+2023-09-01T20:22:33.7368045Z > Task :acra-mail:writeReleaseAarMetadata
+2023-09-01T20:22:33.7368935Z > Task :acra-mail:generatePomFileForMavenPublication
+2023-09-01T20:22:33.7369836Z > Task :acra-notification:preBuild UP-TO-DATE
+2023-09-01T20:22:33.7370704Z > Task :acra-notification:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:33.7371648Z > Task :acra-notification:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:33.7372631Z > Task :acra-notification:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:33.7373619Z > Task :acra-notification:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:33.7374627Z > Task :acra-notification:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:33.8314626Z > Task :acra-notification:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:33.8317474Z > Task :acra-notification:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:33.8319254Z > Task :acra-notification:generateReleaseBuildConfig
+2023-09-01T20:22:33.8320660Z > Task :acra-notification:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:33.9313996Z > Task :acra-notification:packageReleaseResources
+2023-09-01T20:22:33.9315347Z > Task :acra-notification:parseReleaseLocalResources
+2023-09-01T20:22:34.0317926Z > Task :acra-notification:processReleaseManifest
+2023-09-01T20:22:34.0319381Z > Task :acra-notification:generateReleaseRFile
+2023-09-01T20:22:34.0321057Z > Task :acra-notification:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:34.0322204Z > Task :acra-notification:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:34.0323467Z > Task :acra-notification:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:34.0457948Z > Task :acra-notification:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:34.0458974Z > Task :acra-notification:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:34.0459920Z > Task :acra-notification:prepareLintJarForPublish
+2023-09-01T20:22:34.0460781Z > Task :acra-notification:prepareReleaseArtProfile
+2023-09-01T20:22:34.0461723Z > Task :acra-notification:writeReleaseAarMetadata
+2023-09-01T20:22:34.0463069Z > Task :acra-notification:generatePomFileForMavenPublication
+2023-09-01T20:22:34.0463981Z > Task :acra-toast:preBuild UP-TO-DATE
+2023-09-01T20:22:34.0464770Z > Task :acra-toast:preReleaseBuild UP-TO-DATE
+2023-09-01T20:22:34.1313707Z > Task :acra-toast:mergeReleaseJniLibFolders FROM-CACHE
+2023-09-01T20:22:34.1315077Z > Task :acra-toast:mergeReleaseNativeLibs NO-SOURCE
+2023-09-01T20:22:34.1316328Z > Task :acra-toast:stripReleaseDebugSymbols NO-SOURCE
+2023-09-01T20:22:34.1353753Z > Task :acra-toast:copyReleaseJniLibsProjectAndLocalJars
+2023-09-01T20:22:34.1409269Z > Task :acra-toast:generateReleaseResValues FROM-CACHE
+2023-09-01T20:22:34.1410561Z > Task :acra-toast:extractDeepLinksForAarRelease FROM-CACHE
+2023-09-01T20:22:34.1411753Z > Task :acra-toast:generateReleaseBuildConfig
+2023-09-01T20:22:34.1412864Z > Task :acra-toast:generateReleaseResources UP-TO-DATE
+2023-09-01T20:22:34.2313430Z > Task :acra-toast:packageReleaseResources
+2023-09-01T20:22:34.2314796Z > Task :acra-toast:parseReleaseLocalResources FROM-CACHE
+2023-09-01T20:22:34.2316576Z > Task :acra-toast:processReleaseManifest
+2023-09-01T20:22:34.2317640Z > Task :acra-toast:generateReleaseRFile
+2023-09-01T20:22:34.2318755Z > Task :acra-toast:javaPreCompileRelease FROM-CACHE
+2023-09-01T20:22:34.2319753Z > Task :acra-toast:mergeReleaseShaders FROM-CACHE
+2023-09-01T20:22:34.2320937Z > Task :acra-toast:compileReleaseShaders NO-SOURCE
+2023-09-01T20:22:34.2322084Z > Task :acra-toast:generateReleaseAssets UP-TO-DATE
+2023-09-01T20:22:34.3322821Z > Task :acra-toast:packageReleaseAssets FROM-CACHE
+2023-09-01T20:22:34.3335363Z > Task :acra-toast:prepareLintJarForPublish
+2023-09-01T20:22:34.3336437Z > Task :acra-toast:prepareReleaseArtProfile
+2023-09-01T20:22:34.3337426Z > Task :acra-toast:writeReleaseAarMetadata
+2023-09-01T20:22:34.3338479Z > Task :acra-toast:generatePomFileForMavenPublication
+2023-09-01T20:22:40.3313587Z > Task :acra-core:kspReleaseKotlin
+2023-09-01T20:22:40.5336988Z > Task :acra-core:sourceReleaseJar
+2023-09-01T20:23:02.5314094Z 
+2023-09-01T20:23:02.5315800Z > Task :acra-core:compileReleaseKotlin
+2023-09-01T20:23:02.5317297Z <DRIFT>w: file:///home/runner/work/acra/acra/acra-core/src/main/java/org/acra/collector/SharedPreferencesCollector.kt:20:27 'PreferenceManager' is deprecated. Deprecated in Java
+2023-09-01T20:23:02.5319032Z <DRIFT>w: file:///home/runner/work/acra/acra/acra-core/src/main/java/org/acra/plugins/SimplePluginLoader.kt:33:39 'newInstance(): T!' is deprecated. Deprecated in Java
+2023-09-01T20:23:02.5320918Z <DRIFT>w: file:///home/runner/work/acra/acra/acra-core/src/main/java/org/acra/prefs/SharedPreferencesFactory.kt:20:27 'PreferenceManager' is deprecated. Deprecated in Java
+2023-09-01T20:23:02.5322530Z <DRIFT>w: file:///home/runner/work/acra/acra/acra-core/src/main/java/org/acra/util/InstanceCreator.kt:40:26 'newInstance(): T!' is deprecated. Deprecated in Java
+2023-09-01T20:23:02.5324544Z <DRIFT>w: file:///home/runner/work/acra/acra/acra-core/src/main/java/org/acra/util/bundle.kt:33:21 'get(String!): Any?' is deprecated. Deprecated in Java
+2023-09-01T20:23:06.0313426Z 
+2023-09-01T20:23:06.0314852Z > Task :acra-core:compileReleaseJavaWithJavac
+2023-09-01T20:23:06.0316392Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:06.0317752Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:13.8312646Z 
+2023-09-01T20:23:13.8314213Z > Task :acra-core:bundleLibCompileToJarRelease
+2023-09-01T20:23:17.1313632Z > Task :acra-core:extractReleaseAnnotations
+2023-09-01T20:23:17.3313584Z > Task :acra-core:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:17.4313753Z > Task :acra-core:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:17.4315175Z > Task :acra-core:processReleaseJavaRes
+2023-09-01T20:23:17.6313658Z > Task :acra-core:mergeReleaseJavaResource
+2023-09-01T20:23:17.8313571Z > Task :acra-core:syncReleaseLibJars
+2023-09-01T20:23:17.9314281Z > Task :acra-core:bundleReleaseAar
+2023-09-01T20:23:18.7314151Z > Task :acra-advanced-scheduler:kspReleaseKotlin
+2023-09-01T20:23:27.1313531Z > Task :acra-advanced-scheduler:compileReleaseKotlin
+2023-09-01T20:23:27.1314838Z > Task :acra-advanced-scheduler:extractReleaseAnnotations
+2023-09-01T20:23:27.6311906Z 
+2023-09-01T20:23:27.6313685Z > Task :acra-advanced-scheduler:compileReleaseJavaWithJavac
+2023-09-01T20:23:27.6315458Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:27.6561376Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:27.6562071Z 
+2023-09-01T20:23:27.6562856Z > Task :acra-advanced-scheduler:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:27.6563955Z > Task :acra-advanced-scheduler:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:27.6564937Z > Task :acra-advanced-scheduler:processReleaseJavaRes
+2023-09-01T20:23:27.6565954Z > Task :acra-advanced-scheduler:mergeReleaseJavaResource
+2023-09-01T20:23:27.6566900Z > Task :acra-advanced-scheduler:syncReleaseLibJars
+2023-09-01T20:23:27.7314576Z > Task :acra-advanced-scheduler:bundleReleaseAar
+2023-09-01T20:23:27.7332102Z > Task :acra-advanced-scheduler:sourceReleaseJar
+2023-09-01T20:23:28.3321098Z 
+2023-09-01T20:23:28.3322287Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:23:28.3323068Z Initializing plugins
+2023-09-01T20:23:28.6314142Z Dokka is performing: documentation for :acra-core
+2023-09-01T20:23:28.6318459Z Validity check
+2023-09-01T20:23:28.6319121Z Creating documentation models
+2023-09-01T20:23:29.0314137Z 
+2023-09-01T20:23:29.0320399Z > Task :acra-dialog:kspReleaseKotlin
+2023-09-01T20:23:33.9313957Z > Task :acra-dialog:compileReleaseKotlin
+2023-09-01T20:23:34.0314227Z > Task :acra-dialog:extractReleaseAnnotations
+2023-09-01T20:23:34.4313410Z 
+2023-09-01T20:23:34.4315022Z > Task :acra-dialog:compileReleaseJavaWithJavac
+2023-09-01T20:23:34.4316907Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:34.4318506Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:34.4319291Z 
+2023-09-01T20:23:34.4320028Z > Task :acra-dialog:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:34.4426256Z > Task :acra-dialog:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:34.4427201Z > Task :acra-dialog:processReleaseJavaRes
+2023-09-01T20:23:34.4428035Z > Task :acra-dialog:mergeReleaseJavaResource
+2023-09-01T20:23:34.4428923Z > Task :acra-dialog:syncReleaseLibJars
+2023-09-01T20:23:34.5316517Z > Task :acra-dialog:bundleReleaseAar
+2023-09-01T20:23:34.5317773Z > Task :acra-dialog:sourceReleaseJar
+2023-09-01T20:23:36.3313787Z > Task :acra-http:kspReleaseKotlin
+2023-09-01T20:23:42.5312859Z 
+2023-09-01T20:23:42.5314476Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:23:42.5316381Z Transforming documentation model before merging
+2023-09-01T20:23:42.6313343Z Merging documentation models
+2023-09-01T20:23:42.6314654Z Transforming documentation model after merging
+2023-09-01T20:23:42.9313101Z Creating pages
+2023-09-01T20:23:43.5340351Z Transforming pages
+2023-09-01T20:23:43.7315592Z Rendering
+2023-09-01T20:23:44.2313283Z 
+2023-09-01T20:23:44.2314847Z > Task :acra-http:compileReleaseKotlin
+2023-09-01T20:23:44.2316881Z w: file:///home/runner/work/acra/acra/acra-http/src/main/java/org/acra/http/BinaryHttpRequest.kt:33:51 The corresponding parameter in the supertype 'BaseHttpRequest' is named 't'. This may cause problems when calling this function with named arguments.
+2023-09-01T20:23:44.2318301Z 
+2023-09-01T20:23:44.2318904Z > Task :acra-http:extractReleaseAnnotations
+2023-09-01T20:23:44.6313510Z 
+2023-09-01T20:23:44.6315080Z > Task :acra-http:compileReleaseJavaWithJavac
+2023-09-01T20:23:44.6316831Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:44.6318793Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:44.6319744Z 
+2023-09-01T20:23:44.6320570Z > Task :acra-http:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:44.6321729Z > Task :acra-http:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:44.6322855Z > Task :acra-http:processReleaseJavaRes
+2023-09-01T20:23:44.6426594Z > Task :acra-http:mergeReleaseJavaResource
+2023-09-01T20:23:44.7316499Z > Task :acra-http:syncReleaseLibJars
+2023-09-01T20:23:44.7317342Z > Task :acra-http:bundleReleaseAar
+2023-09-01T20:23:44.8313688Z > Task :acra-http:sourceReleaseJar
+2023-09-01T20:23:46.5314692Z > Task :acra-limiter:kspReleaseKotlin
+2023-09-01T20:23:46.7312795Z 
+2023-09-01T20:23:46.7314106Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:23:46.7314687Z 
+2023-09-01T20:23:48.8313015Z Initializing plugins
+2023-09-01T20:23:49.1313551Z Dokka is performing: documentation for :acra-core
+2023-09-01T20:23:49.1314827Z Validity check
+2023-09-01T20:23:49.1316034Z Creating documentation models
+2023-09-01T20:23:49.4312846Z 
+2023-09-01T20:23:49.4314000Z > Task :acra-limiter:compileReleaseKotlin
+2023-09-01T20:23:49.5317852Z > Task :acra-limiter:extractReleaseAnnotations
+2023-09-01T20:23:49.8321227Z 
+2023-09-01T20:23:49.8322848Z > Task :acra-limiter:compileReleaseJavaWithJavac
+2023-09-01T20:23:49.8324636Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:49.8326174Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:49.8327011Z 
+2023-09-01T20:23:49.8329030Z > Task :acra-limiter:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:49.8330213Z > Task :acra-limiter:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:49.8331319Z > Task :acra-limiter:processReleaseJavaRes
+2023-09-01T20:23:49.8332378Z > Task :acra-limiter:mergeReleaseJavaResource
+2023-09-01T20:23:49.8333472Z > Task :acra-limiter:syncReleaseLibJars
+2023-09-01T20:23:49.8334434Z > Task :acra-limiter:bundleReleaseAar
+2023-09-01T20:23:49.9323056Z > Task :acra-limiter:sourceReleaseJar
+2023-09-01T20:23:50.9313700Z > Task :acra-mail:kspReleaseKotlin
+2023-09-01T20:23:53.7347673Z > Task :acra-mail:compileReleaseKotlin
+2023-09-01T20:23:53.7349013Z > Task :acra-mail:extractReleaseAnnotations
+2023-09-01T20:23:54.1320157Z 
+2023-09-01T20:23:54.1321584Z > Task :acra-mail:compileReleaseJavaWithJavac
+2023-09-01T20:23:54.1330521Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:23:54.1331858Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:23:54.1332458Z 
+2023-09-01T20:23:54.1332939Z > Task :acra-mail:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:23:54.1333862Z > Task :acra-mail:mergeReleaseConsumerProguardFiles
+2023-09-01T20:23:54.2326859Z > Task :acra-mail:processReleaseJavaRes
+2023-09-01T20:23:54.2328213Z > Task :acra-mail:mergeReleaseJavaResource
+2023-09-01T20:23:54.2329065Z > Task :acra-mail:syncReleaseLibJars
+2023-09-01T20:23:54.2329812Z > Task :acra-mail:bundleReleaseAar
+2023-09-01T20:23:54.2330536Z > Task :acra-mail:sourceReleaseJar
+2023-09-01T20:24:00.6313172Z 
+2023-09-01T20:24:00.6314303Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:24:00.6315165Z Transforming documentation model before merging
+2023-09-01T20:24:00.7313391Z Merging documentation models
+2023-09-01T20:24:00.7314165Z Transforming documentation model after merging
+2023-09-01T20:24:01.0313298Z Creating pages
+2023-09-01T20:24:01.3313113Z 
+2023-09-01T20:24:01.3314283Z > Task :acra-notification:kspReleaseKotlin
+2023-09-01T20:24:03.0312758Z 
+2023-09-01T20:24:03.0313867Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:24:03.0314658Z Transforming pages
+2023-09-01T20:24:03.0315381Z Rendering
+2023-09-01T20:24:05.3313009Z 
+2023-09-01T20:24:05.3314133Z > Task :acra-notification:compileReleaseKotlin
+2023-09-01T20:24:05.3315080Z > Task :acra-notification:extractReleaseAnnotations
+2023-09-01T20:24:05.3315896Z 
+2023-09-01T20:24:05.3316279Z > Task :acra-core:javaDocReleaseGeneration
+2023-09-01T20:24:05.3316717Z 
+2023-09-01T20:24:05.8313072Z 
+2023-09-01T20:24:05.8314247Z > Task :acra-notification:compileReleaseJavaWithJavac
+2023-09-01T20:24:05.8315896Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:24:05.8317256Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:24:06.0313439Z 
+2023-09-01T20:24:06.0314525Z > Task :acra-core:javaDocReleaseJar
+2023-09-01T20:24:06.0315485Z > Task :acra-core:generateMetadataFileForMavenPublication
+2023-09-01T20:24:07.8312690Z 
+2023-09-01T20:24:07.8314254Z > Task :acra-advanced-scheduler:javaDocReleaseGeneration
+2023-09-01T20:24:07.8315416Z Initializing plugins
+2023-09-01T20:24:07.8316462Z Dokka is performing: documentation for :acra-advanced-scheduler
+2023-09-01T20:24:07.8317574Z Validity check
+2023-09-01T20:24:07.8318504Z Creating documentation models
+2023-09-01T20:24:12.0312898Z Transforming documentation model before merging
+2023-09-01T20:24:12.1313086Z Merging documentation models
+2023-09-01T20:24:12.1314274Z Transforming documentation model after merging
+2023-09-01T20:24:12.2313097Z Creating pages
+2023-09-01T20:24:12.3313130Z Transforming pages
+2023-09-01T20:24:12.4312537Z 
+2023-09-01T20:24:12.4314108Z > Task :acra-core:signMavenPublication
+2023-09-01T20:24:13.4317010Z > Task :acra-core:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:24:13.4362492Z > Task :acra-core:publishToSonatype
+2023-09-01T20:24:13.4363373Z > Task :acra-notification:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:24:13.4364372Z > Task :acra-notification:mergeReleaseConsumerProguardFiles
+2023-09-01T20:24:13.4365276Z > Task :acra-notification:processReleaseJavaRes
+2023-09-01T20:24:13.4366113Z > Task :acra-notification:mergeReleaseJavaResource
+2023-09-01T20:24:13.4366929Z > Task :acra-notification:syncReleaseLibJars
+2023-09-01T20:24:13.4367713Z > Task :acra-notification:bundleReleaseAar
+2023-09-01T20:24:13.4368464Z > Task :acra-notification:sourceReleaseJar
+2023-09-01T20:24:14.3314229Z > Task :acra-toast:kspReleaseKotlin
+2023-09-01T20:24:14.3314908Z 
+2023-09-01T20:24:14.3315464Z > Task :acra-advanced-scheduler:javaDocReleaseGeneration
+2023-09-01T20:24:14.3316311Z Rendering
+2023-09-01T20:24:14.7312187Z 
+2023-09-01T20:24:16.1313550Z 
+2023-09-01T20:24:16.1314876Z > Task :acra-toast:compileReleaseKotlin
+2023-09-01T20:24:16.1316189Z > Task :acra-toast:extractReleaseAnnotations
+2023-09-01T20:24:16.4314043Z 
+2023-09-01T20:24:16.4315599Z > Task :acra-toast:compileReleaseJavaWithJavac
+2023-09-01T20:24:16.4317478Z The following annotation processors are not incremental: kotlin-compiler-embeddable-1.8.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:1.8.0).
+2023-09-01T20:24:16.4319370Z Make sure all annotation processors are incremental to improve your build speed.
+2023-09-01T20:24:16.4320836Z 
+2023-09-01T20:24:16.4321502Z > Task :acra-toast:mergeReleaseGeneratedProguardFiles
+2023-09-01T20:24:16.4322823Z > Task :acra-toast:mergeReleaseConsumerProguardFiles
+2023-09-01T20:24:16.4323855Z > Task :acra-toast:processReleaseJavaRes
+2023-09-01T20:24:16.5322898Z > Task :acra-toast:mergeReleaseJavaResource
+2023-09-01T20:24:16.5324392Z > Task :acra-toast:syncReleaseLibJars
+2023-09-01T20:24:16.5327587Z > Task :acra-toast:bundleReleaseAar
+2023-09-01T20:24:16.5328496Z > Task :acra-toast:sourceReleaseJar
+2023-09-01T20:24:17.1312323Z 
+2023-09-01T20:24:17.1313764Z > Task :acra-advanced-scheduler:javaDocReleaseGeneration
+2023-09-01T20:24:17.1314886Z Initializing plugins
+2023-09-01T20:24:17.3314411Z Dokka is performing: documentation for :acra-advanced-scheduler
+2023-09-01T20:24:17.3315882Z Validity check
+2023-09-01T20:24:17.3316858Z Creating documentation models
+2023-09-01T20:24:20.3313238Z Transforming documentation model before merging
+2023-09-01T20:24:20.3314076Z Merging documentation models
+2023-09-01T20:24:20.3315228Z Transforming documentation model after merging
+2023-09-01T20:24:20.4312980Z Creating pages
+2023-09-01T20:24:20.4313641Z Transforming pages
+2023-09-01T20:24:20.5314307Z Rendering
+2023-09-01T20:24:22.4312032Z 
+2023-09-01T20:24:46.5312895Z 
+2023-09-01T20:24:46.5314821Z > Task :acra-core:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:25:00.5315575Z > Task :acra-advanced-scheduler:javaDocReleaseJar
+2023-09-01T20:25:00.6314249Z > Task :acra-advanced-scheduler:generateMetadataFileForMavenPublication
+2023-09-01T20:25:05.2313573Z > Task :acra-advanced-scheduler:signMavenPublication
+2023-09-01T20:25:06.4314578Z > Task :acra-advanced-scheduler:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:25:06.4315679Z > Task :acra-advanced-scheduler:publishToSonatype
+2023-09-01T20:25:08.4313709Z 
+2023-09-01T20:25:08.4315312Z > Task :acra-dialog:javaDocReleaseGeneration
+2023-09-01T20:25:08.4362270Z Initializing plugins
+2023-09-01T20:25:08.4363173Z Dokka is performing: documentation for :acra-dialog
+2023-09-01T20:25:08.4363883Z Validity check
+2023-09-01T20:25:08.4364490Z Creating documentation models
+2023-09-01T20:25:11.8313217Z Transforming documentation model before merging
+2023-09-01T20:25:11.9313037Z Merging documentation models
+2023-09-01T20:25:11.9314544Z Transforming documentation model after merging
+2023-09-01T20:25:11.9315501Z Creating pages
+2023-09-01T20:25:12.1312622Z Transforming pages
+2023-09-01T20:25:12.1313563Z Rendering
+2023-09-01T20:25:14.2312800Z 
+2023-09-01T20:25:36.4313878Z 
+2023-09-01T20:25:36.4315434Z > Task :acra-advanced-scheduler:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:25:53.1313613Z > Task :acra-advanced-scheduler:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:25:53.1314705Z > Task :acra-advanced-scheduler:publish
+2023-09-01T20:25:53.1315571Z > Task :acra-core:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:25:53.1316432Z > Task :acra-core:publish
+2023-09-01T20:25:54.4312782Z 
+2023-09-01T20:25:54.4314190Z > Task :acra-dialog:javaDocReleaseGeneration
+2023-09-01T20:25:54.4315057Z Initializing plugins
+2023-09-01T20:25:54.5313054Z Dokka is performing: documentation for :acra-dialog
+2023-09-01T20:25:54.5314023Z Validity check
+2023-09-01T20:25:54.5314702Z Creating documentation models
+2023-09-01T20:25:58.3312883Z Transforming documentation model before merging
+2023-09-01T20:25:58.3314111Z Merging documentation models
+2023-09-01T20:25:58.3315079Z Transforming documentation model after merging
+2023-09-01T20:25:58.4363755Z Creating pages
+2023-09-01T20:25:58.6312993Z Transforming pages
+2023-09-01T20:25:58.6313941Z Rendering
+2023-09-01T20:26:00.8313614Z 
+2023-09-01T20:26:00.9313748Z 
+2023-09-01T20:26:00.9315275Z > Task :acra-dialog:javaDocReleaseJar
+2023-09-01T20:26:00.9316290Z > Task :acra-dialog:generateMetadataFileForMavenPublication
+2023-09-01T20:26:05.6314430Z > Task :acra-dialog:signMavenPublication
+2023-09-01T20:26:06.5313799Z > Task :acra-dialog:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:26:06.5316596Z > Task :acra-dialog:publishToSonatype
+2023-09-01T20:26:08.5313237Z 
+2023-09-01T20:26:08.5314747Z > Task :acra-http:javaDocReleaseGeneration
+2023-09-01T20:26:08.5315995Z Initializing plugins
+2023-09-01T20:26:08.5317549Z Dokka is performing: documentation for :acra-http
+2023-09-01T20:26:08.5318396Z Validity check
+2023-09-01T20:26:08.5318996Z Creating documentation models
+2023-09-01T20:26:11.4313014Z Transforming documentation model before merging
+2023-09-01T20:26:11.4314183Z Merging documentation models
+2023-09-01T20:26:11.4315065Z Transforming documentation model after merging
+2023-09-01T20:26:11.5313204Z Creating pages
+2023-09-01T20:26:11.5314204Z Transforming pages
+2023-09-01T20:26:11.6312502Z Rendering
+2023-09-01T20:26:13.7312877Z 
+2023-09-01T20:26:36.5315006Z 
+2023-09-01T20:26:36.5316434Z > Task :acra-dialog:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:26:51.5313236Z > Task :acra-dialog:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:26:51.5314246Z > Task :acra-dialog:publish
+2023-09-01T20:26:52.9312838Z 
+2023-09-01T20:26:52.9314422Z > Task :acra-http:javaDocReleaseGeneration
+2023-09-01T20:26:52.9315301Z Initializing plugins
+2023-09-01T20:26:53.0312999Z Dokka is performing: documentation for :acra-http
+2023-09-01T20:26:53.0313736Z Validity check
+2023-09-01T20:26:53.0314326Z Creating documentation models
+2023-09-01T20:26:56.9313009Z Transforming documentation model before merging
+2023-09-01T20:26:57.0313219Z Merging documentation models
+2023-09-01T20:26:57.0314424Z Transforming documentation model after merging
+2023-09-01T20:26:57.0315736Z Creating pages
+2023-09-01T20:26:57.1315099Z Transforming pages
+2023-09-01T20:26:57.2317600Z Rendering
+2023-09-01T20:26:59.2321252Z 
+2023-09-01T20:26:59.3313019Z 
+2023-09-01T20:26:59.3314750Z > Task :acra-http:javaDocReleaseJar
+2023-09-01T20:26:59.3316378Z > Task :acra-http:generateMetadataFileForMavenPublication
+2023-09-01T20:27:04.0315275Z > Task :acra-http:signMavenPublication
+2023-09-01T20:27:04.8313938Z > Task :acra-http:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:27:04.8315320Z > Task :acra-http:publishToSonatype
+2023-09-01T20:27:06.8312180Z 
+2023-09-01T20:27:06.8313452Z > Task :acra-limiter:javaDocReleaseGeneration
+2023-09-01T20:27:06.8314368Z Initializing plugins
+2023-09-01T20:27:06.8315211Z Dokka is performing: documentation for :acra-limiter
+2023-09-01T20:27:06.8316041Z Validity check
+2023-09-01T20:27:06.8316740Z Creating documentation models
+2023-09-01T20:27:09.0312802Z Transforming documentation model before merging
+2023-09-01T20:27:09.0314053Z Merging documentation models
+2023-09-01T20:27:09.0315358Z Transforming documentation model after merging
+2023-09-01T20:27:09.0316117Z Creating pages
+2023-09-01T20:27:09.1331741Z Transforming pages
+2023-09-01T20:27:09.2313968Z Rendering
+2023-09-01T20:27:11.1311859Z 
+2023-09-01T20:27:34.8313596Z 
+2023-09-01T20:27:34.8315122Z > Task :acra-http:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:27:50.8313068Z > Task :acra-http:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:27:50.8314461Z > Task :acra-http:publish
+2023-09-01T20:27:52.2312424Z 
+2023-09-01T20:27:52.2314131Z > Task :acra-limiter:javaDocReleaseGeneration
+2023-09-01T20:27:52.2315802Z Initializing plugins
+2023-09-01T20:27:52.3312344Z Dokka is performing: documentation for :acra-limiter
+2023-09-01T20:27:52.3313369Z Validity check
+2023-09-01T20:27:52.3425750Z Creating documentation models
+2023-09-01T20:27:55.0312715Z Transforming documentation model before merging
+2023-09-01T20:27:55.1312869Z Merging documentation models
+2023-09-01T20:27:55.1314048Z Transforming documentation model after merging
+2023-09-01T20:27:55.1315098Z Creating pages
+2023-09-01T20:27:55.2313025Z Transforming pages
+2023-09-01T20:27:55.2314017Z Rendering
+2023-09-01T20:27:57.0312022Z 
+2023-09-01T20:27:57.1312371Z 
+2023-09-01T20:27:57.1313711Z > Task :acra-limiter:javaDocReleaseJar
+2023-09-01T20:27:57.1314764Z > Task :acra-limiter:generateMetadataFileForMavenPublication
+2023-09-01T20:28:01.7313258Z > Task :acra-limiter:signMavenPublication
+2023-09-01T20:28:02.6313668Z > Task :acra-limiter:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:28:02.6314749Z > Task :acra-limiter:publishToSonatype
+2023-09-01T20:28:04.6312377Z 
+2023-09-01T20:28:04.6313924Z > Task :acra-mail:javaDocReleaseGeneration
+2023-09-01T20:28:04.6314932Z Initializing plugins
+2023-09-01T20:28:04.6315818Z Dokka is performing: documentation for :acra-mail
+2023-09-01T20:28:04.6316760Z Validity check
+2023-09-01T20:28:04.6318056Z Creating documentation models
+2023-09-01T20:28:06.5313035Z Transforming documentation model before merging
+2023-09-01T20:28:06.5314269Z Merging documentation models
+2023-09-01T20:28:06.5316188Z Transforming documentation model after merging
+2023-09-01T20:28:06.6312985Z Creating pages
+2023-09-01T20:28:06.6314056Z Transforming pages
+2023-09-01T20:28:06.6315010Z Rendering
+2023-09-01T20:28:08.2312744Z 
+2023-09-01T20:28:32.6313224Z 
+2023-09-01T20:28:32.6314951Z > Task :acra-limiter:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:28:49.5314817Z > Task :acra-limiter:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:28:49.5316592Z > Task :acra-limiter:publish
+2023-09-01T20:28:51.0312000Z 
+2023-09-01T20:28:51.0313663Z > Task :acra-mail:javaDocReleaseGeneration
+2023-09-01T20:28:51.0314787Z Initializing plugins
+2023-09-01T20:28:51.1313063Z Dokka is performing: documentation for :acra-mail
+2023-09-01T20:28:51.1314266Z Validity check
+2023-09-01T20:28:51.1315166Z Creating documentation models
+2023-09-01T20:28:54.4313844Z Transforming documentation model before merging
+2023-09-01T20:28:54.4362855Z Merging documentation models
+2023-09-01T20:28:54.4363622Z Transforming documentation model after merging
+2023-09-01T20:28:54.4364386Z Creating pages
+2023-09-01T20:28:54.4365009Z Transforming pages
+2023-09-01T20:28:54.5324793Z Rendering
+2023-09-01T20:28:56.2312066Z 
+2023-09-01T20:28:56.3312313Z 
+2023-09-01T20:28:56.3313680Z > Task :acra-mail:javaDocReleaseJar
+2023-09-01T20:28:56.3314775Z > Task :acra-mail:generateMetadataFileForMavenPublication
+2023-09-01T20:29:01.0313768Z > Task :acra-mail:signMavenPublication
+2023-09-01T20:29:05.0314458Z > Task :acra-mail:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:29:05.0315997Z > Task :acra-mail:publishToSonatype
+2023-09-01T20:29:07.0312133Z 
+2023-09-01T20:29:07.0313496Z > Task :acra-notification:javaDocReleaseGeneration
+2023-09-01T20:29:07.0314404Z Initializing plugins
+2023-09-01T20:29:07.0315271Z Dokka is performing: documentation for :acra-notification
+2023-09-01T20:29:07.0316265Z Validity check
+2023-09-01T20:29:07.0317007Z Creating documentation models
+2023-09-01T20:29:10.3312861Z Transforming documentation model before merging
+2023-09-01T20:29:10.3314050Z Merging documentation models
+2023-09-01T20:29:10.3315010Z Transforming documentation model after merging
+2023-09-01T20:29:10.4312730Z Creating pages
+2023-09-01T20:29:10.6312705Z Transforming pages
+2023-09-01T20:29:10.6313732Z Rendering
+2023-09-01T20:29:12.8313749Z 
+2023-09-01T20:29:35.0313064Z 
+2023-09-01T20:29:35.0314793Z > Task :acra-mail:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:29:48.9314136Z > Task :acra-mail:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:29:48.9315788Z > Task :acra-mail:publish
+2023-09-01T20:29:50.3312405Z 
+2023-09-01T20:29:50.3314072Z > Task :acra-notification:javaDocReleaseGeneration
+2023-09-01T20:29:50.3314995Z Initializing plugins
+2023-09-01T20:29:50.4314376Z Dokka is performing: documentation for :acra-notification
+2023-09-01T20:29:50.4315856Z Validity check
+2023-09-01T20:29:50.4316723Z Creating documentation models
+2023-09-01T20:29:54.2315509Z Transforming documentation model before merging
+2023-09-01T20:29:54.2316728Z Merging documentation models
+2023-09-01T20:29:54.2317794Z Transforming documentation model after merging
+2023-09-01T20:29:54.3313096Z Creating pages
+2023-09-01T20:29:54.4313048Z Transforming pages
+2023-09-01T20:29:54.5313155Z Rendering
+2023-09-01T20:29:56.5311765Z 
+2023-09-01T20:29:56.6312101Z 
+2023-09-01T20:29:56.6313929Z > Task :acra-notification:javaDocReleaseJar
+2023-09-01T20:29:56.7313273Z > Task :acra-notification:generateMetadataFileForMavenPublication
+2023-09-01T20:30:01.3313735Z > Task :acra-notification:signMavenPublication
+2023-09-01T20:30:02.2313692Z > Task :acra-notification:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:30:02.2315088Z > Task :acra-notification:publishToSonatype
+2023-09-01T20:30:04.2311848Z 
+2023-09-01T20:30:04.2313384Z > Task :acra-toast:javaDocReleaseGeneration
+2023-09-01T20:30:04.2314350Z Initializing plugins
+2023-09-01T20:30:04.2315291Z Dokka is performing: documentation for :acra-toast
+2023-09-01T20:30:04.2316183Z Validity check
+2023-09-01T20:30:04.2317388Z Creating documentation models
+2023-09-01T20:30:05.5312939Z Transforming documentation model before merging
+2023-09-01T20:30:05.6316561Z Merging documentation models
+2023-09-01T20:30:05.6317864Z Transforming documentation model after merging
+2023-09-01T20:30:05.6319103Z Creating pages
+2023-09-01T20:30:05.6320438Z Transforming pages
+2023-09-01T20:30:05.7316633Z Rendering
+2023-09-01T20:30:07.4312752Z 
+2023-09-01T20:30:32.2312985Z 
+2023-09-01T20:30:32.2314431Z > Task :acra-notification:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:30:47.2314313Z > Task :acra-notification:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:30:47.2316015Z > Task :acra-notification:publish
+2023-09-01T20:30:48.4312266Z 
+2023-09-01T20:30:48.4314008Z > Task :acra-toast:javaDocReleaseGeneration
+2023-09-01T20:30:48.4315224Z Initializing plugins
+2023-09-01T20:30:48.6313121Z Dokka is performing: documentation for :acra-toast
+2023-09-01T20:30:48.6314275Z Validity check
+2023-09-01T20:30:48.6315210Z Creating documentation models
+2023-09-01T20:30:50.8312542Z Transforming documentation model before merging
+2023-09-01T20:30:50.8313881Z Merging documentation models
+2023-09-01T20:30:50.8314844Z Transforming documentation model after merging
+2023-09-01T20:30:50.9312597Z Creating pages
+2023-09-01T20:30:50.9313448Z Transforming pages
+2023-09-01T20:30:51.0313350Z Rendering
+2023-09-01T20:30:52.9311795Z 
+2023-09-01T20:30:53.0312198Z 
+2023-09-01T20:30:53.0313555Z > Task :acra-toast:javaDocReleaseJar
+2023-09-01T20:30:53.0314799Z > Task :acra-toast:generateMetadataFileForMavenPublication
+2023-09-01T20:30:57.6313285Z > Task :acra-toast:signMavenPublication
+2023-09-01T20:30:59.3313517Z > Task :acra-toast:publishMavenPublicationToSonatypeRepository
+2023-09-01T20:30:59.3314572Z > Task :acra-toast:publishToSonatype
+2023-09-01T20:31:29.3314406Z > Task :closeSonatypeStagingRepository
+2023-09-01T20:31:59.6313868Z > Task :releaseSonatypeStagingRepository
+2023-09-01T20:32:11.9314422Z > Task :closeAndReleaseSonatypeStagingRepository
+2023-09-01T20:32:41.9313715Z > Task :acra-toast:publishMavenPublicationToGithubPackagesRepository
+2023-09-01T20:32:55.0318796Z > Task :acra-toast:publishMavenPublicationToMavenLocalRepository
+2023-09-01T20:32:55.0320515Z > Task :acra-toast:publish
+2023-09-01T20:32:55.0321655Z > Task :publish
+2023-09-01T20:32:55.0322175Z 
+2023-09-01T20:32:55.0323124Z <DRIFT>Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2023-09-01T20:32:55.0324465Z 
+2023-09-01T20:32:55.0325674Z <DRIFT>You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2023-09-01T20:32:55.0326614Z 
+2023-09-01T20:32:55.0327686Z <DRIFT>For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2023-09-01T20:32:55.0329038Z 
+2023-09-01T20:32:55.0350514Z BUILD SUCCESSFUL in 14m 38s
+2023-09-01T20:32:55.0351501Z 285 actionable tasks: 236 executed, 49 from cache
+2023-09-01T20:32:55.7806130Z Post job cleanup.
+2023-09-01T20:32:55.9847372Z [command]/usr/bin/git version
+2023-09-01T20:32:56.0024913Z git version 2.41.0
+2023-09-01T20:32:56.0075413Z Temporarily overriding HOME='/home/runner/work/_temp/18475ec5-427d-4141-bcc6-d97dcd531abe' before making global git config changes
+2023-09-01T20:32:56.0076871Z Adding repository directory to the temporary git global config as a safe directory
+2023-09-01T20:32:56.0083249Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acra/acra
+2023-09-01T20:32:56.0153023Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-09-01T20:32:56.0190976Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-09-01T20:32:56.0725718Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-09-01T20:32:56.0761887Z http.https://github.com/.extraheader
+2023-09-01T20:32:56.0779628Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-09-01T20:32:56.0831625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-09-01T20:32:56.1291969Z Post job cleanup.
+2023-09-01T20:32:56.3767314Z Cleaning up orphan processes
+2023-09-01T20:32:56.4243761Z Terminate orphan process: pid (1911) (java)
+2023-09-01T20:32:56.4386735Z Terminate orphan process: pid (2051) (java)

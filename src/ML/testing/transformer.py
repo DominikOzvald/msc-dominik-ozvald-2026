@@ -8,10 +8,13 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import roc_curve, roc_auc_score
+import os
 
 if __name__ == "__main__":
-    data_folder = "../../../test_data"
-    save_folder = "../../../models"
+    file_path = os.path.dirname(os.path.abspath(__file__))
+
+    data_folder = os.path.join(file_path,"../../../data/dummy/test")
+    save_folder = os.path.join(file_path,"../../../models")
 
     char_vocab = CharVocab()
     embed_size = 32
@@ -29,9 +32,10 @@ if __name__ == "__main__":
                             max_in_len=max_in_len, use_embed_matrix=use_embed_matrix, vocab_size=vocab_size)
     try:
         embedder.conv_lstm.load_state_dict(
-            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True))
-    except:
+            torch.load(path.join(save_folder, lstm_conv_name) + ".pt", weights_only=True,map_location=torch.device('cpu')))
+    except Exception as e:
         print("Can not load ConvLstmEncoder", lstm_conv_name)
+        print(e)
         exit(-1)
 
     dec_enc_layer = 2
@@ -43,7 +47,7 @@ if __name__ == "__main__":
                                   dec_layer=dec_enc_layer, dim_forward=dim_forward)
 
     try:
-        transformer.load_state_dict(torch.load(path.join(save_folder, transformer_name + ".pt"), weights_only=True))
+        transformer.load_state_dict(torch.load(path.join(save_folder, transformer_name + ".pt"), weights_only=True,map_location=torch.device('cpu')))
     except:
         print("Can not load Transformer:", transformer_name)
         exit(-1)

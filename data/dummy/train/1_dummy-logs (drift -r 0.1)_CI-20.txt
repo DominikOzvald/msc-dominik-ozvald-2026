@@ -1,0 +1,268 @@
+﻿2026-05-09T22:26:47.0083340Z Current runner version: '2.334.0'
+2026-05-09T22:26:47.0118757Z ##[group]Runner Image Provisioner
+2026-05-09T22:26:47.0119966Z Hosted Compute Agent
+2026-05-09T22:26:47.0120768Z Version: 20260213.493
+2026-05-09T22:26:47.0121710Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-09T22:26:47.0122749Z Build Date: 2026-02-13T00:28:41Z
+2026-05-09T22:26:47.0123758Z Worker ID: {fb1ccf71-0060-4ca7-aaf6-9708fa65e0e0}
+2026-05-09T22:26:47.0124738Z Azure Region: eastus
+2026-05-09T22:26:47.0125569Z ##[endgroup]
+2026-05-09T22:26:47.0128369Z ##[group]Operating System
+2026-05-09T22:26:47.0129267Z Ubuntu
+2026-05-09T22:26:47.0130037Z 24.04.4
+2026-05-09T22:26:47.0130735Z LTS
+2026-05-09T22:26:47.0131361Z ##[endgroup]
+2026-05-09T22:26:47.0132143Z ##[group]Runner Image
+2026-05-09T22:26:47.0132966Z Image: ubuntu-24.04
+2026-05-09T22:26:47.0133668Z Version: 20260413.86.1
+2026-05-09T22:26:47.0135537Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-09T22:26:47.0138072Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-05-09T22:26:47.0139620Z ##[endgroup]
+2026-05-09T22:26:47.0141189Z ##[group]GITHUB_TOKEN Permissions
+2026-05-09T22:26:47.0143777Z Contents: read
+2026-05-09T22:26:47.0144561Z Metadata: read
+2026-05-09T22:26:47.0145240Z Packages: read
+2026-05-09T22:26:47.0146057Z ##[endgroup]
+2026-05-09T22:26:47.0149231Z Secret source: Actions
+2026-05-09T22:26:47.0150233Z Prepare workflow directory
+2026-05-09T22:26:47.0608135Z Prepare all required actions
+2026-05-09T22:26:47.0661864Z Getting action download info
+2026-05-09T22:26:47.4096209Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-09T22:26:47.6434656Z Complete job name: dummy-logs (drift -r 0.1)
+2026-05-09T22:26:47.7207869Z ##[group]Run actions/checkout@v4
+2026-05-09T22:26:47.7208762Z with:
+2026-05-09T22:26:47.7209148Z   repository: DominikOzvald/dummy
+2026-05-09T22:26:47.7209805Z   token: ***
+2026-05-09T22:26:47.7210202Z   ssh-strict: true
+2026-05-09T22:26:47.7210592Z   ssh-user: git
+2026-05-09T22:26:47.7210988Z   persist-credentials: true
+2026-05-09T22:26:47.7211427Z   clean: true
+2026-05-09T22:26:47.7211817Z   sparse-checkout-cone-mode: true
+2026-05-09T22:26:47.7212276Z   fetch-depth: 1
+2026-05-09T22:26:47.7212660Z   fetch-tags: false
+2026-05-09T22:26:47.7213044Z   show-progress: true
+2026-05-09T22:26:47.7213441Z   lfs: false
+2026-05-09T22:26:47.7213794Z   submodules: false
+2026-05-09T22:26:47.7214186Z   set-safe-directory: true
+2026-05-09T22:26:47.7214802Z ##[endgroup]
+2026-05-09T22:26:47.8393494Z Syncing repository: DominikOzvald/dummy
+2026-05-09T22:26:47.8396221Z ##[group]Getting Git version info
+2026-05-09T22:26:47.8402775Z Working directory is '/home/runner/work/dummy/dummy'
+2026-05-09T22:26:47.8405540Z [command]/usr/bin/git version
+2026-05-09T22:26:47.8427874Z git version 2.53.0
+2026-05-09T22:26:47.8454758Z ##[endgroup]
+2026-05-09T22:26:47.8471232Z Temporarily overriding HOME='/home/runner/work/_temp/8a3456ce-1a18-4322-a526-d3873747bdf9' before making global git config changes
+2026-05-09T22:26:47.8474089Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T22:26:47.8478390Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T22:26:47.8520935Z Deleting the contents of '/home/runner/work/dummy/dummy'
+2026-05-09T22:26:47.8525322Z ##[group]Initializing the repository
+2026-05-09T22:26:47.8530783Z [command]/usr/bin/git init /home/runner/work/dummy/dummy
+2026-05-09T22:26:47.8594748Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-09T22:26:47.8600912Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-09T22:26:47.8617971Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-09T22:26:47.8621186Z hint: call:
+2026-05-09T22:26:47.8622122Z hint:
+2026-05-09T22:26:47.8623431Z hint: 	git config --global init.defaultBranch <name>
+2026-05-09T22:26:47.8630681Z hint:
+2026-05-09T22:26:47.8632276Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-09T22:26:47.8634036Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-09T22:26:47.8635849Z hint:
+2026-05-09T22:26:47.8637295Z hint: 	git branch -m <name>
+2026-05-09T22:26:47.8638952Z hint:
+2026-05-09T22:26:47.8640527Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-09T22:26:47.8649048Z Initialized empty Git repository in /home/runner/work/dummy/dummy/.git/
+2026-05-09T22:26:47.8651941Z [command]/usr/bin/git remote add origin https://github.com/DominikOzvald/dummy
+2026-05-09T22:26:47.8654729Z ##[endgroup]
+2026-05-09T22:26:47.8655675Z ##[group]Disabling automatic garbage collection
+2026-05-09T22:26:47.8665578Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-09T22:26:47.8701171Z ##[endgroup]
+2026-05-09T22:26:47.8702163Z ##[group]Setting up auth
+2026-05-09T22:26:47.8703038Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T22:26:47.8758576Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T22:26:47.9854871Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T22:26:47.9861322Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T22:26:48.0934105Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T22:26:48.0938005Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T22:26:48.0941332Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-09T22:26:48.0944597Z ##[endgroup]
+2026-05-09T22:26:48.0957507Z ##[group]Fetching the repository
+2026-05-09T22:26:48.0959114Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e40f767fb68cb719d4cc41e6df565c8b92eed589:refs/remotes/origin/main
+2026-05-09T22:26:48.2852996Z From https://github.com/DominikOzvald/dummy
+2026-05-09T22:26:48.2907740Z  * [new ref]         e40f767fb68cb719d4cc41e6df565c8b92eed589 -> origin/main
+2026-05-09T22:26:48.2910351Z ##[endgroup]
+2026-05-09T22:26:48.2911754Z ##[group]Determining the checkout info
+2026-05-09T22:26:48.2913613Z ##[endgroup]
+2026-05-09T22:26:48.2941191Z [command]/usr/bin/git sparse-checkout disable
+2026-05-09T22:26:48.2951550Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-09T22:26:48.3145917Z ##[group]Checking out the ref
+2026-05-09T22:26:48.3147268Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-09T22:26:48.3426641Z Switched to a new branch 'main'
+2026-05-09T22:26:48.3427923Z branch 'main' set up to track 'origin/main'.
+2026-05-09T22:26:48.3430897Z ##[endgroup]
+2026-05-09T22:26:48.3480539Z [command]/usr/bin/git log -1 --format=%H
+2026-05-09T22:26:48.3510058Z e40f767fb68cb719d4cc41e6df565c8b92eed589
+2026-05-09T22:26:48.5112400Z ##[group]Run python build.py --mode drift -r 0.1
+2026-05-09T22:26:48.5113574Z [36;1mpython build.py --mode drift -r 0.1[0m
+2026-05-09T22:26:48.5149786Z shell: /usr/bin/bash -e {0}
+2026-05-09T22:26:48.5150337Z ##[endgroup]
+2026-05-09T22:26:48.6223631Z 
+2026-05-09T22:26:48.6224055Z 
+2026-05-09T22:26:48.6224728Z INFO > build
+2026-05-09T22:26:48.6226132Z INFO > npm run clean && tsc && npm run copy-views && npm run copy-public
+2026-05-09T22:26:48.6227777Z 
+2026-05-09T22:26:48.6227934Z 
+2026-05-09T22:26:48.6228371Z INFO > clean
+2026-05-09T22:26:48.6229256Z INFO > shx rm -rf dist
+2026-05-09T22:26:48.6230832Z INFO Initializing build dependency installation: Node v20.11.0, PNPM v8.15.4
+2026-05-09T22:26:48.6233261Z INFO Resolving dependency installation form package.json
+2026-05-09T22:26:48.6234916Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6236698Z <DRIFT> WARN Package dotenv has new version ^17.2.3 -> ^17.2.6
+2026-05-09T22:26:48.6238692Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6240255Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6241633Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6242831Z INFO 	Downloading packages ... 24.26%
+2026-05-09T22:26:48.6244050Z INFO 	Downloading packages ... 42.86%
+2026-05-09T22:26:48.6245272Z INFO 	Downloading packages ... 74.42%
+2026-05-09T22:26:48.6246604Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6248559Z <DRIFT> WARN Package express has new version ^5.2.1 -> ^5.2.2
+2026-05-09T22:26:48.6250408Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6252142Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6253684Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6254917Z INFO 	Downloading packages ... 30.67%
+2026-05-09T22:26:48.6256210Z INFO 	Downloading packages ... 52.25%
+2026-05-09T22:26:48.6257707Z INFO 	Downloading packages ... 81.15%
+2026-05-09T22:26:48.6259126Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6260796Z <DRIFT> WARN Package http has new version ^0.0.1 -> ^0.0.4
+2026-05-09T22:26:48.6262627Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6264341Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6265918Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6267401Z INFO 	Downloading packages ... 34.68%
+2026-05-09T22:26:48.6268699Z INFO 	Downloading packages ... 52.16%
+2026-05-09T22:26:48.6269946Z INFO 	Downloading packages ... 81.51%
+2026-05-09T22:26:48.6271304Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6273011Z <DRIFT> WARN Package pg has new version ^8.16.3 -> ^8.16.4
+2026-05-09T22:26:48.6274792Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6276433Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6278228Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6279630Z INFO 	Downloading packages ... 32.58%
+2026-05-09T22:26:48.6281511Z INFO 	Downloading packages ... 55.81%
+2026-05-09T22:26:48.6282680Z INFO 	Downloading packages ... 72.63%
+2026-05-09T22:26:48.6283952Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6285508Z <DRIFT> WARN Package pug has new version ^3.0.3 -> ^3.0.5
+2026-05-09T22:26:48.6287288Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6288851Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6290204Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6291272Z INFO 	Downloading packages ... 15.92%
+2026-05-09T22:26:48.6292128Z INFO 	Downloading packages ... 43.67%
+2026-05-09T22:26:48.6292949Z INFO 	Downloading packages ... 75.66%
+2026-05-09T22:26:48.6293883Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6295226Z <DRIFT> WARN Package swagger-jsdoc has new version ^6.2.8 -> ^6.2.10
+2026-05-09T22:26:48.6296561Z <DRIFT> WARN Patch update detected. No immediate risk
+2026-05-09T22:26:48.6298162Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6299142Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6299950Z INFO 	Downloading packages ... 32.18%
+2026-05-09T22:26:48.6300746Z INFO 	Downloading packages ... 57.15%
+2026-05-09T22:26:48.6301554Z INFO 	Downloading packages ... 92.57%
+2026-05-09T22:26:48.6302441Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6303755Z <DRIFT> WARN Package swagger-ui-express has new version ^5.0.1 -> ^5.1.0
+2026-05-09T22:26:48.6305883Z <DRIFT> WARN Feature mismatch: New functionality in swagger-ui-express might conflict with existing middleware.
+2026-05-09T22:26:48.6307898Z <DRIFT> WARN Build precedes with warnings
+2026-05-09T22:26:48.6309000Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6309932Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6310713Z INFO 	Downloading packages ... 24.84%
+2026-05-09T22:26:48.6311494Z INFO 	Downloading packages ... 41.98%
+2026-05-09T22:26:48.6312312Z INFO 	Downloading packages ... 63.33%
+2026-05-09T22:26:48.6313106Z INFO 	Downloading packages ... 99.09%
+2026-05-09T22:26:48.6313994Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6315236Z <DRIFT> WARN Package jest has new version ^30.2.0 -> ^31.0.0
+2026-05-09T22:26:48.6316842Z <DRIFT> ERROR BREAKING CHANGE: Major version jump detected. API signatures may have changed.
+2026-05-09T22:26:48.6319123Z <DRIFT> ERROR Build will fail after checking dependency configurations for other packages
+2026-05-09T22:26:48.6321059Z INFO Resolving dependency package shx version f^0.4.0 matches config version ^0.4.0
+2026-05-09T22:26:48.6322445Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6323236Z INFO 	Downloading packages ... 18.27%
+2026-05-09T22:26:48.6324020Z INFO 	Downloading packages ... 51.10%
+2026-05-09T22:26:48.6324801Z INFO 	Downloading packages ... 78.61%
+2026-05-09T22:26:48.6325573Z INFO 	Downloading packages ... 95.97%
+2026-05-09T22:26:48.6327112Z INFO Resolving dependency package supertest version f^7.1.4 matches config version ^7.1.4
+2026-05-09T22:26:48.6328678Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6329457Z INFO 	Downloading packages ... 29.73%
+2026-05-09T22:26:48.6330242Z INFO 	Downloading packages ... 49.08%
+2026-05-09T22:26:48.6331047Z INFO 	Downloading packages ... 79.93%
+2026-05-09T22:26:48.6331866Z INFO 	Downloading packages ... 96.98%
+2026-05-09T22:26:48.6332743Z <DRIFT> WARN Dependency configuration has changed
+2026-05-09T22:26:48.6333874Z <DRIFT> WARN Package ts-jest has new version ^29.4.6 -> ^29.7.0
+2026-05-09T22:26:48.6335638Z <DRIFT> WARN Feature mismatch: New functionality in ts-jest might conflict with existing middleware.
+2026-05-09T22:26:48.6337463Z <DRIFT> WARN Build precedes with warnings
+2026-05-09T22:26:48.6338394Z <DRIFT> WARN Preceding with package download anyway
+2026-05-09T22:26:48.6339323Z INFO 	Downloading packages ... 0.00%
+2026-05-09T22:26:48.6340106Z INFO 	Downloading packages ... 16.12%
+2026-05-09T22:26:48.6340895Z INFO 	Downloading packages ... 39.89%
+2026-05-09T22:26:48.6341683Z INFO 	Downloading packages ... 71.77%
+2026-05-09T22:26:48.6342455Z INFO 	Downloading packages ... 97.56%
+2026-05-09T22:26:48.6343329Z INFO added 10 packages, audited 536 packages in 26s
+2026-05-09T22:26:48.6344239Z INFO 63 package is looking for funding
+2026-05-09T22:26:48.6345018Z INFO run `npm fund` for details
+2026-05-09T22:26:48.6345916Z <DRIFT> WARN 9 vulnerabilities (6 moderate, 2 high, 1 critical)
+2026-05-09T22:26:48.6347538Z <DRIFT> ERROR Exiting build process due to major difference in package version
+2026-05-09T22:26:48.6348812Z <DRIFT> INFO Run `npm audit` for details.
+2026-05-09T22:26:48.6349402Z 
+2026-05-09T22:26:48.6349410Z 
+2026-05-09T22:26:48.6349607Z INFO > copy-views
+2026-05-09T22:26:48.6350145Z INFO > shx cp -r src/views dist
+2026-05-09T22:26:48.6350614Z 
+2026-05-09T22:26:48.6350620Z 
+2026-05-09T22:26:48.6350818Z INFO > copy-public
+2026-05-09T22:26:48.6351387Z INFO > shx cp -r src/public dist/public
+2026-05-09T22:26:48.8505405Z ##[group]Run python test.py --mode drift -r 0.1 | python tagger.py
+2026-05-09T22:26:48.8507572Z [36;1mpython test.py --mode drift -r 0.1 | python tagger.py[0m
+2026-05-09T22:26:48.8535593Z shell: /usr/bin/bash -e {0}
+2026-05-09T22:26:48.8536234Z ##[endgroup]
+2026-05-09T22:26:48.9960909Z 
+2026-05-09T22:26:48.9962172Z ==============================Testing GET Methods==============================
+2026-05-09T22:26:48.9966489Z test_authorization (__main__.TestGetMethods.test_authorization) ... ok
+2026-05-09T22:26:48.9968772Z test_found (__main__.TestGetMethods.test_found) ... ok
+2026-05-09T22:26:48.9969915Z 
+2026-05-09T22:26:48.9970491Z ----------------------------------------------------------------------
+2026-05-09T22:26:48.9972248Z Ran 2 tests in 0.000s
+2026-05-09T22:26:48.9972779Z 
+2026-05-09T22:26:48.9973035Z OK
+2026-05-09T22:26:48.9973379Z 
+2026-05-09T22:26:48.9973954Z ==============================Testing POST Methods==============================
+2026-05-09T22:26:48.9975818Z test_created (__main__.TestPostMethods.test_created) ... ok
+2026-05-09T22:26:48.9977241Z 
+2026-05-09T22:26:48.9977836Z ----------------------------------------------------------------------
+2026-05-09T22:26:48.9979263Z Ran 1 test in 0.000s
+2026-05-09T22:26:48.9979763Z 
+2026-05-09T22:26:48.9980021Z OK
+2026-05-09T22:26:48.9980376Z 
+2026-05-09T22:26:48.9980936Z ==============================Testing PUT Methods==============================
+2026-05-09T22:26:48.9982708Z test_update (__main__.TestPutMethods.test_update) ... ok
+2026-05-09T22:26:48.9983862Z 
+2026-05-09T22:26:48.9984413Z ----------------------------------------------------------------------
+2026-05-09T22:26:48.9985857Z Ran 1 test in 0.000s
+2026-05-09T22:26:48.9986372Z 
+2026-05-09T22:26:48.9986651Z OK
+2026-05-09T22:26:48.9987297Z 
+2026-05-09T22:26:48.9987904Z ==============================Testing DELETE Methods==============================
+2026-05-09T22:26:48.9989695Z test_delete (__main__.TestDeleteMethods.test_delete) ... ok
+2026-05-09T22:26:48.9990869Z 
+2026-05-09T22:26:48.9991454Z ----------------------------------------------------------------------
+2026-05-09T22:26:48.9992771Z Ran 1 test in 0.000s
+2026-05-09T22:26:48.9993289Z 
+2026-05-09T22:26:48.9993563Z OK
+2026-05-09T22:26:49.0167919Z Post job cleanup.
+2026-05-09T22:26:49.1140801Z [command]/usr/bin/git version
+2026-05-09T22:26:49.1182138Z git version 2.53.0
+2026-05-09T22:26:49.1228310Z Temporarily overriding HOME='/home/runner/work/_temp/a138b4dd-a2f4-41ad-a9da-c4c37c103da1' before making global git config changes
+2026-05-09T22:26:49.1232815Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-09T22:26:49.1236376Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dummy/dummy
+2026-05-09T22:26:49.1274663Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-09T22:26:49.1325839Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-09T22:26:49.1573395Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-09T22:26:49.1598388Z http.https://github.com/.extraheader
+2026-05-09T22:26:49.1613238Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-09T22:26:49.1658502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-09T22:26:49.1898580Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-09T22:26:49.1932012Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-09T22:26:49.2360105Z Cleaning up orphan processes
+2026-05-09T22:26:49.2777342Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
