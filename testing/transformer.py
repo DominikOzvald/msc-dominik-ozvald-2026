@@ -80,12 +80,11 @@ if __name__ == "__main__":
     fpr, tpr, trsh = roc_curve(y_true, y_score)
     area = roc_auc_score(y_true, y_score)
 
-    plt.plot(fpr, tpr, label=f"ROC curve (area {area:.4f})")
+    plt.plot(fpr, tpr, label=f"ROC krivulja (površina {area:.4f})")
     plt.plot(np.linspace(0, 1, 10), np.linspace(0, 1, 10), linestyle='dashed', color="gray",
-             label="Random classifier (area 0.5)")
-    plt.ylabel("True Positive Rate")
-    plt.xlabel("False Positive Rate")
-    plt.title("Receiver Operating Characteristic")
+             label="Nasumični klasifikator (površina 0.5)")
+    plt.ylabel("Stopa stvarnih pozitiva")
+    plt.xlabel("Stopa lažnog alarma")
     plt.ylim((0, 1.05))
     plt.xlim((0, 1.0))
     plt.legend()

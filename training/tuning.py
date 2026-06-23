@@ -1,18 +1,16 @@
-import torch.nn
-from os import path
-from utils.datasets import CharVocab, DummyLogDataSet
-from models.vaetransformer import TaggedTransformer
-from torch.optim import Adam
-from utils.train import tagged_train_loop
-from torch.utils.data import DataLoader
-from torch import save
 from models.embedder import ConvEmbedder
-import matplotlib.pyplot as plt
-
+from utils.datasets import CharVocab, DummyLogDataSet
+from torch.utils.data import DataLoader
+from utils.train import tagged_train_loop
+import torch
+from os import path
+from torch.optim import Adam
+from models.vaetransformer import TaggedTransformer
+from torch import save
 if __name__ == "__main__":
-    data_folder = "../train_data"
+    data_folder = "C:/Faks/Diplomski rad/data/tagged_gha/train"
     save_folder = "../trained_models"
-    image_folder = "../train_images"
+
     # ----------------------------------------------------------------------------
     char_vocab = CharVocab()
     embed_size = 32
@@ -41,31 +39,26 @@ if __name__ == "__main__":
     n_head = 2
     dim_forward = 1024
     d_model = 128
-    transformer_name = f"TaggedTransformer_E_{enc_layer}_H_{n_head}_F_{dim_forward}_D_{d_model}"
+    transformer_name = f"TaggedTransformer_E_{enc_layer}_H_{n_head}_F_{dim_forward}_D_{d_model}_tuned"
     model = TaggedTransformer(d_model=d_model, dim_forward=dim_forward, n_head=n_head, num_layers=enc_layer,
                               num_class=5)
     # ----------------------------------------------------------------------------
-    lr = 3e-3
+    lr = 1.5e-3
     optimizer = Adam(model.parameters(), lr=lr)
     # ----------------------------------------------------------------------------
 
-    step = 10
+    step = 30
     frame_size = 30
-    batch_size = 96
-    epochs = 50
-    out_every = 10
+    batch_size = 64
+    epochs = 15
+    out_every = 2
+    weights = torch.Tensor([0.05,0.1,0.5,0.5,0.2])
     dataset = DummyLogDataSet(data_folder,step=step,frame_size=frame_size,pad_tag=6)
     data_loader = DataLoader(dataset,batch_size=batch_size,shuffle=True)
     # ----------------------------------------------------------------------------
 
-    losses, model,_ = tagged_train_loop(model,embedder,optimizer,data_loader,epochs,show_every=out_every)
+    losses,_, model = tagged_train_loop(model,embedder,optimizer,data_loader,epochs,show_every=out_every,weights=weights)
 
     # ----------------------------------------------------------------------------
 
-    plt.plot(range(0, len(losses)), losses[0:])
-    plt.grid()
-    plt.title(f"{transformer_name}_loss")
-    plt.savefig(path.join(image_folder, f"{transformer_name}_loss.png"))
-    # ----------------------------------------------------------------------------
-
-    save(model.state_dict(), path.join(save_folder, transformer_name + ".pt"))
+    save(model.state_dict(), path.join(save_folder, transformer_name + "_tuned.pt"))

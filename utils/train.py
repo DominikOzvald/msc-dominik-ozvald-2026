@@ -176,14 +176,16 @@ def conv_lstm_train_loop(model, optimizer, data_loader, epochs: int = 200, show_
     return losses, best_model
 
 
-def tagged_train_loop(model, embedder, optimizer, data_loader, epochs, show_every):
+def tagged_train_loop(model, embedder, optimizer, data_loader, epochs, show_every, weights=None):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model.to(device)
     model.train()
     embedder.requires_grad_(False)
     embedder.to(device)
     embedder.eval()
-    criterion = torch.nn.CrossEntropyLoss(ignore_index=data_loader.dataset.pad_tag)
+    if weights is not None:
+        weights = weights.to(device)
+    criterion = torch.nn.CrossEntropyLoss(ignore_index=data_loader.dataset.pad_tag,weight=weights)
     losses = []
     batch_num = len(data_loader.dataset) // data_loader.batch_size + 1
     min_loss = 100.0
@@ -217,4 +219,4 @@ def tagged_train_loop(model, embedder, optimizer, data_loader, epochs, show_ever
         losses.append(train_loss / batch_num)
 
     print(f"Min loss: {min_loss}")
-    return losses, best_model
+    return losses, best_model, model
