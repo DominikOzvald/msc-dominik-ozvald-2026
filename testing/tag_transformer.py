@@ -1,13 +1,12 @@
 import numpy as np
 from torch.utils.data import DataLoader
-
 from models.embedder import ConvEmbedder
 from models.transformer import TaggedTransformer
 from utils.datasets import DummyLogDataSet
 from utils.embeddings import CharVocab
 import torch.nn
 from os import path
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report, f1_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
 import matplotlib.pyplot as plt
 
 
@@ -100,10 +99,11 @@ if __name__ == "__main__":
     rep = classification_report(y_true, y_pred, labels=[0, 1, 2, 3, 4],
                                 target_names=["Standard", "Flaky", "Drift", "Security", "Silent"], zero_division=np.nan)
     rep_dict = classification_report(y_true, y_pred, labels=[0, 1, 2, 3, 4],
-                                target_names=["Standard", '"Flaky"', "Pomak", "Sigurnost", "Tihi"], zero_division=np.nan,output_dict=True)
-    y_pred = y_pred[y_true!=0]
-    y_true = y_true[y_true!=0]
-    anomaly_acc = torch.sum(y_pred==y_true)/len(y_true)
+                                     target_names=["Standard", '"Flaky"', "Pomak", "Sigurnost", "Tihi"],
+                                     zero_division=np.nan, output_dict=True)
+    y_pred = y_pred[y_true != 0]
+    y_true = y_true[y_true != 0]
+    anomaly_acc = torch.sum(y_pred == y_true) / len(y_true)
 
     with open(path.join(image_folder, f"{transformer_name}_report.txt"), "w") as f:
         f.write(rep)

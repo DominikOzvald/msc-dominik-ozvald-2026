@@ -45,6 +45,7 @@ class PredTransformer(torch.nn.Module):
 
         return out
 
+
 class TaggedTransformer(torch.nn.Module):
     def __init__(self, d_model: int = 128, dim_forward: int = 1024, n_head: int = 2,
                  num_layers: int = 2, num_class: int = 5):

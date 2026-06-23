@@ -4,10 +4,8 @@ from utils.datasets import CharVocab, DummyLogDataSet
 from models.embedder import ConvEmbedder
 from models.transformer import PredTransformer
 from torch.utils.data import DataLoader
-from utils.train import transformer_loss
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-import math
 import numpy as np
 from sklearn.metrics import roc_curve, roc_auc_score
 

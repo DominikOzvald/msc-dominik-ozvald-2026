@@ -7,6 +7,7 @@ from os import path
 from torch.optim import Adam
 from models.transformer import TaggedTransformer
 from torch import save
+
 if __name__ == "__main__":
     data_folder = "C:/Faks/Diplomski rad/data/tagged_gha/train"
     save_folder = "../trained_models"
@@ -52,12 +53,13 @@ if __name__ == "__main__":
     batch_size = 64
     epochs = 15
     out_every = 2
-    weights = torch.Tensor([0.05,0.1,0.5,0.5,0.2])
-    dataset = DummyLogDataSet(data_folder,step=step,frame_size=frame_size,pad_tag=6)
-    data_loader = DataLoader(dataset,batch_size=batch_size,shuffle=True)
+    weights = torch.Tensor([0.05, 0.1, 0.5, 0.5, 0.2])
+    dataset = DummyLogDataSet(data_folder, step=step, frame_size=frame_size, pad_tag=6)
+    data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     # ----------------------------------------------------------------------------
 
-    losses,_, model = tagged_train_loop(model,embedder,optimizer,data_loader,epochs,show_every=out_every,weights=weights)
+    losses, _, model = tagged_train_loop(model, embedder, optimizer, data_loader, epochs, show_every=out_every,
+                                         weights=weights)
 
     # ----------------------------------------------------------------------------
 

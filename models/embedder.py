@@ -2,7 +2,6 @@ import torch.nn
 from models.convlstm import ConvLSTM
 
 
-
 class ConvEmbedder(torch.nn.Module):
     def __init__(self, embed_size: int, hidden_size_enc: int, hidden_size_dec: int, latent_size: int, vocab_size: int,
                  use_embed_matrix: bool = False, max_in_len: int = 256,
@@ -16,6 +15,6 @@ class ConvEmbedder(torch.nn.Module):
         b, t, f = x.shape
         x_re = x.view(b * t, -1)
         lengths_re = lengths.view(b * t)
-        encoded = self.conv_lstm.get_z(x_re,lengths_re)
+        encoded = self.conv_lstm.get_z(x_re, lengths_re)
         encoded = encoded.view(b, t, -1)
         return encoded

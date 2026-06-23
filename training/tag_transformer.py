@@ -54,11 +54,11 @@ if __name__ == "__main__":
     batch_size = 96
     epochs = 50
     out_every = 10
-    dataset = DummyLogDataSet(data_folder,step=step,frame_size=frame_size,pad_tag=6)
-    data_loader = DataLoader(dataset,batch_size=batch_size,shuffle=True)
+    dataset = DummyLogDataSet(data_folder, step=step, frame_size=frame_size, pad_tag=6)
+    data_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     # ----------------------------------------------------------------------------
 
-    losses, model,_ = tagged_train_loop(model,embedder,optimizer,data_loader,epochs,show_every=out_every)
+    losses, model, _ = tagged_train_loop(model, embedder, optimizer, data_loader, epochs, show_every=out_every)
 
     # ----------------------------------------------------------------------------
 

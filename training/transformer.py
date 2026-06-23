@@ -1,13 +1,12 @@
 import torch.nn
 from os import path
-from models.convlstm import ConvLSTM
 from utils.datasets import CharVocab, TransformerDataset
 from models.transformer import PredTransformer
 from torch.optim import Adam
 from utils.train import transformer_train_loop
 from torch.utils.data import DataLoader
 from torch import save
-from models.embedder import Embedder, ConvEmbedder
+from models.embedder import ConvEmbedder
 import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
