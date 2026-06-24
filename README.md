@@ -14,11 +14,11 @@ $ pip install torch numpy scikit-learn matplotlib
 ```
 Kloniranje repozitorija
 ```
-$ git clone https://github.com/DominikOzvald/DO-DR-code.git
+$ git clone https://github.com/DominikOzvald/msc-dominik-ozvald-2026.git
 ```
 Pokretanje ispitivanja 
 ```
-$ cd DO-DR-code
+$ cd msc-dominik-ozvald-2026
 ```
 ```
 $ python -m src.ML.testing.tag_transformer
