@@ -1,7 +1,0 @@
-success         : 483408 => 83.16%
-failure         : 091240 => 15.70%
-neutral         : 000020 => 0.00%
-skipped         : 004123 => 0.71%
-startup_failure : 000375 => 0.06%
-action_required : 000447 => 0.08%
-cancelled       : 001713 => 0.29%
