@@ -83,7 +83,7 @@ class ConvLSTMDec(torch.nn.Module):
         return out
 
 
-class ConvLSTM(torch.nn.Module):
+class ConvLSTMAutoenkoder(torch.nn.Module):
     def __init__(self, embed_size: int, hidden_size_enc: int, hidden_size_dec: int, latent_size: int, vocab_size: int,
                  use_embed_matrix: bool = False, max_in_len: int = 256,
                  letter_chunk: int = 8):
