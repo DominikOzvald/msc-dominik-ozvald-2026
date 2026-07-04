@@ -41,7 +41,7 @@ if __name__ == "__main__":
     dec_enc_layer = 2
     n_head = 2
     dim_forward = 1024
-    transformer_name = f"PredTransformer_DE_{dec_enc_layer}_H_{n_head}_F_{dim_forward}"
+    transformer_name = f"RecTransformer_DE_{dec_enc_layer}_H_{n_head}_F_{dim_forward}"
     d_model = 128
     transformer = RecTransformer(d_model=d_model, n_head=n_head, enc_layer=dec_enc_layer,
                                  dec_layer=dec_enc_layer, dim_forward=dim_forward)
