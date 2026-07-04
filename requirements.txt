@@ -1,0 +1,5 @@
+python 3.10+
+torch 2.5.1+
+numpy 2.2.6+
+scikit-learn 1.5.2+
+matplotlib 3.9.2+
