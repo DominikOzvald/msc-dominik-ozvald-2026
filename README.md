@@ -6,19 +6,42 @@
 Definirane su četiri vrste anomalija promatrane u radu: nestabilni ispiti, konfiguracijski pomak, tihi neuspjesi i sigurnosne anomalije.. Za potrebe učenja i ispitivanja izrađen je skup podataka koji simulira izgradnju i ispitivanje poslužiteljske aplikacije u koji su ubačeni različiti tipovi anomalija, uz kontrolirano umetanje različitih tipova anomalija. 
 Dodatno je pristup provjeren na označenom podskupu stvarnih zapisa iz GHALogs skupa podataka. Izlučivanje značajki iz zapisa se radi pomoću autoenkodera koji koristi LSTM mrežu i jednodimenzionalnu konvoluciju za kodiranje zapisa u vektore jednake duljine. Dobiveni vektori se grupiraju u pomoću klizni prozora te prosljeđuju u dva modela temeljena na transformeru. Jedan model uči na označenim podacima i razvrstava anomalije po tipovima, a drugi rekonstruira ulazne vektore i određuje anomaliju po razlici između ulaznih i izlaznih vektora. 
 ## Struktura repozitorija
-Izvroni python kod se  nalazi u drekotirju src. Direktorij src sadrži pod direktorije ML i data_generation. Direktorij ML sadrži kod za arhitekturu, učenje i ispitivanje dubokih modela, a data_generation za generiranje podataka.
-ML/models sadrži razrede koji opisuju arhrekturu dubokih modela, ML/models/convlsrtm.py ospisuje Autoenkoder, ML/models/transformer.py opisjuje višeklasni i rekostukciski model transformera,
-a ML/models/embedder.py sadrži razred omotača oko autoenkodera koji služi za prvilno oblikovanje tenzora prije nego se proslijedi autoenkoderu. 
-ML/utils sadrži razrede za porcesiranje podatak i petlje za učenje modela. ML/utils/data.py sadrži funkcije za pred procesitanje zapisa. ML/utils/datasets.py sadrži razrede za učitavanje zapisa. 
-ML/utils/ebeddings.py sadrži razred koji dodjlejuje numerićke virjednosti ascii znakovima zapisa.
-ML/utils/train.py sadrži petelje za učenje modela.
-ML/training sadrži skrpte za pokertanje učenja modela. ML/training/transformer.py uči rekosnturkcijsi model dok ML/training/tag_transfomer uči višeklasni model, a ML/training/convlstm.py autoenkoder. ML/training/tunning.py dodatno uči model transformera prije ispitvanja na GHALogs skupu podatak.
-ML/testing sadrži skripte za ispitavnaje modela. ML/testing/transformer.py isputije reksontukcijski model, a ML/testing/tag_transformer višeklasni model.
-U poddirektoriku data_generation nalazi se kod za generiranje umjetnih podataka. Data_generation/build.py simulira fazu igradnje aplikacije, a data_generation/test.py simulira jediničo ispitvanje. Paketi koji pojvljuju u konfiguracijskom pomaku su definirani u data_generation/package.json, a ispitne vrijednosti za nestabilne ispite u data_generation/test_valures.json
-Direktorij data sadrži generirani umjetni skup podataka i označani pod skup podatak iz GHALogs skupa podataka. Data/dummy sadrži umjetno generirane podatake podjeljene u skup za učenje, ispitivanje i učenje rekonstukcijskog modela. Podaci za učenje rekonstrukcijskog modela ne sadrže anomalije. Data/gha sadrži stvarne zapise podijljen u podatke za ispitvanje i učenje. 
-Direkotirj models sadrži učene modele. Spremljeni su višeklansi model prije i poslje doatanog učenja na GHALogs skupu podataka, nazvani TaggedTransformer_E_2_H_2_F_1024_D_128.pt i TaggedTransformer_E_2_H_2_F_1024_D_128_tuned.pt. 
-Rekosrukcijski model je spremljen kao RecTransformer_DE_2_H_2_F_1024.pt, a autoenkoder ConvLSTM_E_32_H_196_L_128.pt. 
-Rezultati ispitavanja ovih modela se nalaze u direktoriju results. Rezultati su prikazani kao slike i txt dataoteke. Slike prikazuju matrice zabune višekalsnog modela i ROC krivulju rekonstukcijskog modela. U .txt datotekama se nalze preciznost, odziv, F1 mjera i njihov makro prosjek. Slike i .txt datoteke u svojem imenu sadrže ime mopdela na kojeg se odnose.
+Direktorij src predstavlja jezgru implementacije i podijeljen je na dva primarna poddirektorija: ML (strojno učenje) i data_generation (generiranje umjetnih podataka).\
+Src/ML sadrži logiku za definiranje arhitektura dubokih modela, njihovo učenje i ispitivanje. U njemu se nalaze sljedeće datoteke i direktoriji.
+- ML/models/ - Arhitektura modela
+  - convlstm.py: Sadrži implementaciju autoenkodera
+  - transformer.py: Sadrži definicije rezrede (engl. class) za višeklasni i rekonstrukcijski model transformera
+  - embedder.py: Sadrži klasu omotača (engl. wrapper) oko autoenkodera koja služi za pravilno oblikovanje i pripremu tenzora prije prosljeđivanja koderu autoenkodera.
+- ML/utils/ - Pomoćne funkcije i procesiranje zapisa:
+  - data.py: Sadrži funkcije za pretprocesiranje tekstualnih zapisa
+  - datasets.py: Implementira prilagođene razrede za učitavanje podataka
+  - embeddings.py: Sadrži klasu zaduženu za dodjeljivanje numeričkih vrijednosti ASCII znakovima unutar zapisa
+  - train.py: Sadrži petlje za učenje modela
+- ML/training/ - skripte za pokretanje učenja 
+  - convlstm.py: Pokreće proces učenja autoenkodera.
+  - transformer.py: Koristi se za treniranje rekonstrukcijskog modela transformera.
+  - tag_transformer.py: Pokreće učeanje višeklasnog modela transformera
+  - tuning.py: Sadrži logiku za dodatno učenje višeklasnog modela transformera na stvarnim podacima
+- ML/testing/ Evaluacijske skripte:
+  - transformer.py: Služi za ispitivanje rekonstrukcijskog modela.
+  - tag_transformer.py: Služi za ispitivanje višeklasnog modela.
+
+Src/data_generation/ sadrži skripte korištene za generiranje umjetnog skupa podataka. U njemu se nalaze sljedeće datoteke
+- build.py: Simulira fazu izgradnje aplikacije
+- test.py: Simulira izvođenje jediničnih testova
+- package.json: Definira pakete koji se pojavljuju u konfiguracijskom pomaku.
+- test_values.json: Sadrži ispitne vrijednosti koje se koriste za simulaciju nestabilnih ispita
+
+Direktorij data organiziran je u dvije cjeline s obzirom na podrijetlo i namjenu podataka. Data/dummy/ sadrži umjetno generirane podatke podijeljene na skupove za učenje, ispitivanje i učenje rekonstrukcijskog modela. Skup namijenjen rekonstrukcijskom modelu ne sadrži anomalije. Data/gha/ sadrži stvarne, označene zapise iz GHALogs skupa podataka, podijeljene na dio za učenje i ispitivanje.\
+Unutar direktorija models nalaze se sačuvane težine obučenih modela u .pt formatu, nazvane prema arhitekturi. U ovom direktoriju nalaze se sljedeći artefakti:
+- ConvLSTM_E_32_H_196_L_128.pt: Sačuvani model autoenkodera
+- RecTransformer_DE_2_H_2_F_1024.pt: Rekonstrukcijski model transformera
+- TaggedTransformer_E_2_H_2_F_1024_D_128.pt: Višeklasni model prije dodatnog učenja.
+- TaggedTransformer_E_2_H_2_F_1024_D_128_tuned.pt: Višeklasni model nakon dodatnog učenja (finog podešavanja) na GHALogs skupu podataka
+
+Direktorij results sadrži rezultate evaluacije modela. Datoteke u svojem nazivu sadrže ime pripadajućeg modela radi lakše identifikacije. U direktoriju se nalaze slike koje prikazuju matrice zabune za višeklasne modele, kao i ROC krivulje za rekonstrukcijski model. Osim slika u direktoriju se nalaze .txt datoteke s numeričkim vrijednostima preciznosti, odziva, F1 mjere i njihovim makro prosjekom.
+
+    
 ## Preduvjeti
 Sva kod u ovom repozitorjiju je piasan u porgramskogm jeziku Python pa je za njegovo pokretanje dovoljno instalirati Python i potrebene python pakete.
 Preduvjeti za pokretanje koda su python 3.10+, torch minimalno 2.5.1, numpy minimalno 2.2.6, scikit-learn minimalno 1.5.2 i matplotlib minimalno 3.9.2
@@ -42,6 +65,6 @@ $ python -m src.ML.testing.tag_transformer
 $ python -m src.ML.testing.transformer
 ```
 ## Minimalni radni primjer i Reprodukcija rezultata
-pokretanjem gore navedenih naredbi će se pokrenuti ispitivanje naučenih modela i prikazati rezultati tog ispitivanja koji su jednaki rezultatima u direktoriju results 
+Pokretanjem navedenih naredba instalirati će se potrebni python paket za ispitivanje. Rezultat ispitivanja višeklasnog će biti matrica zabune kao ona u direktoriju results zajedno s ispisom preciznosti, odziva, F1 mjere i njihovog makro prosjeka na standardni izlaz. Kod ispitivanja rekosntrukcijskog modela rezultat će bit slika ROC krivulje kao ona u direktoriju results. 
 ## Licence
 Na ovaj kod se odnosi MIT licenca, a na GHALogs skup podataka se odnosi Creative Commons Attribution Share Alike 4.0 international licenca. Skup podatak se može pronaći na poveznici https://zenodo.org/records/10154920
