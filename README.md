@@ -1,28 +1,27 @@
 # Primjena AIOps metodologije za detekciju anomalija u GitHub Actions cjevovodima
  Dominik Ožvald, Vlado Sruk\
- Ovaj repozitorij sadrži python kod za arhitekturu, učenje i ispitivanje dubokih modela za detekciju anomalija u zapisima nastalim u GitHub Actions cjevovodu koji je dio diplomksog rada Primjena AIOps metodologije za detekciju anomalija u GitHub Actions cjevovodima Dominika Ožvalda godine 2026. 
- Takvi zapisi nastaju tijekom izvođenja CI/CD cjevovoda i mogu sadržavati obrasce koji upućuju na kvarove, degradacije pouzdanosti, konfiguracijske probleme ili sigurnosne rizike, čak i kada radni tok ne završava nužno neuspjehom.
- Osim koda za modele sadrži i kod koji je korišten za generiranje umjetnog skupa podataka na kojem su modeli učeni. Ovaj kod je vazan uz diplomski rad koji se nalazi u direkotirju docs.
-Definirane su četiri vrste anomalija promatrane u radu: nestabilni ispiti, konfiguracijski pomak, tihi neuspjesi i sigurnosne anomalije. Za potrebe učenja i ispitivanja izrađen je skup podataka koji simulira izgradnju i ispitivanje poslužiteljske aplikacije u koji su ubačeni različiti tipovi anomalija, uz kontrolirano umetanje različitih tipova anomalija. 
-Dodatno je pristup provjeren na označenom podskupu stvarnih zapisa iz GHALogs skupa podataka. Izlučivanje značajki iz zapisa se radi pomoću autoenkodera koji koristi LSTM mrežu i jednodimenzionalnu konvoluciju za kodiranje zapisa u vektore jednake duljine. Dobiveni vektori se grupiraju u pomoću klizni prozora te prosljeđuju u dva modela temeljena na transformeru. Jedan model uči na označenim podacima i razvrstava anomalije po tipovima, a drugi rekonstruira ulazne vektore i određuje anomaliju po razlici između ulaznih i izlaznih vektora. 
+ Ovaj repozitorij sadrži izvorni Python kod za implementaciju arhitekture, postupak treniranja i evaluaciju modela dubokog učenja namijenjenih detekciji anomalija u zapisima (engl. logs) nastalim unutar radnih tokova GitHub Actions cjevovoda. 
+ Repozitorij je nastao u sklopu diplomskog rada „Primjena AIOps metodologije za detekciju anomalija u GitHub Actions cjevovodima” Dominika Ožvalda (2026.), čiji se cjeloviti tekst nalazi u direktoriju docs/. 
+ U radu su definirane i analizirane četiri ključne kategorije anomalija: nestabilni ispit (engl. flaky tests), konfiguracijski pomak (engl. configuration drift), tihi neuspjesi (engl. silent failures) i sigurnosne anomalije.
 ## Struktura repozitorija
-Direktorij src predstavlja jezgru implementacije i podijeljen je na dva primarna poddirektorija: ML (strojno učenje) i data_generation (generiranje umjetnih podataka).\
-Src/ML sadrži logiku za definiranje arhitektura dubokih modela, njihovo učenje i ispitivanje. U njemu se nalaze sljedeće datoteke i direktoriji.
-- ML/models/ - Arhitektura modela
+Programsko rješenje podijeljeno je u nekoliko glavnih direktorija. Cjelokupni izvorni kod nalazi se unutar direktorija src, dok su podaci, trenirani modeli i rezultati organizirani u zasebne cjeline radi modularnosti i lakše reproduktivnosti rezultata. \
+Direktorij src predstavlja jezgru implementacije i podijeljen je na tri primarna poddirektorija: GHA_AIOps (GHA-AIOps pristup), data_generation (generiranje umjetnih podataka) i integration (Integracija GHA-AIOps pristupa u radni tok)\
+Src/GHA_AIOps sadrži logiku za definiranje arhitektura dubokih modela, njihovo učenje i ispitivanje. U njemu se nalaze sljedeće datoteke i direktoriji.
+- GHA_AIOps/models/ - Arhitektura modela
   - convlstm.py: Sadrži implementaciju autoenkodera
-  - transformer.py: Sadrži definicije rezrede (engl. class) za višeklasni i rekonstrukcijski model transformera
+  - transformer.py: Sadrži definicije razrede (engl. class) za višeklasni i rekonstrukcijski model transformera
   - embedder.py: Sadrži klasu omotača (engl. wrapper) oko autoenkodera koja služi za pravilno oblikovanje i pripremu tenzora prije prosljeđivanja koderu autoenkodera.
-- ML/utils/ - Pomoćne funkcije i procesiranje zapisa:
+- GHA_AIOps/utils/ - Pomoćne funkcije i procesiranje zapisa:
   - data.py: Sadrži funkcije za pretprocesiranje tekstualnih zapisa
   - datasets.py: Implementira prilagođene razrede za učitavanje podataka
   - embeddings.py: Sadrži klasu zaduženu za dodjeljivanje numeričkih vrijednosti ASCII znakovima unutar zapisa
   - train.py: Sadrži petlje za učenje modela
-- ML/training/ - skripte za pokretanje učenja 
+- GHA_AIOps/training/ - skripte za pokretanje učenja 
   - convlstm.py: Pokreće proces učenja autoenkodera.
   - transformer.py: Koristi se za treniranje rekonstrukcijskog modela transformera.
-  - tag_transformer.py: Pokreće učeanje višeklasnog modela transformera
+  - tag_transformer.py: Pokreće učenje višeklasnog modela transformera
   - tuning.py: Sadrži logiku za dodatno učenje višeklasnog modela transformera na stvarnim podacima
-- ML/testing/ Evaluacijske skripte:
+- GHA_AIOps/testing/ Evaluacijske skripte:
   - transformer.py: Služi za ispitivanje rekonstrukcijskog modela.
   - tag_transformer.py: Služi za ispitivanje višeklasnog modela.
 
@@ -65,6 +64,6 @@ $ python -m src.GHA_AIOps.evaluating.tag_transformer
 $ python -m src.GHA_AIOps.evaluating.transformer
 ```
 ## Minimalni radni primjer i Reprodukcija rezultata
-Pokretanjem navedenih naredba instalirati će se potrebni python paket za ispitivanje. Rezultat ispitivanja višeklasnog će biti matrica zabune kao ona u direktoriju results zajedno s ispisom preciznosti, odziva, F1 mjere i njihovog makro prosjeka na standardni izlaz. Kod ispitivanja rekosntrukcijskog modela rezultat će bit slika ROC krivulje kao ona u direktoriju results. 
+Pokretanjem navedenih naredba instalirat će se potrebni python paket za ispitivanje. Rezultat ispitivanja višeklasnog će biti matrica zabune kao ona u direktoriju results zajedno s ispisom preciznosti, odziva, F1 mjere i njihovog makro prosjeka na standardni izlaz. Kod ispitivanja rekosntrukcijskog modela rezultat će biti slika ROC krivulje kao ona u direktoriju results.
 ## Licence
 Na ovaj kod se odnosi MIT licenca, a na GHALogs skup podataka se odnosi Creative Commons Attribution Share Alike 4.0 international licenca. Skup podatak se može pronaći na poveznici https://zenodo.org/records/10154920
