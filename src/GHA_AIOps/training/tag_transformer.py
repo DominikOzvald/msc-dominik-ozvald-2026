@@ -1,12 +1,12 @@
 import torch.nn
 from os import path
-from src.ML.utils.datasets import CharVocab, DummyLogDataSet
-from src.ML.models.transformer import TaggedTransformer
+from src.GHA_AIOps.utils.datasets import CharVocab, DummyLogDataSet
+from src.GHA_AIOps.models.transformer import TaggedTransformer
 from torch.optim import Adam
-from src.ML.utils.train import tagged_train_loop
+from src.GHA_AIOps.utils.train import tagged_train_loop
 from torch.utils.data import DataLoader
 from torch import save
-from src.ML.models.embedder import ConvEmbedder
+from src.GHA_AIOps.models.embedder import ConvEmbedder
 
 if __name__ == "__main__":
     file_path = path.dirname(path.abspath(__file__))

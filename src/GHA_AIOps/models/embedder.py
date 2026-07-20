@@ -1,5 +1,5 @@
 import torch.nn
-from src.ML.models.convlstm import ConvLSTMAutoenkoder
+from src.GHA_AIOps.models.convlstm import ConvLSTMAutoenkoder
 
 
 class ConvEmbedder(torch.nn.Module):

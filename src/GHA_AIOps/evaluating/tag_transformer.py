@@ -2,10 +2,10 @@ import os.path
 
 import numpy as np
 from torch.utils.data import DataLoader
-from src.ML.models.embedder import ConvEmbedder
-from src.ML.models.transformer import TaggedTransformer
-from src.ML.utils.datasets import DummyLogDataSet
-from src.ML.utils.embeddings import CharVocab
+from src.GHA_AIOps.models.embedder import ConvEmbedder
+from src.GHA_AIOps.models.transformer import TaggedTransformer
+from src.GHA_AIOps.utils.datasets import DummyLogDataSet
+from src.GHA_AIOps.utils.embeddings import CharVocab
 import torch.nn
 from os import path
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report

@@ -59,10 +59,10 @@ Pokretanje ispitivanja
 $ cd msc-dominik-ozvald-2026
 ```
 ```
-$ python -m src.ML.testing.tag_transformer
+$ python -m src.GHA_AIOps.evaluating.tag_transformer
 ```
 ```
-$ python -m src.ML.testing.transformer
+$ python -m src.GHA_AIOps.evaluating.transformer
 ```
 ## Minimalni radni primjer i Reprodukcija rezultata
 Pokretanjem navedenih naredba instalirati će se potrebni python paket za ispitivanje. Rezultat ispitivanja višeklasnog će biti matrica zabune kao ona u direktoriju results zajedno s ispisom preciznosti, odziva, F1 mjere i njihovog makro prosjeka na standardni izlaz. Kod ispitivanja rekosntrukcijskog modela rezultat će bit slika ROC krivulje kao ona u direktoriju results. 

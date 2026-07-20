@@ -1,9 +1,9 @@
-from src.ML.utils.datasets import CharVocab, DummyCharDataSet
-from src.ML.utils.data import fixed_pad_fn_factory
+from src.GHA_AIOps.utils.datasets import CharVocab, DummyCharDataSet
+from src.GHA_AIOps.utils.data import fixed_pad_fn_factory
 from torch.optim import Adam
-from src.ML.models.convlstm import ConvLSTMAutoenkoder
+from src.GHA_AIOps.models.convlstm import ConvLSTMAutoenkoder
 from torch.utils.data import DataLoader
-from src.ML.utils.train import conv_lstm_train_loop
+from src.GHA_AIOps.utils.train import conv_lstm_train_loop
 from os import path
 from torch import save
 

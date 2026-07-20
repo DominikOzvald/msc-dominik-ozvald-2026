@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset
-from src.ML.utils.embeddings import CharVocab
-from src.ML.utils.data import extract_raw, extract_tagged
+from src.GHA_AIOps.utils.embeddings import CharVocab
+from src.GHA_AIOps.utils.data import extract_raw, extract_tagged
 import os
 import bisect
 import torch.nn.functional as F
