@@ -31,6 +31,10 @@ Src/data_generation/ sadrži skripte korištene za generiranje umjetnog skupa po
 - package.json: Definira pakete koji se pojavljuju u konfiguracijskom pomaku.
 - test_values.json: Sadrži ispitne vrijednosti koje se koriste za simulaciju nestabilnih ispita
 
+Src/integration/ sadrži skripte za dohvat zapisa i integriranje njihove obrade u radni tok.  U njemu se nalaze sljedeće datoteke
+- action.yml: Definira GitHuba akciju i njezine korake
+- fetch_logs.py: Dohvaća zapise i sprema hi u virtualno okruženje
+- detect.py: Učitava model i koristi ih za detekciju anomalija i izradu izvještaja
 Direktorij data organiziran je u dvije cjeline s obzirom na podrijetlo i namjenu podataka. Data/dummy/ sadrži umjetno generirane podatke podijeljene na skupove za učenje, ispitivanje i učenje rekonstrukcijskog modela. Skup namijenjen rekonstrukcijskom modelu ne sadrži anomalije. Data/gha/ sadrži stvarne, označene zapise iz GHALogs skupa podataka, podijeljene na dio za učenje i ispitivanje.\
 Unutar direktorija models nalaze se sačuvane težine obučenih modela u .pt formatu, nazvane prema arhitekturi. U ovom direktoriju nalaze se sljedeći artefakti:
 - ConvLSTM_E_32_H_196_L_128.pt: Sačuvani model autoenkodera
