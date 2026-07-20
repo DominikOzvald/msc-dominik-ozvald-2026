@@ -1,0 +1,50 @@
+name: "Log Anomaly Detection"
+description: ""
+inputs:
+    github-token:
+        required: true
+    job-name:
+        required: true
+    mail-address:
+        required: true
+    server-address:
+        required: true
+    mail-username:
+        required: true
+    mail-password:
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Fetch logs
+          shell: bash
+          run: python ${{ github.action_path }}/fetch_logs.py -t ${{inputs.github-token}} -j ${{inputs.job-name}}
+        - name: Install dependencies
+          shell: bash
+          run: pip install torch scikit-learn
+        - name: Detection
+          shell: bash
+          id: detector
+          run: |
+              python ${{ github.action_path }}/detect.py -j ${{inputs.job-name}} -p ${{ github.action_path }} > anomaly.txt
+              if [ -f body.html ]; then
+                echo "detection=true" >> $GITHUB_OUTPUT
+              else
+                echo "detection=false" >> $GITHUB_OUTPUT
+              fi
+        - name: Send mail notification
+          uses: dawidd6/action-send-mail@v3
+          if: steps.detector.outputs.detection == 'true'
+          with:
+              server_address: ${{inputs.server-address}}
+              server_port: 465
+              secure: true
+
+              username: ${{ inputs.mail-username }}
+              password: ${{ inputs.mail-password }}
+              to: ${{ inputs.mail-address}}
+              subject: "Anomaly detection alert"
+              from: GitHub Log Bot <${{ inputs.mail-username }}>
+              html_body: file://body.html
+              attachments: anomaly.txt
