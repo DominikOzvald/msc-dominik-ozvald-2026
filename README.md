@@ -8,7 +8,7 @@ Institution: University of Zagreb Faculty of Electrical Engineering and Computin
 
  This repository contains the Python source code for the architecture, training procedure, and evaluation of deep learning models intended for anomaly detection in logs generated within GitHub Actions pipeline workflows. 
  The repository was created as part of the master's thesis "Application of AIOps methodology for anomaly detection in GitHub Actions pipelines" by Dominik Ožvald (2026), the full contents of which can be found in the docs/ directory. 
- Key categories of anomalies defined and analyzed in the paper are: flaky tests, configuration drift, silent failures and security anomalies.
+ Key categories of anomalies defined and analyzed in the thesis are: flaky tests, configuration drift, silent failures and security anomalies.
 
 Mian features:
 - preprocessing of GitHub Actions logs;
@@ -19,49 +19,33 @@ Mian features:
 - GitHub Actions integration;
 - anomaly reporting and notification.
 
-## Struktura repozitorija
-Programsko rješenje podijeljeno je u nekoliko glavnih direktorija. Cjelokupni izvorni kod nalazi se unutar direktorija src, dok su podaci, trenirani modeli i rezultati organizirani u zasebne cjeline radi modularnosti i lakše reproduktivnosti rezultata. \
-Direktorij src predstavlja jezgru implementacije i podijeljen je na tri primarna poddirektorija: GHA_AIOps (GHA-AIOps pristup), data_generation (generiranje umjetnih podataka) i integration (Integracija GHA-AIOps pristupa u radni tok)\
-Src/GHA_AIOps sadrži logiku za definiranje arhitektura dubokih modela, njihovo učenje i ispitivanje. U njemu se nalaze sljedeće datoteke i direktoriji.
-- GHA_AIOps/models/ - Arhitektura modela
-  - convlstm.py: Sadrži implementaciju autoenkodera
-  - transformer.py: Sadrži definicije razrede (engl. class) za višeklasni i rekonstrukcijski model transformera
-  - embedder.py: Sadrži klasu omotača (engl. wrapper) oko autoenkodera koja služi za pravilno oblikovanje i pripremu tenzora prije prosljeđivanja koderu autoenkodera.
-- GHA_AIOps/utils/ - Pomoćne funkcije i procesiranje zapisa:
-  - data.py: Sadrži funkcije za pretprocesiranje tekstualnih zapisa
-  - datasets.py: Implementira prilagođene razrede za učitavanje podataka
-  - embeddings.py: Sadrži klasu zaduženu za dodjeljivanje numeričkih vrijednosti ASCII znakovima unutar zapisa
-  - train.py: Sadrži petlje za učenje modela
-- GHA_AIOps/training/ - skripte za pokretanje učenja 
-  - convlstm.py: Pokreće proces učenja autoenkodera.
-  - transformer.py: Koristi se za treniranje rekonstrukcijskog modela transformera.
-  - tag_transformer.py: Pokreće učenje višeklasnog modela transformera
-  - tuning.py: Sadrži logiku za dodatno učenje višeklasnog modela transformera na stvarnim podacima
-- GHA_AIOps/testing/ Evaluacijske skripte:
-  - transformer.py: Služi za ispitivanje rekonstrukcijskog modela.
-  - tag_transformer.py: Služi za ispitivanje višeklasnog modela.
+## Repository structure
+The software implementation is divided into several main directories. 
+The entire source code is located inside the src directory, 
+while the data, trained models and results are organized 
+into separate units for modularity and easier reproducibility of the results.\
+The src directory represents the core of the implementation and is divided into three primary subdirectories:
+GHA_AIOps, data_generation and integration.\
+`Src/GHA_AIOps` contains logic for defining deep model architectures, learning and testing. 
+It contains the following directories:
+- `GHA_AIOps/models` - Model architecture
+- `GHA_AIOps/utils` - Auxiliary functions and log processing
+- `GHA_AIOps/training` - Scripts to run training
+- `GHA_AIOps/evaluating` Evaluation scripts
 
-Src/data_generation/ sadrži skripte korištene za generiranje umjetnog skupa podataka. U njemu se nalaze sljedeće datoteke
-- build.py: Simulira fazu izgradnje aplikacije
-- test.py: Simulira izvođenje jediničnih testova
-- package.json: Definira pakete koji se pojavljuju u konfiguracijskom pomaku.
-- test_values.json: Sadrži ispitne vrijednosti koje se koriste za simulaciju nestabilnih ispita
-
-Src/integration/ sadrži skripte za dohvat zapisa i integriranje njihove obrade u radni tok.  U njemu se nalaze sljedeće datoteke
-- action.yml: Definira GitHuba akciju i njezine korake
-- fetch_logs.py: Dohvaća zapise i sprema hi u virtualno okruženje
-- detect.py: Učitava model i koristi ih za detekciju anomalija i izradu izvještaja
-
-Direktorij data organiziran je u dvije cjeline s obzirom na podrijetlo i namjenu podataka. Data/dummy/ sadrži umjetno generirane podatke podijeljene na skupove za učenje, ispitivanje i učenje rekonstrukcijskog modela. Skup namijenjen rekonstrukcijskom modelu ne sadrži anomalije. Data/gha/ sadrži stvarne, označene zapise iz GHALogs skupa podataka, podijeljene na dio za učenje i ispitivanje.\
-Unutar direktorija models nalaze se sačuvane težine obučenih modela u .pt formatu, nazvane prema arhitekturi. U ovom direktoriju nalaze se sljedeći artefakti:
-- ConvLSTM_E_32_H_196_L_128.pt: Sačuvani model autoenkodera
-- RecTransformer_DE_2_H_2_F_1024.pt: Rekonstrukcijski model transformera
-- TaggedTransformer_E_2_H_2_F_1024_D_128.pt: Višeklasni model prije dodatnog učenja.
-- TaggedTransformer_E_2_H_2_F_1024_D_128_tuned.pt: Višeklasni model nakon dodatnog učenja (finog podešavanja) na GHALogs skupu podataka
-
-Direktorij results sadrži rezultate evaluacije modela. Datoteke u svojem nazivu sadrže ime pripadajućeg modela radi lakše identifikacije. U direktoriju se nalaze slike koje prikazuju matrice zabune za višeklasne modele, kao i ROC krivulje za rekonstrukcijski model. Osim slika u direktoriju se nalaze .txt datoteke s numeričkim vrijednostima preciznosti, odziva, F1 mjere i njihovim makro prosjekom.
-
-    
+`Src/data_generation/` contains the scripts used to generate the artificial dataset. 
+The data is generated by simulating the building and testing of the server application.\
+`Src/integration/` contains the scripts used in the GitHub action that integrates the GHA-AIOps approach into CI/CD workflows.\
+The data directory is organized into two parts with regard to the origin and purpose of the data. 
+`Data/dummy/` contains artificially generated data divided into sets for learning, testing and learning the reconstruction model. 
+The set intended for the reconstruction model does not contain anomalies. 
+`Data/gha/` contains real, annotated logs from the GHALogs dataset, split into a learning and testing section.\
+Inside the models directory are stored weights of trained models in .pt format, named according to the architecture.
+The results directory contains the results of the model evaluation. 
+The files contain the name of the corresponding model in their name for easier identification. 
+The directory contains images showing the confusion matrices for the multiclass models as well as the ROC curves for the reconstruction model. 
+In addition to images, the directory contains .txt files with numerical values of precision, recall, F1 measure and their macro average.
+`Docs` contains the full contents of text of the master's thesis.
 ## Requirements
 - Python 3.10 or newer
 - Dependencies listed in  [`requirements.txt`](requirements.txt).
@@ -79,8 +63,10 @@ $ git clone https://github.com/DominikOzvald/msc-dominik-ozvald-2026.git
  The data directory is organized into two sections based on data origin and purpose. 
  The `Data/dummy/` directory contains synthetically generated data divided into sets for training, testing, and training the reconstruction model; the set intended for the reconstruction model contains no anomalies. 
  Anomalies form the four key categories were inserted and automatically labeled. This set was generated using scripts form `src/data_generation` in a GitHub Action workflow.\
- The `Data/gha/` directory contains real, labeled logs from the GHALogs dataset, divided into training and testing subsets. This data was taken from real public GitHub repositories and labeled by hand for the use in this thesis.
- This only a subset containing only workflow runs with anomalies.
+ The `Data/gha/` directory contains real, labeled logs from the GHALogs dataset, divided into training and testing subsets. 
+ This data was gathered from real public GitHub repositories and labeled by hand for the use in this thesis.
+ This only a subset containing only workflow runs with anomalies.\
+ The synthetic data set is used to train and evaluate the models, while GHALogs is use to evaluate the transferability of the GHA-AIOps approach to real CI/CD logs. 
  
 ## Models
 - **autoencoder**:
@@ -132,6 +118,17 @@ $ python -m src.GHA_AIOps.evaluating.transformer
 The result of this command should be the following ROC curve:  ![RecTreansformer_DE_2_H_2_F_1024_ROC.png](results%2FRecTreansformer_DE_2_H_2_F_1024_ROC.png)
 
 ## GitHub Actions integration 
+The GHA-AIOps approach has been integrated in to CI/CD pipelines using a custom GitHub Action.
+This action runs in a separate job from the job whos logs are being analyzed. 
+When the job concludes its logs are fetched and feed to the models.
+If an anomaly is detected the action notifies the user by sending an email.
+The implementation of this action in contained in the `src/integration` directory. 
+This implementation can not be run from this repository, 
+but it is identical to the implementation in separate repository witch can be used as GitHub Actions pipeline.
+The action steps are defined in `action.yml` file. 
+Python script `fetch_log.py` is used to fetch and store logs, 
+while `detect.py` is used to load models, preprocess and analyze logs.
+A standard GitHub action dawidd6/action-send-mail is used to notify the user.
 
 ## Citation
  
