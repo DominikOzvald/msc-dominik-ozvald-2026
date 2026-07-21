@@ -35,6 +35,7 @@ keywords:
   - deep learning
   - transformer
   - autoencoder
+
 references:
   - type: thesis
 
@@ -61,8 +62,28 @@ references:
 
     notes: >-
       Master's thesis supervised by prof. Vlado Sruk.
-	  Recommended IEEE-style citation: D. Ožvald, “Primjena AIOps metodologije
-    za detekciju anomalija u GitHub Actions cjevovodima” [“Application of the
-    AIOps Methodology for Anomaly Detection in GitHub Actions Pipelines”],
-    M.S. thesis, University of Zagreb Faculty of Electrical Engineering and
-    Computing, Zagreb, Croatia, 2026.
+      Recommended IEEE-style citation: D. Ožvald, “Primjena AIOps metodologije
+      za detekciju anomalija u GitHub Actions cjevovodima” [“Application of the
+      AIOps Methodology for Anomaly Detection in GitHub Actions Pipelines”],
+      M.S. thesis, University of Zagreb Faculty of Electrical Engineering and
+      Computing, Zagreb, Croatia, 2026.
+references:
+  - type: data
+
+    authors:
+      - family-names: "Moriconi"
+        given-names: "Florent"
+      - family-names: "Durieux"
+        given-names: "Thomas"
+      - family-names: "Falleri"
+        given-names: "Jean-Rémy"
+      - family-names: "Troncy"
+        given-names: "Raphael"
+      - family-names: "Francillon"
+        given-names: "Aurélien"
+
+    title: "GHALogs: Large-Scale Dataset of GitHub Actions Runs"
+    version: "1.0.0"
+    date-released: "2024-12-04"
+    doi: "10.5281/zenodo.10154920"
+    license: CC-BY-SA-4.0
