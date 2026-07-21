@@ -116,11 +116,11 @@ $ python -m src.GHA_AIOps.evaluating.tag_transformer
 ```
 The result of this command should be the following confusion matrix: ![TaggedTransformer_E_2_H_2_F_1024_D_128_matrix.png](results%2FTaggedTransformer_E_2_H_2_F_1024_D_128_matrix.png)  
 Stdout should show the following metrics:\
-Standard : {'precision': 0.9943000139024051, 'recall': 0.9981856245638521, 'f1-score': 0.9962390305056414, 'support': 7165.0}\
-"Flaky" : {'precision': 0.9659090909090909, 'recall': 0.940959409594096, 'f1-score': 0.9532710280373832, 'support': 271.0}\
-Pomak : {'precision': 1.0, 'recall': 0.9363636363636364, 'f1-score': 0.9671361502347418, 'support': 220.0}\
-Sigurnost : {'precision': 0.9781021897810219, 'recall': 0.881578947368421, 'f1-score': 0.9273356401384083, 'support': 152.0}\
-Tihi : {'precision': 0.7608695652173914, 'recall': 0.9210526315789473, 'f1-score': 0.8333333333333334, 'support': 38.0}\
+Standard : {'precision': 0.9943, 'recall': 0.99818, 'f1-score': 0.99623, 'support': 7165.0}\
+"Flaky" : {'precision': 0.96590, 'recall': 0.94095, 'f1-score': 0.95327, 'support': 271.0}\
+Pomak : {'precision': 1.0, 'recall': 0.93636, 'f1-score': 0.96713, 'support': 220.0}\
+Sigurnost : {'precision': 0.97810, 'recall': 0.8815, 'f1-score': 0.9273, 'support': 152.0}\
+Tihi : {'precision': 0.76086, 'recall': 0.9210, 'f1-score': 0.8333, 'support': 38.0}\
 accuracy : 0.9918429773132806 \
 Anomaly accuracy : 0.9251101613044739
 
