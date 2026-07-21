@@ -106,11 +106,11 @@ $ git clone https://github.com/DominikOzvald/msc-dominik-ozvald-2026.git
 
 
 ## Evaluation
-To evaluate the trained models first move to repo root directory
+**To evaluate the trained models first move to repo root directory**
 ```
 $ cd msc-dominik-ozvald-2026
 ```
-To evaluate the multiclass transformer model run the following command: 
+**To evaluate the multiclass transformer model run the following command:**
 ```
 $ python -m src.GHA_AIOps.evaluating.tag_transformer
 ```
@@ -124,7 +124,7 @@ Tihi : {'precision': 0.76086, 'recall': 0.9210, 'f1-score': 0.8333, 'support': 3
 accuracy : 0.9918429773132806 \
 Anomaly accuracy : 0.9251101613044739
 
-o evaluate the reconstruction transformer model run the following command: 
+**To evaluate the reconstruction transformer model run the following command:**
 
 ```
 $ python -m src.GHA_AIOps.evaluating.transformer
