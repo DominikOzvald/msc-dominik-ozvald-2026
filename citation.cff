@@ -35,3 +35,34 @@ keywords:
   - deep learning
   - transformer
   - autoencoder
+references:
+  - type: thesis
+
+    authors:
+      - family-names: "Ožvald"
+        given-names: "Dominik"
+        orcid: "<ORCID-URL>"
+
+    title: >-
+      Primjena AIOps metodologije za detekciju anomalija u GitHub Actions
+      cjevovodima [Application of the AIOps Methodology for Anomaly Detection
+      in GitHub Actions Pipelines]
+
+    thesis-type: "M.S. thesis"
+
+    institution:
+      name: >-
+        University of Zagreb Faculty of Electrical Engineering and Computing
+
+    location:
+      name: "Zagreb, Croatia"
+
+    year: 2026
+
+    notes: >-
+      Master's thesis supervised by prof. Vlado Sruk.
+	  Recommended IEEE-style citation: D. Ožvald, “Primjena AIOps metodologije
+    za detekciju anomalija u GitHub Actions cjevovodima” [“Application of the
+    AIOps Methodology for Anomaly Detection in GitHub Actions Pipelines”],
+    M.S. thesis, University of Zagreb Faculty of Electrical Engineering and
+    Computing, Zagreb, Croatia, 2026.
