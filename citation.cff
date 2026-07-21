@@ -13,3 +13,25 @@ authors:
     orcid: "<ORCID-URL>"
     affiliation: >-
       University of Zagreb Faculty of Electrical Engineering and Computing
+
+version: "<VERSION>"
+date-released: "<YYYY-MM-DD>"
+
+repository-code: "https://github.com/DominikOzvald/msc-dominik-ozvald-2026"
+url: "https://github.com/DominikOzvald/msc-dominik-ozvald-2026"
+license: MIT
+
+abstract: >-
+  Software for training, evaluating, and integrating deep-learning models
+  for anomaly detection in GitHub Actions pipeline logs. The repository
+  accompanies Dominik Ožvald's 2026 master's thesis.
+
+keywords:
+  - AIOps
+  - anomaly detection
+  - GitHub Actions
+  - CI/CD
+  - log analysis
+  - deep learning
+  - transformer
+  - autoencoder
