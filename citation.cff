@@ -1,0 +1,89 @@
+cff-version: 1.2.0
+
+message: >-
+  Please cite the software using the repository metadata below.
+  The associated master's thesis is listed under references.
+
+title: "GHA-AIOps: Software for Anomaly Detection in GitHub Actions Pipelines"
+type: software
+
+authors:
+  - family-names: "Ožvald"
+    given-names: "Dominik"
+    orcid: "<ORCID-URL>"
+    affiliation: >-
+      University of Zagreb Faculty of Electrical Engineering and Computing
+
+version: "<VERSION>"
+date-released: "<YYYY-MM-DD>"
+
+repository-code: "https://github.com/DominikOzvald/msc-dominik-ozvald-2026"
+url: "https://github.com/DominikOzvald/msc-dominik-ozvald-2026"
+license: MIT
+
+abstract: >-
+  Software for training, evaluating, and integrating deep-learning models
+  for anomaly detection in GitHub Actions pipeline logs. The repository
+  accompanies Dominik Ožvald's 2026 master's thesis.
+
+keywords:
+  - AIOps
+  - anomaly detection
+  - GitHub Actions
+  - CI/CD
+  - log analysis
+  - deep learning
+  - transformer
+  - autoencoder
+
+references:
+  - type: thesis
+
+    authors:
+      - family-names: "Ožvald"
+        given-names: "Dominik"
+        orcid: "<ORCID-URL>"
+
+    title: >-
+      Primjena AIOps metodologije za detekciju anomalija u GitHub Actions
+      cjevovodima [Application of the AIOps Methodology for Anomaly Detection
+      in GitHub Actions Pipelines]
+
+    thesis-type: "M.S. thesis"
+
+    institution:
+      name: >-
+        University of Zagreb Faculty of Electrical Engineering and Computing
+
+    location:
+      name: "Zagreb, Croatia"
+
+    year: 2026
+
+    notes: >-
+      Master's thesis supervised by prof. Vlado Sruk.
+	  Recommended IEEE-style citation: D. Ožvald, “Primjena AIOps metodologije
+    za detekciju anomalija u GitHub Actions cjevovodima” [“Application of the
+    AIOps Methodology for Anomaly Detection in GitHub Actions Pipelines”],
+    M.S. thesis, University of Zagreb Faculty of Electrical Engineering and
+    Computing, Zagreb, Croatia, 2026.
+	references:
+  - type: data
+
+    authors:
+      - family-names: "Moriconi"
+        given-names: "Florent"
+      - family-names: "Durieux"
+        given-names: "Thomas"
+      - family-names: "Falleri"
+        given-names: "Jean-Rémy"
+      - family-names: "Troncy"
+        given-names: "Raphael"
+      - family-names: "Francillon"
+        given-names: "Aurélien"
+
+    title: "GHALogs: Large-Scale Dataset of GitHub Actions Runs"
+    version: "1.0.0"
+    date-released: "2024-12-04"
+    doi: "10.5281/zenodo.10154920"
+    license: CC-BY-SA-4.0
